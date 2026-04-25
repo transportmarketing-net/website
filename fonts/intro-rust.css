@@ -1,0 +1,14 @@
+/*
+  Intro Rust G Base - Local Font
+  Font from OnlineWebFonts.com licensed by CC BY 4.0
+*/
+
+@font-face {
+    font-family: "Intro Rust G Base";
+    src: url("intro-rust.woff2") format("woff2"),
+         url("intro-rust.woff") format("woff"),
+         url("intro-rust.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
