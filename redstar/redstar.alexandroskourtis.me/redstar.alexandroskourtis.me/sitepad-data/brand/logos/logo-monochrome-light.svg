@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180">
+  <!-- White circle -->
+  <circle cx="90" cy="95" r="72" fill="#FFFFFF"/>
+
+  <!-- Trail lines (white, curved from lower-left to star) -->
+  <path d="M22,155 Q65,120 118,42" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M30,160 Q72,130 120,52" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M38,165 Q78,138 122,62" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- 6-pointed star (transparent cutout) -->
+  <polygon points="118,29 122.5,38.5 132,38.5 125,44.5 127.5,54 118,48.5 108.5,54 111,44.5 104,38.5 113.5,38.5" fill="transparent"/>
+
+  <!-- Text: RedStar -->
+  <text x="195" y="100" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="72" fill="#FFFFFF">RedStar</text>
+
+  <!-- Text: DIGITAL AGENCY -->
+  <text x="198" y="135" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="28" letter-spacing="6" fill="#FFFFFF">DIGITAL AGENCY</text>
+</svg>
