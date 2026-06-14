@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180">
+  <!-- Blue circle -->
+  <circle cx="90" cy="95" r="72" fill="#4285f4"/>
+
+  <!-- Three parallel data lines -->
+  <line x1="40" y1="72" x2="140" y2="72" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="40" y1="95" x2="140" y2="95" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="40" y1="118" x2="140" y2="118" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Circuit nodes -->
+  <circle cx="70" cy="72" r="5" fill="#4285f4" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="110" cy="95" r="5" fill="#4285f4" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="80" cy="118" r="5" fill="#4285f4" stroke="#FFFFFF" stroke-width="2.5"/>
+
+  <!-- Vertical connectors -->
+  <line x1="70" y1="77" x2="70" y2="90" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 4"/>
+  <line x1="110" y1="100" x2="110" y2="113" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 4"/>
+
+  <!-- Arrows -->
+  <polygon points="134,68.5 140,72 134,75.5" fill="#FFFFFF"/>
+  <polygon points="134,91.5 140,95 134,98.5" fill="#FFFFFF"/>
+  <polygon points="134,114.5 140,118 134,121.5" fill="#FFFFFF"/>
+
+  <!-- Text: BlueLine -->
+  <text x="195" y="100" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="72" fill="#FFFFFF">BlueLine</text>
+
+  <!-- Text: SAAS & SYSTEMS -->
+  <text x="198" y="135" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="28" letter-spacing="6" fill="#FFFFFF">SAAS &amp; SYSTEMS</text>
+</svg>

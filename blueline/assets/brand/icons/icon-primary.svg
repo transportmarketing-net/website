@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Blue circle -->
+  <circle cx="100" cy="100" r="80" fill="#4285f4"/>
+
+  <!-- Three parallel data lines flowing left to right with rounded caps -->
+  <line x1="45" y1="72" x2="155" y2="72" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="45" y1="100" x2="155" y2="100" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="45" y1="128" x2="155" y2="128" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Circuit nodes at intersections -->
+  <circle cx="75" cy="72" r="6" fill="#4285f4" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="125" cy="100" r="6" fill="#4285f4" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="90" cy="128" r="6" fill="#4285f4" stroke="#FFFFFF" stroke-width="3"/>
+
+  <!-- Vertical connector lines between nodes -->
+  <line x1="75" y1="78" x2="75" y2="94" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+  <line x1="125" y1="106" x2="125" y2="122" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+
+  <!-- Small data arrows on the lines -->
+  <polygon points="148,68 155,72 148,76" fill="#FFFFFF"/>
+  <polygon points="148,96 155,100 148,104" fill="#FFFFFF"/>
+  <polygon points="148,124 155,128 148,132" fill="#FFFFFF"/>
+</svg>

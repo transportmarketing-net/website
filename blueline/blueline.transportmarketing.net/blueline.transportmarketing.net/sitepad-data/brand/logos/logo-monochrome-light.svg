@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180">
+  <!-- Icon: Monochrome light - all elements #FFFFFF (for dark backgrounds) -->
+  <circle cx="90" cy="95" r="72" fill="#FFFFFF"/>
+  <!-- Horizontal data lines (dark inside white circle) -->
+  <line x1="40.5" y1="69.8" x2="139.5" y2="69.8" stroke="#1A1A1A" stroke-width="3.6" stroke-linecap="round"/>
+  <line x1="40.5" y1="95" x2="139.5" y2="95" stroke="#1A1A1A" stroke-width="3.6" stroke-linecap="round"/>
+  <line x1="40.5" y1="120.2" x2="139.5" y2="120.2" stroke="#1A1A1A" stroke-width="3.6" stroke-linecap="round"/>
+  <!-- Circuit nodes: fill matches circle -->
+  <circle cx="67.5" cy="69.8" r="5.4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.7"/>
+  <circle cx="112.5" cy="95" r="5.4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.7"/>
+  <circle cx="81" cy="120.2" r="5.4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.7"/>
+  <!-- Dotted vertical connectors -->
+  <line x1="67.5" y1="75.2" x2="67.5" y2="89.6" stroke="#1A1A1A" stroke-width="2.25" stroke-linecap="round" stroke-dasharray="1 4.5"/>
+  <line x1="112.5" y1="100.4" x2="112.5" y2="114.8" stroke="#1A1A1A" stroke-width="2.25" stroke-linecap="round" stroke-dasharray="1 4.5"/>
+  <!-- Arrows at line ends -->
+  <polygon points="133.2,66.2 139.5,69.8 133.2,73.4" fill="#1A1A1A"/>
+  <polygon points="133.2,91.4 139.5,95 133.2,98.6" fill="#1A1A1A"/>
+  <polygon points="133.2,116.6 139.5,120.2 133.2,123.8" fill="#1A1A1A"/>
+  <!-- Text: BlueLine -->
+  <text x="190" y="105" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900" fill="#FFFFFF">BlueLine</text>
+  <!-- Text: SAAS & SYSTEMS -->
+  <text x="192" y="140" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#FFFFFF" letter-spacing="5">SAAS &amp; SYSTEMS</text>
+</svg>

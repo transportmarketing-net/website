@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 180">
+  <!-- Green circle -->
+  <circle cx="90" cy="95" r="72" fill="#34a853"/>
+
+  <!-- Megaphone body -->
+  <path d="M52,82 L52,110 L78,110 L115,132 L115,60 L78,82 Z" fill="#FFFFFF"/>
+
+  <!-- Megaphone bell -->
+  <path d="M115,58 Q136,72 136,95 Q136,118 115,133" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Handle -->
+  <rect x="43" y="85" width="10" height="15" rx="2.5" fill="#FFFFFF"/>
+
+  <!-- Sound waves -->
+  <path d="M128,70 Q143,82 143,95 Q143,108 128,121" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M137,60 Q156,76 156,95 Q156,114 137,131" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Energy sparks -->
+  <line x1="55" y1="65" x2="49" y2="54" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="66" y1="60" x2="63" y2="48" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="55" y1="128" x2="49" y2="140" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Text: GreenPromo -->
+  <text x="195" y="100" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="68" fill="#FFFFFF">GreenPromo</text>
+
+  <!-- Text: EVENTS & ACTIVATIONS -->
+  <text x="198" y="135" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="24" letter-spacing="5" fill="#FFFFFF">EVENTS &amp; ACTIVATIONS</text>
+</svg>
