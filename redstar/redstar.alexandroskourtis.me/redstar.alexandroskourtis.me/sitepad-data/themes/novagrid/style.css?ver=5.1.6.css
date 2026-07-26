@@ -101,7 +101,7 @@ body.pagelayer-body {
 
 .pagelayer-header .p-9mp7183 img {
 	display: block !important;
-	height: 40px !important;
+	height: 65px !important;
 	max-width: 188px;
 	object-fit: contain;
 }
@@ -372,7 +372,7 @@ body.pagelayer-body {
 	}
 
 	.pagelayer-header .p-9mp7183 img {
-		height: 34px !important;
+		height: 50px !important;
 		max-width: 48vw;
 	}
 
@@ -426,7 +426,7 @@ body.pagelayer-body {
 	}
 
 	.pagelayer-header .p-9mp7183 img {
-		height: 32px !important;
+		height: 45px !important;
 	}
 }
 
