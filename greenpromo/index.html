@@ -1,88 +1,1826 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenPromo - Transport Marketing</title>
-    <link href="../fonts/intro-rust.css" rel="stylesheet">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>GreenPromo | Διανομή Φυλλαδίων Αθήνα & Αττική</title>
+    <meta name="description" content="Επαγγελματική διανομή φυλλαδίων στην Αθήνα & ευρύτερη Αττική. Πόρτα-πόρτα, χέρι-με-χέρι, γραμματοκιβώτια. Φωτογραφική τεκμηρίωση & GPS tracking.">
+    <meta name="keywords" content="διανομή φυλλαδίων, Αθήνα, Αττική, πόρτα-πόρτα, χέρι-με-χέρι, field marketing, leaflet distribution">
+    <meta name="robots" content="index, follow">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="GR-I">
+    <meta name="geo.placename" content="Athens">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:site_name" content="GreenPromo Marketing">
+    <meta property="og:title" content="GreenPromo | Διανομή Φυλλαδίων Αθήνα & Αττική">
+    <meta property="og:description" content="Αξιόπιστη διανομή φυλλαδίων σε όλη την Αττική. Φωτογραφική τεκμηρίωση. Δωρεάν προσφορά σε 24 ώρες.">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&subset=greek&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "GreenPromo Marketing",
+        "description": "Αξιόπιστη διανομή φυλλαδίων και προωθητικές ενέργειες σε όλη την Αττική.",
+        "url": "https://transportmarketing.net/greenpromo/",
+        "telephone": "+302103007716",
+        "email": "info@greenpromo.marketing",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Λεωφ. Αλεξάνδρας 123",
+            "addressLocality": "Αθήνα",
+            "postalCode": "114 74",
+            "addressRegion": "Αττική",
+            "addressCountry": "GR"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        }
+    }
+    </script>
+
     <style>
-        * {
+        /* ===== RESET & VARIABLES ===== */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --gp-primary: #34a853;
+            --gp-primary-dark: #1e7e34;
+            --gp-primary-bright: #4caf50;
+            --gp-forest: #0a2e14;
+            --gp-ink: #081a0e;
+            --gp-surface: #f4fff7;
+            --gp-surface-soft: #e7f8eb;
+            --gp-surface-card: #dff0e3;
+            --gp-border: rgba(30, 126, 52, 0.24);
+            --gp-glow: rgba(52, 168, 83, 0.3);
+            --gp-white: #ffffff;
+            --gp-text: #1a1a1a;
+            --gp-text-secondary: #4a5a4e;
+            --gp-text-muted: #6b7c73;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Intro Rust G Base', sans-serif;
-            background-color: #2d2f33;
-            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gp-surface);
+            color: var(--gp-text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            transition: padding 0.3s ease;
+        }
+
+        .site-header.scrolled {
+            padding: 10px 24px;
+        }
+
+        .nav-pill {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--gp-surface);
+            border: 1px solid rgba(30, 126, 52, 0.1);
+            border-radius: 999px;
+            box-shadow: 0 18px 55px rgba(8, 26, 14, 0.09);
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: clamp(18px, 2vw, 30px);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-logo-text {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--gp-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo-text span {
+            color: var(--gp-ink);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: clamp(12px, 2vw, 28px);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gp-ink);
+            text-decoration: none;
+            font-size: clamp(14px, 1.3vw, 16px);
+            font-weight: 500;
+            transition: color 180ms ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--gp-primary);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--gp-primary) 0%, var(--gp-primary-bright) 100%);
+            color: var(--gp-white) !important;
+            padding: 10px 22px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 12px 28px var(--gp-glow);
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .nav-cta:hover {
+            background: linear-gradient(135deg, var(--gp-primary-dark) 0%, var(--gp-primary) 100%);
+            box-shadow: 0 16px 34px rgba(52, 168, 83, 0.36);
+            transform: translateY(-1px);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--gp-ink);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(244, 255, 247, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 99;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-menu.active { display: flex; }
+
+        .mobile-menu a {
+            color: var(--gp-ink);
+            text-decoration: none;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover { color: var(--gp-primary); }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 100px;
+            background:
+                linear-gradient(135deg, rgba(8, 26, 14, 0.82) 0%, rgba(10, 46, 20, 0.6) 40%, rgba(30, 126, 52, 0.25) 100%),
+                url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=80') center/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-inner {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gp-primary-bright);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            background: rgba(52, 168, 83, 0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(36px, 5vw, 60px);
+            font-weight: 800;
+            color: var(--gp-white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 300ms ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-hero--primary {
+            background: linear-gradient(135deg, var(--gp-primary) 0%, var(--gp-primary-bright) 100%);
+            color: var(--gp-white);
+            box-shadow: 0 12px 28px var(--gp-glow);
+        }
+
+        .btn-hero--primary:hover {
+            background: linear-gradient(135deg, var(--gp-primary-dark) 0%, var(--gp-primary) 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 16px 34px rgba(52, 168, 83, 0.36);
+        }
+
+        .btn-hero--whatsapp {
+            background: #25D366;
+            color: var(--gp-white);
+        }
+
+        .btn-hero--whatsapp:hover { background: #1da851; }
+
+        .btn-hero--viber {
+            background: #7360F2;
+            color: var(--gp-white);
+        }
+
+        .btn-hero--viber:hover { background: #5a48c9; }
+
+        .btn-hero svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Hero right - feature cards */
+        .hero-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-feature-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: background 300ms ease, transform 300ms ease;
+        }
+
+        .hero-feature-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .hero-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--gp-primary), var(--gp-primary-bright));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .hero-feature-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gp-white);
+        }
+
+        .hero-feature-text h3 {
+            color: var(--gp-white);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .hero-feature-text p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ===== SECTIONS SHARED ===== */
+        .section {
+            padding: 100px 24px;
+        }
+
+        .section-inner {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gp-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 50px);
+            font-weight: 800;
+            color: var(--gp-ink);
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 17px;
+            color: var(--gp-text-secondary);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+
+        .section-subtitle.centered {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title.centered {
+            text-align: center;
+        }
+
+        .section-label.centered {
+            display: block;
+            text-align: center;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .section-services {
+            background: var(--gp-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--gp-surface);
+            border: 1px solid rgba(30, 126, 52, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 400ms ease;
+            position: relative;
             overflow: hidden;
         }
 
-        .hero {
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gp-primary), var(--gp-primary-bright));
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+
+        .service-card:hover {
+            background: var(--gp-white);
+            box-shadow: 0 18px 55px rgba(8, 26, 14, 0.09);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before { opacity: 1; }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--gp-primary), var(--gp-primary-bright));
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--gp-white);
+        }
+
+        .service-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--gp-ink);
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--gp-text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .section-how {
+            background: var(--gp-surface);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            border-top: 2px dashed var(--gp-primary);
+            opacity: 0.3;
+        }
+
+        .step-card {
             text-align: center;
-            padding: 2rem;
+            position: relative;
         }
 
-        .brand {
-            color: #34a853;
-            font-size: 8rem;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            color: #ffffff;
-            font-size: 2rem;
-            font-weight: 800;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-
-        .dot {
-            width: 4rem;
-            height: 4rem;
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--gp-primary), var(--gp-primary-bright));
             border-radius: 50%;
-            background-color: #34a853;
-            margin: 3rem auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--gp-white);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 20px var(--gp-glow);
         }
 
-        .back-link {
-            color: #ffffff;
+        .step-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gp-surface-soft);
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .step-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--gp-primary);
+        }
+
+        .step-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gp-ink);
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: var(--gp-text-secondary);
+            line-height: 1.6;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
+        /* ===== PACKAGES ===== */
+        .section-packages {
+            background: var(--gp-white);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .package-card {
+            background: var(--gp-surface);
+            border: 1px solid rgba(30, 126, 52, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 300ms ease, box-shadow 300ms ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(8, 26, 14, 0.12);
+        }
+
+        .package-card--featured {
+            border: 2px solid var(--gp-primary);
+            background: var(--gp-white);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gp-primary);
+            color: var(--gp-white);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 16px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .package-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gp-ink);
+            margin-bottom: 8px;
+        }
+
+        .package-price {
+            font-family: 'Manrope', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--gp-ink);
+            margin-bottom: 24px;
+        }
+
+        .package-price span {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gp-text-muted);
+        }
+
+        .package-features {
+            list-style: none;
+            flex: 1;
+            margin-bottom: 24px;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(30, 126, 52, 0.08);
+            font-size: 14px;
+            color: var(--gp-text-secondary);
+        }
+
+        .package-features li:last-child { border-bottom: none; }
+
+        .btn-package {
+            display: block;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
             text-decoration: none;
-            font-size: 1rem;
-            opacity: 0.7;
-            transition: opacity 0.2s ease;
+            text-align: center;
+            transition: all 300ms ease;
+            cursor: pointer;
+            border: none;
         }
 
-        .back-link:hover {
+        .btn-package--primary {
+            background: linear-gradient(135deg, var(--gp-primary), var(--gp-primary-bright));
+            color: var(--gp-white);
+            box-shadow: 0 8px 20px var(--gp-glow);
+        }
+
+        .btn-package--primary:hover {
+            background: linear-gradient(135deg, var(--gp-primary-dark), var(--gp-primary));
+            transform: translateY(-1px);
+        }
+
+        .btn-package--outline {
+            background: transparent;
+            color: var(--gp-text-secondary);
+            border: 1.5px solid rgba(30, 126, 52, 0.2);
+        }
+
+        .btn-package--outline:hover {
+            border-color: var(--gp-primary);
+            color: var(--gp-primary);
+            background: var(--gp-surface-soft);
+        }
+
+        .packages-note {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 15px;
+            color: var(--gp-text-secondary);
+        }
+
+        .packages-note a {
+            color: var(--gp-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .packages-note a:hover { text-decoration: underline; }
+
+        /* ===== CLIENTS ===== */
+        .section-clients {
+            background: var(--gp-surface);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .client-card {
+            background: var(--gp-white);
+            border: 1px solid rgba(30, 126, 52, 0.06);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            transition: all 300ms ease;
+        }
+
+        .client-card:hover {
+            border-color: var(--gp-primary);
+            box-shadow: 0 8px 24px rgba(8, 26, 14, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .client-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .client-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gp-ink);
+            line-height: 1.4;
+        }
+
+        /* ===== FAQ ===== */
+        .section-faq {
+            background: var(--gp-white);
+        }
+
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--gp-surface);
+            border: 1px solid rgba(30, 126, 52, 0.08);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: border-color 300ms ease;
+        }
+
+        .faq-item.open {
+            border-color: var(--gp-primary);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            background: none;
+            border: none;
+            color: var(--gp-text);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: color 180ms ease;
+        }
+
+        .faq-question:hover { color: var(--gp-primary); }
+
+        .faq-icon {
+            font-size: 20px;
+            font-weight: 300;
+            color: var(--gp-text-muted);
+            transition: transform 300ms ease, color 300ms ease;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            color: var(--gp-primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 400ms ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+        }
+
+        .faq-answer p {
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: var(--gp-text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ===== CONTACT ===== */
+        .section-contact {
+            background: var(--gp-forest);
+            color: var(--gp-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .contact-info > p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .contact-detail-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(52, 168, 83, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--gp-primary-bright);
+        }
+
+        .contact-detail strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 4px;
+        }
+
+        .contact-detail a, .contact-detail span {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .contact-detail a:hover { color: var(--gp-primary-bright); }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 36px;
+        }
+
+        .contact-form h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--gp-white);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: var(--gp-white);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: border-color 200ms ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gp-primary);
+        }
+
+        .form-group select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--gp-forest);
+            color: var(--gp-white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--gp-primary), var(--gp-primary-bright));
+            color: var(--gp-white);
+            border: none;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 300ms ease;
+            box-shadow: 0 12px 28px var(--gp-glow);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, var(--gp-primary-dark), var(--gp-primary));
+            transform: translateY(-1px);
+        }
+
+        .form-note {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--gp-ink);
+            padding: 40px 24px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-brand {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            color: var(--gp-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 200ms ease;
+        }
+
+        .footer-links a:hover { color: var(--gp-white); }
+
+        .footer-copy {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .footer-parent {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-parent a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 200ms ease;
+        }
+
+        .footer-parent a:hover { color: var(--gp-white); }
+
+        .footer-dots {
+            display: flex;
+            gap: 3px;
+        }
+
+        .footer-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+
+        .footer-dot--blue { background: #4285f4; }
+        .footer-dot--red { background: #ea4335; }
+        .footer-dot--green { background: #34a853; }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.revealed {
             opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger delays */
+        .service-card.reveal:nth-child(2) { transition-delay: 80ms; }
+        .service-card.reveal:nth-child(3) { transition-delay: 160ms; }
+        .service-card.reveal:nth-child(4) { transition-delay: 240ms; }
+        .service-card.reveal:nth-child(5) { transition-delay: 320ms; }
+        .service-card.reveal:nth-child(6) { transition-delay: 400ms; }
+
+        .step-card.reveal:nth-child(2) { transition-delay: 100ms; }
+        .step-card.reveal:nth-child(3) { transition-delay: 200ms; }
+        .step-card.reveal:nth-child(4) { transition-delay: 300ms; }
+
+        .package-card.reveal:nth-child(2) { transition-delay: 80ms; }
+        .package-card.reveal:nth-child(3) { transition-delay: 160ms; }
+        .package-card.reveal:nth-child(4) { transition-delay: 240ms; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid::before { display: none; }
         }
 
         @media (max-width: 768px) {
-            .brand {
-                font-size: 4rem;
+            .nav-links { display: none; }
+            .nav-cta { display: none; }
+            .hamburger { display: flex; }
+
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 60px;
+                min-height: auto;
             }
-            .subtitle {
-                font-size: 1.5rem;
+
+            .hero-title {
+                font-size: clamp(28px, 7vw, 42px);
             }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .section {
+                padding: 60px 16px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-hero {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal { opacity: 1; transform: none; }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1 class="brand">GREENPROMO</h1>
-        <div class="dot"></div>
-        <h2 class="subtitle">FIELD MARKETING</h2>
-        <p style="margin-top: 3rem;">
-            <a href="https://transportmarketing.net" class="back-link">← Back to Transport Marketing</a>
-        </p>
+
+    <!-- Header -->
+    <header class="site-header" id="site-header">
+        <nav class="nav-pill">
+            <a href="#hero" class="nav-logo">
+                <span class="nav-logo-text"><span>Green</span>Promo</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#hero">Αρχική</a></li>
+                <li><a href="#services">Υπηρεσίες</a></li>
+                <li><a href="#packages">Πακέτα</a></li>
+                <li><a href="#clients">Πελάτες</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Επικοινωνία</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta">Δωρεάν Εκτίμηση</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Μενού">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#hero" class="mobile-link">Αρχική</a>
+        <a href="#services" class="mobile-link">Υπηρεσίες</a>
+        <a href="#packages" class="mobile-link">Πακέτα</a>
+        <a href="#clients" class="mobile-link">Πελάτες</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#contact" class="mobile-link">Επικοινωνία</a>
     </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <span class="hero-label">Εμπιστοσύνη Αθηναϊκών Επιχειρήσεων</span>
+                <h1 class="hero-title">Διανομή Φυλλαδίων Αθήνα & Αττική</h1>
+                <p class="hero-subtitle">Επαγγελματική, τεκμηριωμένη διανομή φυλλαδίων πόρτα-πόρτα & χέρι-με-χέρι. Φωτογραφική απόδειξη σε κάθε παράδοση.</p>
+                <div class="hero-buttons">
+                    <a href="#packages" class="btn-hero btn-hero--primary">Δείτε Πακέτα ↓</a>
+                    <a href="https://wa.me/306989442438" class="btn-hero btn-hero--whatsapp" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="viber://chat?number=%2B306989442438" class="btn-hero btn-hero--viber">
+                        <svg viewBox="0 0 24 24"><path d="M11.4 0C9.473.028 5.333.344 3.394 2.163 1.898 3.643 1.362 5.836 1.3 8.534c-.064 2.698-.14 7.76 4.756 9.12h.004l-.004 2.086s-.032.844.524 1.016c.436.14.614-.136 2.202-1.9.87-.964 1.846-2.08 2.652-3.026.004 0 2.984.248 5.29-.24 0 0 2.726-.308 3.072-3.928.358-3.746.196-6.154-.596-8.14C18.16 1.192 14.948.072 11.4 0zm.212 1.6c3.174.06 5.904 1 6.706 3.092.702 1.766.858 3.914.536 7.306-.276 2.89-2.312 3.054-2.312 3.054-1.98.42-4.544.218-4.544.218l-.004.002c-.88 1.028-2.296 2.588-2.296 2.588l-.076.088c-.084.09-.18.126-.242.094-.084-.042-.074-.2-.066-.342v-.018l.038-3.028c-4.152-1.14-3.922-5.478-3.868-7.746.054-2.268.498-4.144 1.746-5.374C8.578 2.318 10.252 1.59 11.612 1.6zm-.316 2.476a.421.421 0 00-.414.432c0 .238.19.432.424.432 1.166.01 2.142.416 2.9 1.206.754.786 1.156 1.822 1.2 3.08.006.238.202.428.438.422a.433.433 0 00.418-.442c-.052-1.46-.53-2.68-1.43-3.618-.9-.94-2.064-1.43-3.458-1.502a.55.55 0 00-.078-.01zm.002 1.544c-.232-.006-.426.18-.432.414s.18.428.414.434c.652.024 1.15.236 1.522.646.374.41.576.95.608 1.614a.425.425 0 00.444.412.426.426 0 00.408-.45c-.042-.862-.318-1.57-.832-2.13-.516-.558-1.186-.874-2.022-.934a.467.467 0 00-.11-.006zm-.002 1.538a.42.42 0 00-.414.434.42.42 0 00.42.426l.032-.002c.312.012.486.16.54.462a.423.423 0 00.488.346.425.425 0 00.344-.492c-.114-.64-.546-1.098-1.28-1.164a.444.444 0 00-.13-.01zm-2.262.566c.134-.008.27.044.4.168l.002-.002c.164.156.578.56.836.842.26.284.3.676.058.944l-.002.002-.498.496c-.244.234-.2.576.05.87l.003.004c.48.696 1.07 1.32 1.76 1.858l.004.002c.32.252.886.542 1.254.726l.004.004c.302.152.644.082.86-.138l.434-.528c.254-.314.644-.3.926-.072.284.23.788.612.788.612l.766.548c.162.118.256.284.262.48.01.196-.068.426-.246.654-.336.426-.698.756-1.09.904-.39.146-.622.166-.778.164-.03 0-.058 0-.084-.002-1.1-.102-2.96-1.146-3.906-1.846-.66-.486-1.246-1.014-1.76-1.584-.382-.424-.722-.864-1.022-1.334-.472-.738-.814-1.592-.904-2.07-.06-.306-.022-.488.034-.618.058-.13.146-.22.244-.29a7.9 7.9 0 01.54-.43.685.685 0 01.332-.128z"/></svg>
+                        Viber
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-features">
+                <div class="hero-feature-card">
+                    <div class="hero-feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+                    </div>
+                    <div class="hero-feature-text">
+                        <h3>Φωτογραφική Απόδειξη</h3>
+                        <p>Κάθε διανομή τεκμηριώνεται με φωτογραφίες με χρονοσφραγίδα</p>
+                    </div>
+                </div>
+                <div class="hero-feature-card">
+                    <div class="hero-feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="hero-feature-text">
+                        <h3>GPS Tracking</h3>
+                        <p>Δείτε ακριβώς πού πήγαν τα φυλλάδιά σας με χάρτες διαδρομών</p>
+                    </div>
+                </div>
+                <div class="hero-feature-card">
+                    <div class="hero-feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    </div>
+                    <div class="hero-feature-text">
+                        <h3>Αναφορές Παράδοσης</h3>
+                        <p>Λεπτομερείς αναφορές PDF: ζώνες κάλυψης, ποσότητες, ημερομηνίες</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-services" id="services">
+        <div class="section-inner">
+            <span class="section-label centered">Υπηρεσίες</span>
+            <h2 class="section-title centered">Σημεία Διανομής Φυλλαδίων</h2>
+            <p class="section-subtitle centered">Στοχευμένη διανομή εντύπων με μετρήσιμα αποτελέσματα σε όλη την Αττική.</p>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 6H10v2h10V6zm0 4H10v2h10v-2zm0 4H10v2h10v-2zM4 6h4v2H4V6zm0 4h4v2H4v-2zm0 4h4v2H4v-2zM2 2v20h20V2H2z"/></svg>
+                    </div>
+                    <h3>Γραμματοκιβώτια</h3>
+                    <p>Αξιόπιστη τοποθέτηση φυλλαδίων σε γραμματοκιβώτια πολυκατοικιών και μονοκατοικιών.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    </div>
+                    <h3>Μονοκατοικίες</h3>
+                    <p>Στοχευμένη διανομή σε μονοκατοικίες με τοποθέτηση στο κατώφλι ή γραμματοκιβώτιο.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>
+                    </div>
+                    <h3>Πολυκατοικίες</h3>
+                    <p>Μαζική κάλυψη πολυκατοικιών ανά περιοχή, ζώνη ή ταχυδρομικό κώδικα.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                    </div>
+                    <h3>Επιχειρήσεις</h3>
+                    <p>Διανομή σε καταστήματα, γραφεία και εμπορικά κέντρα με στοχευμένη προσέγγιση.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3>Πόρτα-Πόρτα</h3>
+                    <p>Παράδοση χέρι-με-χέρι σε περαστικούς σε περιοχές υψηλής κίνησης.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                    </div>
+                    <h3>Σταθερά Σημεία</h3>
+                    <p>Τοποθέτηση σε stands, ράφια και σημεία υποδοχής σε στρατηγικές τοποθεσίες.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-how" id="how">
+        <div class="section-inner">
+            <span class="section-label centered">Πώς λειτουργεί</span>
+            <h2 class="section-title centered">4 Βήματα. Απλά & Γρήγορα.</h2>
+            <p class="section-subtitle centered">Κάθε καμπάνια ξεκινά με κατανόηση των αναγκών σας και ολοκληρώνεται με πλήρη τεκμηρίωση.</p>
+
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+                    </div>
+                    <h3>Επικοινωνείτε</h3>
+                    <p>Ενημερώστε μας για τις ανάγκες σας μέσω φόρμας, τηλεφώνου ή WhatsApp.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>
+                    </div>
+                    <h3>Σχεδιάζουμε</h3>
+                    <p>Καθορίζουμε μαζί τις περιοχές διανομής, ποσότητες και χρονοδιάγραμμα.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3>Διανέμουμε</h3>
+                    <p>Η ομάδα μας ξεκινά τη διανομή με φωτογραφική τεκμηρίωση σε κάθε βήμα.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <h3>Αναφορά</h3>
+                    <p>Λαμβάνετε πλήρη αναφορά αποτελεσμάτων με φωτογραφίες, GPS και στατιστικά.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="section section-packages" id="packages">
+        <div class="section-inner">
+            <span class="section-label centered">Πακέτα</span>
+            <h2 class="section-title centered">Τα Πακέτα μας</h2>
+            <p class="section-subtitle centered">Απλή, διαφανής τιμολόγηση για Αθήνα & ευρύτερη Αττική.</p>
+
+            <div class="packages-grid">
+                <!-- Custom -->
+                <div class="package-card reveal">
+                    <h3>Custom</h3>
+                    <div class="package-price">&euro;5<span>/ώρα</span></div>
+                    <ul class="package-features">
+                        <li>Εσείς επιλέγετε τοποθεσία</li>
+                        <li>Εσείς επιλέγετε ώρες</li>
+                        <li>Χέρι-με-χέρι διανομή</li>
+                        <li>Φωτογραφική απόδειξη</li>
+                    </ul>
+                    <a href="#contact" class="btn-package btn-package--outline">Ξεκινήστε</a>
+                </div>
+
+                <!-- Starter -->
+                <div class="package-card reveal">
+                    <h3>Starter</h3>
+                    <div class="package-price">&euro;89<span>/καμπάνια</span></div>
+                    <ul class="package-features">
+                        <li>Έως 2.000 φυλλάδια</li>
+                        <li>1 ζώνη διανομής</li>
+                        <li>Φωτογραφική απόδειξη</li>
+                        <li>Παράδοση σε 5 εργάσιμες</li>
+                    </ul>
+                    <a href="#contact" class="btn-package btn-package--outline">Ξεκινήστε</a>
+                </div>
+
+                <!-- Standard -->
+                <div class="package-card package-card--featured reveal">
+                    <span class="package-badge">Προτεινόμενο</span>
+                    <h3>Standard</h3>
+                    <div class="package-price">&euro;199<span>/καμπάνια</span></div>
+                    <ul class="package-features">
+                        <li>Έως 5.000 φυλλάδια</li>
+                        <li>2-3 ζώνες διανομής</li>
+                        <li>Φωτογραφική απόδειξη + GPS</li>
+                        <li>Παράδοση σε 5 εργάσιμες</li>
+                        <li>PDF αναφορά παράδοσης</li>
+                    </ul>
+                    <a href="#contact" class="btn-package btn-package--primary">Ξεκινήστε</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="package-card reveal">
+                    <h3>Pro</h3>
+                    <div class="package-price">&euro;399<span>/καμπάνια</span></div>
+                    <ul class="package-features">
+                        <li>10.000+ φυλλάδια</li>
+                        <li>Πολλαπλές ζώνες κάλυψης</li>
+                        <li>Φωτογραφική απόδειξη + GPS</li>
+                        <li>Πλήρης αναφορά με heatmap</li>
+                        <li>Αφοσιωμένος συντονιστής</li>
+                        <li>Προτεραιότητα εκτέλεσης</li>
+                    </ul>
+                    <a href="#contact" class="btn-package btn-package--outline">Επικοινωνήστε</a>
+                </div>
+            </div>
+
+            <p class="packages-note">Διαθέσιμα πρόσθετα: σχεδιασμός φυλλαδίων, εκτύπωση, sampling, διανομή εκδηλώσεων. <a href="#contact">Ζητήστε προσαρμοσμένη προσφορά →</a></p>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="section section-clients" id="clients">
+        <div class="section-inner">
+            <span class="section-label centered">Πελάτες</span>
+            <h2 class="section-title centered">Κλάδοι που Εξυπηρετούμε</h2>
+            <p class="section-subtitle centered">Επιχειρήσεις κάθε κλάδου μας εμπιστεύονται για τη διανομή των εντύπων τους.</p>
+
+            <div class="clients-grid">
+                <div class="client-card reveal">
+                    <div class="client-icon">🛒</div>
+                    <h4>Σούπερ Μάρκετ & Καταστήματα Τροφίμων</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">🍽️</div>
+                    <h4>Εστιατόρια & Ταβέρνες</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">💇</div>
+                    <h4>Κομμωτήρια & Κέντρα Αισθητικής</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">💪</div>
+                    <h4>Γυμναστήρια & Κέντρα Ευεξίας</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">💊</div>
+                    <h4>Φαρμακεία</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">🏠</div>
+                    <h4>Κτηματομεσιτικά Γραφεία</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">📚</div>
+                    <h4>Φροντιστήρια & Κέντρα Ξένων Γλωσσών</h4>
+                </div>
+                <div class="client-card reveal">
+                    <div class="client-icon">☕</div>
+                    <h4>Καφετέριες & Ζαχαροπλαστεία</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-faq" id="faq">
+        <div class="section-inner">
+            <span class="section-label centered">FAQ</span>
+            <h2 class="section-title centered">Συχνές Ερωτήσεις</h2>
+            <p class="section-subtitle centered">Ό,τι χρειάζεται να ξέρετε πριν ξεκινήσετε.</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Πώς αποδεικνύετε ότι έγινε η διανομή;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Κάθε καμπάνια περιλαμβάνει φωτογραφική απόδειξη με χρονοσφραγίδα. Τα πακέτα Standard και Pro περιλαμβάνουν επίσης χάρτες διαδρομών GPS και λεπτομερή αναφορά παράδοσης PDF, ώστε να μπορείτε να επαληθεύσετε ακριβώς πού και πότε έγινε η διανομή.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Ποιες περιοχές καλύπτετε;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Καλύπτουμε την Αθήνα και την ευρύτερη Αττική, συμπεριλαμβανομένων βασικών περιοχών όπως Κηφισιά, Μαρούσι, Γλυφάδα, Πειραιάς, Χαλάνδρι, Περιστέρι, Νέα Σμύρνη και πολλές άλλες. Επικοινωνήστε μαζί μας για διαθεσιμότητα συγκεκριμένων ζωνών.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Τι είδη διανομής προσφέρετε;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Προσφέρουμε διανομή πόρτα-πόρτα (γραμματοκιβώτιο και κατώφλι), διανομή χέρι-με-χέρι (περιοχές υψηλής κίνησης) και διανομή εκδηλώσεων για συνέδρια, εμπορικές εκθέσεις και τοπικές εκδηλώσεις.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Ποια είναι η ελάχιστη παραγγελία;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Το πακέτο Starter ξεκινά από 2.000 φυλλάδια. Για μικρότερες ανάγκες, μπορείτε να χρησιμοποιήσετε το πακέτο Custom με χρέωση ανά ώρα (€5/ώρα).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Αναλαμβάνετε εκτύπωση και σχεδιασμό;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ναι, ο σχεδιασμός και η εκτύπωση φυλλαδίων είναι διαθέσιμα ως πρόσθετα σε οποιοδήποτε πακέτο. Συνεργαζόμαστε με αξιόπιστους τοπικούς τυπογράφους για υλικά υψηλής ποιότητας.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Τι γίνεται σε περίπτωση κακοκαιρίας;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Εάν η διανομή δεν μπορεί να πραγματοποιηθεί λόγω καιρικών συνθηκών ή αργιών, επαναπρογραμματίζουμε και σας ενημερώνουμε αμέσως. Το χρονοδιάγραμμα προσαρμόζεται χωρίς επιπλέον κόστος.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Ποιοι είναι οι χρόνοι παράδοσης;
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Τα πακέτα Starter και Standard ολοκληρώνονται εντός 5 εργάσιμων ημερών. Τα πακέτα Pro ακολουθούν προσαρμοσμένο χρονοδιάγραμμα που συμφωνείται με τον αφοσιωμένο συντονιστή σας.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-contact" id="contact">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Ζητήστε δωρεάν προσφορά</h2>
+                    <p>Συμπληρώστε τη φόρμα ή καλέστε μας. Απάντηση εντός 24 ωρών.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Τηλέφωνα</strong>
+                                <a href="tel:2103007716">210 300 77 16</a><br>
+                                <a href="tel:6989442438">698 944 24 38</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@greenpromo.marketing">info@greenpromo.marketing</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Διεύθυνση</strong>
+                                <span>Λεωφ. Αλεξάνδρας 123, Αθήνα 114 74</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Ώρες</strong>
+                                <span>Δευτέρα - Παρασκευή, 09:00 - 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <h3>Φόρμα Επικοινωνίας</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Όνομα *</label>
+                            <input type="text" id="name" name="name" required placeholder="Το όνομά σας">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Τηλέφωνο *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="69x xxx xxxx">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="business">Είδος επιχείρησης</label>
+                            <input type="text" id="business" name="business" placeholder="π.χ. Εστιατόριο">
+                        </div>
+                        <div class="form-group">
+                            <label for="flyers">Αριθμός Φυλλαδίων</label>
+                            <select id="flyers" name="flyers">
+                                <option value="">Επιλέξτε...</option>
+                                <option value="custom">Custom (ανά ώρα)</option>
+                                <option value="2000">Έως 2.000</option>
+                                <option value="5000">Έως 5.000</option>
+                                <option value="10000">10.000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Περιοχή διανομής</label>
+                        <input type="text" id="area" name="area" placeholder="π.χ. Κηφισιά, Μαρούσι">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Πρόσθετες πληροφορίες</label>
+                        <textarea id="message" name="message" placeholder="Περιγράψτε τις ανάγκες σας..."></textarea>
+                    </div>
+                    <!-- Honeypot -->
+                    <div style="position: absolute; left: -9999px;">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn-submit">Ζητήστε δωρεάν προσφορά</button>
+                    <p class="form-note">Απαντάμε εντός 24 ωρών τις εργάσιμες ημέρες.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">GreenPromo</span>
+            <div class="footer-links">
+                <a href="#services">Υπηρεσίες</a>
+                <a href="#packages">Πακέτα</a>
+                <a href="#contact">Επικοινωνία</a>
+            </div>
+            <div class="footer-parent">
+                <span class="footer-dots">
+                    <span class="footer-dot footer-dot--blue"></span>
+                    <span class="footer-dot footer-dot--red"></span>
+                    <span class="footer-dot footer-dot--green"></span>
+                </span>
+                <a href="https://transportmarketing.net">Transport Marketing</a>
+            </div>
+            <span class="footer-copy">&copy; 2026 GreenPromo Marketing</span>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('open');
+                    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked if it was closed
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        // Respect reduced motion preference
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.reveal').forEach(el => {
+                revealObserver.observe(el);
+            });
+        } else {
+            document.querySelectorAll('.reveal').forEach(el => {
+                el.classList.add('revealed');
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission placeholder
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Honeypot check
+            const honeypot = this.querySelector('input[name="website"]');
+            if (honeypot && honeypot.value) return;
+
+            // Rate limiting
+            const lastSubmit = sessionStorage.getItem('lastFormSubmit');
+            if (lastSubmit && Date.now() - parseInt(lastSubmit) < 30000) {
+                alert('Παρακαλώ περιμένετε λίγο πριν υποβάλετε ξανά.');
+                return;
+            }
+
+            sessionStorage.setItem('lastFormSubmit', Date.now().toString());
+            alert('Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.');
+            this.reset();
+        });
+    </script>
+
 </body>
 </html>
