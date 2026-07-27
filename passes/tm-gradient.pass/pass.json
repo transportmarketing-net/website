@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.net.transportmarketing.card",
+  "serialNumber": "f7614b7a-e5cc-47f5-b00c-6a28e96e6b70",
+  "teamIdentifier": "TEAM_ID_HERE",
+  "organizationName": "Transport Marketing",
+  "description": "Transport Marketing",
+  "backgroundColor": "rgb(10,10,10)",
+  "foregroundColor": "rgb(255,255,255)",
+  "labelColor": "rgb(150,150,150)",
+  "generic": {
+    "primaryFields": [
+      {
+        "key": "name",
+        "label": "TM",
+        "value": "Alexandros Kourtis"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "Director"
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "value": "Transport Marketing"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "phone",
+        "label": "Phone",
+        "value": "+30 698 944 2438"
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "value": "director@transportmarketing.net"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "website",
+        "label": "Website",
+        "value": "https://transportmarketing.net"
+      },
+      {
+        "key": "tagline",
+        "label": "Tagline",
+        "value": "Three brands · One vision"
+      }
+    ]
+  },
+  "barcode": {
+    "message": "https://transportmarketing.net",
+    "format": "PKBarcodeFormatQR",
+    "messageEncoding": "iso-8859-1"
+  },
+  "barcodes": [
+    {
+      "message": "https://transportmarketing.net",
+      "format": "PKBarcodeFormatQR",
+      "messageEncoding": "iso-8859-1"
+    }
+  ]
+}

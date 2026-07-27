@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "puppeteer": "^25.3.0",
+    "qrcode": "^1.5.4"
+  },
+  "dependencies": {
+    "playwright": "^1.62.0"
+  }
+}

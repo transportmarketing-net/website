@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.net.transportmarketing.card",
+  "serialNumber": "a984985c-b450-4944-ad4d-e99b50bcbba6",
+  "teamIdentifier": "TEAM_ID_HERE",
+  "organizationName": "GreenPromo",
+  "description": "GreenPromo — Events & Activations",
+  "backgroundColor": "rgb(12,26,16)",
+  "foregroundColor": "rgb(255,255,255)",
+  "labelColor": "rgb(52,168,83)",
+  "generic": {
+    "primaryFields": [
+      {
+        "key": "name",
+        "label": "GP",
+        "value": "Alexandros Kourtis"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "Director"
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "value": "GreenPromo"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "phone",
+        "label": "Phone",
+        "value": "+30 698 944 2438"
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "value": "director@transportmarketing.net"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "website",
+        "label": "Website",
+        "value": "https://transportmarketing.net"
+      },
+      {
+        "key": "tagline",
+        "label": "Tagline",
+        "value": "Three brands · One vision"
+      }
+    ]
+  },
+  "barcode": {
+    "message": "https://transportmarketing.net",
+    "format": "PKBarcodeFormatQR",
+    "messageEncoding": "iso-8859-1"
+  },
+  "barcodes": [
+    {
+      "message": "https://transportmarketing.net",
+      "format": "PKBarcodeFormatQR",
+      "messageEncoding": "iso-8859-1"
+    }
+  ]
+}

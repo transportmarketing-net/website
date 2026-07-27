@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.net.transportmarketing.card",
+  "serialNumber": "2108a016-2c29-48a2-8045-2154304ab7ae",
+  "teamIdentifier": "TEAM_ID_HERE",
+  "organizationName": "RedStar",
+  "description": "RedStar — Digital Agency",
+  "backgroundColor": "rgb(20,20,20)",
+  "foregroundColor": "rgb(255,255,255)",
+  "labelColor": "rgb(234,67,53)",
+  "generic": {
+    "primaryFields": [
+      {
+        "key": "name",
+        "label": "RS",
+        "value": "Alexandros Kourtis"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "Director"
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "value": "RedStar"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "phone",
+        "label": "Phone",
+        "value": "+30 698 944 2438"
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "value": "director@transportmarketing.net"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "website",
+        "label": "Website",
+        "value": "https://transportmarketing.net"
+      },
+      {
+        "key": "tagline",
+        "label": "Tagline",
+        "value": "Three brands · One vision"
+      }
+    ]
+  },
+  "barcode": {
+    "message": "https://transportmarketing.net",
+    "format": "PKBarcodeFormatQR",
+    "messageEncoding": "iso-8859-1"
+  },
+  "barcodes": [
+    {
+      "message": "https://transportmarketing.net",
+      "format": "PKBarcodeFormatQR",
+      "messageEncoding": "iso-8859-1"
+    }
+  ]
+}

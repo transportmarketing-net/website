@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.net.transportmarketing.card",
+  "serialNumber": "88336f5d-6435-4755-b4d5-b9f3277417c5",
+  "teamIdentifier": "TEAM_ID_HERE",
+  "organizationName": "BlueLine",
+  "description": "BlueLine — SaaS & Systems",
+  "backgroundColor": "rgb(13,27,48)",
+  "foregroundColor": "rgb(255,255,255)",
+  "labelColor": "rgb(66,133,244)",
+  "generic": {
+    "primaryFields": [
+      {
+        "key": "name",
+        "label": "BL",
+        "value": "Alexandros Kourtis"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "Director"
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "value": "BlueLine"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "phone",
+        "label": "Phone",
+        "value": "+30 698 944 2438"
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "value": "director@transportmarketing.net"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "website",
+        "label": "Website",
+        "value": "https://transportmarketing.net"
+      },
+      {
+        "key": "tagline",
+        "label": "Tagline",
+        "value": "Three brands · One vision"
+      }
+    ]
+  },
+  "barcode": {
+    "message": "https://transportmarketing.net",
+    "format": "PKBarcodeFormatQR",
+    "messageEncoding": "iso-8859-1"
+  },
+  "barcodes": [
+    {
+      "message": "https://transportmarketing.net",
+      "format": "PKBarcodeFormatQR",
+      "messageEncoding": "iso-8859-1"
+    }
+  ]
+}
