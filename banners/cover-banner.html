@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Marketing — Cover Banner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 2480px;
+            height: 3508px;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* Transit map background */
+        .transit-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.08;
+        }
+
+        .transit-bg svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Vignette overlay */
+        .vignette {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.15) 100%);
+            pointer-events: none;
+        }
+
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            text-align: center;
+        }
+
+        .logo-dots {
+            display: flex;
+            gap: 40px;
+        }
+
+        .logo-dot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .logo-dot--blue { background: #4285f4; }
+        .logo-dot--red { background: #ea4335; }
+        .logo-dot--green { background: #34a853; }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .brand-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 180px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            line-height: 1;
+            text-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        .brand-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 52px;
+            font-weight: 400;
+            color: #888;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- Transit map background -->
+        <div class="transit-bg">
+            <svg viewBox="0 0 2480 3508" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Blue line: horizontal curves -->
+                <path d="M-200,600 L800,600 Q1000,600 1000,800 L1000,1600 Q1000,1800 1200,1800 L2800,1800" stroke="#4285f4" stroke-width="30" fill="none"/>
+                <!-- Red line: diagonal -->
+                <path d="M-200,2800 L600,2800 Q800,2800 900,2600 L1600,1100 Q1700,900 1900,900 L2800,900" stroke="#ea4335" stroke-width="30" fill="none"/>
+                <!-- Green line: sweeping curve -->
+                <path d="M1400,-200 L1400,500 Q1400,700 1600,900 L2400,1600 Q2600,1800 2600,2000 L2600,3200 Q2600,3400 2400,3400 L-200,3400" stroke="#34a853" stroke-width="30" fill="none"/>
+            </svg>
+        </div>
+
+        <!-- Vignette -->
+        <div class="vignette"></div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Logo -->
+            <div class="logo-dots">
+                <div class="logo-dot logo-dot--blue"></div>
+                <div class="logo-dot logo-dot--red"></div>
+                <div class="logo-dot logo-dot--green"></div>
+            </div>
+
+            <!-- Brand text -->
+            <div class="brand-text">
+                <div class="brand-title">Transport Marketing</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

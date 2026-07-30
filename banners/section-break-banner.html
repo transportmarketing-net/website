@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Marketing — Section Break</title>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 900px;
+            height: 1600px;
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG container for transit line */
+        .transit-line {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .transit-line svg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- Diagonal transit line with stations -->
+        <div class="transit-line">
+            <svg viewBox="0 0 900 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Main diagonal line from bottom-left to top-right -->
+                <path d="M100,1500 L800,100" stroke="#4285f4" stroke-width="16" fill="none" opacity="0.2"/>
+
+                <!-- Station dots along the line -->
+                <!-- First station (blue) - bottom-left -->
+                <circle cx="200" cy="1350" r="24" fill="#0f0f0f" stroke="#4285f4" stroke-width="4"/>
+
+                <!-- Second station (red) - middle -->
+                <circle cx="450" cy="800" r="24" fill="#0f0f0f" stroke="#ea4335" stroke-width="4"/>
+
+                <!-- Third station (green) - top-right -->
+                <circle cx="700" cy="250" r="24" fill="#0f0f0f" stroke="#34a853" stroke-width="4"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

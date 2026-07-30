@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RedStar Section Break</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 900px;
+            height: 1600px;
+            background: #141414;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Diagonal red line */
+        .diagonal-line {
+            width: 6px;
+            height: 1200px;
+            background: linear-gradient(180deg, transparent, #ea4335 20%, #ea4335 80%, transparent);
+            transform: rotate(-15deg);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagonal-line"></div>
+</body>
+</html>

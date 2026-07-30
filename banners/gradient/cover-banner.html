@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient Cover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 2480px;
+            height: 3508px;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Full RGB gradient strip at top */
+        .gradient-strip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background: linear-gradient(90deg, #4285f4 0%, #ea4335 50%, #34a853 100%);
+        }
+        /* Ambient glow from gradient */
+        .ambient-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 800px;
+            background: linear-gradient(180deg,
+                rgba(66,133,244,0.08) 0%,
+                rgba(234,67,53,0.04) 40%,
+                transparent 100%);
+            pointer-events: none;
+        }
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .logo-dots {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 120px;
+        }
+        .logo-dot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        .logo-text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 180px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #4285f4, #ea4335, #34a853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-strip"></div>
+    <div class="ambient-glow"></div>
+    <div class="content">
+        <div class="logo-dots">
+            <div class="logo-dot" style="background: #4285f4;"></div>
+            <div class="logo-dot" style="background: #ea4335;"></div>
+            <div class="logo-dot" style="background: #34a853;"></div>
+        </div>
+        <div class="logo-text">TRANSPORT MARKETING</div>
+    </div>
+</body>
+</html>

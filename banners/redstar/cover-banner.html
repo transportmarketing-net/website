@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RedStar Cover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 2480px;
+            height: 3508px;
+            background: #141414;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Red gradient bar at top */
+        .accent-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, transparent, #ea4335, transparent);
+        }
+        /* Radial red glow top-right */
+        .glow {
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(234,67,53,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .logo-dots {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 120px;
+        }
+        .logo-dot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        .logo-text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 180px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        /* Star icon beside title */
+        .star-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="accent-bar"></div>
+    <div class="glow"></div>
+    <div class="content">
+        <div class="logo-dots">
+            <div class="logo-dot" style="background: #4285f4;"></div>
+            <div class="logo-dot" style="background: #ea4335;"></div>
+            <div class="logo-dot" style="background: #34a853;"></div>
+        </div>
+        <div class="logo-text">
+            REDSTAR
+            <svg class="star-icon" width="140" height="140" viewBox="0 0 24 24" fill="#ea4335" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="12,2 14.9,8.6 22,9.3 16.8,14 18.2,21 12,17.3 5.8,21 7.2,14 2,9.3 9.1,8.6"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient Section Break</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 900px;
+            height: 1600px;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Vertical gradient bar */
+        .gradient-bar {
+            width: 8px;
+            height: 70%;
+            background: linear-gradient(180deg, #4285f4 0%, #ea4335 50%, #34a853 100%);
+            border-radius: 4px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bar"></div>
+</body>
+</html>

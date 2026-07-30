@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark Minimal Cover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 2480px;
+            height: 3508px;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Subtle noise texture overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .logo-dots {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 120px;
+        }
+        .logo-dot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        .logo-text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 180px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="logo-dots">
+            <div class="logo-dot" style="background: #4285f4;"></div>
+            <div class="logo-dot" style="background: #ea4335;"></div>
+            <div class="logo-dot" style="background: #34a853;"></div>
+        </div>
+        <div class="logo-text">TRANSPORT MARKETING</div>
+    </div>
+</body>
+</html>

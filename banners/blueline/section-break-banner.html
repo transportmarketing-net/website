@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlueLine Section Break</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 900px;
+            height: 1600px;
+            background: #0d1b30;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Horizontal blue line with tech accent */
+        .tech-line {
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #4285f4 30%, #4285f4 70%, transparent);
+            opacity: 0.4;
+            position: relative;
+        }
+        .tech-line::before,
+        .tech-line::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #4285f4;
+            border-radius: 50%;
+            top: -4px;
+            box-shadow: 0 0 20px rgba(66,133,244,0.6);
+        }
+        .tech-line::before { left: 30%; }
+        .tech-line::after { right: 30%; }
+    </style>
+</head>
+<body>
+    <div class="tech-line"></div>
+</body>
+</html>

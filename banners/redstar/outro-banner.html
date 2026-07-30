@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RedStar Outro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 2480px;
+            height: 3508px;
+            background: #141414;
+            padding: 200px;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Red pattern background (reduced opacity) */
+        .pattern-bg {
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle, rgba(234,67,53,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .top-section {
+            text-align: center;
+            margin-bottom: 400px;
+        }
+        .logo-dots {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+        .logo-dot {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        .logo-text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 120px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-bottom: 600px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .contact-label {
+            font-size: 42px;
+            font-weight: 500;
+            color: rgba(234,67,53,0.6);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            width: 220px;
+        }
+        .contact-value {
+            font-size: 48px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.8);
+        }
+        .bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .footer-text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .qr-code {
+            width: 400px;
+            height: 400px;
+            background: rgba(234,67,53,0.05);
+            border: 4px solid rgba(234,67,53,0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-bg"></div>
+
+    <div class="top-section">
+        <div class="logo-dots">
+            <div class="logo-dot" style="background: #4285f4;"></div>
+            <div class="logo-dot" style="background: #ea4335;"></div>
+            <div class="logo-dot" style="background: #34a853;"></div>
+        </div>
+        <div class="logo-text">REDSTAR</div>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-row">
+            <div class="contact-label">EMAIL</div>
+            <div class="contact-value">director@transportmarketing.net</div>
+        </div>
+        <div class="contact-row">
+            <div class="contact-label">PHONE</div>
+            <div class="contact-value">+30 698 944 2438</div>
+        </div>
+        <div class="contact-row">
+            <div class="contact-label">WEB</div>
+            <div class="contact-value">transportmarketing.net</div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="footer-text">REDSTAR</div>
+        <div class="qr-code">
+            <svg viewBox="0 0 29 29" width="360" height="360" xmlns="http://www.w3.org/2000/svg">
+                <rect width="29" height="29" fill="#141414"/>
+                <rect x="0" y="0" width="7" height="7" fill="rgba(234,67,53,0.5)"/>
+                <rect x="1" y="1" width="5" height="5" fill="#141414"/>
+                <rect x="2" y="2" width="3" height="3" fill="rgba(234,67,53,0.5)"/>
+                <rect x="22" y="0" width="7" height="7" fill="rgba(234,67,53,0.5)"/>
+                <rect x="23" y="1" width="5" height="5" fill="#141414"/>
+                <rect x="24" y="2" width="3" height="3" fill="rgba(234,67,53,0.5)"/>
+                <rect x="0" y="22" width="7" height="7" fill="rgba(234,67,53,0.5)"/>
+                <rect x="1" y="23" width="5" height="5" fill="#141414"/>
+                <rect x="2" y="24" width="3" height="3" fill="rgba(234,67,53,0.5)"/>
+                <rect x="8" y="8" width="1" height="1" fill="rgba(234,67,53,0.3)"/>
+                <rect x="10" y="9" width="1" height="1" fill="rgba(234,67,53,0.3)"/>
+                <rect x="12" y="8" width="1" height="1" fill="rgba(234,67,53,0.3)"/>
+                <rect x="16" y="16" width="5" height="5" fill="rgba(234,67,53,0.3)"/>
+                <rect x="17" y="17" width="3" height="3" fill="#141414"/>
+                <rect x="18" y="18" width="1" height="1" fill="rgba(234,67,53,0.3)"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
