@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AmberLane Section Break</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            width: 900px;
+            height: 1600px;
+            background: #1a1408;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Two converging amber chevron lines */
+        .chevron-line {
+            position: absolute;
+            width: 6px;
+            height: 1200px;
+            background: linear-gradient(180deg, transparent, #E8912D 20%, #E8912D 80%, transparent);
+            opacity: 0.3;
+        }
+        .chevron-left {
+            transform: rotate(8deg);
+            left: 420px;
+        }
+        .chevron-right {
+            transform: rotate(-8deg);
+            right: 420px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chevron-line chevron-left"></div>
+    <div class="chevron-line chevron-right"></div>
+</body>
+</html>

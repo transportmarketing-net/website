@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.net.transportmarketing.card",
+  "serialNumber": "6979e4e0-b0b3-40d7-9773-502b6db24705",
+  "teamIdentifier": "TEAM_ID_HERE",
+  "organizationName": "AmberLane",
+  "description": "AmberLane — Operations & Management",
+  "backgroundColor": "rgb(26,20,8)",
+  "foregroundColor": "rgb(255,255,255)",
+  "labelColor": "rgb(232,145,45)",
+  "generic": {
+    "primaryFields": [
+      {
+        "key": "name",
+        "label": "AL",
+        "value": "Alexandros Kourtis"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "value": "Director"
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "value": "AmberLane"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "phone",
+        "label": "Phone",
+        "value": "+30 698 944 2438"
+      },
+      {
+        "key": "email",
+        "label": "Email",
+        "value": "director@transportmarketing.net"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "website",
+        "label": "Website",
+        "value": "https://transportmarketing.net"
+      },
+      {
+        "key": "tagline",
+        "label": "Tagline",
+        "value": "Three brands · One vision"
+      }
+    ]
+  },
+  "barcode": {
+    "message": "https://transportmarketing.net",
+    "format": "PKBarcodeFormatQR",
+    "messageEncoding": "iso-8859-1"
+  },
+  "barcodes": [
+    {
+      "message": "https://transportmarketing.net",
+      "format": "PKBarcodeFormatQR",
+      "messageEncoding": "iso-8859-1"
+    }
+  ]
+}

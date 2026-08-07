@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AmberLane - Λύσεις στελέχωσης και πρόσληψης</title>
+  <meta name="description" content="Η AmberLane συνδέει ελληνικές επιχειρήσεις με ελεγμένο διεθνές προσωπικό για φιλοξενία, κατασκευές, logistics, φροντίδα και εποχικές λειτουργίες.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Geist:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #181817;
+      --ink-soft: #252320;
+      --ink-card: #302d29;
+      --cream: #f6f1e8;
+      --paper: #fffaf0;
+      --muted: #bdb4a6;
+      --muted-dark: #6e665c;
+      --line: rgba(246, 241, 232, 0.14);
+      --line-dark: rgba(24, 24, 23, 0.13);
+      --amber: #f1ad3f;
+      --amber-light: #ffd372;
+      --olive: #c2cc6a;
+      --steel: #9eb7bc;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      --radius: 10px;
+      --max: 1120px;
+      --font-body: "Geist", "Noto Sans", "Aptos", "Segoe UI", sans-serif;
+      --font-display: "Bricolage Grotesque", "Noto Sans Display", "Trebuchet MS", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    body::selection {
+      background: var(--amber);
+      color: var(--ink);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .page-shell {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(241, 173, 63, 0.11), transparent 29rem),
+        linear-gradient(180deg, #171615 0%, #211d1b 34%, #181817 100%);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      padding: 18px clamp(20px, 5vw, 96px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: color-mix(in srgb, var(--ink) 83%, transparent);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--amber);
+      border-radius: 50%;
+      position: relative;
+      box-shadow: inset 0 0 0 5px var(--ink), 0 0 0 1px rgba(241, 173, 63, 0.2);
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 3px;
+      border-radius: 999px;
+      right: -4px;
+      top: 10px;
+      background: var(--amber);
+      transform: rotate(-21deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pill {
+      min-height: 40px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(246, 241, 232, 0.18);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-2px);
+    }
+
+    .pill-primary {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: var(--ink);
+    }
+
+    .pill-outline {
+      color: var(--amber-light);
+      border-color: rgba(241, 173, 63, 0.85);
+    }
+
+    .briefcase {
+      width: 22px;
+      height: 22px;
+      color: var(--cream);
+      opacity: 0.9;
+    }
+
+    .language-switch {
+      min-height: 40px;
+      padding: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      border: 1px solid rgba(246, 241, 232, 0.18);
+      border-radius: 999px;
+      background: rgba(246, 241, 232, 0.04);
+    }
+
+    .language-switch button {
+      width: 34px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: color-mix(in srgb, var(--cream) 68%, transparent);
+      font-size: 11px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .language-switch button.is-active {
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--cream);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-panel {
+      display: none;
+    }
+
+    .section {
+      padding: clamp(74px, 10vw, 142px) clamp(20px, 5vw, 96px);
+    }
+
+    .section-dark {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .section-light {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .section-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--amber-light);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .section-light .eyebrow {
+      color: #9b6b1c;
+    }
+
+    .display {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(42px, 7.4vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      font-weight: 800;
+    }
+
+    .headline {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5.7vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+      font-weight: 800;
+    }
+
+    .body-copy {
+      margin: 0;
+      max-width: 58ch;
+      color: color-mix(in srgb, var(--cream) 76%, transparent);
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.55;
+    }
+
+    .section-light .body-copy {
+      color: var(--muted-dark);
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 132px 20px 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero .display {
+      max-width: 760px;
+      margin-top: 18px;
+    }
+
+    .hero p {
+      margin: 22px auto 0;
+      max-width: 540px;
+      color: color-mix(in srgb, var(--cream) 82%, transparent);
+      font-size: 18px;
+      line-height: 1.48;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .underline-swoop {
+      position: relative;
+      display: inline-block;
+    }
+
+    .underline-swoop::after {
+      content: "";
+      position: absolute;
+      left: -2%;
+      right: -2%;
+      bottom: 4px;
+      height: 12px;
+      border: 3px solid var(--amber);
+      border-top: 0;
+      border-radius: 50%;
+      transform: rotate(-3deg);
+      pointer-events: none;
+    }
+
+    .work-strip {
+      margin-top: 68px;
+      width: 100vw;
+      position: relative;
+      overflow-x: auto;
+      overflow-y: visible;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .work-strip::-webkit-scrollbar {
+      display: none;
+    }
+
+    .work-strip::before,
+    .work-strip::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: clamp(18px, 4vw, 64px);
+      pointer-events: none;
+    }
+
+    .work-strip::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--ink), transparent);
+    }
+
+    .work-strip::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--ink), transparent);
+    }
+
+    .worker-track {
+      display: flex;
+      gap: clamp(16px, 1.6vw, 26px);
+      width: max-content;
+      min-width: 100%;
+      box-sizing: border-box;
+      justify-content: center;
+      padding: 0 clamp(24px, 3vw, 44px) 20px;
+    }
+
+    .worker-card {
+      width: clamp(136px, 10.2vw, 154px);
+      height: clamp(292px, 21.4vw, 322px);
+      flex: 0 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+      position: relative;
+      isolation: isolate;
+    }
+
+    .worker-card:nth-child(even) {
+      transform: translateY(16px);
+    }
+
+    .worker-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.82) contrast(1.05);
+    }
+
+    .worker-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(24, 24, 23, 0.05), rgba(24, 24, 23, 0.58));
+      z-index: 1;
+    }
+
+    .card-sheet {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      z-index: 2;
+      min-height: 146px;
+      padding: 10px;
+      border-radius: 7px;
+      background: color-mix(in srgb, var(--paper) 90%, transparent);
+      color: var(--ink);
+    }
+
+    .card-sheet small {
+      display: block;
+      margin-bottom: 8px;
+      color: #7e5618;
+      font-size: 9px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-sheet strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .card-sheet span {
+      display: block;
+      margin-top: 10px;
+      font-size: 10px;
+      line-height: 1.25;
+      color: #62594f;
+    }
+
+    .work-pill {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 16px;
+      z-index: 2;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--amber);
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .trusted {
+      padding: 70px 20px 42px;
+      text-align: center;
+    }
+
+    .trusted h2 {
+      margin: 0 0 26px;
+      font-family: var(--font-display);
+      font-size: 21px;
+      letter-spacing: -0.03em;
+    }
+
+    .logo-cloud {
+      max-width: 660px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px 38px;
+      align-items: center;
+      color: color-mix(in srgb, var(--cream) 80%, transparent);
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    .reasons {
+      padding-top: 88px;
+    }
+
+    .reasons .headline {
+      max-width: 780px;
+      margin: 0 auto 62px;
+      text-align: center;
+    }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .reason-card {
+      min-height: 270px;
+      padding: 52px clamp(28px, 4vw, 62px);
+      border-radius: 7px;
+      background: #36342e;
+      border: 1px solid rgba(246, 241, 232, 0.07);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reason-number {
+      position: absolute;
+      left: 34px;
+      top: 18px;
+      color: rgba(24, 24, 23, 0.42);
+      font-family: var(--font-display);
+      font-size: 132px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.08em;
+    }
+
+    .reason-card h3 {
+      position: relative;
+      margin: 0 0 14px;
+      max-width: 340px;
+      font-family: var(--font-display);
+      font-size: 26px;
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      z-index: 1;
+    }
+
+    .reason-card p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 440px;
+      color: color-mix(in srgb, var(--cream) 78%, transparent);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .journey {
+      text-align: center;
+      padding-top: 70px;
+      padding-bottom: 86px;
+    }
+
+    .journey .headline {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .journey p {
+      margin: 22px auto 0;
+      max-width: 530px;
+    }
+
+    .path-map {
+      width: min(100%, 800px);
+      margin: 54px auto 0;
+      color: var(--cream);
+    }
+
+    .cta-band {
+      padding-top: 34px;
+      padding-bottom: 104px;
+    }
+
+    .cta-card {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: clamp(38px, 6vw, 58px) 28px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--amber-light), var(--amber));
+      color: var(--ink);
+      text-align: center;
+      box-shadow: 0 24px 70px rgba(241, 173, 63, 0.24);
+    }
+
+    .cta-card h2 {
+      margin: 0 auto 24px;
+      max-width: 740px;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4.2vw, 40px);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .dark-button {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 28px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .expert {
+      padding-top: 92px;
+      padding-bottom: 0;
+    }
+
+    .expert-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+      align-items: end;
+      gap: clamp(40px, 8vw, 100px);
+    }
+
+    .expert-copy {
+      padding-bottom: 86px;
+    }
+
+    .expert-copy .headline {
+      max-width: 560px;
+    }
+
+    .expert-copy p {
+      margin: 26px 0 0;
+      max-width: 560px;
+      color: color-mix(in srgb, var(--cream) 78%, transparent);
+    }
+
+    .portrait {
+      align-self: end;
+      min-height: 440px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+
+    .portrait::before {
+      content: "";
+      position: absolute;
+      inset: 12% 8% 0;
+      border-radius: 50% 50% 0 0;
+      background: radial-gradient(circle at 50% 36%, rgba(241, 173, 63, 0.25), transparent 62%);
+    }
+
+    .portrait img {
+      position: relative;
+      width: min(100%, 430px);
+      filter: grayscale(1) contrast(1.08);
+      mix-blend-mode: luminosity;
+    }
+
+    .results {
+      text-align: center;
+    }
+
+    .results .headline {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .result-grid {
+      margin-top: 58px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .result-card {
+      min-height: 158px;
+      padding: 28px;
+      border-radius: 7px;
+      background: var(--ink);
+      color: var(--cream);
+      text-align: left;
+    }
+
+    .result-card strong {
+      display: block;
+      margin-bottom: 12px;
+      font-family: var(--font-display);
+      font-size: 44px;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .result-card span {
+      display: block;
+      color: color-mix(in srgb, var(--cream) 82%, transparent);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .footnote {
+      margin: 28px 0 0;
+      color: var(--muted-dark);
+      font-size: 11px;
+    }
+
+    .timeline-section .headline {
+      max-width: 760px;
+      margin: 0 auto 66px;
+      text-align: center;
+    }
+
+    .timeline {
+      max-width: 940px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 86px 1fr;
+      row-gap: 58px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      left: 50%;
+      width: 4px;
+      border-radius: 999px;
+      background: rgba(246, 241, 232, 0.18);
+      transform: translateX(-50%);
+    }
+
+    .timeline-dot {
+      position: relative;
+      z-index: 1;
+      width: 28px;
+      height: 28px;
+      margin: 16px auto 0;
+      border-radius: 50%;
+      border: 5px solid var(--ink-card);
+      background: var(--amber);
+      box-shadow: 0 0 0 3px var(--olive);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .timeline-item.right {
+      grid-column: 3;
+    }
+
+    .timeline-item.left {
+      grid-column: 1;
+    }
+
+    .timeline-dot-wrap {
+      grid-column: 2;
+    }
+
+    .timeline-icon {
+      width: 78px;
+      height: 78px;
+      color: var(--amber);
+    }
+
+    .timeline-text h3 {
+      margin: 0 0 8px;
+      font-family: var(--font-display);
+      font-size: 19px;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .timeline-text p {
+      margin: 0;
+      color: color-mix(in srgb, var(--cream) 76%, transparent);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .case-study {
+      text-align: center;
+    }
+
+    .case-layout {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1fr);
+      gap: 70px;
+      align-items: center;
+      text-align: left;
+    }
+
+    .case-visual {
+      position: relative;
+      min-height: 330px;
+    }
+
+    .case-panel {
+      position: absolute;
+      border-radius: 5px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .case-panel.large {
+      width: 76%;
+      left: 0;
+      top: 0;
+    }
+
+    .case-panel.small {
+      width: 48%;
+      right: 0;
+      bottom: 0;
+      border: 5px solid var(--paper);
+    }
+
+    .case-copy h3 {
+      margin: 0 0 22px;
+      font-family: var(--font-display);
+      font-size: 27px;
+      letter-spacing: -0.04em;
+    }
+
+    .case-copy p {
+      max-width: 560px;
+      margin: 0 0 34px;
+      color: var(--muted-dark);
+      line-height: 1.55;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 34px;
+      max-width: 560px;
+    }
+
+    .case-metric strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 42px;
+      letter-spacing: -0.06em;
+    }
+
+    .case-metric span {
+      display: block;
+      color: var(--muted-dark);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+      gap: clamp(40px, 8vw, 96px);
+      align-items: center;
+    }
+
+    .solution-copy p {
+      margin: 26px 0 0;
+      max-width: 540px;
+      color: color-mix(in srgb, var(--cream) 80%, transparent);
+    }
+
+    .package {
+      padding: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--amber-light), var(--amber));
+      color: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .package h3 {
+      margin: 0 0 10px;
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: -0.04em;
+    }
+
+    .price-row {
+      display: flex;
+      gap: 18px;
+      align-items: baseline;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(24, 24, 23, 0.2);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .package ul {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 28px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: color-mix(in srgb, var(--ink) 82%, transparent);
+    }
+
+    .package li::before {
+      content: "✓ ";
+      font-weight: 900;
+    }
+
+    .package .dark-button {
+      width: 100%;
+    }
+
+    .stack {
+      text-align: center;
+    }
+
+    .stack-grid {
+      max-width: 830px;
+      margin: 44px auto 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px 36px;
+      color: color-mix(in srgb, var(--ink) 78%, transparent);
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .compare {
+      text-align: center;
+    }
+
+    .compare .body-copy {
+      margin: 22px auto 42px;
+      max-width: 700px;
+    }
+
+    .compare-table {
+      width: min(100%, 700px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.35fr repeat(3, 1fr);
+      border-top: 1px solid var(--line-dark);
+      color: var(--ink);
+      text-align: center;
+    }
+
+    .compare-table > div {
+      min-height: 50px;
+      padding: 14px 10px;
+      display: grid;
+      place-items: center;
+      border-bottom: 1px solid var(--line-dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .compare-table > div:nth-child(4n + 1) {
+      justify-items: start;
+      text-align: left;
+      color: var(--muted-dark);
+    }
+
+    .compare-table .highlight {
+      background: var(--amber-light);
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--cream);
+      font-size: 13px;
+    }
+
+    .testimonials {
+      text-align: center;
+    }
+
+    .testimonial-grid {
+      margin: 58px auto 0;
+      max-width: 990px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 42px;
+      text-align: center;
+    }
+
+    .quote {
+      color: color-mix(in srgb, var(--cream) 72%, transparent);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .quote-author {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 12px;
+      color: color-mix(in srgb, var(--cream) 60%, transparent);
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: grayscale(1);
+    }
+
+    .slider-bars {
+      width: 160px;
+      margin: 74px auto 28px;
+      display: grid;
+      grid-template-columns: 44px repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .slider-bars span {
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(246, 241, 232, 0.16);
+    }
+
+    .slider-bars span:first-child {
+      background: var(--amber-light);
+    }
+
+    .faq .headline {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .faq-list {
+      width: min(100%, 660px);
+      margin: 0 auto;
+    }
+
+    details {
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    summary {
+      min-height: 56px;
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid var(--line-dark);
+      border-radius: 50%;
+      color: var(--muted-dark);
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "-";
+    }
+
+    details p {
+      margin: -4px 0 18px;
+      color: var(--muted-dark);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .final-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      align-items: stretch;
+      margin-top: 76px;
+    }
+
+    .final-card {
+      min-height: 430px;
+      border-radius: 9px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .final-card.accent {
+      background: linear-gradient(135deg, var(--amber-light), var(--amber));
+      color: var(--ink);
+      padding: 44px;
+    }
+
+    .final-card.dark {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 44px;
+    }
+
+    .final-card h3 {
+      margin: 0 0 18px;
+      max-width: 360px;
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4.7vw, 42px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    .final-card p {
+      max-width: 420px;
+      margin: 0 0 28px;
+      color: color-mix(in srgb, currentColor 74%, transparent);
+    }
+
+    .final-card.accent h3,
+    .final-card.accent p {
+      max-width: 300px;
+    }
+
+    .final-card.dark h3,
+    .final-card.dark p {
+      max-width: 390px;
+    }
+
+    .final-card h3,
+    .final-card p,
+    .final-card .dark-button,
+    .final-card .outline-button {
+      position: relative;
+      z-index: 1;
+    }
+
+    .final-card img {
+      position: absolute;
+      right: -6%;
+      bottom: -14%;
+      width: 58%;
+      max-height: 230px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: saturate(0.9);
+    }
+
+    .final-card.accent img {
+      width: 52%;
+      right: 0;
+      bottom: -86px;
+      max-height: 170px;
+    }
+
+    .final-card.dark img {
+      width: 48%;
+      right: 0;
+      bottom: 0;
+      max-height: 180px;
+    }
+
+    .outline-button {
+      display: inline-flex;
+      min-height: 42px;
+      min-width: 220px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid var(--amber-light);
+      color: var(--amber-light);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .newsletter {
+      padding: 70px 20px 54px;
+      text-align: center;
+      background: var(--ink);
+      color: var(--cream);
+      border-top: 1px solid rgba(246, 241, 232, 0.08);
+    }
+
+    .newsletter h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 29px;
+      letter-spacing: -0.035em;
+    }
+
+    .newsletter p {
+      margin: 8px 0 28px;
+      color: color-mix(in srgb, var(--cream) 72%, transparent);
+    }
+
+    .email-form {
+      margin: 0 auto;
+      width: min(100%, 380px);
+      min-height: 42px;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(246, 241, 232, 0.36);
+      border-radius: 999px;
+    }
+
+    .email-form input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--cream);
+      padding: 0 16px;
+      font-size: 13px;
+    }
+
+    .email-form input::placeholder {
+      color: color-mix(in srgb, var(--cream) 46%, transparent);
+    }
+
+    .email-form button {
+      min-height: 34px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .footer {
+      padding: 44px clamp(20px, 5vw, 96px) 58px;
+      background: var(--ink);
+      color: var(--cream);
+      border-top: 1px solid rgba(246, 241, 232, 0.08);
+    }
+
+    .footer-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 46px;
+      align-items: end;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      color: color-mix(in srgb, var(--cream) 70%, transparent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .footer-meta {
+      color: color-mix(in srgb, var(--cream) 70%, transparent);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links,
+      .header-actions {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .mobile-panel {
+        position: fixed;
+        z-index: 49;
+        inset: 70px 16px auto;
+        padding: 18px;
+        display: none;
+        flex-direction: column;
+        gap: 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: color-mix(in srgb, var(--ink) 96%, transparent);
+        box-shadow: var(--shadow);
+      }
+
+      .mobile-panel.is-open {
+        display: flex;
+      }
+
+      .reasons-grid,
+      .result-grid,
+      .testimonial-grid,
+      .final-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .expert-grid,
+      .case-layout,
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expert-copy {
+        padding-bottom: 0;
+      }
+
+      .portrait {
+        min-height: 320px;
+      }
+
+      .stack-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .site-header {
+        padding: 14px 18px;
+      }
+
+      .hero {
+        padding-top: 108px;
+      }
+
+      .worker-track {
+        gap: 16px;
+        justify-content: flex-start;
+        padding-inline: 20px;
+      }
+
+      .work-strip::before,
+      .work-strip::after {
+        display: none;
+      }
+
+      .worker-card {
+        width: 132px;
+        height: 282px;
+      }
+
+      .logo-cloud {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .reasons-grid {
+        gap: 18px;
+      }
+
+      .reason-card {
+        min-height: 230px;
+        padding: 42px 26px;
+      }
+
+      .reason-number {
+        left: 20px;
+        font-size: 100px;
+      }
+
+      .timeline {
+        display: block;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 64px 1fr;
+        margin-bottom: 42px;
+        padding-left: 0;
+      }
+
+      .timeline-dot-wrap {
+        display: none;
+      }
+
+      .timeline-item::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        margin: 8px 0 0 8px;
+        border-radius: 50%;
+        border: 5px solid var(--ink-card);
+        background: var(--amber);
+        box-shadow: 0 0 0 3px var(--olive);
+      }
+
+      .timeline-icon {
+        width: 58px;
+        height: 58px;
+      }
+
+      .case-visual {
+        min-height: 270px;
+      }
+
+      .case-metrics,
+      .package ul {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .compare-table {
+        grid-template-columns: 1.2fr repeat(3, 0.82fr);
+      }
+
+      .compare-table > div {
+        font-size: 11px;
+        padding: 12px 6px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+
+      .footer-meta {
+        text-align: left;
+      }
+
+      .final-card.accent,
+      .final-card.dark {
+        padding: 32px 26px 238px;
+      }
+
+      .final-card h3,
+      .final-card p {
+        max-width: 100%;
+      }
+
+      .final-card img,
+      .final-card.accent img,
+      .final-card.dark img {
+        right: -16px;
+        bottom: 0;
+        width: min(88%, 360px);
+        max-height: 210px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Αρχική AmberLane" data-label-en="AmberLane home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AmberLane</span>
+      </a>
+      <nav class="nav-links" aria-label="Κύρια πλοήγηση" data-label-en="Primary navigation">
+        <a href="#why" data-en="Why AmberLane">Γιατί AmberLane</a>
+        <a href="#process" data-en="Process">Διαδικασία</a>
+        <a href="#case-studies" data-en="Case Studies">Μελέτες</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Επιλογή γλώσσας" data-label-en="Language selection">
+          <button type="button" class="is-active" data-lang="el" aria-pressed="true">EL</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="pill pill-outline" href="mailto:director@transportmarketing.net" data-en="Book a call">Κλείστε κλήση</a>
+        <a class="pill pill-primary" href="#solution" data-en="Get staffed">Βρείτε προσωπικό</a>
+        <svg class="briefcase" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7h3.5A1.5 1.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-9A1.5 1.5 0 0 1 4.5 7H8Zm2 0h4V5.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V7Zm-5 5.5V17a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-4.5a19.6 19.6 0 0 1-7 1.25 19.6 19.6 0 0 1-7-1.25Zm0-3.5v1.3a17.3 17.3 0 0 0 7 1.45 17.3 17.3 0 0 0 7-1.45V9H5Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" data-label-en="Open menu" aria-expanded="false">
+        <svg width="19" height="14" viewBox="0 0 19 14" aria-hidden="true">
+          <path d="M1 1h17M1 7h17M1 13h17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </header>
+
+    <nav class="mobile-panel" aria-label="Πλοήγηση κινητού" data-label-en="Mobile navigation">
+      <a href="#why" data-en="Why AmberLane">Γιατί AmberLane</a>
+      <a href="#process" data-en="Process">Διαδικασία</a>
+      <a href="#case-studies" data-en="Case Studies">Μελέτες</a>
+      <a href="mailto:director@transportmarketing.net" data-en="Book a call">Κλείστε κλήση</a>
+      <a href="#solution" data-en="Get staffed">Βρείτε προσωπικό</a>
+      <div class="language-switch mobile-language-switch" role="group" aria-label="Επιλογή γλώσσας" data-label-en="Language selection">
+        <button type="button" class="is-active" data-lang="el" aria-pressed="true">EL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow" data-en="Staffing pipelines for Greek operations">Ροές στελέχωσης για ελληνικές επιχειρήσεις</p>
+        <h1 class="display"><span data-en="We place vetted workers who keep">Βρίσκουμε ελεγμένο προσωπικό που κρατά</span> <span class="underline-swoop" data-en="business moving">την επιχείρηση σε κίνηση</span></h1>
+        <p data-en="AmberLane handles sourcing, screening, compliance, relocation, and replacement support for hospitality, construction, logistics, and care teams across Greece.">Η AmberLane αναλαμβάνει εύρεση, έλεγχο, συμμόρφωση, μετεγκατάσταση και αντικατάσταση προσωπικού για φιλοξενία, κατασκευές, εφοδιαστική και φροντίδα σε όλη την Ελλάδα.</p>
+        <div class="hero-actions">
+          <a class="pill pill-primary" href="#why" data-en="Learn more">Μάθετε περισσότερα</a>
+        </div>
+
+        <div class="work-strip" aria-label="Κατηγορίες στελέχωσης AmberLane" data-label-en="AmberLane staffing categories">
+          <div class="worker-track">
+            <article class="worker-card">
+              <img src="images/hero_1.jpg" alt="Εργαζόμενοι σε εργοτάξιο" data-alt-en="Construction workers on site">
+              <div class="card-sheet"><small data-en="Construction">Κατασκευές</small><strong data-en="Skilled site crews">Συνεργεία εργοταξίου</strong><span data-en="General labor, foremen, helpers, and industrial hands.">Εργάτες, εργοδηγοί, βοηθοί και βιομηχανικά χέρια.</span></div>
+              <span class="work-pill" data-en="Source workers">Βρείτε εργάτες</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/img_1.jpg" alt="Χώρος φιλοξενίας" data-alt-en="Hospitality interior">
+              <div class="card-sheet"><small data-en="Hotels">Ξενοδοχεία</small><strong data-en="Seasonal teams">Εποχικές ομάδες</strong><span data-en="Housekeeping, reception, kitchen, F&amp;B, and resort support.">Καθαριότητα, υποδοχή, κουζίνα, εστίαση και υποστήριξη μονάδων.</span></div>
+              <span class="work-pill" data-en="Fill shifts">Καλύψτε βάρδιες</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/slider-1.jpg" alt="Λειτουργία αποθήκης" data-alt-en="Warehouse operation">
+              <div class="card-sheet"><small data-en="Logistics">Εφοδιαστική</small><strong data-en="Warehouse staff">Προσωπικό αποθήκης</strong><span data-en="Pick, pack, loading, dispatch, and back-of-house operations.">Παραλαβές, συσκευασία, φόρτωση, αποστολές και υποστήριξη.</span></div>
+              <span class="work-pill" data-en="Move faster">Προχωρήστε</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/img_2.jpg" alt="Επαγγελματική συνάντηση" data-alt-en="Business meeting">
+              <div class="card-sheet"><small data-en="Office">Γραφείο</small><strong data-en="Admin support">Διοικητική υποστήριξη</strong><span data-en="Reliable staff for reception, back office, and coordination roles.">Αξιόπιστα άτομα για υποδοχή, διοικητική υποστήριξη και συντονισμό.</span></div>
+              <span class="work-pill" data-en="Stay covered">Κάλυψη ρόλων</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/slider-3.jpg" alt="Χώρος καθημερινής εργασίας" data-alt-en="Operational work area">
+              <div class="card-sheet"><small data-en="Care">Φροντίδα</small><strong data-en="Home services">Υπηρεσίες σπιτιού</strong><span data-en="Housekeeping, childcare, elder care, and domestic assistance.">Καθαριότητα, φύλαξη παιδιών, φροντίδα ηλικιωμένων και οικιακή βοήθεια.</span></div>
+              <span class="work-pill" data-en="Build trust">Χτίστε σιγουριά</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/hero_2.jpg" alt="Βιομηχανικός εργαζόμενος" data-alt-en="Industrial worker">
+              <div class="card-sheet"><small data-en="Industrial">Βιομηχανία</small><strong data-en="Ready labor pool">Έτοιμη δεξαμενή</strong><span data-en="Screened candidates prepared for demanding environments.">Ελεγμένοι υποψήφιοι για απαιτητικά περιβάλλοντα.</span></div>
+              <span class="work-pill" data-en="Deploy crews">Στήστε ομάδες</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/slider-2.jpg" alt="Τεχνική εργασία επισκευής" data-alt-en="Technical repair work">
+              <div class="card-sheet"><small data-en="Technical">Τεχνικά</small><strong data-en="Specialist roles">Ειδικοί ρόλοι</strong><span data-en="Practical screening for roles where skill and reliability matter.">Πρακτικός έλεγχος για ρόλους όπου μετρά η αξιοπιστία.</span></div>
+              <span class="work-pill" data-en="Verify skills">Ελέγξτε ικανότητες</span>
+            </article>
+            <article class="worker-card">
+              <img src="images/img_5.jpg" alt="Συνάντηση ομάδας" data-alt-en="Team meeting">
+              <div class="card-sheet"><small data-en="Compliance">Συμμόρφωση</small><strong data-en="Paperwork handled">Χαρτιά οργανωμένα</strong><span data-en="Permits, relocation support, insurance, and onboarding steps.">Άδειες, μετεγκατάσταση, ασφάλιση και βήματα ένταξης.</span></div>
+              <span class="work-pill" data-en="Start clean">Σωστή αρχή</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="trusted">
+        <h2 data-en="AmberLane is built for teams that cannot run short-staffed">Η AmberLane είναι φτιαγμένη για ομάδες που δεν αντέχουν κενές βάρδιες</h2>
+        <div class="logo-cloud" aria-label="Κλάδοι που εξυπηρετούνται" data-label-en="Industries served">
+          <span data-en="hotels">ξενοδοχεία</span>
+          <span data-en="resorts">τουριστικές μονάδες</span>
+          <span data-en="warehouses">αποθήκες</span>
+          <span data-en="builders">εργολάβοι</span>
+          <span data-en="cafes">καφέ</span>
+          <span data-en="care homes">μονάδες φροντίδας</span>
+          <span data-en="factories">εργοστάσια</span>
+          <span data-en="private homes">ιδιωτικές κατοικίες</span>
+        </div>
+      </section>
+
+      <section class="section section-dark reasons" id="why">
+        <div class="section-inner">
+          <h2 class="headline" data-en="4 Reasons why companies use AmberLane to build workforce capacity">4 λόγοι που οι επιχειρήσεις χρησιμοποιούν την AmberLane για να χτίσουν δυναμικό προσωπικού</h2>
+          <div class="reasons-grid">
+            <article class="reason-card">
+              <span class="reason-number">1</span>
+              <h3 data-en="We recruit for the shift, not just the CV">Προσλαμβάνουμε για τη βάρδια, όχι μόνο για το βιογραφικό</h3>
+              <p data-en="Profiles are screened against the real job: hours, housing, physical requirements, language needs, and manager expectations.">Τα προφίλ ελέγχονται με βάση την πραγματική δουλειά: ώρες, διαμονή, φυσικές απαιτήσεις, γλώσσα και προσδοκίες του υπευθύνου.</p>
+            </article>
+            <article class="reason-card">
+              <span class="reason-number">2</span>
+              <h3 data-en="Compliance is part of the service">Η συμμόρφωση είναι μέρος της υπηρεσίας</h3>
+              <p data-en="Visa steps, permits, contracts, insurance, and relocation details are tracked so hiring does not become another admin load.">Βίζες, άδειες, συμβάσεις, ασφάλιση και μετεγκατάσταση παρακολουθούνται ώστε η πρόσληψη να μη γίνει άλλο ένα διοικητικό βάρος.</p>
+            </article>
+            <article class="reason-card">
+              <span class="reason-number">3</span>
+              <h3 data-en="Your operations stay understandable">Οι λειτουργίες σας μένουν καθαρές</h3>
+              <p data-en="Shortlists, documents, arrival dates, replacement windows, and open roles are kept clear from first request to first day.">Λίστες υποψηφίων, έγγραφα, αφίξεις, αντικαταστάσεις και ανοιχτοί ρόλοι μένουν ξεκάθαρα από το πρώτο αίτημα έως την πρώτη ημέρα.</p>
+            </article>
+            <article class="reason-card">
+              <span class="reason-number">4</span>
+              <h3 data-en="Designed for repeat seasonal demand">Σχεδιασμένο για επαναλαμβανόμενη εποχική ζήτηση</h3>
+              <p data-en="Hospitality, construction, and logistics hiring is cyclical. We build a pipeline you can reuse before pressure hits.">Η στελέχωση σε φιλοξενία, κατασκευές και εφοδιαστική είναι κυκλική. Χτίζουμε ροή υποψηφίων που επαναχρησιμοποιείται πριν έρθει η πίεση.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark journey">
+        <div class="section-inner">
+          <p class="eyebrow" data-en="Reduce hiring friction and stabilize operations">Μειώστε την τριβή στις προσλήψεις και σταθεροποιήστε τη λειτουργία</p>
+          <h2 class="headline" data-en="Here is why you should use AmberLane for staffing">Γιατί να χρησιμοποιήσετε την AmberLane για στελέχωση</h2>
+          <p class="body-copy" data-en="Move from scattered referrals, late-night calls, and uncertain paperwork into one managed flow from role request to worker arrival.">Περάστε από σκόρπιες συστάσεις, βραδινά τηλεφωνήματα και αβέβαια χαρτιά σε μία οργανωμένη ροή από το αίτημα ρόλου έως την άφιξη εργαζομένου.</p>
+          <svg class="path-map" viewBox="0 0 900 260" role="img" aria-label="Διαδρομή στελέχωσης AmberLane σε σύγκριση με πρόχειρη πρόσληψη" data-label-en="AmberLane staffing path compared with ad hoc hiring">
+            <defs>
+              <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M140 128 C210 128 205 45 276 45 H620" stroke="var(--amber-light)" stroke-width="8" filter="url(#glow)"/>
+              <path d="M140 128 C215 128 210 213 310 213 H778" stroke="rgba(246,241,232,0.16)" stroke-width="6"/>
+            </g>
+            <g fill="var(--cream)" font-family="Geist, Noto Sans, sans-serif" font-size="13" font-weight="700">
+              <text x="74" y="112" data-en="Open role">Ανοιχτός ρόλος</text>
+              <text x="246" y="28" data-en="Role brief">Περιγραφή ρόλου</text>
+              <text x="395" y="28" data-en="Shortlist">Λίστα</text>
+              <text x="544" y="28" data-en="Arrival plan">Πλάνο άφιξης</text>
+              <text x="650" y="50" data-en="First shift">Πρώτη βάρδια</text>
+              <text x="282" y="239" opacity=".46" data-en="Referrals">Συστάσεις</text>
+              <text x="420" y="239" opacity=".46" data-en="Messages">Μηνύματα</text>
+              <text x="564" y="239" opacity=".46" data-en="Paperwork">Χαρτιά</text>
+              <text x="696" y="239" opacity=".46" data-en="Delays">Καθυστερήσεις</text>
+            </g>
+            <g>
+              <circle cx="642" cy="45" r="14" fill="var(--amber-light)"/>
+              <path d="M635 45l5 5 10-12" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="795" cy="213" r="14" fill="#e36d3e"/>
+              <path d="M790 208l10 10M800 208l-10 10" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="cta-band section-dark">
+        <div class="cta-card">
+          <h2 data-en="Ready to staff your next season without last-minute panic?">Έτοιμοι να στελεχώσετε την επόμενη σεζόν χωρίς πανικό τελευταίας στιγμής;</h2>
+          <a class="dark-button" href="mailto:director@transportmarketing.net" data-en="Start a staffing request">Ξεκινήστε αίτημα στελέχωσης</a>
+        </div>
+      </section>
+
+      <section class="section section-dark expert">
+        <div class="section-inner expert-grid">
+          <div class="expert-copy">
+            <p class="eyebrow" data-en="Here is why you should trust AmberLane">Γιατί μπορείτε να εμπιστευτείτε την AmberLane</p>
+            <h2 class="headline" data-en="We are operators in staffing that holds under pressure.">Είμαστε πρακτικοί συνεργάτες στη στελέχωση που αντέχει στην πίεση.</h2>
+            <p data-en="AmberLane is built around practical recruitment, direct communication, and clean execution. The goal is simple: give business owners a reliable path from urgent staffing need to people who can actually work.">Η AmberLane χτίστηκε γύρω από πρακτική πρόσληψη, άμεση επικοινωνία και καθαρή εκτέλεση. Ο στόχος είναι απλός: να δώσει στους επιχειρηματίες αξιόπιστη διαδρομή από την ανάγκη στελέχωσης έως ανθρώπους που μπορούν όντως να εργαστούν.</p>
+            <p data-en="We match the worker profile to the job environment, not to a generic role title. That means fewer surprises, better first weeks, and a process that managers can follow without chasing ten different people.">Ταιριάζουμε το προφίλ του εργαζομένου με το πραγματικό περιβάλλον εργασίας, όχι με έναν γενικό τίτλο ρόλου. Αυτό σημαίνει λιγότερες εκπλήξεις, καλύτερες πρώτες εβδομάδες και διαδικασία που οι υπεύθυνοι μπορούν να παρακολουθήσουν χωρίς ατελείωτο κυνηγητό.</p>
+          </div>
+          <div class="portrait">
+            <img src="images/person_1.jpg" alt="Σύμβουλος στελέχωσης AmberLane" data-alt-en="AmberLane staffing advisor">
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light results">
+        <div class="section-inner">
+          <p class="eyebrow" data-en="It works in real operations">Λειτουργεί σε πραγματικές επιχειρήσεις</p>
+          <h2 class="headline" data-en="As you can see for yourself, stable staffing changes the business">Όπως μπορείτε να δείτε, η σταθερή στελέχωση αλλάζει την επιχείρηση</h2>
+          <div class="result-grid">
+            <article class="result-card"><strong>72h</strong><span data-en="typical first shortlist for repeat role profiles.">τυπική πρώτη λίστα για επαναλαμβανόμενα προφίλ ρόλων.</span></article>
+            <article class="result-card"><strong>3x</strong><span data-en="fewer manager follow-ups when documents are centralized.">λιγότερες επαφές με υπευθύνους όταν τα έγγραφα είναι συγκεντρωμένα.</span></article>
+            <article class="result-card"><strong>6</strong><span data-en="core sectors covered across seasonal and permanent roles.">βασικοί κλάδοι σε εποχικούς και μόνιμους ρόλους.</span></article>
+            <article class="result-card"><strong>1</strong><span data-en="clear contact from brief to arrival and replacement support.">καθαρή επαφή από την περιγραφή έως την άφιξη και την αντικατάσταση.</span></article>
+          </div>
+          <p class="footnote" data-en="Operational estimates vary by country, role, season, and documentation status.">Οι λειτουργικές εκτιμήσεις διαφέρουν ανά χώρα, ρόλο, σεζόν και κατάσταση εγγράφων.</p>
+        </div>
+      </section>
+
+      <section class="section section-dark timeline-section" id="process">
+        <div class="section-inner">
+          <h2 class="headline" data-en="What happens when you request workers from AmberLane">Τι συμβαίνει όταν ζητάτε εργαζόμενους από την AmberLane</h2>
+          <div class="timeline">
+            <article class="timeline-item left">
+              <svg class="timeline-icon" viewBox="0 0 80 80" aria-hidden="true">
+                <rect x="14" y="8" width="42" height="58" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M23 22h24M23 32h18M23 44h26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M51 56l14-14 5 5-14 14-8 3 3-8Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div class="timeline-text">
+                <h3 data-en="Fill out a detailed staffing brief">Συμπληρώνετε αναλυτική περιγραφή στελέχωσης</h3>
+                <p data-en="We capture role, location, dates, housing, language, salary range, and non-negotiables.">Καταγράφουμε ρόλο, τοποθεσία, ημερομηνίες, διαμονή, γλώσσα, μισθολογικό εύρος και μη διαπραγματεύσιμα.</p>
+              </div>
+            </article>
+            <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
+
+            <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
+            <article class="timeline-item right">
+              <svg class="timeline-icon" viewBox="0 0 80 80" aria-hidden="true">
+                <rect x="13" y="27" width="44" height="30" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M57 37h9a7 7 0 0 1 0 14h-9" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="34" cy="42" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M23 57c2-7 20-7 22 0" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div class="timeline-text">
+                <h3 data-en="Kick-off call">Κλήση εκκίνησης</h3>
+                <p data-en="We confirm the role, explain realistic timelines, and align on candidate quality before sourcing starts.">Επιβεβαιώνουμε τον ρόλο, εξηγούμε ρεαλιστικά χρονοδιαγράμματα και συμφωνούμε στην ποιότητα υποψηφίων πριν ξεκινήσει η αναζήτηση.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item left">
+              <svg class="timeline-icon" viewBox="0 0 80 80" aria-hidden="true">
+                <rect x="11" y="20" width="27" height="37" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="45" y="20" width="24" height="37" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M17 30h15M17 38h10M51 30l12 12M63 30 51 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div class="timeline-text">
+                <h3 data-en="Sourcing, screening, and documentation">Αναζήτηση, έλεγχος και έγγραφα</h3>
+                <p data-en="We shortlist candidates, verify fit, gather documents, and flag any risk before you choose.">Φτιάχνουμε λίστα υποψηφίων, ελέγχουμε την καταλληλότητα, συγκεντρώνουμε έγγραφα και επισημαίνουμε κινδύνους πριν επιλέξετε.</p>
+              </div>
+            </article>
+            <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
+
+            <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
+            <article class="timeline-item right">
+              <svg class="timeline-icon" viewBox="0 0 80 80" aria-hidden="true">
+                <rect x="14" y="16" width="52" height="38" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M23 43c10-18 18 12 29-12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M31 64h18M40 54v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div class="timeline-text">
+                <h3 data-en="Offer, travel, and onboarding plan">Προσφορά, ταξίδι και πλάνο ένταξης</h3>
+                <p data-en="We organize approvals, arrival dates, first-day requirements, and handover details for managers.">Οργανώνουμε εγκρίσεις, ημερομηνίες άφιξης, απαιτήσεις πρώτης ημέρας και παράδοση πληροφοριών στους υπευθύνους.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item left">
+              <svg class="timeline-icon" viewBox="0 0 80 80" aria-hidden="true">
+                <path d="M40 9c8 8 12 19 12 31l13 9-13 3-3 14-9-13-9 13-3-14-13-3 13-9c0-12 4-23 12-31Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="40" cy="30" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div class="timeline-text">
+                <h3 data-en="Your workers start">Οι εργαζόμενοι ξεκινούν</h3>
+                <p data-en="We stay close during the first weeks and manage replacement support if a placement does not hold.">Μένουμε κοντά τις πρώτες εβδομάδες και διαχειριζόμαστε υποστήριξη αντικατάστασης αν μια τοποθέτηση δεν κρατήσει.</p>
+              </div>
+            </article>
+            <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light case-study" id="case-studies">
+        <div class="section-inner">
+          <p class="eyebrow" data-en="It works, too">Λειτουργεί και στην πράξη</p>
+          <h2 class="headline" data-en="Case studies">Μελέτες περιπτώσεων</h2>
+          <div class="case-layout">
+            <div class="case-visual">
+              <div class="case-panel large"><img src="images/img_1.jpg" alt="Περίπτωση στελέχωσης φιλοξενίας" data-alt-en="Hospitality staffing case"></div>
+              <div class="case-panel small"><img src="images/hero_1.jpg" alt="Περίπτωση στελέχωσης κατασκευών" data-alt-en="Construction staffing case"></div>
+            </div>
+            <div class="case-copy">
+              <h3 data-en="Seasonal hospitality team">Εποχική ομάδα φιλοξενίας</h3>
+              <p data-en="A hotel group needed a clean path for seasonal staff before peak demand. AmberLane mapped the role profiles, screened for practical fit, and centralized paperwork so managers could hire without constant follow-up.">Ένας ξενοδοχειακός όμιλος χρειαζόταν καθαρή διαδρομή για εποχικό προσωπικό πριν την αιχμή ζήτησης. Η AmberLane χαρτογράφησε τα προφίλ ρόλων, έλεγξε πρακτική καταλληλότητα και συγκέντρωσε τα έγγραφα ώστε οι υπεύθυνοι να προσλάβουν χωρίς συνεχείς επαφές.</p>
+              <div class="case-metrics">
+                <div class="case-metric"><strong>18</strong><span data-en="roles grouped into repeatable hiring profiles.">ρόλοι ομαδοποιημένοι σε επαναλαμβανόμενα προφίλ πρόσληψης.</span></div>
+                <div class="case-metric"><strong data-en="5wk">5εβδ.</strong><span data-en="planning window from brief to first arrivals.">παράθυρο σχεδιασμού από περιγραφή έως πρώτες αφίξεις.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="solution">
+        <div class="section-inner solution-grid">
+          <div class="solution-copy">
+            <p class="eyebrow" data-en="Let's talk staffing">Ας μιλήσουμε για στελέχωση</p>
+            <h2 class="headline" data-en="Our workforce pipeline solution">Η λύση μας για ροή προσωπικού</h2>
+            <p data-en="We build a role-by-role hiring process for businesses that need dependable people, not random applications. Each request becomes a tracked staffing lane with sourcing, screening, compliance, onboarding, and replacement terms.">Χτίζουμε διαδικασία πρόσληψης ανά ρόλο για επιχειρήσεις που χρειάζονται αξιόπιστους ανθρώπους, όχι τυχαίες αιτήσεις. Κάθε αίτημα γίνεται οργανωμένη ροή στελέχωσης με αναζήτηση, έλεγχο, συμμόρφωση, ένταξη και όρους αντικατάστασης.</p>
+            <p data-en="AmberLane helps teams understand who they need, where candidates can come from, what paperwork is required, and what timeline is realistic before pressure reaches the operation.">Η AmberLane βοηθά τις ομάδες να καταλάβουν ποιον χρειάζονται, από πού μπορούν να έρθουν υποψήφιοι, ποια χαρτιά απαιτούνται και ποιο χρονοδιάγραμμα είναι ρεαλιστικό πριν η πίεση φτάσει στη λειτουργία.</p>
+          </div>
+          <aside class="package" aria-label="Πακέτο στελέχωσης AmberLane" data-label-en="AmberLane staffing package">
+            <h3 data-en="Staffing pipeline build">Χτίσιμο ροής στελέχωσης</h3>
+            <div class="price-row"><span data-en="from consultation">από συμβουλευτική</span><span data-en="custom per role">προσαρμοσμένο ανά ρόλο</span></div>
+            <ul>
+              <li data-en="Role definition">Ορισμός ρόλου</li>
+              <li data-en="Candidate sourcing">Αναζήτηση υποψηφίων</li>
+              <li data-en="Screening calls">Κλήσεις ελέγχου</li>
+              <li data-en="Document tracking">Παρακολούθηση εγγράφων</li>
+              <li data-en="Compliance support">Υποστήριξη συμμόρφωσης</li>
+              <li data-en="Arrival planning">Πλάνο άφιξης</li>
+              <li data-en="Manager handover">Παράδοση σε υπεύθυνο</li>
+              <li data-en="Replacement support">Υποστήριξη αντικατάστασης</li>
+            </ul>
+            <a class="dark-button" href="mailto:director@transportmarketing.net" data-en="Build my pipeline">Χτίστε τη ροή μου</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-light stack">
+        <div class="section-inner">
+          <h2 class="headline" data-en="We plug into your operating stack">Κουμπώνουμε στη λειτουργική σας ροή</h2>
+          <div class="stack-grid" aria-label="Λειτουργικές περιοχές που υποστηρίζει η AmberLane" data-label-en="Operational areas AmberLane supports">
+            <span data-en="Hotels">Ξενοδοχεία</span>
+            <span data-en="Resorts">Τουριστικές μονάδες</span>
+            <span data-en="Logistics">Εφοδιαστική</span>
+            <span data-en="Construction">Κατασκευές</span>
+            <span data-en="Warehouses">Αποθήκες</span>
+            <span data-en="Payroll">Μισθοδοσία</span>
+            <span data-en="Permits">Άδειες</span>
+            <span data-en="Insurance">Ασφάλιση</span>
+            <span data-en="Housing">Διαμονή</span>
+            <span data-en="Onboarding">Ένταξη</span>
+            <span data-en="Care">Φροντίδα</span>
+            <span data-en="Offices">Γραφεία</span>
+            <span data-en="Factories">Εργοστάσια</span>
+            <span data-en="Restaurants">Εστιατόρια</span>
+            <span data-en="Homes">Κατοικίες</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light compare">
+        <div class="section-inner">
+          <h2 class="headline" data-en="How we compare">Πώς συγκρινόμαστε</h2>
+          <p class="body-copy" data-en="Most hiring routes either push the work back to the manager or disappear after sending a CV. AmberLane is built to stay with the operational reality until the worker can actually start.">Οι περισσότερες διαδρομές πρόσληψης είτε επιστρέφουν τη δουλειά στον υπεύθυνο είτε εξαφανίζονται μετά την αποστολή ενός βιογραφικού. Η AmberLane μένει μέσα στη λειτουργική πραγματικότητα μέχρι ο εργαζόμενος να ξεκινήσει όντως.</p>
+          <div class="compare-table" role="table" aria-label="Πίνακας σύγκρισης AmberLane" data-label-en="AmberLane comparison table">
+            <div></div><div class="highlight">AmberLane</div><div data-en="In-house">Εσωτερικά</div><div data-en="Classic agency">Κλασικό γραφείο</div>
+            <div data-en="No scattered follow-up needed">Χωρίς σκόρπια παρακολούθηση</div><div><span class="check">✓</span></div><div>x</div><div data-en="sometimes">μερικές φορές</div>
+            <div data-en="Candidate fit checked against real shift">Έλεγχος καταλληλότητας για πραγματική βάρδια</div><div><span class="check">✓</span></div><div data-en="sometimes">μερικές φορές</div><div>x</div>
+            <div data-en="Documents tracked in one flow">Έγγραφα σε μία ροή</div><div><span class="check">✓</span></div><div>x</div><div data-en="sometimes">μερικές φορές</div>
+            <div data-en="Replacement terms discussed early">Όροι αντικατάστασης από νωρίς</div><div><span class="check">✓</span></div><div>x</div><div>x</div>
+            <div data-en="Repeat role pipeline for next season">Ροή ρόλων για την επόμενη σεζόν</div><div><span class="check">✓</span></div><div data-en="sometimes">μερικές φορές</div><div>x</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark testimonials">
+        <div class="section-inner">
+          <h2 class="headline" data-en="What others have to say about working with AmberLane">Τι λένε άλλοι για τη συνεργασία με την AmberLane</h2>
+          <div class="testimonial-grid">
+            <figure>
+              <blockquote class="quote" data-en="&quot;The biggest change was clarity. We knew who was coming, what was missing, and what each manager needed to prepare.&quot;">"Η μεγαλύτερη αλλαγή ήταν η σαφήνεια. Ξέραμε ποιος έρχεται, τι λείπει και τι έπρεπε να προετοιμάσει κάθε υπεύθυνος."</blockquote>
+              <figcaption class="quote-author"><img class="avatar" src="images/person_2.jpg" alt=""><span data-en="Hotel Operations Manager">Υπεύθυνος λειτουργίας ξενοδοχείου</span></figcaption>
+            </figure>
+            <figure>
+              <blockquote class="quote" data-en="&quot;AmberLane understood that site work is not just bodies. They screened for availability, stamina, documents, and communication.&quot;">"Η AmberLane κατάλαβε ότι το εργοτάξιο δεν είναι απλώς σώματα. Έλεγξαν διαθεσιμότητα, αντοχή, έγγραφα και επικοινωνία."</blockquote>
+              <figcaption class="quote-author"><img class="avatar" src="images/person_1.jpg" alt=""><span data-en="Construction Coordinator">Συντονιστής Κατασκευών</span></figcaption>
+            </figure>
+            <figure>
+              <blockquote class="quote" data-en="&quot;It took pressure off our back office. Candidate details and paperwork were organized before we had to make decisions.&quot;">"Έβγαλε πίεση από το διοικητικό μας γραφείο. Τα στοιχεία υποψηφίων και τα χαρτιά ήταν οργανωμένα πριν χρειαστεί να αποφασίσουμε."</blockquote>
+              <figcaption class="quote-author"><img class="avatar" src="images/person_3.jpg" alt=""><span data-en="Logistics Founder">Ιδρυτής εφοδιαστικής</span></figcaption>
+            </figure>
+          </div>
+          <div class="slider-bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <a class="pill pill-primary" href="mailto:director@transportmarketing.net" data-en="Get started">Ξεκινήστε</a>
+        </div>
+      </section>
+
+      <section class="section section-light faq">
+        <div class="section-inner">
+          <h2 class="headline" data-en="Frequently Asked Questions">Συχνές ερωτήσεις</h2>
+          <div class="faq-list">
+            <details>
+              <summary data-en="Which roles can AmberLane help with?">Σε ποιους ρόλους μπορεί να βοηθήσει η AmberLane;</summary>
+              <p data-en="Hospitality, construction, logistics, industrial, office support, household, and care roles. The best fit is repeatable operational hiring, especially when documents and timing matter.">Φιλοξενία, κατασκευές, εφοδιαστική, βιομηχανία, γραφειακή υποστήριξη, οικιακές υπηρεσίες και φροντίδα. Η καλύτερη εφαρμογή είναι επαναλαμβανόμενη λειτουργική πρόσληψη, ειδικά όταν τα έγγραφα και ο χρόνος έχουν σημασία.</p>
+            </details>
+            <details>
+              <summary data-en="How long does the first shortlist take?">Πόσο χρόνο παίρνει η πρώτη λίστα;</summary>
+              <p data-en="It depends on the role, source country, season, and compliance requirements. Repeatable profiles can move faster once the role brief is clear.">Εξαρτάται από τον ρόλο, τη χώρα προέλευσης, τη σεζόν και τις απαιτήσεις συμμόρφωσης. Τα επαναλαμβανόμενα προφίλ κινούνται πιο γρήγορα όταν η περιγραφή ρόλου είναι καθαρή.</p>
+            </details>
+            <details>
+              <summary data-en="Do you handle work permits and documents?">Αναλαμβάνετε άδειες εργασίας και έγγραφα;</summary>
+              <p data-en="AmberLane tracks the workflow and supports the required documentation steps, then keeps the business informed about missing items and timing risks.">Η AmberLane παρακολουθεί τη ροή και υποστηρίζει τα απαραίτητα βήματα τεκμηρίωσης, κρατώντας την επιχείρηση ενημερωμένη για ελλείψεις και κινδύνους χρόνου.</p>
+            </details>
+            <details>
+              <summary data-en="Can you support seasonal hotel staffing?">Μπορείτε να υποστηρίξετε εποχική στελέχωση ξενοδοχείων;</summary>
+              <p data-en="Yes. Seasonal hospitality teams are a core use case, including housekeeping, reception, F&amp;B, kitchen, maintenance, and support staff.">Ναι. Οι εποχικές ομάδες φιλοξενίας είναι βασική περίπτωση χρήσης, με καθαριότητα, υποδοχή, εστίαση, κουζίνα, συντήρηση και υποστηρικτικό προσωπικό.</p>
+            </details>
+            <details>
+              <summary data-en="What happens if a placement does not work?">Τι γίνεται αν μια τοποθέτηση δεν πετύχει;</summary>
+              <p data-en="Replacement expectations are discussed before placement. The goal is to keep your operation covered rather than treat the hire as a one-time transaction.">Οι προσδοκίες αντικατάστασης συζητούνται πριν την τοποθέτηση. Ο στόχος είναι να μείνει η λειτουργία σας καλυμμένη, όχι να αντιμετωπιστεί η πρόσληψη ως μεμονωμένη συναλλαγή.</p>
+            </details>
+            <details>
+              <summary data-en="Who needs to be involved from our side?">Ποιος χρειάζεται να συμμετέχει από τη δική μας πλευρά;</summary>
+              <p data-en="Usually one owner or operations lead, plus the manager who knows the day-to-day job. Clear requirements upfront reduce delays later.">Συνήθως ένας ιδιοκτήτης ή υπεύθυνος λειτουργίας, μαζί με τον προϊστάμενο που γνωρίζει την καθημερινή δουλειά. Οι καθαρές απαιτήσεις από την αρχή μειώνουν καθυστερήσεις μετά.</p>
+            </details>
+            <details>
+              <summary data-en="Can you help with workers from Nepal, India, and the Philippines?">Μπορείτε να βοηθήσετε με εργαζόμενους από Νεπάλ, Ινδία και Φιλιππίνες;</summary>
+              <p data-en="Yes. The current AmberLane positioning includes international recruitment from those markets, with screening and relocation workflow support.">Ναι. Η τρέχουσα θέση της AmberLane περιλαμβάνει διεθνή πρόσληψη από αυτές τις αγορές, με έλεγχο και υποστήριξη ροής μετεγκατάστασης.</p>
+            </details>
+            <details>
+              <summary data-en="Is this only for large companies?">Είναι μόνο για μεγάλες εταιρείες;</summary>
+              <p data-en="No. Smaller businesses can use AmberLane when the role is important enough that a wrong hire or late arrival would damage operations.">Όχι. Μικρότερες επιχειρήσεις μπορούν να χρησιμοποιήσουν την AmberLane όταν ο ρόλος είναι αρκετά σημαντικός ώστε μια λάθος πρόσληψη ή καθυστερημένη άφιξη να επηρεάσει τη λειτουργία.</p>
+            </details>
+            <details>
+              <summary data-en="Can we use AmberLane for permanent roles?">Μπορούμε να χρησιμοποιήσουμε την AmberLane για μόνιμους ρόλους;</summary>
+              <p data-en="Yes. Seasonal and permanent placements can both fit, as long as the role requirements and expectations are made clear at the start.">Ναι. Εποχικές και μόνιμες τοποθετήσεις μπορούν να λειτουργήσουν, αρκεί οι απαιτήσεις και οι προσδοκίες του ρόλου να είναι ξεκάθαρες από την αρχή.</p>
+            </details>
+            <details>
+              <summary data-en="How do we start?">Πώς ξεκινάμε;</summary>
+              <p data-en="Send a short message with the role, location, number of people, timing, and any housing or document constraints. AmberLane will turn that into a staffing brief.">Στείλτε ένα σύντομο μήνυμα με ρόλο, τοποθεσία, αριθμό ατόμων, χρονισμό και τυχόν περιορισμούς σε διαμονή ή έγγραφα. Η AmberLane θα το μετατρέψει σε περιγραφή στελέχωσης.</p>
+            </details>
+          </div>
+
+          <div class="final-cards">
+            <article class="final-card accent">
+              <h3 data-en="Ready to stop hiring at the last minute?">Έτοιμοι να σταματήσετε τις προσλήψεις τελευταίας στιγμής;</h3>
+              <p data-en="Tell us the roles, dates, and locations you need covered. We will map the staffing lane and next steps.">Πείτε μας τους ρόλους, τις ημερομηνίες και τις τοποθεσίες που χρειάζεστε. Θα χαρτογραφήσουμε τη ροή στελέχωσης και τα επόμενα βήματα.</p>
+              <a class="dark-button" href="mailto:director@transportmarketing.net" data-en="Build my pipeline">Χτίστε τη ροή μου</a>
+              <img src="images/slider-1.jpg" alt="Λειτουργία στελέχωσης αποθήκης" data-alt-en="Warehouse staffing operation">
+            </article>
+            <article class="final-card dark">
+              <h3 data-en="Not ready to hire yet? Book a call with us.">Δεν είστε έτοιμοι να προσλάβετε; Κλείστε μια κλήση μαζί μας.</h3>
+              <p data-en="Use the call to understand timelines, documentation, and what a realistic worker pipeline would look like for your business.">Χρησιμοποιήστε την κλήση για να καταλάβετε χρονοδιαγράμματα, έγγραφα και πώς μοιάζει μια ρεαλιστική ροή εργαζομένων για την επιχείρησή σας.</p>
+              <a class="outline-button" href="tel:+306989442438" data-en="Let's talk">Ας μιλήσουμε</a>
+              <img src="images/person_3.jpg" alt="Σύμβουλος AmberLane" data-alt-en="AmberLane advisor">
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <h2 data-en="Subscribe to our workforce notes.">Γραφτείτε στις σημειώσεις στελέχωσης.</h2>
+        <p data-en="Practical staffing updates for business owners and operators.">Πρακτικές ενημερώσεις στελέχωσης για ιδιοκτήτες και υπευθύνους λειτουργίας.</p>
+        <form class="email-form" action="mailto:director@transportmarketing.net" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="Το email σας" aria-label="Διεύθυνση email" data-placeholder-en="Your Email" data-label-en="Email address">
+          <button type="submit" data-en="Subscribe">Εγγραφή</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>AmberLane</span>
+        </a>
+        <div class="footer-links">
+          <a href="about.html" data-en="About AmberLane">Σχετικά με την AmberLane</a>
+          <a href="services.html" data-en="Service Lines">Γραμμές υπηρεσιών</a>
+          <a href="https://transportmarketing.net">Transport Marketing</a>
+        </div>
+        <div class="footer-meta">
+          <div data-en="Contact us: director@transportmarketing.net">Επικοινωνία: director@transportmarketing.net</div>
+          <div data-en="© 2026 AmberLane. All rights reserved.">&copy; 2026 AmberLane. Με επιφύλαξη παντός δικαιώματος.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const pageMeta = {
+      el: {
+        title: 'AmberLane - Λύσεις στελέχωσης και πρόσληψης',
+        description: 'Η AmberLane συνδέει ελληνικές επιχειρήσεις με ελεγμένο διεθνές προσωπικό για φιλοξενία, κατασκευές, logistics, φροντίδα και εποχικές λειτουργίες.'
+      },
+      en: {
+        title: 'AmberLane - Staffing and Recruitment Solutions',
+        description: 'AmberLane connects Greek businesses with vetted international workers for hospitality, construction, logistics, care, and seasonal operations.'
+      }
+    };
+
+    const toggle = document.querySelector('.menu-toggle');
+    const panel = document.querySelector('.mobile-panel');
+    const languageButtons = document.querySelectorAll('[data-lang]');
+    const metaDescription = document.querySelector('meta[name="description"]');
+
+    const rememberDefault = (node, key, value) => {
+      const defaultKey = `${key}El`;
+      if (!node.dataset[defaultKey]) {
+        node.dataset[defaultKey] = value;
+      }
+    };
+
+    const setLanguage = (language) => {
+      const lang = language === 'en' ? 'en' : 'el';
+
+      document.documentElement.lang = lang;
+      document.title = pageMeta[lang].title;
+      if (metaDescription) {
+        metaDescription.setAttribute('content', pageMeta[lang].description);
+      }
+
+      document.querySelectorAll('[data-en]').forEach((node) => {
+        rememberDefault(node, 'text', node.textContent);
+        node.textContent = lang === 'en' ? node.dataset.en : node.dataset.textEl;
+      });
+
+      document.querySelectorAll('[data-placeholder-en]').forEach((node) => {
+        rememberDefault(node, 'placeholder', node.getAttribute('placeholder') || '');
+        node.setAttribute('placeholder', lang === 'en' ? node.dataset.placeholderEn : node.dataset.placeholderEl);
+      });
+
+      document.querySelectorAll('[data-label-en]').forEach((node) => {
+        rememberDefault(node, 'label', node.getAttribute('aria-label') || '');
+        node.setAttribute('aria-label', lang === 'en' ? node.dataset.labelEn : node.dataset.labelEl);
+      });
+
+      document.querySelectorAll('[data-alt-en]').forEach((node) => {
+        rememberDefault(node, 'alt', node.getAttribute('alt') || '');
+        node.setAttribute('alt', lang === 'en' ? node.dataset.altEn : node.dataset.altEl);
+      });
+
+      languageButtons.forEach((button) => {
+        const isActive = button.dataset.lang === lang;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+    };
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    panel?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        panel.classList.remove('is-open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    languageButtons.forEach((button) => {
+      button.addEventListener('click', () => setLanguage(button.dataset.lang));
+    });
+
+    const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+    setLanguage(requestedLanguage === 'en' ? 'en' : 'el');
+  </script>
+</body>
+</html>
