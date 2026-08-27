@@ -6,16 +6,16 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>BlueLine | SaaS Πλατφόρμες & Cloud Αρχιτεκτονική</title>
-    <meta name="description" content="Custom SaaS πλατφόρμες, cloud αρχιτεκτονική και enterprise λογισμικό. HotelPoint, eShopPoint, EmailPoint. Αθήνα.">
-    <meta name="keywords" content="SaaS, cloud, software development, hotel management, e-commerce, email marketing, Athens, custom software">
+    <title>BlueLine | SaaS Πλατφόρμες</title>
+    <meta name="description" content="SaaS πλατφόρμες για ξενοδοχεία, e-commerce, email marketing και ιατρεία. HotelSystem, eShopPoint, EmailPoint, DoctorPoint. Αθήνα.">
+    <meta name="keywords" content="SaaS, cloud, hotel management, e-commerce, email marketing, doctor software, Athens">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="BlueLine">
-    <meta property="og:title" content="BlueLine | SaaS Πλατφόρμες & Cloud Αρχιτεκτονική">
-    <meta property="og:description" content="Custom SaaS πλατφόρμες, cloud αρχιτεκτονική και enterprise λογισμικό.">
+    <meta property="og:title" content="BlueLine | SaaS Πλατφόρμες">
+    <meta property="og:description" content="SaaS πλατφόρμες για ξενοδοχεία, e-commerce, email marketing και ιατρεία.">
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,13 +314,11 @@
             fill: currentColor;
         }
 
-        /* Hero right - Project Mockups */
+        /* Hero right - Project Mockups (2x2 grid) */
         .project-mockups {
-            position: relative;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
         }
 
         .mockup-frame {
@@ -328,36 +326,14 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            position: absolute;
-            width: 80%;
             transition: transform 400ms ease, box-shadow 400ms ease;
             text-decoration: none;
         }
 
         .mockup-frame:hover {
-            transform: scale(1.05) !important;
+            transform: scale(1.05);
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-            z-index: 10 !important;
-        }
-
-        .mockup-back {
-            z-index: 1;
-            top: 0;
-            left: 0;
-            transform: rotate(-3deg);
-        }
-
-        .mockup-middle {
-            z-index: 2;
-            top: 40px;
-            left: 10%;
-        }
-
-        .mockup-front {
-            z-index: 3;
-            top: 80px;
-            left: 20%;
-            transform: rotate(2deg);
+            z-index: 10;
         }
 
         .mockup-topbar {
@@ -423,6 +399,11 @@
             color: #2dd4bf;
         }
 
+        .mockup-tag--coral {
+            background: rgba(224, 85, 85, 0.2);
+            color: #f07070;
+        }
+
         /* ===== SECTIONS SHARED ===== */
         .section {
             padding: 100px 24px;
@@ -471,7 +452,7 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
 
@@ -505,6 +486,7 @@
         .product-card--hotel::before { background: linear-gradient(90deg, #4285f4, #5e9ff5); }
         .product-card--eshop::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
         .product-card--email::before { background: linear-gradient(90deg, #14b8a6, #2dd4bf); }
+        .product-card--doctor::before { background: linear-gradient(90deg, #e05555, #f07070); }
 
         .product-icon {
             width: 56px;
@@ -519,6 +501,7 @@
         .product-icon--hotel { background: linear-gradient(135deg, #4285f4, #5e9ff5); }
         .product-icon--eshop { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
         .product-icon--email { background: linear-gradient(135deg, #14b8a6, #2dd4bf); }
+        .product-icon--doctor { background: linear-gradient(135deg, #e05555, #f07070); }
 
         .product-icon svg {
             width: 28px;
@@ -592,194 +575,26 @@
 
         .btn-product:hover svg { transform: translateX(3px); }
 
-        /* ===== SERVICES ===== */
-        .section-services {
-            background: var(--bl-surface);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            background: var(--bl-white);
-            border: 1px solid rgba(66, 133, 244, 0.06);
-            border-radius: 16px;
-            padding: 32px 24px;
-            text-align: center;
-            transition: all 400ms ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--bl-primary), var(--bl-primary-bright));
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
-
-        .service-card:hover {
-            box-shadow: 0 18px 55px rgba(6, 13, 26, 0.08);
-            transform: translateY(-4px);
-        }
-
-        .service-card:hover::after { opacity: 1; }
-
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--bl-primary), var(--bl-primary-bright));
-            border-radius: 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
-        .service-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: var(--bl-white);
-        }
-
-        .service-card h3 {
-            font-size: 17px;
-            font-weight: 700;
-            color: var(--bl-ink);
-            margin-bottom: 8px;
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: var(--bl-text-secondary);
-            line-height: 1.6;
-        }
-
-        /* ===== HOW IT WORKS ===== */
-        .section-how {
-            background: var(--bl-white);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            position: relative;
-        }
-
-        .steps-grid::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 12.5%;
-            right: 12.5%;
-            height: 2px;
-            border-top: 2px dashed var(--bl-primary);
-            opacity: 0.25;
-        }
-
-        .step-card { text-align: center; position: relative; }
-
-        .step-number {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--bl-primary), var(--bl-primary-bright));
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Manrope', sans-serif;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--bl-white);
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 8px 20px var(--bl-glow);
-        }
-
-        .step-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--bl-ink);
-            margin-bottom: 8px;
-        }
-
-        .step-card p {
-            font-size: 14px;
-            color: var(--bl-text-secondary);
-            line-height: 1.6;
-            max-width: 220px;
-            margin: 0 auto;
-        }
-
-        /* ===== TECH STACK ===== */
-        .section-tech {
-            background: var(--bl-surface);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 12px;
-        }
-
-        .tech-item {
-            background: var(--bl-white);
-            border: 1px solid rgba(66, 133, 244, 0.06);
-            border-radius: 12px;
-            padding: 20px 12px;
-            text-align: center;
-            transition: all 300ms ease;
-        }
-
-        .tech-item:hover {
-            border-color: var(--bl-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(6, 13, 26, 0.06);
-        }
-
-        .tech-item span {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--bl-ink);
-        }
-
-        .tech-item small {
-            font-size: 11px;
-            color: var(--bl-text-muted);
-            margin-top: 4px;
-            display: block;
-        }
-
         /* ===== CONTACT ===== */
         .section-contact {
             background: var(--bl-navy);
             color: var(--bl-white);
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
+        .contact-centered {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .contact-info h2 {
+        .contact-centered h2 {
             font-size: clamp(28px, 4vw, 42px);
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 16px;
         }
 
-        .contact-info > p {
+        .contact-centered > p {
             font-size: 16px;
             color: rgba(255, 255, 255, 0.6);
             line-height: 1.7;
@@ -790,6 +605,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            text-align: left;
         }
 
         .contact-detail {
@@ -831,103 +647,6 @@
         }
 
         .contact-detail a:hover { color: var(--bl-primary-bright); }
-
-        /* Contact Form */
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 36px;
-        }
-
-        .contact-form h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .form-group { margin-bottom: 16px; }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.55);
-            margin-bottom: 6px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 10px;
-            color: var(--bl-white);
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            transition: border-color 200ms ease;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder { color: rgba(255, 255, 255, 0.25); }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--bl-primary);
-        }
-
-        .form-group select {
-            appearance: none;
-            cursor: pointer;
-        }
-
-        .form-group select option {
-            background: var(--bl-navy);
-            color: var(--bl-white);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, var(--bl-primary), var(--bl-primary-bright));
-            color: var(--bl-white);
-            border: none;
-            border-radius: 12px;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 300ms ease;
-            box-shadow: 0 12px 28px var(--bl-glow);
-        }
-
-        .btn-submit:hover {
-            background: linear-gradient(135deg, var(--bl-primary-dark), var(--bl-primary));
-            transform: translateY(-1px);
-        }
-
-        .form-note {
-            text-align: center;
-            margin-top: 12px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.35);
-        }
 
         /* ===== FOOTER ===== */
         .site-footer {
@@ -1004,37 +723,18 @@
             transform: translateY(0);
         }
 
-        .service-card.reveal:nth-child(2) { transition-delay: 80ms; }
-        .service-card.reveal:nth-child(3) { transition-delay: 160ms; }
-        .service-card.reveal:nth-child(4) { transition-delay: 240ms; }
-        .service-card.reveal:nth-child(5) { transition-delay: 320ms; }
-        .service-card.reveal:nth-child(6) { transition-delay: 400ms; }
-
-        .step-card.reveal:nth-child(2) { transition-delay: 100ms; }
-        .step-card.reveal:nth-child(3) { transition-delay: 200ms; }
-        .step-card.reveal:nth-child(4) { transition-delay: 300ms; }
-
         .product-card.reveal:nth-child(2) { transition-delay: 100ms; }
         .product-card.reveal:nth-child(3) { transition-delay: 200ms; }
+        .product-card.reveal:nth-child(4) { transition-delay: 300ms; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero-inner { grid-template-columns: 1fr; gap: 40px; }
             .products-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
-            .steps-grid { grid-template-columns: repeat(2, 1fr); }
-            .steps-grid::before { display: none; }
-            .tech-grid { grid-template-columns: repeat(4, 1fr); }
             .project-mockups {
-                position: static;
-                min-height: auto;
-                flex-direction: column;
-                gap: 20px;
-                display: flex;
-            }
-            .mockup-frame {
-                position: static !important;
-                width: 100% !important;
-                transform: none !important;
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
             }
         }
 
@@ -1044,19 +744,12 @@
             .hamburger { display: flex; }
 
             .hero { padding-top: 100px; padding-bottom: 60px; min-height: auto; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
             .section { padding: 60px 16px; }
-            .form-row { grid-template-columns: 1fr; }
-            .tech-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { flex-wrap: wrap; justify-content: center; }
         }
 
         @media (max-width: 480px) {
-            .services-grid { grid-template-columns: 1fr; }
-            .steps-grid { grid-template-columns: 1fr; }
-            .tech-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-buttons { flex-direction: column; }
             .btn-hero { width: 100%; justify-content: center; }
         }
@@ -1082,12 +775,9 @@
             <ul class="nav-links">
                 <li><a href="#hero">Αρχική</a></li>
                 <li><a href="#products">Προϊόντα</a></li>
-                <li><a href="#services">Υπηρεσίες</a></li>
-                <li><a href="#process">Διαδικασία</a></li>
-                <li><a href="#tech">Tech Stack</a></li>
                 <li><a href="#contact">Επικοινωνία</a></li>
             </ul>
-            <a href="#contact" class="nav-cta">Κλείσε Ραντεβού</a>
+            <a href="#contact" class="nav-cta">Επικοινωνία</a>
             <button class="hamburger" id="hamburger" aria-label="Μενού">
                 <span></span><span></span><span></span>
             </button>
@@ -1098,9 +788,6 @@
     <div class="mobile-menu" id="mobile-menu">
         <a href="#hero" class="mobile-link">Αρχική</a>
         <a href="#products" class="mobile-link">Προϊόντα</a>
-        <a href="#services" class="mobile-link">Υπηρεσίες</a>
-        <a href="#process" class="mobile-link">Διαδικασία</a>
-        <a href="#tech" class="mobile-link">Tech Stack</a>
         <a href="#contact" class="mobile-link">Επικοινωνία</a>
     </div>
 
@@ -1108,9 +795,9 @@
     <section class="hero" id="hero">
         <div class="hero-inner">
             <div class="hero-content">
-                <span class="hero-label">SaaS & Cloud Engineering</span>
-                <h1 class="hero-title">Custom Εφαρμογές & SaaS Πλατφόρμες</h1>
-                <p class="hero-subtitle">Χτίζουμε τα εργαλεία που η επιχείρησή σας χρειάζεται. Από hotel management μέχρι e-commerce, σχεδιάζουμε και αναπτύσσουμε scalable cloud λύσεις.</p>
+                <span class="hero-label">SaaS Products</span>
+                <h1 class="hero-title">Τα SaaS Προϊόντα μας</h1>
+                <p class="hero-subtitle">Σχεδιάζουμε και αναπτύσσουμε τα δικά μας SaaS προϊόντα. Από hotel management μέχρι e-commerce και ιατρικό λογισμικό, scalable cloud πλατφόρμες.</p>
                 <div class="hero-buttons">
                     <a href="#products" class="btn-hero btn-hero--primary">Δείτε τα Προϊόντα ↓</a>
                     <a href="#contact" class="btn-hero btn-hero--outline">
@@ -1121,19 +808,19 @@
             </div>
 
             <div class="project-mockups">
-                <div class="mockup-frame mockup-back">
+                <div class="mockup-frame">
                     <div class="mockup-topbar">
                         <span class="mockup-dot" style="background:#ff5f57"></span>
                         <span class="mockup-dot" style="background:#febc2e"></span>
                         <span class="mockup-dot" style="background:#28c840"></span>
                     </div>
                     <div class="mockup-content">
-                        <div class="mockup-brand">EmailPoint</div>
-                        <div class="mockup-desc">Email marketing & αυτοματισμοί για growth-focused teams.</div>
-                        <span class="mockup-tag mockup-tag--teal">Email Automation</span>
+                        <div class="mockup-brand">HotelSystem</div>
+                        <div class="mockup-desc">All-in-one hotel management system. Reservations, housekeeping, billing.</div>
+                        <span class="mockup-tag mockup-tag--blue">Hotel Management</span>
                     </div>
                 </div>
-                <div class="mockup-frame mockup-middle">
+                <div class="mockup-frame">
                     <div class="mockup-topbar">
                         <span class="mockup-dot" style="background:#ff5f57"></span>
                         <span class="mockup-dot" style="background:#febc2e"></span>
@@ -1145,16 +832,28 @@
                         <span class="mockup-tag mockup-tag--purple">E-Commerce</span>
                     </div>
                 </div>
-                <div class="mockup-frame mockup-front">
+                <div class="mockup-frame">
                     <div class="mockup-topbar">
                         <span class="mockup-dot" style="background:#ff5f57"></span>
                         <span class="mockup-dot" style="background:#febc2e"></span>
                         <span class="mockup-dot" style="background:#28c840"></span>
                     </div>
                     <div class="mockup-content">
-                        <div class="mockup-brand">HotelPoint</div>
-                        <div class="mockup-desc">All-in-one hotel management system. Reservations, housekeeping, billing.</div>
-                        <span class="mockup-tag mockup-tag--blue">Hotel Management</span>
+                        <div class="mockup-brand">EmailPoint</div>
+                        <div class="mockup-desc">Email marketing & αυτοματισμοί για growth-focused teams.</div>
+                        <span class="mockup-tag mockup-tag--teal">Email Automation</span>
+                    </div>
+                </div>
+                <div class="mockup-frame">
+                    <div class="mockup-topbar">
+                        <span class="mockup-dot" style="background:#ff5f57"></span>
+                        <span class="mockup-dot" style="background:#febc2e"></span>
+                        <span class="mockup-dot" style="background:#28c840"></span>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-brand">DoctorPoint</div>
+                        <div class="mockup-desc">Ιατρικό λογισμικό για ραντεβού, ιστορικό & τιμολόγηση.</div>
+                        <span class="mockup-tag mockup-tag--coral">Medical Software</span>
                     </div>
                 </div>
             </div>
@@ -1169,12 +868,12 @@
             <p class="section-subtitle centered">Enterprise-grade λογισμικό, σχεδιασμένο για Ελληνικές και διεθνείς επιχειρήσεις.</p>
 
             <div class="products-grid">
-                <!-- HotelPoint -->
+                <!-- HotelSystem -->
                 <div class="product-card product-card--hotel reveal">
                     <div class="product-icon product-icon--hotel">
                         <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
                     </div>
-                    <h3>HotelPoint</h3>
+                    <h3>HotelSystem</h3>
                     <p>All-in-one hotel management system για boutique hotels, chains και resorts.</p>
                     <ul class="product-features">
                         <li>Smart Booking Engine</li>
@@ -1185,7 +884,7 @@
                         <li>AADE MyData Integration</li>
                         <li>White Label Solution</li>
                     </ul>
-                    <a href="#contact" class="btn-product">
+                    <a href="http://hotelssystem.net/" target="_blank" class="btn-product">
                         Μάθετε περισσότερα
                         <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
                     </a>
@@ -1232,116 +931,27 @@
                         <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services -->
-    <section class="section section-services" id="services">
-        <div class="section-inner">
-            <span class="section-label centered">Υπηρεσίες</span>
-            <h2 class="section-title centered">Full-Stack Development</h2>
-            <p class="section-subtitle centered">Από concept μέχρι production. Σχεδιάζουμε, αναπτύσσουμε και υποστηρίζουμε cloud-native εφαρμογές.</p>
-
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                <!-- DoctorPoint -->
+                <div class="product-card product-card--doctor reveal">
+                    <div class="product-icon product-icon--doctor">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
                     </div>
-                    <h3>Web Apps & Custom Software</h3>
-                    <p>Tailor-made εφαρμογές με Laravel, React και modern tech stacks.</p>
+                    <h3>DoctorPoint</h3>
+                    <p>Ολοκληρωμένο ιατρικό λογισμικό για ιδιωτικά ιατρεία και πολυϊατρεία.</p>
+                    <ul class="product-features">
+                        <li>Online Ραντεβού</li>
+                        <li>Ιατρικό Ιστορικό</li>
+                        <li>Ηλεκτρονικές Συνταγές</li>
+                        <li>SMS Υπενθυμίσεις</li>
+                        <li>Τιμολόγηση & Αποδείξεις</li>
+                        <li>GDPR Compliant</li>
+                    </ul>
+                    <a href="#contact" class="btn-product">
+                        Μάθετε περισσότερα
+                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                    </a>
                 </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
-                    </div>
-                    <h3>Cloud Architecture</h3>
-                    <p>Scalable infrastructure design σε AWS, GCP ή bare-metal servers.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-                    </div>
-                    <h3>API Development</h3>
-                    <p>RESTful & GraphQL APIs με authentication, rate limiting και documentation.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/></svg>
-                    </div>
-                    <h3>Mobile & Responsive</h3>
-                    <p>Progressive Web Apps και mobile-first εφαρμογές με native-like performance.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg>
-                    </div>
-                    <h3>DevOps & CI/CD</h3>
-                    <p>Automated deployments, monitoring, Docker containers και zero-downtime releases.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
-                    </div>
-                    <h3>System Integration</h3>
-                    <p>Σύνδεση με τρίτα συστήματα: payment gateways, ERPs, CRMs, channel managers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="section section-how" id="process">
-        <div class="section-inner">
-            <span class="section-label centered">Διαδικασία</span>
-            <h2 class="section-title centered">Πώς Δουλεύουμε</h2>
-            <p class="section-subtitle centered">Κάθε project ξεκινά με κατανόηση και ολοκληρώνεται με παράδοση production-ready κώδικα.</p>
-
-            <div class="steps-grid">
-                <div class="step-card reveal">
-                    <div class="step-number">01</div>
-                    <h3>Discovery</h3>
-                    <p>Κατανοούμε τις ανάγκες, τους στόχους και τους χρήστες σας. 15λεπτο call ή email.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">02</div>
-                    <h3>Architecture</h3>
-                    <p>Σχεδιάζουμε wireframes, τεχνικό πλάνο, data model. Εσείς εγκρίνετε πριν ξεκινήσουμε.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">03</div>
-                    <h3>Development</h3>
-                    <p>Agile sprints με weekly demos. Βλέπετε πρόοδο, δίνετε feedback, κάνουμε iterate.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">04</div>
-                    <h3>Launch & Support</h3>
-                    <p>Deploy σε production, monitoring, documentation. Συνεχής support και updates.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="section section-tech" id="tech">
-        <div class="section-inner">
-            <span class="section-label centered">Tech Stack</span>
-            <h2 class="section-title centered">Τεχνολογίες</h2>
-            <p class="section-subtitle centered">Modern, battle-tested τεχνολογίες για scalable και maintainable εφαρμογές.</p>
-
-            <div class="tech-grid">
-                <div class="tech-item reveal"><span>Laravel</span><small>Backend</small></div>
-                <div class="tech-item reveal"><span>React</span><small>Frontend</small></div>
-                <div class="tech-item reveal"><span>Vue.js</span><small>Frontend</small></div>
-                <div class="tech-item reveal"><span>PostgreSQL</span><small>Database</small></div>
-                <div class="tech-item reveal"><span>Redis</span><small>Cache & Queues</small></div>
-                <div class="tech-item reveal"><span>Docker</span><small>Containers</small></div>
-                <div class="tech-item reveal"><span>AWS</span><small>Cloud</small></div>
-                <div class="tech-item reveal"><span>Stripe</span><small>Payments</small></div>
-                <div class="tech-item reveal"><span>Livewire</span><small>Reactivity</small></div>
-                <div class="tech-item reveal"><span>Tailwind</span><small>CSS</small></div>
-                <div class="tech-item reveal"><span>GitHub</span><small>CI/CD</small></div>
-                <div class="tech-item reveal"><span>Nginx</span><small>Server</small></div>
             </div>
         </div>
     </section>
@@ -1349,88 +959,48 @@
     <!-- Contact -->
     <section class="section section-contact" id="contact">
         <div class="section-inner">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Ας χτίσουμε μαζί το επόμενο project σας</h2>
-                    <p>Κλείστε ένα δωρεάν 15λεπτο discovery call ή στείλτε μας μήνυμα. Απαντάμε εντός 24 ωρών.</p>
+            <div class="contact-centered">
+                <h2>Επικοινωνήστε μαζί μας</h2>
+                <p>Ενδιαφέρεστε για κάποιο από τα προϊόντα μας; Επικοινωνήστε μαζί μας και θα σας απαντήσουμε εντός 24 ωρών.</p>
 
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
-                            </div>
-                            <div>
-                                <strong>Τηλέφωνο</strong>
-                                <a href="tel:6989442438">698 944 24 38</a>
-                            </div>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
                         </div>
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            </div>
-                            <div>
-                                <strong>Email</strong>
-                                <a href="mailto:info@blueline.dev">info@blueline.dev</a>
-                            </div>
+                        <div>
+                            <strong>Τηλέφωνο</strong>
+                            <a href="tel:6989442438">698 944 24 38</a>
                         </div>
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            </div>
-                            <div>
-                                <strong>Τοποθεσία</strong>
-                                <span>Αθήνα, Ελλάδα</span>
-                            </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         </div>
-                        <div class="contact-detail">
-                            <div class="contact-detail-icon">
-                                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                            </div>
-                            <div>
-                                <strong>Διαθεσιμότητα</strong>
-                                <span>Δευτέρα - Παρασκευή, 09:00 - 18:00</span>
-                            </div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:info@blueline.dev">info@blueline.dev</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Τοποθεσία</strong>
+                            <span>Αθήνα, Ελλάδα</span>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Διαθεσιμότητα</strong>
+                            <span>Δευτέρα - Παρασκευή, 09:00 - 18:00</span>
                         </div>
                     </div>
                 </div>
-
-                <form class="contact-form" id="contact-form">
-                    <h3>Στείλτε μας Μήνυμα</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Όνομα *</label>
-                            <input type="text" id="name" name="name" required placeholder="Το όνομά σας">
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Εταιρεία</label>
-                            <input type="text" id="company" name="company" placeholder="Η εταιρεία σας">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="you@company.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="interest">Ενδιαφέρον</label>
-                        <select id="interest" name="interest">
-                            <option value="">Επιλέξτε...</option>
-                            <option value="hotelpoint">HotelPoint - Hotel Management</option>
-                            <option value="eshoppoint">eShopPoint - E-Commerce</option>
-                            <option value="emailpoint">EmailPoint - Email Marketing</option>
-                            <option value="custom">Custom Software Development</option>
-                            <option value="consulting">Technical Consulting</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Περιγράψτε το project σας</label>
-                        <textarea id="message" name="message" placeholder="Πείτε μας για τις ανάγκες σας..."></textarea>
-                    </div>
-                    <div style="position: absolute; left: -9999px;">
-                        <input type="text" name="website" tabindex="-1" autocomplete="off">
-                    </div>
-                    <button type="submit" class="btn-submit">Στείλτε Μήνυμα</button>
-                    <p class="form-note">Απαντάμε εντός 24 ωρών τις εργάσιμες ημέρες.</p>
-                </form>
             </div>
         </div>
     </section>
@@ -1441,7 +1011,6 @@
             <span class="footer-brand">BlueLine</span>
             <div class="footer-links">
                 <a href="#products">Προϊόντα</a>
-                <a href="#services">Υπηρεσίες</a>
                 <a href="#contact">Επικοινωνία</a>
             </div>
             <div class="footer-parent">
@@ -1501,21 +1070,6 @@
         } else {
             document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
         }
-
-        // Form
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const honeypot = this.querySelector('input[name="website"]');
-            if (honeypot && honeypot.value) return;
-            const lastSubmit = sessionStorage.getItem('lastFormSubmit');
-            if (lastSubmit && Date.now() - parseInt(lastSubmit) < 30000) {
-                alert('Παρακαλώ περιμένετε λίγο πριν υποβάλετε ξανά.');
-                return;
-            }
-            sessionStorage.setItem('lastFormSubmit', Date.now().toString());
-            alert('Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.');
-            this.reset();
-        });
     </script>
 
 </body>
