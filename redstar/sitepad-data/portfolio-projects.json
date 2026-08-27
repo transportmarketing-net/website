@@ -1,0 +1,497 @@
+[
+  {
+    "slug": "kotzia-pediatric-pulmonology-platform",
+    "title": "Δρ. Κοτζιά Δόξα",
+    "articleTitle": "Δρ. Κοτζιά Δόξα - Παιδιατρικό Laravel website με ραντεβού και SEO blog",
+    "metaTitle": "Παιδιατρικό Laravel Website | Δρ. Κοτζιά Δόξα",
+    "metaDescription": "Case study για παιδιατρικό Laravel website με δίγλωσσες σελίδες, ραντεβού, blog, υπηρεσίες, γιατρούς και Google Calendar sync.",
+    "focusKeyword": "παιδιατρικό laravel website",
+    "category": "Healthcare Laravel",
+    "portfolioMeta": "01 / Healthcare Laravel",
+    "image": "sitepad-data/uploads/2026/05/project-pediatric.png",
+    "imageAlt": "Homepage screenshot από το website της Δρ. Κοτζιά Δόξα",
+    "liveUrl": "https://pediatric-lxxk6eb8.on-forge.com/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Παιδιατρικό και παιδοπνευμονολογικό website σε Laravel με online ραντεβού, δίγλωσση δομή, SEO blog και admin διαχείριση.",
+    "summary": "Το project χτίστηκε για παιδιατρικό και παιδοπνευμονολογικό ιατρείο που χρειάζεται σοβαρή δημόσια εικόνα, καθαρή ενημέρωση γονέων και πρακτική διαχείριση αιτημάτων ραντεβού. Η δημόσια εμπειρία παρουσιάζει τη Δρ. Δόξα Κοτζιά, υπηρεσίες, γιατρούς, blog, τιμές και στοιχεία επικοινωνίας, ενώ το backend οργανώνει περιεχόμενο και λειτουργικές ροές.",
+    "challenge": "Ο χώρος της υγείας απαιτεί εμπιστοσύνη, σαφήνεια και παραγωγικότητα. Το site έπρεπε να εξηγήσει εξειδικευμένες παιδοπνευμονολογικές υπηρεσίες χωρίς θόρυβο, να υποστηρίξει ελληνικά και αγγλικά, και να δώσει στο ιατρείο εργαλεία για ραντεβού, blog, media και Google Calendar χωρίς εξάρτηση από χειροκίνητες αλλαγές κώδικα.",
+    "solution": [
+      "Δίγλωσσες δημόσιες διαδρομές για αρχική, υπηρεσίες, γιατρούς, blog, επικοινωνία και ραντεβού.",
+      "Admin περιβάλλον για appointments, ασθενείς, blog posts, media library, υπηρεσίες, γιατρούς, FAQs, testimonials και site settings.",
+      "Appointment flow με διαθέσιμες ώρες, service types, κατάσταση αιτήματος και σύνδεση με Google Calendar.",
+      "SEO-ready blog δομή με published posts, meta titles, meta descriptions, excerpts, featured images και κατηγορίες."
+    ],
+    "technical": "Η εφαρμογή βασίζεται σε Laravel 10 με Blade views, migrations για appointments, blog posts, service types, patients, doctors, settings και media, καθώς και controllers για public pages και admin workflows. Η παραγωγική φιλοξενία είναι Laravel Forge πίσω από Cloudflare, με canonical URLs και asset paths που μπορούν να δουλέψουν σε live περιβάλλον.",
+    "stack": [
+      "Laravel 10",
+      "Blade templates",
+      "Database migrations",
+      "Bilingual routes",
+      "Admin CRUD",
+      "Google Calendar API",
+      "SEO blog fields"
+    ],
+    "seo": "Το SEO angle εστιάζει σε παιδιατρικές και παιδοπνευμονολογικές αναζητήσεις με ξεχωριστές σελίδες υπηρεσιών, ενημερωτικά άρθρα, localized metadata και περιεχόμενο που απαντά σε πραγματικές απορίες γονέων.",
+    "outcomes": [
+      "Καθαρή public παρουσία για γιατρό υψηλής εξειδίκευσης.",
+      "Διαχειρίσιμο blog και περιεχόμενο χωρίς αλλαγές στον κώδικα.",
+      "Ροή ραντεβού που συνδέει τη δημόσια σελίδα με την εσωτερική οργάνωση του ιατρείου."
+    ]
+  },
+  {
+    "slug": "lumencia-medical-marketing",
+    "title": "Lumencia",
+    "articleTitle": "Lumencia - Premium medical marketing website και CRM σε Laravel",
+    "metaTitle": "Lumencia Medical Marketing Case Study | RedStar",
+    "metaDescription": "Case study για premium medical marketing πλατφόρμα με Laravel 12, CRM, lead generation engine και σύστημα προσφορών.",
+    "focusKeyword": "medical marketing platform",
+    "category": "Medical Marketing",
+    "portfolioMeta": "02 / Medical marketing",
+    "image": "sitepad-data/uploads/2026/05/project-lumencia.png",
+    "imageAlt": "Lumencia website screenshot",
+    "liveUrl": "https://lumencia.gr/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Premium marketing agency για πλαστικούς χειρουργούς και αισθητικές κλινικές, με Laravel 12, CRM και lead generation engine.",
+    "summary": "Το Lumencia είναι project για premium marketing υπηρεσίες στον χώρο της αισθητικής ιατρικής. Η δουλειά δεν ήταν μόνο η δημόσια παρουσία: έπρεπε να υπάρχει και λειτουργικό υπόβαθρο για leads, πελάτες, προσφορές και οργανωμένη εμπορική συνέχεια.",
+    "challenge": "Οι πλαστικοί χειρουργοί και οι αισθητικές κλινικές χρειάζονται ψηφιακή παρουσία που δείχνει ποιότητα, αλλά και μηχανισμό που δεν αφήνει τα leads να χάνονται. Το project έπρεπε να συνδέσει brand positioning, landing εμπειρία και backend εμπορική ροή.",
+    "solution": [
+      "Premium homepage και service presentation με medical aesthetic tone.",
+      "Lead generation engine που οδηγεί τον χρήστη σε συγκεκριμένη επόμενη ενέργεια.",
+      "CRM βάση για επαφές, πελάτες και follow-up.",
+      "Σύστημα προσφορών ώστε η εμπορική διαδικασία να μένει οργανωμένη."
+    ],
+    "technical": "Η πλατφόρμα βασίζεται σε Laravel 12, με custom backend αντί για απλό CMS. Αυτό επιτρέπει έλεγχο πάνω στη φόρμα, τα leads, τη ροή προσφορών και τη μελλοντική επέκταση σε agency operations.",
+    "stack": [
+      "Laravel 12",
+      "Custom CRM",
+      "Lead forms",
+      "Offer workflow",
+      "Responsive frontend",
+      "SEO metadata"
+    ],
+    "seo": "Το περιεχόμενο στοχεύει σε αναζητήσεις γύρω από medical marketing, marketing για αισθητικές κλινικές και ψηφιακή ανάπτυξη ιατρικών υπηρεσιών, με σαφείς σελίδες και τίτλους που μιλούν στη συγκεκριμένη αγορά.",
+    "outcomes": [
+      "Δημόσια εικόνα που ταιριάζει σε premium ιατρικό κοινό.",
+      "Κεντρική βάση για leads και εμπορικές ενέργειες.",
+      "Πλατφόρμα που μπορεί να μεγαλώσει μαζί με τις υπηρεσίες του agency."
+    ]
+  },
+  {
+    "slug": "extratzis-staffing-platform",
+    "title": "Extratzis",
+    "articleTitle": "Extratzis - Πλατφόρμα στελέχωσης με δίγλωσση εμπειρία και WCAG AA",
+    "metaTitle": "Extratzis Staffing Platform Case Study | RedStar",
+    "metaDescription": "Case study για εφαρμογή εύρεσης εργασίας με HTML5, Bootstrap 4, i18n, WCAG AA προσβασιμότητα και γρήγορη παράδοση.",
+    "focusKeyword": "staffing platform website",
+    "category": "Staffing Platform",
+    "portfolioMeta": "03 / Staffing platform",
+    "image": "sitepad-data/uploads/2026/05/project-extratzis.png",
+    "imageAlt": "Extratzis platform screenshot",
+    "liveUrl": "https://extratzis.gr/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Εφαρμογή εύρεσης εργασίας με landing page υψηλών προδιαγραφών, δίγλωσση υποστήριξη, WCAG AA και παράδοση σε 24 ημέρες.",
+    "summary": "Το Extratzis οργανώνει μια staffing πρόταση γύρω από άμεση κατανόηση, γρήγορη δράση και προσβασιμότητα. Το site έπρεπε να εξηγεί καθαρά το μοντέλο και να λειτουργεί άνετα σε ελληνικό και αγγλικό κοινό.",
+    "challenge": "Σε μια πλατφόρμα εύρεσης εργασίας, ο χρήστης πρέπει να καταλάβει γρήγορα τι προσφέρεται και ποιο είναι το επόμενο βήμα. Η γρήγορη παράδοση δεν έπρεπε να μειώσει την ποιότητα σε responsive, i18n ή accessibility.",
+    "solution": [
+      "Landing page με ξεκάθαρη ιεραρχία για υποψηφίους και επιχειρήσεις.",
+      "Δίγλωσση υποστήριξη μέσω i18n ώστε το περιεχόμενο να μη διπλώνεται πρόχειρα.",
+      "Προσβασιμότητα WCAG AA για βασικές ροές και αναγνωσιμότητα.",
+      "Σταθερή HTML5 και Bootstrap 4 βάση για γρήγορη παραγωγή και εύκολη συντήρηση."
+    ],
+    "technical": "Η υλοποίηση βασίστηκε σε HTML5 και Bootstrap 4 με responsive components, οργανωμένα strings για i18n και προσεκτικές επιλογές contrast, focus states και semantic structure.",
+    "stack": [
+      "HTML5",
+      "Bootstrap 4",
+      "i18n",
+      "WCAG AA",
+      "Responsive layout",
+      "Fast static delivery"
+    ],
+    "seo": "Η σελίδα χτίστηκε ώστε να μπορεί να στοχεύσει όρους γύρω από στελέχωση, εύρεση εργασίας και staffing υπηρεσίες, με σαφή headings και copy που δεν θυσιάζει την αναγνωσιμότητα για keywords.",
+    "outcomes": [
+      "Γρήγορη παράδοση σε 24 ημέρες.",
+      "Δίγλωσση εμπειρία χωρίς ξεχωριστή παράλληλη υλοποίηση.",
+      "Προσβάσιμη landing εμπειρία για πιο ευρύ κοινό."
+    ]
+  },
+  {
+    "slug": "akeraio-creative-portfolio",
+    "title": "Akeraio Studio",
+    "articleTitle": "Akeraio Studio - Creative portfolio με Laravel, Vue και Inertia",
+    "metaTitle": "Akeraio Creative Portfolio Case Study | RedStar",
+    "metaDescription": "Case study για creative agency portfolio με Laravel 10, Vue 3, Inertia.js, 4 γλώσσες, automated tests και caching.",
+    "focusKeyword": "creative agency portfolio",
+    "category": "Creative Portfolio",
+    "portfolioMeta": "04 / Creative portfolio",
+    "image": "sitepad-data/uploads/2026/05/project-akeraio.png",
+    "imageAlt": "Akeraio Studio website screenshot",
+    "liveUrl": "https://akeraio.com/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Creative agency portfolio με Laravel 10, Vue 3, Inertia.js, 4 γλώσσες, 228 automated tests και 85% cache hit rate.",
+    "summary": "Το Akeraio Studio χτίστηκε ως σύγχρονο portfolio για creative agency με ανάγκη για γρήγορη εμπειρία, πολυγλωσσικό περιεχόμενο και τεχνική βάση που αντέχει σε συχνές αλλαγές έργων και παρουσιάσεων.",
+    "challenge": "Ένα agency portfolio πρέπει να δείχνει χαρακτήρα, αλλά δεν μπορεί να είναι εύθραυστο. Χρειάζεται γρήγορη πλοήγηση, καλά οργανωμένο περιεχόμενο και σιγουριά ότι οι αλλαγές δεν σπάνε βασικές ροές.",
+    "solution": [
+      "Laravel backend με Vue 3 frontend μέσω Inertia.js.",
+      "Πολυγλωσσική δομή για τέσσερις γλώσσες.",
+      "Automated test suite για κρίσιμες λειτουργίες.",
+      "Caching strategy με στόχο γρήγορο browsing στο portfolio."
+    ],
+    "technical": "Η αρχιτεκτονική Laravel 10, Vue 3 και Inertia.js δίνει SPA-like εμπειρία χωρίς να χαθεί ο έλεγχος του backend. Τα 228 automated tests και το 85% cache hit rate βοηθούν το project να παραμένει γρήγορο και σταθερό.",
+    "stack": [
+      "Laravel 10",
+      "Vue 3",
+      "Inertia.js",
+      "Multilingual content",
+      "Automated tests",
+      "Application caching"
+    ],
+    "seo": "Το SEO βασίζεται σε ξεχωριστές παρουσιάσεις έργων, γλώσσες και καθαρό content structure ώστε το creative portfolio να μπορεί να ανακαλυφθεί πέρα από branded αναζητήσεις.",
+    "outcomes": [
+      "Πολυγλωσσική παρουσίαση agency έργων.",
+      "Γρήγορη εμπειρία χάρη σε caching.",
+      "Κώδικας με test coverage για πιο ασφαλή εξέλιξη."
+    ]
+  },
+  {
+    "slug": "helppoint-volunteer-platform",
+    "title": "HelpPoint",
+    "articleTitle": "HelpPoint - Multi-tenant πλατφόρμα εθελοντών σε Laravel",
+    "metaTitle": "HelpPoint Volunteer Platform Case Study | RedStar",
+    "metaDescription": "Case study για Laravel 12 multi-tenant πλατφόρμα εθελοντών με campaigns, shifts, 6 γλώσσες και GeoJSON χάρτη.",
+    "focusKeyword": "volunteer management platform",
+    "category": "Volunteer SaaS",
+    "portfolioMeta": "05 / Volunteer SaaS",
+    "image": "sitepad-data/uploads/2026/05/project-helppoint.png",
+    "imageAlt": "HelpPoint platform screenshot",
+    "liveUrl": "https://helppoint.io/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Πλατφόρμα διαχείρισης εθελοντών και μη κερδοσκοπικών οργανισμών με Laravel 12, multi-tenancy, campaigns, shifts και GeoJSON.",
+    "summary": "Το HelpPoint σχεδιάστηκε για οργανισμούς που χρειάζονται διαχείριση εθελοντών, δράσεων και βαρδιών σε ένα περιβάλλον που μπορεί να εξυπηρετήσει πολλαπλούς φορείς.",
+    "challenge": "Οι μη κερδοσκοπικοί οργανισμοί δουλεύουν με πολλές ομάδες, διαφορετικές γλώσσες και γεωγραφικές ανάγκες. Το project έπρεπε να αποφύγει την απλή φόρμα ενδιαφέροντος και να λειτουργήσει σαν πραγματική πλατφόρμα operations.",
+    "solution": [
+      "Multi-tenant δομή για διαφορετικούς οργανισμούς.",
+      "Campaigns και shifts ώστε η συμμετοχή να γίνεται οργανωμένα.",
+      "Υποστήριξη 6 γλωσσών για διεθνές κοινό.",
+      "GeoJSON χάρτης για χωρική απεικόνιση δράσεων και αναγκών."
+    ],
+    "technical": "Η πλατφόρμα βασίζεται σε Laravel 12 με έμφαση σε tenant boundaries, οργανωμένα domain models και λειτουργίες που μπορούν να επεκταθούν ανά οργανισμό.",
+    "stack": [
+      "Laravel 12",
+      "Multi-tenancy",
+      "Campaign management",
+      "Shift scheduling",
+      "GeoJSON maps",
+      "6-language content"
+    ],
+    "seo": "Η δημόσια πλευρά μπορεί να στοχεύσει αναζητήσεις γύρω από εθελοντισμό, volunteer management και nonprofit campaigns, ενώ η πλατφόρμα στηρίζει το operational credibility πίσω από το μήνυμα.",
+    "outcomes": [
+      "Ενιαίο σύστημα για οργανισμούς, δράσεις και εθελοντές.",
+      "Δομή έτοιμη για διεθνή χρήση.",
+      "Χάρτης και βάρδιες που μετατρέπουν την πρόθεση σε πρακτική οργάνωση."
+    ]
+  },
+  {
+    "slug": "ellinity-tour-saas",
+    "title": "Ellinity",
+    "articleTitle": "Ellinity - SaaS πλατφόρμα tour operators με AI εξαγωγή περιηγήσεων",
+    "metaTitle": "Ellinity Tour Operator SaaS Case Study | RedStar",
+    "metaDescription": "Case study για multi-tenant SaaS tour operators με Laravel 12, Claude AI integration, templates και AI tour extraction.",
+    "focusKeyword": "tour operator SaaS",
+    "category": "Tour Operator SaaS",
+    "portfolioMeta": "06 / Tour operator SaaS",
+    "image": "sitepad-data/uploads/2026/05/project-ellinity.png",
+    "imageAlt": "Ellinity Offers platform screenshot",
+    "liveUrl": "https://ellinity.gr/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Multi-tenant SaaS πλατφόρμα για tour operators με Laravel 12, Claude AI integration, 5 templates και AI-powered εξαγωγή περιηγήσεων.",
+    "summary": "Το Ellinity οργανώνει την παραγωγή και παρουσίαση προσφορών για tour operators. Το project συνδυάζει SaaS αρχιτεκτονική, templates και AI ώστε οι τουριστικές ομάδες να δουλεύουν πιο γρήγορα με καθαρότερο output.",
+    "challenge": "Οι tour operators παράγουν πολλά πακέτα, προτάσεις και περιηγήσεις. Η πρόκληση ήταν να μειωθεί η χειροκίνητη παραγωγή περιεχομένου χωρίς να χαθεί ο έλεγχος στην παρουσίαση και την εμπορική ποιότητα.",
+    "solution": [
+      "Multi-tenant SaaS βάση για διαφορετικούς operators.",
+      "Πέντε templates για δομημένη παρουσίαση προσφορών.",
+      "Claude AI integration για εξαγωγή και οργάνωση περιηγήσεων.",
+      "Περιβάλλον που κρατά το περιεχόμενο, την προσφορά και την εμφάνιση στο ίδιο workflow."
+    ],
+    "technical": "Η πλατφόρμα βασίζεται σε Laravel 12 και συνδέει AI-assisted extraction με structured templates, ώστε η δημιουργία tour content να γίνεται επαναλαμβανόμενη και ελέγξιμη.",
+    "stack": [
+      "Laravel 12",
+      "Multi-tenant SaaS",
+      "Claude AI integration",
+      "Template engine",
+      "Offer workflows",
+      "Structured content"
+    ],
+    "seo": "Το προϊόν μπορεί να υποστηρίξει search intent γύρω από tour operator software, προσφορές ταξιδιών και travel SaaS, με δομημένες σελίδες που μετατρέπουν περιεχόμενο σε searchable assets.",
+    "outcomes": [
+      "Ταχύτερη παραγωγή προσφορών και περιηγήσεων.",
+      "Επαναχρησιμοποιήσιμη βάση templates.",
+      "SaaS δομή που μπορεί να εξυπηρετήσει πολλούς operators."
+    ]
+  },
+  {
+    "slug": "sedd-volunteer-rescue",
+    "title": "SEDD",
+    "articleTitle": "SEDD - Website εθελοντικής διάσωσης και πυρόσβεσης με SEO βάση",
+    "metaTitle": "SEDD Volunteer Rescue Website Case Study | RedStar",
+    "metaDescription": "Case study για website εθελοντικής διάσωσης και πυρόσβεσης με Forge hosting, SEO βελτιστοποίηση και καθαρή ενημέρωση.",
+    "focusKeyword": "volunteer rescue website",
+    "category": "Nonprofit Website",
+    "portfolioMeta": "07 / Nonprofit website",
+    "image": "sitepad-data/uploads/2026/05/project-sedd.png",
+    "imageAlt": "SEDD website screenshot",
+    "liveUrl": "https://sedd-ovx7u9ng.on-forge.com/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Ψηφιακή παρουσία για εθελοντικό οργανισμό διάσωσης και πυρόσβεσης στη Βόρεια-Κεντρική Εύβοια, με Forge hosting και SEO.",
+    "summary": "Το SEDD χρειάζεται ψηφιακή παρουσία που να στηρίζει εμπιστοσύνη, ενημέρωση και άμεση κατανόηση αποστολής. Το site τοποθετεί τον οργανισμό καθαρά και κάνει το περιεχόμενο πιο εύκολα προσβάσιμο.",
+    "challenge": "Για έναν εθελοντικό οργανισμό διάσωσης και πυρόσβεσης, το site πρέπει να δείχνει σοβαρότητα χωρίς υπερβολή. Οι επισκέπτες πρέπει να καταλάβουν γρήγορα ποιος είναι ο οργανισμός, πού δραστηριοποιείται και πώς μπορούν να ενημερωθούν ή να στηρίξουν.",
+    "solution": [
+      "Καθαρή παρουσίαση αποστολής και περιοχής δράσης.",
+      "Σύγχρονη δημόσια εικόνα που αποφεύγει παρωχημένο nonprofit ύφος.",
+      "Laravel Forge hosting για σταθερή παραγωγική λειτουργία.",
+      "SEO βελτιστοποίηση για αναζητήσεις γύρω από εθελοντική διάσωση και πυρόσβεση."
+    ],
+    "technical": "Το project στήθηκε με production hosting σε Laravel Forge και δομή που επιτρέπει καθαρή ενημέρωση, γρήγορη φόρτωση και αξιόπιστη παρουσίαση περιεχομένου.",
+    "stack": [
+      "Laravel Forge",
+      "Responsive frontend",
+      "SEO metadata",
+      "Content pages",
+      "Image-led homepage",
+      "Production hosting"
+    ],
+    "seo": "Η SEO στρατηγική δίνει έμφαση σε τοπικό και θεματικό intent: εθελοντική διάσωση, πυρόσβεση, Βόρεια Εύβοια και ενημερωτικές σελίδες που μπορούν να συνδεθούν εσωτερικά.",
+    "outcomes": [
+      "Πιο σοβαρή και σύγχρονη ψηφιακή εικόνα για τον οργανισμό.",
+      "Σαφής επικοινωνία αποστολής και υπηρεσίας προς την κοινότητα.",
+      "Hosting βάση κατάλληλη για live χρήση."
+    ]
+  },
+  {
+    "slug": "transport-marketing-brand-hub",
+    "title": "Transport Marketing",
+    "articleTitle": "Transport Marketing - Brand hub για digital services και sub-brands",
+    "metaTitle": "Transport Marketing Brand Hub Case Study | RedStar",
+    "metaDescription": "Case study για brand hub που οργανώνει digital services, sub-brands, portfolio και διαδρομή επικοινωνίας.",
+    "focusKeyword": "digital agency brand hub",
+    "category": "Brand Hub",
+    "portfolioMeta": "08 / Brand hub",
+    "image": "sitepad-data/uploads/2026/05/project-redstar.png",
+    "imageAlt": "Transport Marketing website screenshot",
+    "liveUrl": "https://transportmarketing.net/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Κεντρική παρουσία για digital services, sub-brands και portfolio, με καθαρή διαδρομή προς case studies και επικοινωνία.",
+    "summary": "Το Transport Marketing λειτουργεί ως κεντρικός κόμβος για υπηρεσίες, brand assets, sub-brands και παρουσιάσεις έργων. Ο στόχος είναι ο επισκέπτης να καταλάβει γρήγορα τι προσφέρεται και να φτάσει σε πραγματικά δείγματα δουλειάς.",
+    "challenge": "Ένα agency hub μπορεί εύκολα να γίνει γενικόλογο. Η πρόκληση ήταν να οργανωθούν υπηρεσίες, portfolio και επικοινωνία με τρόπο που δείχνει ουσία, χωρίς να χαθεί το brand energy.",
+    "solution": [
+      "Homepage με άμεση παρουσίαση υπηρεσιών και portfolio.",
+      "Εσωτερικές διαδρομές προς case studies αντί για απλά screenshots.",
+      "Οπτική ταυτότητα που συνδέει το RedStar με το ευρύτερο Transport Marketing οικοσύστημα.",
+      "Στατική παραγωγή περιεχομένου για εύκολη μεταφορά σε production."
+    ],
+    "technical": "Το site δουλεύει ως static exported παρουσία με assets, directory index pages και generator-driven case studies ώστε να μπορεί να ανέβει σε απλό hosting χωρίς runtime dependencies.",
+    "stack": [
+      "Static HTML",
+      "Responsive CSS",
+      "Portfolio generator",
+      "Structured content",
+      "Sitemap",
+      "Open Graph metadata"
+    ],
+    "seo": "Η SEO βάση ενισχύεται με blog/case-study URLs, sitemap, εσωτερικά links από το portfolio και περιεχόμενο που συνδέει υπηρεσίες με πραγματικές υλοποιήσεις.",
+    "outcomes": [
+      "Το portfolio δεν μένει πλέον σαν απλή γκαλερί εικόνων.",
+      "Κάθε project αποκτά indexable landing page.",
+      "Η στατική δομή παραμένει κατάλληλη για live deployment."
+    ]
+  },
+  {
+    "slug": "cisemc-consulting-website",
+    "title": "CISEMC Consultants",
+    "articleTitle": "CISEMC Consultants - Corporate consulting website για διεθνείς επενδυτές",
+    "metaTitle": "CISEMC Consulting Website Case Study | RedStar",
+    "metaDescription": "Case study για corporate consulting website με επενδυτικό positioning, industries, value opportunities και B2B αξιοπιστία.",
+    "focusKeyword": "consulting website",
+    "category": "Consulting Website",
+    "portfolioMeta": "09 / Consulting website",
+    "image": "sitepad-data/uploads/2026/05/project-cisemc.png",
+    "imageAlt": "CISEMC Consultants website screenshot",
+    "liveUrl": "https://cisemc.com/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Corporate παρουσίαση για διεθνείς συμβουλευτικές υπηρεσίες, industries και value opportunities με σοβαρό B2B ύφος.",
+    "summary": "Το CISEMC Consultants χρειάζεται εταιρική παρουσία που μιλά σε επενδυτές και decision makers. Η σελίδα δίνει έμφαση σε διεθνείς ευκαιρίες, αξιοπιστία και καθαρή παρουσίαση υπηρεσιών.",
+    "challenge": "Σε consulting περιβάλλον, το design πρέπει να μοιάζει ώριμο και αξιόπιστο χωρίς να γίνεται ψυχρό ή αόριστο. Το περιεχόμενο έπρεπε να βοηθά τον επισκέπτη να καταλάβει πεδία, industries και αξία.",
+    "solution": [
+      "Corporate landing εμπειρία με καθαρό value proposition.",
+      "Οργάνωση υπηρεσιών και industries για γρήγορη σάρωση.",
+      "Visual direction που στηρίζει διεθνές επενδυτικό ύφος.",
+      "CTA διαδρομές για B2B επικοινωνία."
+    ],
+    "technical": "Η υλοποίηση δίνει προτεραιότητα σε σταθερή responsive παρουσία, image-led sections και καθαρή δομή περιεχομένου ώστε το site να λειτουργεί ως αξιόπιστο πρώτο σημείο επαφής.",
+    "stack": [
+      "Corporate frontend",
+      "Responsive layout",
+      "Service pages",
+      "Industry sections",
+      "Lead CTAs",
+      "SEO page structure"
+    ],
+    "seo": "Το περιεχόμενο μπορεί να στοχεύσει consulting, investment opportunities και industry advisory queries, με τίτλους και sections που εξηγούν τι προσφέρει η εταιρεία.",
+    "outcomes": [
+      "Πιο καθαρή εταιρική εικόνα για διεθνές κοινό.",
+      "Καλύτερη οργάνωση consulting υπηρεσιών.",
+      "Περιεχόμενο κατάλληλο για B2B ανακάλυψη και επικοινωνία."
+    ]
+  },
+  {
+    "slug": "dd-sintering-industrial-website",
+    "title": "DD Sintering",
+    "articleTitle": "DD Sintering - Industrial B2B website για οδοντιατρική παραγωγή",
+    "metaTitle": "DD Sintering Industrial Website Case Study | RedStar",
+    "metaDescription": "Case study για B2B industrial website οδοντιατρικής παραγωγής με σαφή υπηρεσίες, credibility και τεχνικό positioning.",
+    "focusKeyword": "industrial B2B website",
+    "category": "Industrial Website",
+    "portfolioMeta": "10 / Industrial website",
+    "image": "sitepad-data/uploads/2026/05/project-ddsintering.png",
+    "imageAlt": "DD Sintering website screenshot",
+    "liveUrl": "https://ddsintering.gr/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "B2B site για οδοντιατρική παραγωγή και εργαστηριακές υπηρεσίες, με επαγγελματική αξιοπιστία και καθαρή παρουσίαση.",
+    "summary": "Το DD Sintering είναι βιομηχανικό B2B project για εργαστηριακές και οδοντιατρικές υπηρεσίες. Το site έπρεπε να δείξει τεχνική ικανότητα και εμπιστοσύνη σε επαγγελματικό κοινό.",
+    "challenge": "Τα industrial B2B sites συχνά μένουν ασαφή ή παρωχημένα. Εδώ ο στόχος ήταν να φανεί η εξειδίκευση και η παραγωγική αξιοπιστία χωρίς υπερβολικό copy ή γενικόλογα visuals.",
+    "solution": [
+      "Σοβαρή αρχική εμπειρία με εικόνες σχετικές με παραγωγή και εργαστήριο.",
+      "Καθαρή παρουσίαση υπηρεσιών για επαγγελματίες οδοντιατρικής.",
+      "Copy που δίνει έμφαση σε αξιοπιστία, ακρίβεια και συνεργασία.",
+      "Δομή που βοηθά τον χρήστη να φτάσει γρήγορα σε επικοινωνία."
+    ],
+    "technical": "Η σελίδα δίνει έμφαση σε γρήγορη φόρτωση, responsive behavior και visual hierarchy που στηρίζει B2B αξιολόγηση υπηρεσιών.",
+    "stack": [
+      "Responsive frontend",
+      "Industrial imagery",
+      "Service structure",
+      "Contact CTAs",
+      "SEO metadata",
+      "Performance-conscious assets"
+    ],
+    "seo": "Η SEO προσέγγιση μπορεί να καλύψει οδοντιατρικό εργαστήριο, sintering υπηρεσίες και B2B συνεργασίες με σελίδες που περιγράφουν συγκεκριμένες υπηρεσίες αντί για γενικές υποσχέσεις.",
+    "outcomes": [
+      "Πιο επαγγελματική πρώτη εντύπωση για B2B συνεργάτες.",
+      "Σαφέστερη παρουσίαση εργαστηριακής αξίας.",
+      "Πιο άμεση διαδρομή προς επικοινωνία."
+    ]
+  },
+  {
+    "slug": "strive-hotel-staffing-website",
+    "title": "ST.RIVE Workforce",
+    "articleTitle": "ST.RIVE Workforce - Website στελέχωσης και εκπαίδευσης ξενοδοχείων",
+    "metaTitle": "ST.RIVE Hotel Staffing Website Case Study | RedStar",
+    "metaDescription": "Case study για website στελέχωσης και εκπαίδευσης ξενοδοχείων με δυνατό μήνυμα, lead flow και responsive παρουσία.",
+    "focusKeyword": "hotel staffing website",
+    "category": "Training Website",
+    "portfolioMeta": "11 / Training website",
+    "image": "sitepad-data/uploads/2026/05/project-strive.png",
+    "imageAlt": "ST.RIVE Workforce website screenshot",
+    "liveUrl": "https://strive.gr/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Εκπαιδευτικό και staffing site για ξενοδοχειακή αγορά, με άμεσο μήνυμα γύρω από στελέχωση και ανάγκες εργοδοτών.",
+    "summary": "Το ST.RIVE Workforce μιλά σε επιχειρήσεις που χρειάζονται στελέχωση και κατάρτιση στον ξενοδοχειακό χώρο. Το site έπρεπε να δώσει άμεση κατανόηση του offer και να εμπνεύσει επαγγελματική εμπιστοσύνη.",
+    "challenge": "Η ξενοδοχειακή στελέχωση είναι πρακτικό πρόβλημα, όχι αφηρημένη υπηρεσία. Η πρόκληση ήταν να παρουσιαστεί η αξία με σαφή γλώσσα και να διατηρηθεί σοβαρή, δραστήρια αισθητική.",
+    "solution": [
+      "Hero μήνυμα που δηλώνει καθαρά τη στελέχωση ξενοδοχείων.",
+      "Δομή περιεχομένου για εργοδότες και υποψήφιους.",
+      "Responsive layout κατάλληλο για γρήγορη ανάγνωση από κινητό.",
+      "CTA σημεία που οδηγούν σε επικοινωνία ή επόμενο βήμα."
+    ],
+    "technical": "Η υλοποίηση στηρίζεται σε σταθερή landing page δομή με image-led sections, καθαρά breakpoints και copy που κρατά το focus στην επαγγελματική ανάγκη.",
+    "stack": [
+      "Responsive frontend",
+      "Landing page strategy",
+      "Greek copywriting",
+      "Lead CTAs",
+      "Hospitality positioning",
+      "SEO headings"
+    ],
+    "seo": "Το περιεχόμενο μπορεί να στοχεύσει όρους όπως στελέχωση ξενοδοχείων, εκπαίδευση προσωπικού και hospitality staffing, με headings που μιλούν απευθείας στην αγορά.",
+    "outcomes": [
+      "Πιο δυνατό πρώτο μήνυμα για ξενοδοχειακούς πελάτες.",
+      "Καθαρή παρουσίαση του staffing/training offer.",
+      "Σταθερή mobile εμπειρία για άμεση αξιολόγηση."
+    ]
+  },
+  {
+    "slug": "panorama-residences-real-estate",
+    "title": "Panorama Residences",
+    "articleTitle": "Panorama Residences - Real estate website με visual-first παρουσίαση",
+    "metaTitle": "Panorama Residences Real Estate Case Study | RedStar",
+    "metaDescription": "Case study για real estate website με visual-first παρουσίαση κατοικιών, τοποθεσία, επενδυτικό ύφος και lead διαδρομή.",
+    "focusKeyword": "real estate website",
+    "category": "Real Estate Website",
+    "portfolioMeta": "12 / Real estate website",
+    "image": "sitepad-data/uploads/2026/05/project-panorama.png",
+    "imageAlt": "Panorama Residences website screenshot",
+    "liveUrl": "https://panorama-residences.gr/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Visual-first παρουσίαση κατοικιών με έμφαση στην εικόνα, την τοποθεσία, το επενδυτικό ύφος και την επικοινωνία.",
+    "summary": "Το Panorama Residences χρειάζεται να πουλήσει αίσθηση, τοποθεσία και επενδυτική προοπτική. Η σελίδα βασίζεται σε μεγάλο visual impact και καθαρή πληροφορία για τον ενδιαφερόμενο.",
+    "challenge": "Σε real estate project, ο χρήστης αξιολογεί πρώτα εικόνα και εμπιστοσύνη. Το site έπρεπε να δώσει χώρο στα renders, να μη βαραίνει από περιττά κείμενα και να οδηγεί φυσικά σε επικοινωνία.",
+    "solution": [
+      "Μεγάλη visual παρουσίαση του property από την πρώτη οθόνη.",
+      "Περιεχόμενο που συνδέει κατοικία, τοποθεσία και επενδυτική αξία.",
+      "Σταθερή responsive διάταξη για mobile browsing.",
+      "Lead-oriented ενότητες για ενδιαφέρον αγοράς ή ενημέρωση."
+    ],
+    "technical": "Το site σχεδιάστηκε γύρω από φωτογραφικό και render υλικό, με προσοχή σε image sizing, layout stability και σαφή hierarchy για περιγραφές και CTA.",
+    "stack": [
+      "Real estate frontend",
+      "Visual-first layout",
+      "Responsive imagery",
+      "Lead CTAs",
+      "SEO metadata",
+      "Performance-aware images"
+    ],
+    "seo": "Η SEO δομή μπορεί να στοχεύσει αναζητήσεις γύρω από residences, κατοικίες, τοποθεσία και επενδυτικά ακίνητα, με σελίδες που δίνουν context πέρα από μια απλή εικόνα.",
+    "outcomes": [
+      "Πιο ισχυρή πρώτη εντύπωση για το property.",
+      "Καθαρότερη ιστορία γύρω από κατοικία και τοποθεσία.",
+      "Πιο άμεση διαδρομή για lead ενδιαφέροντος."
+    ]
+  },
+  {
+    "slug": "noor-sprouts-retail-website",
+    "title": "Noor Sprouts",
+    "articleTitle": "Noor Sprouts - Retail website για homeschool resources και εκπαιδευτικά προϊόντα",
+    "metaTitle": "Noor Sprouts Retail Website Case Study | RedStar",
+    "metaDescription": "Case study για retail website με homeschool resources, εκπαιδευτικά προϊόντα, promotional flow και καθαρή εμπορική κατεύθυνση.",
+    "focusKeyword": "retail website homeschool resources",
+    "category": "Retail Website",
+    "portfolioMeta": "13 / Retail website",
+    "image": "sitepad-data/uploads/2026/05/project-noor.png",
+    "imageAlt": "Noor Sprouts website screenshot",
+    "liveUrl": "https://noorsprouts.com/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Retail παρουσίαση για homeschool curriculums, unit studies και resources για Muslim families and educators, με καθαρό promotional flow.",
+    "summary": "Το Noor Sprouts παρουσιάζει εκπαιδευτικά resources, curriculums και unit studies για οικογένειες και εκπαιδευτικούς. Το site έπρεπε να συνδυάσει φιλικό brand, προϊόντα και εμπορική καθαρότητα.",
+    "challenge": "Ένα retail education brand πρέπει να μοιάζει ζεστό χωρίς να χάνει την εμπορική του λειτουργία. Ο επισκέπτης πρέπει να καταλάβει τι πωλείται, για ποιον είναι και πώς προχωρά προς αγορά.",
+    "solution": [
+      "Homepage που βάζει τα προϊόντα στο επίκεντρο από την πρώτη οθόνη.",
+      "Promotional flow για homeschool resources και themed educational materials.",
+      "Καθαρή διάκριση navigation, shop, about, services και membership.",
+      "Οπτικό ύφος που στηρίζει οικογενειακή και εκπαιδευτική εμπιστοσύνη."
+    ],
+    "technical": "Η υλοποίηση δίνει προτεραιότητα σε product-led presentation, responsive behavior και εμπορική σαφήνεια στις βασικές διαδρομές.",
+    "stack": [
+      "Retail frontend",
+      "Product-led homepage",
+      "Shop navigation",
+      "Membership flow",
+      "Responsive layout",
+      "SEO product copy"
+    ],
+    "seo": "Το SEO μπορεί να στηριχθεί σε long-tail intent για homeschool curriculums, Muslim families, unit studies και educational resources, με product copy που είναι σαφές και searchable.",
+    "outcomes": [
+      "Πιο καθαρή εμπορική παρουσίαση προϊόντων.",
+      "Brand experience που μιλά στο σωστό κοινό.",
+      "Διαδρομές που βοηθούν την ανακάλυψη και την αγορά."
+    ]
+  }
+]

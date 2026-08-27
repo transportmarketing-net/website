@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /site-admin/
 Allow: /site-admin/admin-ajax.php
+Sitemap: https://transportmarketing.net/redstar/sitemap.xml

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Παιδιατρικό Laravel Website | Δρ. Κοτζιά Δόξα</title>
+  <meta name="description" content="Case study για παιδιατρικό Laravel website με δίγλωσσες σελίδες, ραντεβού, blog, υπηρεσίες, γιατρούς και Google Calendar sync.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://transportmarketing.net/redstar/blog/kotzia-pediatric-pulmonology-platform/">
+  <link rel="icon" type="image/svg+xml" href="../../sitepad-data/brand/favicons/favicon.svg">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Παιδιατρικό Laravel Website | Δρ. Κοτζιά Δόξα">
+  <meta property="og:description" content="Case study για παιδιατρικό Laravel website με δίγλωσσες σελίδες, ραντεβού, blog, υπηρεσίες, γιατρούς και Google Calendar sync.">
+  <meta property="og:url" content="https://transportmarketing.net/redstar/blog/kotzia-pediatric-pulmonology-platform/">
+  <meta property="og:site_name" content="RedStar Digital Agency">
+  <meta property="og:image" content="https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/project-pediatric.png">
+  <meta property="og:image:alt" content="Homepage screenshot από το website της Δρ. Κοτζιά Δόξα">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Παιδιατρικό Laravel Website | Δρ. Κοτζιά Δόξα">
+  <meta name="twitter:description" content="Case study για παιδιατρικό Laravel website με δίγλωσσες σελίδες, ραντεβού, blog, υπηρεσίες, γιατρούς και Google Calendar sync.">
+  <meta name="twitter:image" content="https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/project-pediatric.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
+  <meta property="article:published_time" content="2026-08-27">
+  <meta property="article:modified_time" content="2026-08-27">
+  <meta property="article:section" content="Case Study">
+  <style>
+    :root {
+      --rs-red: #d62828;
+      --rs-red-dark: #8f1111;
+      --rs-red-soft: #fff1ee;
+      --rs-ink: #17080a;
+      --rs-muted: #665457;
+      --rs-surface: #fff9f7;
+      --rs-line: #ecd8d2;
+      --rs-cream: #fff4ed;
+      --rs-teal: #0f766e;
+      --rs-blue: #213b7d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--rs-surface);
+      color: var(--rs-ink);
+      font-family: Inter, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .rs-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 18px max(24px, calc((100% - 1180px) / 2));
+      border-bottom: 1px solid var(--rs-line);
+      background: rgba(255, 249, 247, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+    }
+
+    .rs-logo {
+      display: inline-flex;
+      align-items: center;
+      min-width: 178px;
+      text-decoration: none;
+    }
+
+    .rs-logo img {
+      width: 178px;
+      height: auto;
+    }
+
+    .rs-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-weight: 700;
+      color: var(--rs-muted);
+    }
+
+    .rs-nav a {
+      min-height: 40px;
+      padding: 9px 13px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .rs-nav a:hover,
+    .rs-nav a:focus-visible,
+    .rs-nav a.is-active {
+      color: var(--rs-red-dark);
+      background: var(--rs-red-soft);
+      outline: none;
+    }
+
+    .rs-main {
+      min-height: 70vh;
+    }
+
+    .rs-shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .rs-hero {
+      padding: 74px 0 54px;
+      background:
+        linear-gradient(120deg, rgba(23, 8, 10, 0.94), rgba(91, 8, 18, 0.86)),
+        url("../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg") center / cover;
+      color: #fff9f7;
+    }
+
+    .rs-eyebrow {
+      margin: 0 0 14px;
+      color: #ff5b4d;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Manrope, Inter, Arial, sans-serif;
+      letter-spacing: 0;
+      line-height: 1.12;
+    }
+
+    h1 {
+      max-width: 840px;
+      font-size: 3.25rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .rs-lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: rgba(255, 249, 247, 0.82);
+      font-size: 1.08rem;
+      font-weight: 500;
+    }
+
+    .rs-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .rs-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid var(--rs-red);
+      border-radius: 8px;
+      background: var(--rs-red);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .rs-button.secondary {
+      border-color: rgba(255, 249, 247, 0.46);
+      background: rgba(255, 249, 247, 0.08);
+      color: #fff9f7;
+    }
+
+    .rs-button:hover,
+    .rs-button:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      padding: 44px 0 82px;
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--rs-line);
+      border-radius: 8px;
+      background: #fff;
+      text-decoration: none;
+      box-shadow: 0 18px 46px rgba(23, 8, 10, 0.07);
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    }
+
+    .case-card:hover,
+    .case-card:focus-visible {
+      border-color: rgba(214, 40, 40, 0.42);
+      box-shadow: 0 24px 58px rgba(23, 8, 10, 0.12);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .case-card__media {
+      aspect-ratio: 16 / 10;
+      padding: 10px;
+      background: #1a0709;
+    }
+
+    .case-card__media img {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .case-card__body {
+      display: grid;
+      align-content: start;
+      gap: 12px;
+      padding: 22px;
+    }
+
+    .case-card__meta,
+    .article-meta {
+      color: var(--rs-red-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .case-card__title {
+      color: var(--rs-ink);
+      font-family: Manrope, Inter, Arial, sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+
+    .case-card__excerpt {
+      margin: 0;
+      color: var(--rs-muted);
+      font-weight: 500;
+    }
+
+    .article-hero {
+      padding: 58px 0 0;
+      background:
+        linear-gradient(120deg, rgba(23, 8, 10, 0.94), rgba(91, 8, 18, 0.84)),
+        url("../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg") center / cover;
+      color: #fff9f7;
+    }
+
+    .article-hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+      align-items: end;
+      gap: 34px;
+    }
+
+    .article-hero h1 {
+      font-size: 3rem;
+    }
+
+    .article-hero__copy {
+      padding-bottom: 42px;
+    }
+
+    .article-figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 249, 247, 0.22);
+      border-radius: 8px 8px 0 0;
+      background: #130608;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    .article-figure img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      object-position: center;
+      padding: 12px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 48px;
+      padding: 58px 0 84px;
+    }
+
+    .article-content {
+      display: grid;
+      gap: 34px;
+    }
+
+    .article-content section {
+      display: grid;
+      gap: 16px;
+    }
+
+    .article-content p {
+      margin: 0;
+      color: var(--rs-muted);
+      font-size: 1.02rem;
+    }
+
+    .article-content ul,
+    .article-aside ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding-left: 20px;
+      color: var(--rs-muted);
+    }
+
+    .article-content li,
+    .article-aside li {
+      padding-left: 4px;
+    }
+
+    .article-aside {
+      position: sticky;
+      top: 96px;
+      align-self: start;
+      display: grid;
+      gap: 14px;
+    }
+
+    .article-panel {
+      border: 1px solid var(--rs-line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 18px;
+      box-shadow: 0 16px 40px rgba(23, 8, 10, 0.06);
+    }
+
+    .article-panel strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--rs-ink);
+    }
+
+    .article-panel span,
+    .article-panel a {
+      color: var(--rs-muted);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .article-panel a:hover,
+    .article-panel a:focus-visible {
+      color: var(--rs-red-dark);
+      outline: none;
+    }
+
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .article-tags span {
+      padding: 6px 9px;
+      border-radius: 8px;
+      background: #eef8f6;
+      color: var(--rs-teal);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .related-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .related-link {
+      display: grid;
+      gap: 6px;
+      padding: 18px;
+      border: 1px solid var(--rs-line);
+      border-radius: 8px;
+      background: var(--rs-cream);
+      text-decoration: none;
+    }
+
+    .related-link:hover,
+    .related-link:focus-visible {
+      border-color: rgba(214, 40, 40, 0.4);
+      outline: none;
+    }
+
+    .related-link small {
+      color: var(--rs-red-dark);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .related-link strong {
+      font-family: Manrope, Inter, Arial, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .rs-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px max(24px, calc((100% - 1180px) / 2));
+      background: var(--rs-ink);
+      color: #fff9f7;
+    }
+
+    .rs-footer div {
+      display: grid;
+      gap: 4px;
+    }
+
+    .rs-footer span {
+      color: rgba(255, 249, 247, 0.72);
+    }
+
+    .rs-footer a {
+      color: #fff9f7;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .rs-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .rs-nav {
+        justify-content: flex-start;
+      }
+
+      h1,
+      .article-hero h1 {
+        font-size: 2.45rem;
+      }
+
+      .case-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .article-hero__grid,
+      .article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .article-aside {
+        position: static;
+      }
+    }
+
+    @media (max-width: 620px) {
+      body {
+        font-size: 15px;
+      }
+
+      .rs-header {
+        padding: 16px 20px;
+      }
+
+      .rs-logo img {
+        width: 150px;
+      }
+
+      .rs-nav {
+        width: 100%;
+        gap: 6px;
+      }
+
+      .rs-nav a {
+        min-height: 38px;
+        padding: 8px 10px;
+      }
+
+      .rs-shell {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .rs-hero {
+        padding: 50px 0 38px;
+      }
+
+      h1,
+      .article-hero h1 {
+        font-size: 2.1rem;
+      }
+
+      h2 {
+        font-size: 1.65rem;
+      }
+
+      .case-grid,
+      .related-row {
+        grid-template-columns: 1fr;
+      }
+
+      .article-hero {
+        padding-top: 42px;
+      }
+
+      .article-hero__copy {
+        padding-bottom: 28px;
+      }
+
+      .article-layout {
+        gap: 34px;
+        padding: 42px 0 58px;
+      }
+
+      .rs-footer {
+        flex-direction: column;
+        padding: 28px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+
+      .case-card:hover,
+      .case-card:focus-visible,
+      .rs-button:hover,
+      .rs-button:focus-visible {
+        transform: none;
+      }
+    }
+  </style>
+  <script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Δρ. Κοτζιά Δόξα - Παιδιατρικό Laravel website με ραντεβού και SEO blog",
+    "description": "Case study για παιδιατρικό Laravel website με δίγλωσσες σελίδες, ραντεβού, blog, υπηρεσίες, γιατρούς και Google Calendar sync.",
+    "image": "https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/project-pediatric.png",
+    "author": {
+      "@type": "Person",
+      "name": "Alexandros Kourtis"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RedStar Digital Agency",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://transportmarketing.net/redstar/sitepad-data/brand/RedStar.png"
+      }
+    },
+    "datePublished": "2026-08-27",
+    "dateModified": "2026-08-27",
+    "mainEntityOfPage": "https://transportmarketing.net/redstar/blog/kotzia-pediatric-pulmonology-platform/",
+    "articleSection": "Case Study",
+    "keywords": [
+      "παιδιατρικό laravel website",
+      "Healthcare Laravel",
+      "Δρ. Κοτζιά Δόξα",
+      "Laravel 10",
+      "Blade templates",
+      "Database migrations",
+      "Bilingual routes"
+    ],
+    "inLanguage": "el-GR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "RedStar",
+        "item": "https://transportmarketing.net/redstar/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://transportmarketing.net/redstar/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Δρ. Κοτζιά Δόξα",
+        "item": "https://transportmarketing.net/redstar/blog/kotzia-pediatric-pulmonology-platform/"
+      }
+    ]
+  }
+]</script>
+</head>
+<body>
+  <header class="rs-header">
+    <a class="rs-logo" href="../../index.html" aria-label="RedStar homepage">
+      <img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar Digital Agency">
+    </a>
+    <nav class="rs-nav" aria-label="Primary navigation">
+        <a class="" href="../../index.html">Αρχική</a>
+        <a class="" href="../../index.html#services">Υπηρεσίες</a>
+        <a class="" href="../../index.html#portfolio">Portfolio</a>
+        <a class="is-active" href="../../blog/index.html">Blog</a>
+        <a class="" href="../../contact/index.html">Επικοινωνία</a>
+    </nav>
+  </header>
+  <main class="rs-main">
+    <article>
+      <section class="article-hero">
+        <div class="rs-shell article-hero__grid">
+          <div class="article-hero__copy">
+            <p class="rs-eyebrow">Case Study 01</p>
+            <h1>Δρ. Κοτζιά Δόξα - Παιδιατρικό Laravel website με ραντεβού και SEO blog</h1>
+            <p class="rs-lead">Παιδιατρικό και παιδοπνευμονολογικό website σε Laravel με online ραντεβού, δίγλωσση δομή, SEO blog και admin διαχείριση.</p>
+            <div class="rs-actions">
+              <a class="rs-button" href="https://pediatric-lxxk6eb8.on-forge.com/" target="_blank" rel="noopener">Δείτε live project</a>
+              <a class="rs-button secondary" href="../../contact/index.html">Συζητήστε παρόμοιο project</a>
+            </div>
+          </div>
+          <figure class="article-figure">
+            <img src="../../sitepad-data/uploads/2026/05/project-pediatric.png" alt="Homepage screenshot από το website της Δρ. Κοτζιά Δόξα" fetchpriority="high">
+          </figure>
+        </div>
+      </section>
+      <div class="rs-shell article-layout">
+        <div class="article-content">
+          <section>
+            <p class="article-meta">Healthcare Laravel / 27 Αυγούστου 2026</p>
+            <h2>Το project με μια ματιά</h2>
+            <p>Το project χτίστηκε για παιδιατρικό και παιδοπνευμονολογικό ιατρείο που χρειάζεται σοβαρή δημόσια εικόνα, καθαρή ενημέρωση γονέων και πρακτική διαχείριση αιτημάτων ραντεβού. Η δημόσια εμπειρία παρουσιάζει τη Δρ. Δόξα Κοτζιά, υπηρεσίες, γιατρούς, blog, τιμές και στοιχεία επικοινωνίας, ενώ το backend οργανώνει περιεχόμενο και λειτουργικές ροές.</p>
+          </section>
+          <section>
+            <h2>Πρόκληση</h2>
+            <p>Ο χώρος της υγείας απαιτεί εμπιστοσύνη, σαφήνεια και παραγωγικότητα. Το site έπρεπε να εξηγήσει εξειδικευμένες παιδοπνευμονολογικές υπηρεσίες χωρίς θόρυβο, να υποστηρίξει ελληνικά και αγγλικά, και να δώσει στο ιατρείο εργαλεία για ραντεβού, blog, media και Google Calendar χωρίς εξάρτηση από χειροκίνητες αλλαγές κώδικα.</p>
+          </section>
+          <section>
+            <h2>Τι υλοποιήθηκε</h2>
+            <ul>
+          <li>Δίγλωσσες δημόσιες διαδρομές για αρχική, υπηρεσίες, γιατρούς, blog, επικοινωνία και ραντεβού.</li>
+          <li>Admin περιβάλλον για appointments, ασθενείς, blog posts, media library, υπηρεσίες, γιατρούς, FAQs, testimonials και site settings.</li>
+          <li>Appointment flow με διαθέσιμες ώρες, service types, κατάσταση αιτήματος και σύνδεση με Google Calendar.</li>
+          <li>SEO-ready blog δομή με published posts, meta titles, meta descriptions, excerpts, featured images και κατηγορίες.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Τεχνική βάση</h2>
+            <p>Η εφαρμογή βασίζεται σε Laravel 10 με Blade views, migrations για appointments, blog posts, service types, patients, doctors, settings και media, καθώς και controllers για public pages και admin workflows. Η παραγωγική φιλοξενία είναι Laravel Forge πίσω από Cloudflare, με canonical URLs και asset paths που μπορούν να δουλέψουν σε live περιβάλλον.</p>
+          </section>
+          <section>
+            <h2>SEO και περιεχόμενο</h2>
+            <p>Το SEO angle εστιάζει σε παιδιατρικές και παιδοπνευμονολογικές αναζητήσεις με ξεχωριστές σελίδες υπηρεσιών, ενημερωτικά άρθρα, localized metadata και περιεχόμενο που απαντά σε πραγματικές απορίες γονέων.</p>
+          </section>
+          <section>
+            <h2>Αποτέλεσμα</h2>
+            <ul>
+          <li>Καθαρή public παρουσία για γιατρό υψηλής εξειδίκευσης.</li>
+          <li>Διαχειρίσιμο blog και περιεχόμενο χωρίς αλλαγές στον κώδικα.</li>
+          <li>Ροή ραντεβού που συνδέει τη δημόσια σελίδα με την εσωτερική οργάνωση του ιατρείου.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Σχετικά case studies</h2>
+            <div class="related-row">
+              <a class="related-link" href="../noor-sprouts-retail-website/index.html">
+                <small>Προηγούμενο</small>
+                <strong>Noor Sprouts</strong>
+              </a>
+              <a class="related-link" href="../lumencia-medical-marketing/index.html">
+                <small>Επόμενο</small>
+                <strong>Lumencia</strong>
+              </a>
+            </div>
+          </section>
+        </div>
+        <aside class="article-aside" aria-label="Project details">
+          <div class="article-panel">
+            <strong>Project</strong>
+            <span>Δρ. Κοτζιά Δόξα</span>
+          </div>
+          <div class="article-panel">
+            <strong>Κατηγορία</strong>
+            <span>Healthcare Laravel</span>
+          </div>
+          <div class="article-panel">
+            <strong>Live URL</strong>
+            <a href="https://pediatric-lxxk6eb8.on-forge.com/" target="_blank" rel="noopener">https://pediatric-lxxk6eb8.on-forge.com/</a>
+          </div>
+          <div class="article-panel">
+            <strong>Stack</strong>
+            <ul>
+          <li>Laravel 10</li>
+          <li>Blade templates</li>
+          <li>Database migrations</li>
+          <li>Bilingual routes</li>
+          <li>Admin CRUD</li>
+          <li>Google Calendar API</li>
+          <li>SEO blog fields</li>
+            </ul>
+          </div>
+          <div class="article-panel">
+            <strong>SEO focus</strong>
+            <div class="article-tags">
+          <span>παιδιατρικό laravel website</span>
+          <span>Healthcare Laravel</span>
+          <span>Δρ. Κοτζιά Δόξα</span>
+          <span>Laravel 10</span>
+          <span>Blade templates</span>
+          <span>Database migrations</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </main>
+  <footer class="rs-footer">
+    <div>
+      <strong>RedStar Digital Agency</strong>
+      <span>Custom εφαρμογές, websites και αυτοματισμοί με παραγωγική τεχνική βάση.</span>
+    </div>
+    <a href="../../contact/index.html">Συζητήστε το επόμενο project</a>
+  </footer>
+</body>
+</html>
