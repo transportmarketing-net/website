@@ -43,6 +43,12 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 	--redstar-surface-card: #f0e3df;
 	--redstar-border: rgba(143, 17, 17, 0.24);
 	--redstar-glow: rgba(214, 40, 40, 0.3);
+	/* P0-1: kill global capitalize on headings + body text */
+	--pagelayer-font-primary-text-transform: none;
+	--pagelayer-font-secondary-text-transform: none;
+	--pagelayer-font-accent-text-transform: none;
+	/* P0-2: body line-height 1.25 -> 1.6 for Greek diacritics readability */
+	--pagelayer-font-text-line-height: 1.6;
 }
 
 html,
@@ -50,6 +56,7 @@ body.pagelayer-body {
 	background: var(--redstar-surface);
 	color: var(--redstar-ink);
 	overflow-x: hidden;
+	font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .pagelayer-header {
@@ -445,4 +452,197 @@ body.pagelayer-body {
 	.pagelayer-header .p-cv46230 .pagelayer-btn-icon {
 		transition: none !important;
 	}
+}
+
+/* ===================================================================
+   UX/UI REVIEW FIXES
+   =================================================================== */
+
+/* P0-1: kill capitalize on pricing list items too */
+.pagelayer-list-item,
+.pagelayer-service-heading,
+.pagelayer-service-text,
+.pagelayer-accordion-title,
+.pagelayer-heading-holder {
+	text-transform: none !important;
+}
+
+/* P0-5: hide template placeholder text in pricing circles */
+.pagelayer-service-icon.pagelayer-service-default {
+	display: none !important;
+}
+
+/* P1-6: warm up cool-gray section backgrounds */
+.p-ibp6881,
+.p-zz85132 {
+	background: var(--redstar-surface-soft) !important;
+}
+
+/* P1-6: pricing tab content area warm bg instead of pure #fff */
+.p-8sx3670 .pagelayer-tab {
+	background-color: var(--redstar-surface) !important;
+}
+
+/* P1-7: tech stack icon visibility improvement */
+.p-ts0g001 .tech-item svg {
+	opacity: 0.78 !important;
+	filter: grayscale(50%) !important;
+}
+
+.p-ts0g001 .tech-item:hover svg {
+	opacity: 1 !important;
+	filter: grayscale(0%) !important;
+}
+
+/* P1-7: reduce oversized tech stack heading */
+.p-ts0g001 .tech-stack-heading {
+	font-size: 30px !important;
+}
+
+/* P1-8: mobile CTA fixed bottom bar */
+@media (max-width: 768px) {
+	.p-zqa5247.pagelayer-hide-tablet,
+	.p-zqa5247.pagelayer-hide-mobile {
+		display: block !important;
+		position: fixed !important;
+		bottom: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		width: 100% !important;
+		z-index: 9999 !important;
+		background: var(--redstar-surface) !important;
+		padding: 10px 16px !important;
+		box-shadow: 0 -4px 20px rgba(25, 6, 8, 0.12) !important;
+		border-top: 1px solid var(--redstar-border) !important;
+		text-align: center !important;
+	}
+
+	.p-zqa5247 .pagelayer-col-holder {
+		display: flex !important;
+		justify-content: center !important;
+	}
+
+	.p-zqa5247 .p-cv46230 .pagelayer-btn-holder {
+		width: 100% !important;
+		max-width: 340px !important;
+		justify-content: center !important;
+		padding: 14px 24px !important;
+		font-size: 16px !important;
+	}
+
+	/* prevent CTA bar from covering footer content */
+	body.pagelayer-body {
+		padding-bottom: 68px !important;
+	}
+}
+
+/* P1-9: CTA buttons for pricing cards */
+.pricing-cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--redstar-primary) 0%, var(--redstar-primary-bright) 100%);
+	color: var(--redstar-surface) !important;
+	font-family: Manrope, Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	padding: 14px 28px;
+	border-radius: 14px;
+	margin-top: 20px;
+	box-shadow: 0 8px 22px var(--redstar-glow);
+	transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+	white-space: nowrap;
+}
+
+.pricing-cta:hover,
+.pricing-cta:focus-visible {
+	background: linear-gradient(135deg, var(--redstar-primary-dark) 0%, var(--redstar-primary) 100%);
+	transform: translateY(-2px);
+	box-shadow: 0 12px 30px rgba(214, 40, 40, 0.36);
+	color: var(--redstar-surface) !important;
+}
+
+/* P1-11: enlarge pricing price circles */
+.p-5di1242,
+.p-c862280,
+.p-vsz5543 {
+	height: 130px !important;
+	width: 130px !important;
+	padding-top: 24px !important;
+}
+
+.p-5di1242 .pagelayer-service-heading,
+.p-c862280 .pagelayer-service-heading,
+.p-vsz5543 .pagelayer-service-heading {
+	font-size: 20px !important;
+	line-height: 1.2 !important;
+}
+
+.p-5di1242 .pagelayer-service-text,
+.p-c862280 .pagelayer-service-text,
+.p-vsz5543 .pagelayer-service-text {
+	font-size: 11px !important;
+	line-height: 1.3 !important;
+}
+
+/* P2-13: service card hover effects */
+.p-rkq3754,
+.p-ysc134 {
+	transition: transform 300ms ease, box-shadow 300ms ease !important;
+}
+
+.p-rkq3754:hover,
+.p-ysc134:hover {
+	transform: translateY(-4px) !important;
+	box-shadow: 0 24px 52px rgba(25, 6, 8, 0.1) !important;
+}
+
+/* P2-14: font fallback stack */
+.pagelayer-heading-holder,
+.pagelayer-heading-holder *,
+[class*="pagelayer-font-primary"],
+[class*="pagelayer-font-secondary"],
+[class*="pagelayer-font-accent"] {
+	font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* P2: accordion panel line-height for readability */
+.pagelayer-accordion-panel .pagelayer-heading-holder {
+	line-height: 1.6 !important;
+}
+
+/* P1: pricing tab containers — prevent feature list clipping */
+.p-8sx3670 .pagelayer-tabcontent {
+	overflow: visible !important;
+}
+
+.p-fsr7498,
+.p-bg29434,
+.p-pbn9807 {
+	overflow: visible !important;
+}
+
+.p-krt4246,
+.p-wi78338,
+.p-buv6603 {
+	overflow: visible !important;
+	min-width: 0 !important;
+}
+
+/* P1: Custom tab price circle — larger to fit Greek text */
+.p-vsz5543 {
+	height: 140px !important;
+	width: 140px !important;
+	padding-top: 24px !important;
+}
+
+.p-vsz5543 .pagelayer-service-heading {
+	font-size: 17px !important;
+	line-height: 1.2 !important;
+}
+
+.p-vsz5543 .pagelayer-service-text {
+	font-size: 11px !important;
+	line-height: 1.3 !important;
 }
