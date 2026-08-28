@@ -532,5 +532,44 @@
       "Τρεις ρόλοι με ξεχωριστή εμπειρία και ξεκάθαρα δικαιώματα.",
       "Αρχιτεκτονική Service/Repository που διατηρεί τη βάση κώδικα οργανωμένη καθώς μεγαλώνει."
     ]
+  },
+  {
+    "slug": "toner-ink-eshop",
+    "title": "Toner Ink",
+    "articleTitle": "Toner Ink - E-Shop ηλεκτρονικών και αναλωσίμων εκτυπωτών στην Αθήνα",
+    "metaTitle": "Toner Ink E-Shop Case Study | RedStar",
+    "metaDescription": "Case study για e-shop ηλεκτρονικών και αναλωσίμων εκτυπωτών με product catalog, category navigation, σύγκριση προϊόντων και υπηρεσίες επισκευής στο κέντρο της Αθήνας.",
+    "focusKeyword": "e-shop ηλεκτρονικών αθήνα",
+    "category": "E-Shop",
+    "portfolioMeta": "15 / E-Shop",
+    "image": "sitepad-data/uploads/2026/05/project-tonerink.png",
+    "imageAlt": "Toner Ink screenshot - E-Shop ηλεκτρονικών και αναλωσίμων εκτυπωτών",
+    "liveUrl": "https://tonerink-biss4z1y.on-forge.com/",
+    "publishedAt": "2026-08-28",
+    "excerpt": "E-shop ηλεκτρονικών και αναλωσίμων εκτυπωτών στο κέντρο της Αθήνας, με product catalog, σύγκριση προϊόντων, wishlist και 25 χρόνια εμπειρίας στις επισκευές.",
+    "summary": "Το Toner Ink είναι κατάστημα ηλεκτρονικών και αναλωσίμων εκτυπωτών στα Εξάρχεια της Αθήνας, με 25 χρόνια εμπειρίας στις επισκευές. Το e-shop καλύπτει smartphones, notebooks, εκτυπωτές, ακουστικά, cameras, τηλεοράσεις και αξεσουάρ, με δυνατότητα σύγκρισης προϊόντων, wishlist και παραλαβή από κατάστημα.",
+    "challenge": "Ένα φυσικό κατάστημα ηλεκτρονικών με μακρά ιστορία στις επισκευές χρειαζόταν ψηφιακή παρουσία που να αντικατοπτρίζει την εμπειρία του. Ο στόχος ήταν ένα e-shop με σαφή κατηγοριοποίηση προϊόντων, εύκολη πλοήγηση και δυνατότητα σύγκρισης, ενώ παράλληλα προβάλλει τις υπηρεσίες service και τη φυσική παρουσία στο κέντρο.",
+    "solution": [
+      "Product catalog με κατηγορίες: Smartphones, Notebooks, Printer Supplies, Headphones, Cameras, TVs και αξεσουάρ.",
+      "Σύγκριση προϊόντων (compare) μέχρι 3 items ταυτόχρονα.",
+      "Wishlist και order tracking για εγγεγραμμένους χρήστες.",
+      "Υπηρεσίες Printer Service, PC & Laptop Help, Store Pickup και Customer Care."
+    ],
+    "technical": "Η πλατφόρμα βασίζεται σε e-commerce engine με responsive frontend, category-based navigation, product search με filtering ανά κατηγορία, multi-currency support (EUR, USD, GBP) και bilingual interface (EL/EN). Η ασφάλεια περιλαμβάνει Cloudflare integration.",
+    "stack": [
+      "E-Commerce Platform",
+      "Responsive Frontend",
+      "Product Catalog & Categories",
+      "Search & Filtering",
+      "Multi-Currency (EUR/USD/GBP)",
+      "Bilingual (EL/EN)",
+      "Cloudflare Security"
+    ],
+    "seo": "Το e-shop στοχεύει σε τοπικό SEO για αναλώσιμα εκτυπωτών και ηλεκτρονικά στην Αθήνα, με κατηγοριοποιημένα προϊόντα, structured data και bilingual content που επεκτείνει το reach σε αγγλόφωνο κοινό.",
+    "outcomes": [
+      "Ψηφιακή βιτρίνα που αντικατοπτρίζει 25 χρόνια εμπειρίας στο χώρο.",
+      "Εύκολη πλοήγηση σε πάνω από 10 κατηγορίες προϊόντων.",
+      "Σύγκριση, wishlist και order tracking που ενισχύουν την εμπειρία αγοράς."
+    ]
   }
 ]
