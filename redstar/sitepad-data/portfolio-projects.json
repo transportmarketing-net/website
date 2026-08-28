@@ -493,5 +493,44 @@
       "Brand experience που μιλά στο σωστό κοινό.",
       "Διαδρομές που βοηθούν την ανακάλυψη και την αγορά."
     ]
+  },
+  {
+    "slug": "sass-academic-support-platform",
+    "title": "SASS Platform",
+    "articleTitle": "SASS Platform - Σύστημα ακαδημαϊκής υποστήριξης για το Deree, ACG",
+    "metaTitle": "SASS Academic Support Platform Case Study | RedStar",
+    "metaDescription": "Case study για πλατφόρμα ακαδημαϊκής υποστήριξης με PHP 8, Service/Repository pattern, RBAC, Docker και Bootstrap 5 για το American College of Greece.",
+    "focusKeyword": "academic support platform",
+    "category": "EdTech Platform",
+    "portfolioMeta": "14 / EdTech platform",
+    "image": "sitepad-data/uploads/2026/05/project-sass.png",
+    "imageAlt": "SASS Platform screenshot - Student Academic Support Services",
+    "liveUrl": "https://sass.acg.edu/",
+    "publishedAt": "2026-08-27",
+    "excerpt": "Σύστημα διαχείρισης ακαδημαϊκής υποστήριξης για το Deree (ACG) με PHP 8, Service/Repository pattern, ραντεβού, βάρδιες και τρεις ρόλους χρηστών.",
+    "summary": "Το SASS Platform εξυπηρετεί τη Διεύθυνση Ακαδημαϊκής Υποστήριξης του Deree, The American College of Greece. Η πλατφόρμα οργανώνει peer-to-peer tutoring: φοιτητές κλείνουν ραντεβού, facilitators διαχειρίζονται βάρδιες και σημειώσεις, και η διοίκηση βλέπει αναφορές και ελέγχει ρόλους, μαθήματα και αντιστοιχίσεις.",
+    "challenge": "Ένα πανεπιστημιακό σύστημα υποστήριξης πρέπει να εξυπηρετεί τρεις διαφορετικούς ρόλους με ξεχωριστές ανάγκες, να λειτουργεί αξιόπιστα σε ακαδημαϊκό περιβάλλον και να διατηρεί καθαρή αρχιτεκτονική ώστε η ανάπτυξη να παραμένει βιώσιμη. Οι φοιτητές θέλουν γρήγορη κράτηση, οι facilitators ελεγχόμενη ροή, και η διοίκηση reporting χωρίς χειροκίνητη συλλογή δεδομένων.",
+    "solution": [
+      "Τρία ξεχωριστά dashboards για Student, Facilitator και Admin με RBAC.",
+      "Σύστημα ραντεβού με διαθεσιμότητα facilitator και session notes.",
+      "Shift tracking για βάρδιες tutoring με sign-in και sign-out.",
+      "Admin panel με διαχείριση μαθημάτων, αντιστοίχιση facilitators και reporting."
+    ],
+    "technical": "Η εφαρμογή βασίζεται σε PHP 8 με Service/Repository pattern και PSR-4 autoloading. Η βάση δεδομένων είναι MySQL 8.0. Το frontend χρησιμοποιεί Bootstrap 5.1.3 και jQuery 3.7.1. Η ασφάλεια περιλαμβάνει session-based auth, CSRF protection και role-based access control. Η παραγωγική εγκατάσταση γίνεται με Docker και Apache 2.4.",
+    "stack": [
+      "PHP 8.0+",
+      "MySQL 8.0",
+      "Service/Repository Pattern",
+      "Bootstrap 5.1.3",
+      "Docker",
+      "CSRF + Session Security",
+      "Role-Based Access Control"
+    ],
+    "seo": "Η πλατφόρμα στηρίζει τη δημόσια εικόνα των υπηρεσιών SASS του Deree, με landing page που εξηγεί τι προσφέρεται, πού βρίσκεται η υπηρεσία και πώς μπορεί κάποιος να επικοινωνήσει. Η τεχνική δομή επιτρέπει μελλοντική επέκταση σε indexable σελίδες ανά υπηρεσία.",
+    "outcomes": [
+      "Ενιαίο σύστημα που αντικαθιστά χειροκίνητη οργάνωση tutoring.",
+      "Τρεις ρόλοι με ξεχωριστή εμπειρία και ξεκάθαρα δικαιώματα.",
+      "Αρχιτεκτονική Service/Repository που διατηρεί τη βάση κώδικα οργανωμένη καθώς μεγαλώνει."
+    ]
   }
 ]

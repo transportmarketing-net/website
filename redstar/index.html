@@ -740,6 +740,17 @@ WhatsApp</a>
             <span class="redstar-project-card__action">Δείτε case study <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
           </span>
         </a>
+        <a class="redstar-project-card" href="blog/sass-academic-support-platform/index.html" aria-label="SASS Platform case study">
+          <span class="redstar-project-card__media">
+            <img src="sitepad-data/uploads/2026/05/project-sass.png" alt="SASS Platform screenshot - Student Academic Support Services" loading="lazy">
+          </span>
+          <span class="redstar-project-card__body">
+            <span class="redstar-project-card__meta">14 / EdTech Platform</span>
+            <span class="redstar-project-card__title">SASS Platform</span>
+            <span class="redstar-project-card__copy">Σύστημα διαχείρισης ακαδημαϊκής υποστήριξης για το Deree (ACG) με PHP 8, Service/Repository pattern, ραντεβού, βάρδιες και τρεις ρόλους χρηστών.</span>
+            <span class="redstar-project-card__action">Δείτε case study <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
@@ -4481,9 +4492,9 @@ transform: scale(3) translateX(-15px)
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  max-width: 1000px;
+  gap: 40px;
+  flex-wrap: nowrap;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -4496,12 +4507,39 @@ transform: scale(3) translateX(-15px)
   opacity: 0.8;
   transition: opacity 400ms ease, transform 400ms ease;
   text-decoration: none;
-  min-width: 180px;
+  min-width: 0;
+  flex: 1 1 0;
+  max-width: 200px;
+  position: relative;
 }
 
 .p-vb0w001 .volunteer-item:hover {
   opacity: 1;
   transform: translateY(-5px);
+}
+
+.p-vb0w001 .volunteer-item[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: var(--pagelayer-color-text, #1a1a1a);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
+  z-index: 10;
+}
+
+.p-vb0w001 .volunteer-item[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .p-vb0w001 .volunteer-logo {
@@ -4524,10 +4562,12 @@ transform: scale(3) translateX(-15px)
 
 @media (max-width: 768px) {
   .p-vb0w001 .volunteer-grid {
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   .p-vb0w001 .volunteer-item {
-    min-width: 140px;
+    flex: 0 0 auto;
+    min-width: 120px;
   }
   .p-vb0w001 .volunteer-logo {
     max-width: 140px;
@@ -4558,27 +4598,33 @@ transform: scale(3) translateX(-15px)
         <div class="volunteer-grid">
 
           <!-- Deree -->
-          <a href="https://sass.acg.edu/" target="_blank" rel="noopener" class="volunteer-item">
+          <a href="https://sass.acg.edu/" target="_blank" rel="noopener" class="volunteer-item" data-tooltip="Web Platform Development">
             <img src="sitepad-data/uploads/2026/05/logo-deree.png" alt="Deree - The American University of Greece" class="volunteer-logo logo-invert">
             <span class="volunteer-name">Deree</span>
           </a>
 
           <!-- Boroume -->
-          <a href="https://www.boroume.gr/" target="_blank" rel="noopener" class="volunteer-item">
+          <a href="https://www.boroume.gr/" target="_blank" rel="noopener" class="volunteer-item" data-tooltip="Volunteer, Food Rescue">
             <img src="sitepad-data/uploads/2026/05/logo-boroume.png" alt="Boroume" class="volunteer-logo">
             <span class="volunteer-name">Boroume</span>
           </a>
 
           <!-- Shedia -->
-          <a href="https://shedia-scheduler-xxrl6bxv.on-forge.com/" target="_blank" rel="noopener" class="volunteer-item">
+          <a href="https://shedia-scheduler-xxrl6bxv.on-forge.com/" target="_blank" rel="noopener" class="volunteer-item" data-tooltip="Web App Development">
             <img src="sitepad-data/uploads/2026/05/logo-shedia.png" alt="Shedia" class="volunteer-logo">
             <span class="volunteer-name">Shedia</span>
           </a>
 
           <!-- EAPN -->
-          <a href="https://www.eapn.gr/" target="_blank" rel="noopener" class="volunteer-item">
+          <a href="https://www.eapn.gr/" target="_blank" rel="noopener" class="volunteer-item" data-tooltip="Digital Support, Content">
             <img src="sitepad-data/uploads/2026/05/logo-eapn.png" alt="EAPN Greece" class="volunteer-logo">
             <span class="volunteer-name">EAPN</span>
+          </a>
+
+          <!-- SEDD -->
+          <a href="https://sedd-ovx7u9ng.on-forge.com/" target="_blank" rel="noopener" class="volunteer-item" data-tooltip="Website Development">
+            <img src="sitepad-data/uploads/2026/05/logo-sedd.png" alt="Σωματείο Εθελοντών Διασωστών Δασοπυροσβεστών Β.Κ. Εύβοιας" class="volunteer-logo">
+            <span class="volunteer-name">SEDD</span>
           </a>
 
         </div>
@@ -4864,10 +4910,10 @@ rotate: .0deg;
 .p-3377051 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
 .p-3377051 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
 .p-3377051 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-.p-3377051{padding-top: 0px; padding-right: 0px; padding-bottom: 65px; padding-left: 0px}
-@media (max-width: 768px) and (min-width: 501px){.p-3377051{padding-top: 0px; padding-right: 40px; padding-bottom: 50px; padding-left: 40px}
+.p-3377051{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
+@media (max-width: 768px) and (min-width: 501px){.p-3377051{padding-top: 0px; padding-right: 40px; padding-bottom: 0px; padding-left: 40px}
 }
-@media (max-width: 500px){.p-3377051{padding-top: 0px; padding-right: 30px; padding-bottom: 40px; padding-left: 30px}
+@media (max-width: 500px){.p-3377051{padding-top: 0px; padding-right: 30px; padding-bottom: 0px; padding-left: 30px}
 }
 </style>
 			
@@ -5230,140 +5276,6 @@ height: 250px;}
 </div></div>
 </div></div>
 </div></div>
-<!-- Tech Stack: Τεχνολογίες που Δουλεύω Καθημερινά -->
-<div pagelayer-id="ts0g001" class="p-ts0g001 pagelayer-row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="ts0g001">
-.p-ts0g001 .pagelayer-col-holder{padding: 10px}
-.p-ts0g001 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-ts0g001{padding-top: 0px; padding-right: 0px; padding-bottom: 65px; padding-left: 0px; background: var(--pagelayer-color-accent)}
-@media (max-width: 768px) and (min-width: 501px){.p-ts0g001{padding-top: 0px; padding-right: 40px; padding-bottom: 50px; padding-left: 40px}}
-@media (max-width: 500px){.p-ts0g001{padding-top: 0px; padding-right: 20px; padding-bottom: 40px; padding-left: 20px}}
-.p-ts0g001 .tech-stack-heading{
-  text-align: center;
-  color: var(--pagelayer-color-secondary);
-  font-family: var(--pagelayer-font-secondary-font-family);
-  font-size: var(--pagelayer-font-secondary-font-size);
-  font-weight: var(--pagelayer-font-secondary-font-weight);
-  text-transform: var(--pagelayer-font-secondary-text-transform);
-  letter-spacing: 1px;
-  line-height: 1em;
-  margin-bottom: 40px;
-}
-.p-ts0g001 .tech-stack-strip{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.p-ts0g001 .tech-item{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-.p-ts0g001 .tech-item svg{
-  height: 50px;
-  width: 50px;
-  fill: #141414;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: all 400ms ease;
-}
-.p-ts0g001 .tech-item:hover svg{
-  filter: grayscale(0%);
-  opacity: 1;
-}
-.p-ts0g001 .tech-item .tech-label{
-  font-family: var(--pagelayer-font-text-font-family);
-  font-size: 13px;
-  color: var(--pagelayer-color-text);
-  text-align: center;
-  opacity: 0.7;
-  transition: opacity 400ms ease;
-}
-.p-ts0g001 .tech-item:hover .tech-label{
-  opacity: 1;
-}
-@media (max-width: 768px){
-  .p-ts0g001 .tech-stack-strip{gap: 20px}
-  .p-ts0g001 .tech-item svg{height: 40px; width: 40px}
-  .p-ts0g001 .tech-item .tech-label{font-size: 11px}
-}
-</style>
-  <div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-    <div pagelayer-id="ts0g002" class="p-ts0g002 pagelayer-col">
-      <div class="pagelayer-col-holder">
-        <h3 class="tech-stack-heading">Τεχνολογίες που Δουλεύω Καθημερινά</h3>
-        <div class="tech-stack-strip">
-          <!-- Laravel -->
-          <div class="tech-item">
-            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504.4 115.83a5.72 5.72 0 00-.28-.68 8.52 8.52 0 00-.53-1.25 6 6 0 00-.54-.71 9.36 9.36 0 00-.72-.94c-.23-.22-.52-.4-.77-.6a8.84 8.84 0 00-.9-.68L404.4 55.55a8.82 8.82 0 00-8.83 0L299.32 111.1a9 9 0 00-.9.68c-.25.2-.54.38-.77.6a9.36 9.36 0 00-.72.94 6 6 0 00-.54.71 8.52 8.52 0 00-.53 1.25 5.72 5.72 0 00-.28.68 10.44 10.44 0 00-.32 1.45 6.37 6.37 0 00-.1.65v97.76L216 259.31V119.68a6.37 6.37 0 00-.1-.65 10.44 10.44 0 00-.32-1.45 5.72 5.72 0 00-.28-.68 8.52 8.52 0 00-.53-1.25 6 6 0 00-.54-.71 9.36 9.36 0 00-.72-.94c-.23-.22-.52-.4-.77-.6a8.84 8.84 0 00-.9-.68L116.57 55.55a8.82 8.82 0 00-8.83 0L11.49 111.1a8.84 8.84 0 00-.9.68c-.25.2-.54.38-.77.6a9.36 9.36 0 00-.72.94 6 6 0 00-.54.71 8.52 8.52 0 00-.53 1.25 5.72 5.72 0 00-.28.68 10.44 10.44 0 00-.32 1.45A6.37 6.37 0 007.33 118v271.81a8.82 8.82 0 004.41 7.63l192.25 110.84a8.83 8.83 0 001.33.54c.21.08.41.2.63.26a8.65 8.65 0 004.41 0c.22-.06.42-.18.63-.26a8.83 8.83 0 001.33-.54L308.57 452a8.82 8.82 0 004.41-7.63v-97.56l92.83-53.54a8.82 8.82 0 004.41-7.63V175.13a6.37 6.37 0 00-.1-.65 10.44 10.44 0 00-.32-1.45zM111.16 72.32l80.25 46.29-80.25 46.29-80.2-46.29zm88.25 304.14l-80.65 46.53V197.71l80.65-46.53zm8-166.52l-80.65 46.53-80.65-46.53 80.65-46.53zm184.65 119.98l-80.65 46.53V250.64l80.65-46.53zm8-166.52l-80.65 46.53-80.65-46.53 80.65-46.53z" style="fill:#141414"/></svg>
-            <span class="tech-label">Laravel</span>
-          </div>
-          <!-- Vue.js -->
-          <div class="tech-item">
-            <svg viewBox="0 0 261.76 226.69" xmlns="http://www.w3.org/2000/svg"><path d="M161.1 0L130.88 52.32 100.66 0H0l130.88 226.69L261.76 0z" style="fill:#141414"/><path d="M161.1 0L130.88 52.32 100.66 0H52.26l78.62 136.01L209.5 0z" style="fill:#141414;opacity:0.6"/></svg>
-            <span class="tech-label">Vue.js</span>
-          </div>
-          <!-- PHP -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 134" xmlns="http://www.w3.org/2000/svg"><ellipse cx="128" cy="67" rx="128" ry="67" style="fill:#141414;opacity:0.15"/><text x="128" y="80" text-anchor="middle" style="fill:#141414;font-family:'Arial Black',sans-serif;font-size:58px;font-weight:900">PHP</text></svg>
-            <span class="tech-label">PHP</span>
-          </div>
-          <!-- Tailwind CSS -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 154" xmlns="http://www.w3.org/2000/svg"><path d="M128 0C93.9 0 72.5 17 64 51.2 76.8 34.1 91.2 28.3 107.2 32c9.1 2.1 15.7 8.9 22.9 16.3C141.8 60.6 155.5 75 186.7 75c34.1 0 55.5-17 64-51.2-12.8 17.1-27.2 22.9-43.2 19.8-9.1-2.1-15.7-8.9-22.9-16.3C172.9 15.1 159.2.7 128 0zM64 76.8C29.9 76.8 8.5 93.8 0 128c12.8-17.1 27.2-22.9 43.2-19.8 9.1 2.1 15.7 8.9 22.9 16.3 11.7 12.3 25.4 26.7 56.6 26.7 34.1 0 55.5-17 64-51.2-12.8 17.1-27.2 22.9-43.2 19.8-9.1-2.1-15.7-8.9-22.9-16.3C108.9 91.2 95.2 76.8 64 76.8z" style="fill:#141414"/></svg>
-            <span class="tech-label">Tailwind CSS</span>
-          </div>
-          <!-- Bootstrap -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M0 222.99C0 241.07 14.93 256 33.01 256h189.98c18.08 0 33.01-14.93 33.01-33.01V33.01C256 14.93 241.07 0 222.99 0H33.01C14.93 0 0 14.93 0 33.01z" style="fill:#141414;opacity:0.15"/><path d="M106.16 80h60.59c9.55 0 17.53 1.35 23.92 4.06 6.39 2.71 11.18 6.63 14.36 11.78 3.18 5.14 4.77 11.35 4.77 18.62 0 6.54-1.45 12.2-4.34 16.99-2.9 4.79-6.92 8.67-12.07 11.64-5.15 2.97-11.15 4.82-18 5.56v1.14c7.41.57 13.96 2.42 19.67 5.56 5.7 3.14 10.17 7.41 13.41 12.78 3.24 5.38 4.86 11.72 4.86 19.04 0 7.65-1.76 14.37-5.27 20.18-3.51 5.8-8.87 10.35-16.08 13.64-7.21 3.29-16.42 4.94-27.63 4.94H106.16zm26.59 58.04h32.73c9.06 0 15.57-1.73 19.52-5.18 3.95-3.46 5.93-8.29 5.93-14.5 0-4.3-1-7.89-2.98-10.78-1.99-2.9-4.85-5.06-8.6-6.49-3.75-1.43-8.29-2.14-13.64-2.14h-32.96zm0 22.29v40.83h35.39c9.22 0 15.91-1.97 20.08-5.89 4.17-3.92 6.26-9.17 6.26-15.74 0-4.62-1.11-8.6-3.32-11.92-2.22-3.33-5.38-5.89-9.5-7.69-4.11-1.8-9.05-2.71-14.83-2.71h-34.08z" style="fill:#141414"/></svg>
-            <span class="tech-label">Bootstrap</span>
-          </div>
-          <!-- JavaScript -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect width="256" height="256" style="fill:#141414;opacity:0.15"/><path d="M67.31 213.93l19.14-11.6c3.69 6.54 7.05 12.07 15.12 12.07 7.72 0 12.6-3.02 12.6-14.76V119.7h23.57v80.27c0 24.33-14.27 35.4-35.1 35.4-18.81 0-29.71-9.74-35.33-21.44zm83.45-3.02l19.14-11.12c5.05 8.24 11.6 14.27 23.2 14.27 9.74 0 15.96-4.87 15.96-11.6 0-8.07-6.39-10.93-17.15-15.63l-5.88-2.52c-17-7.23-28.27-16.31-28.27-35.46 0-17.64 13.44-31.08 34.43-31.08 14.94 0 25.7 5.21 33.43 18.81l-18.31 11.77c-4.03-7.23-8.4-10.08-15.12-10.08-6.88 0-11.27 4.37-11.27 10.08 0 7.05 4.38 9.91 14.44 14.27l5.88 2.52c20.01 8.58 31.25 17.32 31.25 37 0 21.19-16.63 32.78-38.98 32.78-21.86 0-35.97-10.42-42.73-24.06z" style="fill:#141414"/></svg>
-            <span class="tech-label">JavaScript</span>
-          </div>
-          <!-- GitHub -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 250" xmlns="http://www.w3.org/2000/svg"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.17 0-3.043-.12-13.111-.174-23.759-35.614 7.742-43.124-15.133-43.124-15.133-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0" style="fill:#141414"/></svg>
-            <span class="tech-label">GitHub</span>
-          </div>
-          <!-- MySQL -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 252" xmlns="http://www.w3.org/2000/svg"><path d="M236 194.2c-13.6-.2-24.1 1-33 4.6-2.5 1-6.5 1-6.9 4.2 1.4 1.4 1.6 3.5 2.7 5.3 2.2 3.3 5.8 7.6 9.1 9.8 3.6 2.5 7.2 5 10.9 7.2 6.6 3.8 14 6 20.4 9.8 3.8 2.3 7.5 5.3 11.3 7.8 1.9 1.2 3.1 3.2 5.5 4v-.5c-1.2-1.6-1.6-3.8-2.8-5.5l-5.2-5c-5.1-6.8-11.5-12.7-18.4-17.5-5.5-3.8-17.8-9-20.1-15.3l-.4-.4c3.9-.4 8.5-1.8 12.2-2.9 6.1-1.6 11.6-1.2 17.9-2.9l8.5-2.5v-1.6c-3.2-3.3-5.5-7.5-8.9-10.6-9.1-8-19-16-29.2-22.9-5.4-3.6-12.3-6-18.1-9-2-1-5.5-1.5-6.7-3.2-3.1-3.9-4.7-9-7-13.5-4.8-9.5-9.5-20-13.7-30-2.9-6.8-4.7-13.5-8.2-19.9-16.8-30.2-34.9-48.5-62.9-66.4-6-3.8-13.1-5.4-20.6-7.4l-12.2-.6c-2.5-1-5.1-4-7.2-5.4C86 3.5 62.3-10.6 55.3 10.6c-4.4 13.3 6.6 26.3 10.4 33.1 2.7 4.7 6.2 10 8.1 15.1 1.2 3.3 1.5 6.7 2.7 10.2 2.9 8.5 5.6 17.8 9.5 25.7 2 4 4.2 8.2 6.8 11.8 1.6 2.2 4.2 3.2 4.8 6.5-2.7 3.8-2.9 9.7-4.4 14.4-6.7 21.3-4.2 47.8 5.4 63.5 2.9 4.8 9.9 15.2 19.2 11.2 8.2-3.5 6.4-14.2 8.7-23.7.5-2.2.2-3.7 1.2-5.2v.4l7.2 14.4c5.4 8.6 14.8 17.5 22.7 23.5 4.1 3.1 7.4 8.5 12.6 10.4v-.5h-.4c-1-1.6-2.7-2.3-4.1-3.5-3.2-3.2-6.8-7.2-9.4-10.8-7.5-10.2-14.2-21.3-20.3-32.8-2.9-5.5-5.5-11.6-7.9-17.3-1-2.2-1-5.5-2.9-6.5-2.7 4-6.7 7.4-8.7 12.5-3.5 8.2-3.9 18.2-5.2 28.5-.7.2-.4 0-.8.4-5.7-1.4-7.7-7.3-9.9-12.3-5.5-12.6-6.5-32.9-1.7-47.5 1.2-3.8 6.8-15.6 4.6-19.2-1.1-3.4-4.6-5.4-6.6-8.1-2.4-3.4-4.8-7.9-6.5-11.8-4.4-10.2-6.5-21.5-11.3-31.7-2.3-4.8-6.1-9.7-9.3-14.1-3.5-4.9-7.4-8.5-10.2-14.2-1-2-2.3-5.2-.8-7.4.5-1.5 1.1-2.2 2.7-2.6 2.7-2.2 10.2.7 12.9 1.9 7.3 3.2 13.4 6.2 19.5 10.5 2.9 2 5.9 6 9.6 7h4.2c6.6 1.5 14 .4 20.2 2.3 10.9 3.4 20.7 8.5 29.5 13.9 26.8 16.5 48.8 40 63.7 68 2.4 4.6 3.4 8.9 5.6 13.8 4.4 9.8 9.9 19.9 14.3 29.5 4.4 9.5 8.7 19.2 15 27.2 3.3 4.2 16.3 6.5 22.2 8.7 4.1 1.7 10.8 3.4 14.6 5.5 7.2 4 14.2 8.7 20.9 13.2 3.4 2.3 13.7 7.3 14.3 11.5" style="fill:#141414"/></svg>
-            <span class="tech-label">MySQL</span>
-          </div>
-          <!-- Redis -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 220" xmlns="http://www.w3.org/2000/svg"><path d="M245.97 168.94c-13.17 6.87-81.39 34.87-95.93 42.49-14.54 7.62-22.6 7.54-34.07 1.8-11.47-5.74-83.42-34.5-96.62-40.65-6.6-3.08-10.07-5.67-10.07-8.18V140.68s94.56-20.57 109.59-26.21c15.03-5.64 20.24-5.78 33.37-.57 13.13 5.21 82.49 17.03 96.69 21.08v23.67c0 2.53-2.34 5.15-2.96 10.29z" style="fill:#141414;opacity:0.3"/><path d="M245.97 143.22c-13.17 6.87-81.39 34.87-95.93 42.49-14.54 7.62-22.6 7.54-34.07 1.8-11.47-5.74-83.42-34.5-96.62-40.65C6.18 140.78 0 137.84 0 135.35l.04-23.73s94.56-20.57 109.59-26.21c15.03-5.64 20.24-5.78 33.37-.57 13.13 5.21 82.49 17.03 96.69 21.08l.24 23.67c0 2.53-7.14 7.56-6.04 13.63z" style="fill:#141414;opacity:0.5"/><path d="M245.97 117.5c-13.17 6.87-81.39 34.87-95.93 42.49-14.54 7.62-22.6 7.54-34.07 1.8-11.47-5.74-83.42-34.5-96.62-40.65-13.2-6.15-13.55-10.38-.35-15.73C34.03 99.77 100.16 72.1 115.19 66.46c15.03-5.64 20.24-5.78 33.37-.57 13.13 5.21 79.12 31.98 96.69 39.32 15.03 7.11 13.89 5.42.72 12.29z" style="fill:#141414;opacity:0.7"/></svg>
-            <span class="tech-label">Redis</span>
-          </div>
-          <!-- n8n -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="216" height="216" rx="40" style="fill:#141414;opacity:0.15"/><text x="128" y="155" text-anchor="middle" style="fill:#141414;font-family:sans-serif;font-size:100px;font-weight:bold">n8n</text></svg>
-            <span class="tech-label">n8n</span>
-          </div>
-          <!-- Docker -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 185" xmlns="http://www.w3.org/2000/svg"><path d="M250.7 80.9c-2.8-1.9-9.1-5.4-17.2-5.4-3.1 0-6.2.4-9.1 1.1-1.8-12.4-11.3-22.4-22-29l-4.4-2.8-3 4.3c-3.8 5.8-5.7 13.8-5.1 20.4.5 4.8 1.9 9.6 4.8 13.6-2.2 1.2-4.7 2.2-6.9 3.1-6.5 2.4-12.6 3.7-18.9 3.7H.5l-.5 1.7c-1.6 9.7-1.6 39.8 17 63 14.2 17.7 35.4 26.7 63.1 26.7 60.1 0 104.6-27.7 125.5-78 8.2.2 16.3-.1 24-4.7 5.3-3.2 9.7-8.2 12.2-14.2l1.8-4.3-3.9-2.2zM30.8 84.9h22.7v22.4H30.8zm28.5 0h22.7v22.4H59.3zm0-28.3h22.7v22.4H59.3zM87.8 84.9h22.7v22.4H87.8zm0-28.3h22.7v22.4H87.8zm28.5 28.3h22.7v22.4h-22.7zm0-28.3h22.7v22.4h-22.7zm28.5 28.3h22.7v22.4h-22.7zM173.3 84.9H196v22.4h-22.7z" style="fill:#141414"/></svg>
-            <span class="tech-label">Docker</span>
-          </div>
-          <!-- Nginx -->
-          <div class="tech-item">
-            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M128 2L18 65.5v125L128 254l110-63.5v-125z" style="fill:#141414;opacity:0.15"/><path d="M90 80v96h18v-68l40 68h18V80h-18v68l-40-68z" style="fill:#141414"/></svg>
-            <span class="tech-label">Nginx</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div pagelayer-id="v3h8448" id="pricing" class="p-v3h8448 pagelayer-row pagelayer-row-stretch-auto pagelayer-height-default">
 <style pagelayer-style-id="v3h8448">.p-v3h8448 .pagelayer-col-holder{padding: 10px}
 .p-v3h8448 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
@@ -5371,10 +5283,10 @@ height: 250px;}
 .p-v3h8448 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
 .p-v3h8448 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
 .p-v3h8448 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-.p-v3h8448{padding-top: 65px; padding-right: 0px; padding-bottom: 65px; padding-left: 0px}
-@media (max-width: 768px) and (min-width: 501px){.p-v3h8448{padding-top: 50px; padding-right: 40px; padding-bottom: 30px; padding-left: 40px}
+.p-v3h8448{padding-top: 65px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
+@media (max-width: 768px) and (min-width: 501px){.p-v3h8448{padding-top: 50px; padding-right: 40px; padding-bottom: 0px; padding-left: 40px}
 }
-@media (max-width: 500px){.p-v3h8448{padding-top: 40px; padding-right: 30px; padding-bottom: 20px; padding-left: 30px}
+@media (max-width: 500px){.p-v3h8448{padding-top: 40px; padding-right: 30px; padding-bottom: 0px; padding-left: 30px}
 }
 </style>
 			
@@ -5420,713 +5332,77 @@ height: 250px;}
 </style><div class="pagelayer-heading-holder">Ξεκάθαρη τιμολόγηση, χωρίς κρυφές χρεώσεις</div>
 		
 			</div>
-<div pagelayer-id="8sx3670" class="p-8sx3670 pagelayer-tabs">
-<style pagelayer-style-id="8sx3670">.p-8sx3670 .pagelayer-tabs-holder{text-align:center}
-.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks{color:var(--pagelayer-color-secondary);font-family: var(--pagelayer-font-text-font-family); font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks.active{color:var(--pagelayer-color-accent);background-color:var(--pagelayer-color-primary)}
-.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks:hover{color:var(--pagelayer-color-accent);background-color:var(--pagelayer-color-primary)}
-.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks i{float:left;padding:0px 10px;padding-left:0px}
-.p-8sx3670 .pagelayer-tab{color:#000000;background-color:#fff}
-.p-8sx3670.pagelayer-tabs .pagelayer-tabcontainer .pagelayer-tab{padding: 15px}
-@media (max-width: 768px) and (min-width: 501px){.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks{font-family: ; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks{font-family: ; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-8sx3670{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-</style><div class="pagelayer-tabs-holder"></div>
-			<div class="pagelayer-tabcontainer">
-<div pagelayer-id="dq65630" class="p-dq65630 pagelayer-tab" pagelayer-tab-title="Ιστοσελίδα">
-<div class="pagelayer-tabcontent">
-<div pagelayer-id="fsr7498" class="p-fsr7498 pagelayer-inner_row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="fsr7498">.p-fsr7498 .pagelayer-col-holder{padding: 10px}
-.p-fsr7498 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-fsr7498 .pagelayer-svg-top .pagelayer-shape-fill{fill:#8f1111}
-.p-fsr7498 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
-.p-fsr7498 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
-.p-fsr7498 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-</style>
-			
-			
-			
-			
-			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-<div pagelayer-id="tmc426" class="p-tmc426 pagelayer-col">
-<style pagelayer-style-id="tmc426">.p-tmc426{align-content: flex-end !important;background-image: url("sitepad-data/uploads/2026/05/redstar-space-solar-glow.jpg");background-attachment: scroll;background-position-x: center;background-position-y: center;background-repeat: no-repeat;background-size: cover;padding-top: 0px; padding-right: 30px; padding-bottom: 10px; padding-left: 30px;border-radius: 20px 20px 20px 20px; -webkit-border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px}
-.p-tmc426 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-tmc426{width: 60%}
-.p-tmc426 > .pagelayer-background-overlay{background-color: var(--pagelayer-color-secondary);opacity: 0.6;-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-tmc426{
-overflow: hidden;}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-tmc426{width: 100%}
-.p-tmc426{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-tmc426{width: 100%}
-.p-tmc426{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px}
-}
-</style>
-				
-				
-				<div class="pagelayer-background-overlay"></div>
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="pc56232" class="p-pc56232 pagelayer-inner_row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="pc56232">.p-pc56232 .pagelayer-col-holder{padding: 10px}
-.p-pc56232 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-pc56232 .pagelayer-svg-top .pagelayer-shape-fill{fill:#8f1111}
-.p-pc56232 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
-.p-pc56232 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
-.p-pc56232 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-@media (max-width: 500px){.p-pc56232{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-</style>
-			
-			
-			
-			
-			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-<div pagelayer-id="cpr3120" class="p-cpr3120 pagelayer-col">
-<style pagelayer-style-id="cpr3120">.p-cpr3120 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-cpr3120{width: 25%}
-.p-cpr3120 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-cpr3120{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-cpr3120{width: 30%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-cpr3120{width: 100%}
-.p-cpr3120{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 0px !important; -webkit-border-radius: 0px !important;-moz-border-radius: 0px !important}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="5di1242" class="p-5di1242 pagelayer-iconbox">
-<style pagelayer-style-id="5di1242">.p-5di1242 .pagelayer-service-icon i{color:#d62828;-webkit-transition: all 400ms; transition: all 400ms}
-.p-5di1242 .pagelayer-service-icon{font-size:75px}
-.p-5di1242 .pagelayer-service-heading{text-align:center;padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family); font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-accent-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important;-webkit-transition: all 400ms; transition: all 400ms}
-.p-5di1242 .pagelayer-service-details{text-align:center}
-.p-5di1242 .pagelayer-service-btn{-webkit-transition: all 400ms; transition: all 400ms}
-.p-5di1242{background: linear-gradient(90deg, #8f1111 0%, #f9412f 100%, #f9412f 100%);padding-top: 20px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-.p-5di1242{
-height: 100px;
-width:100px;
-overflow: hidden;
-margin: auto;}
-@media (max-width: 768px) and (min-width: 501px){.p-5di1242 .pagelayer-service-heading{font-family: ; font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-5di1242 .pagelayer-service-heading{font-family: ; font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-5di1242{padding-top: 25px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-}
-</style><div class="pagelayer-service-container pagelayer-service-align-top pagelayer-service-vertical-{{service_vertical_alignment}}">
-			<div class="pagelayer-service-icon pagelayer-service-default">
-				<i class=" pagelayer-icon-{{service_icon_shape_type}} pagelayer-animation-{{anim_hover}}" aria-hidden="true"></i>
+<div class="rs-pricing-grid">
+<!-- Card 1: Ιστοσελίδα -->
+<div class="rs-pricing-card">
+	<div class="rs-pricing-img" style="background-image:url('sitepad-data/uploads/2026/05/pricing-website.jpg')">
+		<div class="rs-pricing-img-overlay"></div>
+	</div>
+	<div class="rs-pricing-body">
+		<h3 class="rs-pricing-title">Ιστοσελίδα</h3>
+		<p class="rs-pricing-desc">Ιδανικό για online παρουσία, landing page ή μικρή ιστοσελίδα.</p>
+		<ul class="rs-pricing-features">
+			<li>Μονοσέλιδο site ή landing page</li>
+			<li>Σχεδιασμός responsive για κινητά</li>
+			<li>Βασική ρύθμιση SEO</li>
+			<li>2 γύροι αναθεωρήσεων</li>
+		</ul>
+		<div class="rs-pricing-cta-wrap">
+			<div class="rs-pricing-badge">
+				<span class="rs-pricing-amount">&euro;300-500</span>
+				<span class="rs-pricing-sub">ενδεικτική τιμή</span>
 			</div>
-			<div class="pagelayer-service-details">
-				
-					<div class="pagelayer-service-heading">&euro;300–500</div>
-
-				<div class="pagelayer-service-text"><span>ενδεικτική τιμή</span></div>
-				
-			</div>
-			 
-		</div></div>
-</div></div>
-<div pagelayer-id="ohr9803" class="p-ohr9803 pagelayer-col">
-<style pagelayer-style-id="ohr9803">.p-ohr9803{align-content: center !important}
-.p-ohr9803 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-ohr9803{width: 75%}
-.p-ohr9803 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-ohr9803{width: 70%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-ohr9803{width: 100%}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="p6f1648" class="p-p6f1648 pagelayer-heading" align="left">
-<style pagelayer-style-id="p6f1648">.p-p6f1648{text-align: left}
-.p-p6f1648 .pagelayer-heading-holder *{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family) !important; font-size: 30px !important; font-style:  !important; font-weight: 600 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important}
-.p-p6f1648 .pagelayer-heading-holder{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family) !important; font-size: 30px !important; font-style:  !important; font-weight: 600 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important}
-@media (max-width: 768px) and (min-width: 501px){.p-p6f1648 .pagelayer-heading-holder *{font-family:  !important; font-size: 23px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-p6f1648 .pagelayer-heading-holder{font-family:  !important; font-size: 23px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-p6f1648{text-align: center}
-.p-p6f1648 .pagelayer-heading-holder *{font-family:  !important; font-size: 20px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-p6f1648 .pagelayer-heading-holder{font-family:  !important; font-size: 20px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><div class="pagelayer-heading-holder">Ιστοσελίδα</div>
-		
-			</div>
-<div pagelayer-id="p1r5068" class="p-p1r5068 pagelayer-heading" align="left">
-<style pagelayer-style-id="p1r5068">.p-p1r5068{text-align: left}
-.p-p1r5068 .pagelayer-heading-holder *{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-text-font-family) !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-p1r5068 .pagelayer-heading-holder{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-text-font-family) !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-@media (max-width: 768px) and (min-width: 501px){.p-p1r5068 .pagelayer-heading-holder *{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-p1r5068 .pagelayer-heading-holder{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-p1r5068{text-align: center}
-.p-p1r5068 .pagelayer-heading-holder *{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-p1r5068 .pagelayer-heading-holder{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><div class="pagelayer-heading-holder">Ιδανικό για online παρουσία, landing page ή μικρή ιστοσελίδα.</div>
-		
-			</div>
-</div></div>
-</div></div>
-</div></div>
-<div pagelayer-id="otl3252" class="p-otl3252 pagelayer-col">
-<style pagelayer-style-id="otl3252">.p-otl3252 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-otl3252{width: 2%}
-.p-otl3252 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-otl3252{width: 100%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-otl3252{width: 100%}
-}
-</style>
-				
-				
-				
+			<a href="#contact" class="pricing-cta">Ζητήστε Προσφορά</a>
+		</div>
+	</div>
 </div>
-<div pagelayer-id="krt4246" class="p-krt4246 pagelayer-col">
-<style pagelayer-style-id="krt4246">.p-krt4246{align-content: center !important;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 20px}
-.p-krt4246 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-krt4246{width: 38%}
-.p-krt4246 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-krt4246{width: 100%}
-.p-krt4246{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-krt4246{width: 100%}
-.p-krt4246{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="efe1204" class="p-efe1204 pagelayer-list">
-<style pagelayer-style-id="efe1204">.p-efe1204 li{list-style-type: none;font-family: var(--pagelayer-font-text-font-family); font-size: 18px !important; font-style:  !important; font-weight: 500 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-efe1204 .pagelayer-list-icon-holder{padding-bottom: calc(10px/2); padding-top: calc(10px/2)}
-.p-efe1204 .pagelayer-list-item{color:var(--pagelayer-color-secondary);margin-left: 10px}
-.p-efe1204 li > a{font-family: var(--pagelayer-font-text-font-family); font-size: 18px !important; font-style:  !important; font-weight: 500 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-efe1204 .pagelayer-list-icon{color:var(--pagelayer-color-primary);font-size: 20px}
-.p-efe1204 .pagelayer-list-ul > div:not(:last-child){border-bottom-style: solid}
-.p-efe1204 .pagelayer-list-ul > div{border-bottom-color: var(--pagelayer-color-accent);border-bottom-width: 10px}
-@media (max-width: 768px) and (min-width: 501px){.p-efe1204 li{font-family: ; font-size: 15px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-efe1204 li > a{font-family: ; font-size: 15px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-efe1204 li{font-family: ; font-size: 14px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-efe1204 li > a{font-family: ; font-size: 14px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><ul class="pagelayer-list-ul pagelayer-list-type-none">
-<div pagelayer-id="kez6069" class="p-kez6069 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Μονοσέλιδο site ή landing page</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="row8183" class="p-row8183 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Σχεδιασμός responsive για κινητά</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="zxc2843" class="p-zxc2843 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Βασική ρύθμιση SEO</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="isk8439" class="p-isk8439 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">2 γύροι αναθεωρήσεων</span>
-					</span>
-
-			</li></div>
-</ul></div>
-<div style="text-align:center; padding: 10px 0 20px;"><a href="#contact" class="pricing-cta">Ζητήστε Προσφορά</a></div>
-</div></div>
-</div></div>
-</div></div>
-<div pagelayer-id="bpi9182" class="p-bpi9182 pagelayer-tab" pagelayer-tab-title="E-shop">
-<div class="pagelayer-tabcontent">
-<div pagelayer-id="bg29434" class="p-bg29434 pagelayer-inner_row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="bg29434">.p-bg29434 .pagelayer-col-holder{padding: 10px}
-.p-bg29434 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-bg29434 .pagelayer-svg-top .pagelayer-shape-fill{fill:#8f1111}
-.p-bg29434 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
-.p-bg29434 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
-.p-bg29434 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-</style>
-			
-			
-			
-			
-			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-<div pagelayer-id="u7u1878" class="p-u7u1878 pagelayer-col">
-<style pagelayer-style-id="u7u1878">.p-u7u1878{align-content: flex-end !important;background-image: url("sitepad-data/uploads/2026/05/redstar-space-aurora-ridge.jpg");background-attachment: scroll;background-position-x: center;background-position-y: center;background-repeat: no-repeat;background-size: cover;padding-top: 0px; padding-right: 30px; padding-bottom: 10px; padding-left: 30px;border-radius: 20px 20px 20px 20px; -webkit-border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px}
-.p-u7u1878 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-u7u1878{width: 60%}
-.p-u7u1878 > .pagelayer-background-overlay{background-color: var(--pagelayer-color-secondary);opacity: 0.6;-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-u7u1878{
-overflow: hidden;}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-u7u1878{width: 100%}
-.p-u7u1878{padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-u7u1878{width: 100%}
-.p-u7u1878{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px}
-}
-</style>
-				
-				
-				<div class="pagelayer-background-overlay"></div>
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="fs66031" class="p-fs66031 pagelayer-inner_row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="fs66031">.p-fs66031 .pagelayer-col-holder{padding: 10px}
-.p-fs66031 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-fs66031 .pagelayer-svg-top .pagelayer-shape-fill{fill:#8f1111}
-.p-fs66031 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
-.p-fs66031 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
-.p-fs66031 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-.p-fs66031{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-@media (max-width: 500px){.p-fs66031{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-</style>
-			
-			
-			
-			
-			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-<div pagelayer-id="xo696" class="p-xo696 pagelayer-col">
-<style pagelayer-style-id="xo696">.p-xo696 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-xo696{width: 25%}
-.p-xo696 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-xo696{width: 30%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-xo696{width: 100%}
-.p-xo696{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="c862280" class="p-c862280 pagelayer-iconbox">
-<style pagelayer-style-id="c862280">.p-c862280 .pagelayer-service-icon i{color:#d62828;-webkit-transition: all 400ms; transition: all 400ms}
-.p-c862280 .pagelayer-service-icon{font-size:75px}
-.p-c862280 .pagelayer-service-heading{text-align:center;padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family); font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-accent-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important;-webkit-transition: all 400ms; transition: all 400ms}
-.p-c862280 .pagelayer-service-details{text-align:center}
-.p-c862280 .pagelayer-service-btn{-webkit-transition: all 400ms; transition: all 400ms}
-.p-c862280{background: linear-gradient(90deg, #8f1111 0%, #f9412f 100%, #f9412f 100%);padding-top: 20px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-.p-c862280{
-height: 100px;
-width:100px;
-overflow: hidden;
-margin: auto;}
-@media (max-width: 768px) and (min-width: 501px){.p-c862280 .pagelayer-service-heading{font-family: ; font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-c862280 .pagelayer-service-heading{font-family: ; font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-c862280{padding-top: 25px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-}
-</style><div class="pagelayer-service-container pagelayer-service-align-top pagelayer-service-vertical-{{service_vertical_alignment}}">
-			<div class="pagelayer-service-icon pagelayer-service-default">
-				<i class=" pagelayer-icon-{{service_icon_shape_type}} pagelayer-animation-{{anim_hover}}" aria-hidden="true"></i>
+<!-- Card 2: E-shop (featured) -->
+<div class="rs-pricing-card">
+	<div class="rs-pricing-img" style="background-image:url('sitepad-data/uploads/2026/05/pricing-eshop.jpg')">
+		<div class="rs-pricing-img-overlay"></div>
+	</div>
+	<div class="rs-pricing-body">
+		<h3 class="rs-pricing-title">E-shop</h3>
+		<p class="rs-pricing-desc">Ηλεκτρονικό κατάστημα με πληρωμές, διαχείριση προϊόντων και παραγγελιών.</p>
+		<ul class="rs-pricing-features">
+			<li>Κατάλογος προϊόντων &amp; κατηγορίες</li>
+			<li>Ηλεκτρονικές πληρωμές &amp; checkout</li>
+			<li>Διαχείριση παραγγελιών</li>
+			<li>SEO &amp; responsive σχεδίαση</li>
+		</ul>
+		<div class="rs-pricing-cta-wrap">
+			<div class="rs-pricing-badge">
+				<span class="rs-pricing-amount">&euro;500-1,000</span>
+				<span class="rs-pricing-sub">ενδεικτική τιμή</span>
 			</div>
-			<div class="pagelayer-service-details">
-				
-					<div class="pagelayer-service-heading">&euro;500–1,000</div>
-
-				<div class="pagelayer-service-text"><span>ενδεικτική τιμή</span></div>
-				
-			</div>
-			 
-		</div></div>
-</div></div>
-<div pagelayer-id="qdw5423" class="p-qdw5423 pagelayer-col">
-<style pagelayer-style-id="qdw5423">.p-qdw5423{align-content: center !important}
-.p-qdw5423 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-qdw5423{width: 75%}
-.p-qdw5423 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-qdw5423{width: 70%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-qdw5423{width: 100%}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="8u28843" class="p-8u28843 pagelayer-heading" align="left">
-<style pagelayer-style-id="8u28843">.p-8u28843{text-align: left}
-.p-8u28843 .pagelayer-heading-holder *{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family) !important; font-size: 30px !important; font-style:  !important; font-weight: 600 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important}
-.p-8u28843 .pagelayer-heading-holder{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family) !important; font-size: 30px !important; font-style:  !important; font-weight: 600 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important}
-@media (max-width: 768px) and (min-width: 501px){.p-8u28843 .pagelayer-heading-holder *{font-family:  !important; font-size: 23px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-8u28843 .pagelayer-heading-holder{font-family:  !important; font-size: 23px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-8u28843{text-align: center}
-.p-8u28843 .pagelayer-heading-holder *{font-family:  !important; font-size: 20px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-8u28843 .pagelayer-heading-holder{font-family:  !important; font-size: 20px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><div class="pagelayer-heading-holder">E-shop</div>
-		
-			</div>
-<div pagelayer-id="stb2379" class="p-stb2379 pagelayer-heading" align="left">
-<style pagelayer-style-id="stb2379">.p-stb2379{text-align: left}
-.p-stb2379 .pagelayer-heading-holder *{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-text-font-family) !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-stb2379 .pagelayer-heading-holder{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-text-font-family) !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-@media (max-width: 768px) and (min-width: 501px){.p-stb2379 .pagelayer-heading-holder *{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-stb2379 .pagelayer-heading-holder{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-stb2379{text-align: center}
-.p-stb2379 .pagelayer-heading-holder *{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-stb2379 .pagelayer-heading-holder{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><div class="pagelayer-heading-holder">Ηλεκτρονικό κατάστημα με πληρωμές, διαχείριση προϊόντων και παραγγελιών.</div>
-		
-			</div>
-</div></div>
-</div></div>
-</div></div>
-<div pagelayer-id="yle2518" class="p-yle2518 pagelayer-col">
-<style pagelayer-style-id="yle2518">.p-yle2518 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-yle2518{width: 2%}
-.p-yle2518 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-yle2518{width: 100%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-yle2518{width: 100%}
-}
-</style>
-				
-				
-				
+			<a href="#contact" class="pricing-cta">Ζητήστε Προσφορά</a>
+		</div>
+	</div>
 </div>
-<div pagelayer-id="wi78338" class="p-wi78338 pagelayer-col">
-<style pagelayer-style-id="wi78338">.p-wi78338{align-content: center !important;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 20px}
-.p-wi78338 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-wi78338{width: 38%}
-.p-wi78338 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-wi78338{width: 100%}
-.p-wi78338{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-wi78338{width: 100%}
-.p-wi78338{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="d0h2717" class="p-d0h2717 pagelayer-list">
-<style pagelayer-style-id="d0h2717">.p-d0h2717 li{list-style-type: none;font-family: var(--pagelayer-font-text-font-family); font-size: 18px !important; font-style:  !important; font-weight: 500 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-d0h2717 .pagelayer-list-icon-holder{padding-bottom: calc(10px/2); padding-top: calc(10px/2)}
-.p-d0h2717 .pagelayer-list-item{color:var(--pagelayer-color-secondary);margin-left: 10px}
-.p-d0h2717 li > a{font-family: var(--pagelayer-font-text-font-family); font-size: 18px !important; font-style:  !important; font-weight: 500 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-d0h2717 .pagelayer-list-icon{color:var(--pagelayer-color-primary);font-size: 20px}
-.p-d0h2717 .pagelayer-list-ul > div:not(:last-child){border-bottom-style: solid}
-.p-d0h2717 .pagelayer-list-ul > div{border-bottom-color: var(--pagelayer-color-accent);border-bottom-width: 10px}
-@media (max-width: 768px) and (min-width: 501px){.p-d0h2717 li{font-family: ; font-size: 15px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-d0h2717 li > a{font-family: ; font-size: 15px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-d0h2717 li{font-family: ; font-size: 14px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-d0h2717 li > a{font-family: ; font-size: 14px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><ul class="pagelayer-list-ul pagelayer-list-type-none">
-<div pagelayer-id="8td8792" class="p-8td8792 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Κατάλογος προϊόντων & κατηγορίες</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="mwy8668" class="p-mwy8668 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Ηλεκτρονικές πληρωμές & checkout</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="z6o4864" class="p-z6o4864 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Διαχείριση παραγγελιών</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="asz9175" class="p-asz9175 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">SEO & responsive σχεδίαση</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="lgq5703" class="p-lgq5703 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">5 γύροι αναθεωρήσεων</span>
-					</span>
-
-			</li></div>
-</ul></div>
-<div style="text-align:center; padding: 10px 0 20px;"><a href="#contact" class="pricing-cta">Ζητήστε Προσφορά</a></div>
-</div></div>
-</div></div>
-</div></div>
-<div pagelayer-id="d607019" class="p-d607019 pagelayer-tab" pagelayer-tab-title="Custom Εφαρμογές">
-<div class="pagelayer-tabcontent">
-<div pagelayer-id="pbn9807" class="p-pbn9807 pagelayer-inner_row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="pbn9807">.p-pbn9807 .pagelayer-col-holder{padding: 10px}
-.p-pbn9807 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-pbn9807 .pagelayer-svg-top .pagelayer-shape-fill{fill:#8f1111}
-.p-pbn9807 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
-.p-pbn9807 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
-.p-pbn9807 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-</style>
-			
-			
-			
-			
-			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-<div pagelayer-id="pei7605" class="p-pei7605 pagelayer-col">
-<style pagelayer-style-id="pei7605">.p-pei7605{align-content: flex-end !important;background-image: url("sitepad-data/uploads/2026/05/redstar-space-stellar-dust.jpg");background-attachment: scroll;background-position-x: center;background-position-y: center;background-repeat: no-repeat;background-size: cover;padding-top: 0px; padding-right: 30px; padding-bottom: 10px; padding-left: 30px;border-radius: 20px 20px 20px 20px; -webkit-border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px}
-.p-pei7605 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-pei7605{width: 60%}
-.p-pei7605 > .pagelayer-background-overlay{background-color: var(--pagelayer-color-secondary);opacity: 0.6;-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-pei7605{
-overflow: hidden;}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-pei7605{width: 100%}
-.p-pei7605{padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-pei7605{width: 100%}
-.p-pei7605{margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px}
-}
-</style>
-				
-				
-				<div class="pagelayer-background-overlay"></div>
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="pqn1270" class="p-pqn1270 pagelayer-inner_row pagelayer-row-stretch-auto pagelayer-height-default">
-<style pagelayer-style-id="pqn1270">.p-pqn1270 .pagelayer-col-holder{padding: 10px}
-.p-pqn1270 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-pqn1270 .pagelayer-svg-top .pagelayer-shape-fill{fill:#8f1111}
-.p-pqn1270 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
-.p-pqn1270 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
-.p-pqn1270 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-.p-pqn1270{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-</style>
-			
-			
-			
-			
-			<div class="pagelayer-row-holder pagelayer-row pagelayer-auto pagelayer-width-auto">
-<div pagelayer-id="hw12360" class="p-hw12360 pagelayer-col">
-<style pagelayer-style-id="hw12360">.p-hw12360 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-hw12360{width: 25%}
-.p-hw12360 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-.p-hw12360{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-hw12360{width: 30%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-hw12360{width: 100%}
-.p-hw12360{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="vsz5543" class="p-vsz5543 pagelayer-iconbox">
-<style pagelayer-style-id="vsz5543">.p-vsz5543 .pagelayer-service-icon i{color:#d62828;-webkit-transition: all 400ms; transition: all 400ms}
-.p-vsz5543 .pagelayer-service-icon{font-size:75px}
-.p-vsz5543 .pagelayer-service-heading{text-align:center;padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family); font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-accent-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important;-webkit-transition: all 400ms; transition: all 400ms}
-.p-vsz5543 .pagelayer-service-details{text-align:center}
-.p-vsz5543 .pagelayer-service-btn{-webkit-transition: all 400ms; transition: all 400ms}
-.p-vsz5543{background: linear-gradient(90deg, #8f1111 0%, #f9412f 100%, #f9412f 100%);padding-top: 20px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-.p-vsz5543{
-height: 100px;
-width:100px;
-overflow: hidden;
-margin: auto;}
-@media (max-width: 768px) and (min-width: 501px){.p-vsz5543 .pagelayer-service-heading{font-family: ; font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-vsz5543 .pagelayer-service-heading{font-family: ; font-size: var(--pagelayer-font-accent-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-vsz5543{padding-top: 25px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;border-radius: 500px 500px 500px 500px; -webkit-border-radius: 500px 500px 500px 500px;-moz-border-radius: 500px 500px 500px 500px}
-}
-</style><div class="pagelayer-service-container pagelayer-service-align-top pagelayer-service-vertical-{{service_vertical_alignment}}">
-			<div class="pagelayer-service-icon pagelayer-service-default">
-				<i class=" pagelayer-icon-{{service_icon_shape_type}} pagelayer-animation-{{anim_hover}}" aria-hidden="true"></i>
+<!-- Card 3: Custom Εφαρμογές -->
+<div class="rs-pricing-card">
+	<div class="rs-pricing-img" style="background-image:url('sitepad-data/uploads/2026/05/pricing-custom-app.jpg')">
+		<div class="rs-pricing-img-overlay"></div>
+	</div>
+	<div class="rs-pricing-body">
+		<h3 class="rs-pricing-title">Custom Εφαρμογές</h3>
+		<p class="rs-pricing-desc">Custom εφαρμογές, πλατφόρμες, αυτοματισμοί, integrations. Ό,τι χρειάζεται η επιχείρησή σας.</p>
+		<ul class="rs-pricing-features">
+			<li>Εφαρμογές web &amp; πλατφόρμες</li>
+			<li>Αυτοματισμοί &amp; διασυνδέσεις API</li>
+			<li>CRM, dashboards, εσωτερικά εργαλεία</li>
+		</ul>
+		<div class="rs-pricing-cta-wrap">
+			<div class="rs-pricing-badge">
+				<span class="rs-pricing-amount" style="font-size:14px">Ευέλικτη Τιμολόγηση</span>
+				<span class="rs-pricing-sub">κατόπιν συνεννόησης</span>
 			</div>
-			<div class="pagelayer-service-details">
-				
-					<div class="pagelayer-service-heading">Ευέλικτη Τιμολόγηση</div>
-
-				<div class="pagelayer-service-text"><span>κατόπιν συνεννόησης</span></div>
-				
-			</div>
-			 
-		</div></div>
-</div></div>
-<div pagelayer-id="yre5308" class="p-yre5308 pagelayer-col">
-<style pagelayer-style-id="yre5308">.p-yre5308{align-content: center !important}
-.p-yre5308 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-yre5308{width: 75%}
-.p-yre5308 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-yre5308{width: 70%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-yre5308{width: 100%}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="iyf6232" class="p-iyf6232 pagelayer-heading" align="left">
-<style pagelayer-style-id="iyf6232">.p-iyf6232{text-align: left}
-.p-iyf6232 .pagelayer-heading-holder *{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family) !important; font-size: 30px !important; font-style:  !important; font-weight: 600 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important}
-.p-iyf6232 .pagelayer-heading-holder{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-accent-font-family) !important; font-size: 30px !important; font-style:  !important; font-weight: 600 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-accent-line-height) !important; text-transform: var(--pagelayer-font-accent-text-transform) !important; letter-spacing: px !important; word-spacing: px !important}
-@media (max-width: 768px) and (min-width: 501px){.p-iyf6232 .pagelayer-heading-holder *{font-family:  !important; font-size: 23px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-iyf6232 .pagelayer-heading-holder{font-family:  !important; font-size: 23px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-iyf6232{text-align: center}
-.p-iyf6232 .pagelayer-heading-holder *{font-family:  !important; font-size: 20px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-iyf6232 .pagelayer-heading-holder{font-family:  !important; font-size: 20px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><div class="pagelayer-heading-holder">Custom Εφαρμογές</div>
-		
-			</div>
-<div pagelayer-id="lgh7946" class="p-lgh7946 pagelayer-heading" align="left">
-<style pagelayer-style-id="lgh7946">.p-lgh7946{text-align: left}
-.p-lgh7946 .pagelayer-heading-holder *{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-text-font-family) !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-lgh7946 .pagelayer-heading-holder{color:var(--pagelayer-color-accent);font-family: var(--pagelayer-font-text-font-family) !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight: var(--pagelayer-font-text-font-weight) !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-@media (max-width: 768px) and (min-width: 501px){.p-lgh7946 .pagelayer-heading-holder *{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-lgh7946 .pagelayer-heading-holder{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-lgh7946{text-align: center}
-.p-lgh7946 .pagelayer-heading-holder *{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-lgh7946 .pagelayer-heading-holder{font-family:  !important; font-size: var(--pagelayer-font-text-font-size) !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><div class="pagelayer-heading-holder">Custom εφαρμογές, πλατφόρμες, αυτοματισμοί, integrations. Ό,τι χρειάζεται η επιχείρησή σας.</div>
-		
-			</div>
-</div></div>
-</div></div>
-</div></div>
-<div pagelayer-id="ggu6733" class="p-ggu6733 pagelayer-col">
-<style pagelayer-style-id="ggu6733">.p-ggu6733 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-ggu6733{width: 2%}
-.p-ggu6733 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-ggu6733{width: 100%}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-ggu6733{width: 100%}
-}
-</style>
-				
-				
-				
+			<a href="#contact" class="pricing-cta">Ζητήστε Προσφορά</a>
+		</div>
+	</div>
 </div>
-<div pagelayer-id="buv6603" class="p-buv6603 pagelayer-col">
-<style pagelayer-style-id="buv6603">.p-buv6603{align-content: center !important;padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 20px}
-.p-buv6603 .pagelayer-col-holder > div:not(:last-child){margin-bottom: 15px}
-.pagelayer-row-holder .p-buv6603{width: 38%}
-.p-buv6603 > .pagelayer-background-overlay{-webkit-transition: all 400ms !important; transition: all 400ms !important}
-@media (max-width: 768px) and (min-width: 501px){.pagelayer-row-holder .p-buv6603{width: 100%}
-.p-buv6603{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-@media (max-width: 500px){.pagelayer-row-holder .p-buv6603{width: 100%}
-.p-buv6603{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
-}
-</style>
-				
-				
-				
-				<div class="pagelayer-col-holder">
-<div pagelayer-id="knj868" class="p-knj868 pagelayer-list">
-<style pagelayer-style-id="knj868">.p-knj868 li{list-style-type: none;font-family: var(--pagelayer-font-text-font-family); font-size: 18px !important; font-style:  !important; font-weight: 500 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-knj868 .pagelayer-list-icon-holder{padding-bottom: calc(10px/2); padding-top: calc(10px/2)}
-.p-knj868 .pagelayer-list-item{color:var(--pagelayer-color-secondary);margin-left: 10px}
-.p-knj868 li > a{font-family: var(--pagelayer-font-text-font-family); font-size: 18px !important; font-style:  !important; font-weight: 500 !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: var(--pagelayer-font-text-line-height) !important; text-transform: none !important; letter-spacing: px !important; word-spacing: px !important}
-.p-knj868 .pagelayer-list-icon{color:var(--pagelayer-color-primary);font-size: 20px}
-.p-knj868 .pagelayer-list-ul > div:not(:last-child){border-bottom-style: solid}
-.p-knj868 .pagelayer-list-ul > div{border-bottom-color: var(--pagelayer-color-accent);border-bottom-width: 10px}
-@media (max-width: 768px) and (min-width: 501px){.p-knj868 li{font-family: ; font-size: 15px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-knj868 li > a{font-family: ; font-size: 15px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-@media (max-width: 500px){.p-knj868 li{font-family: ; font-size: 14px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-.p-knj868 li > a{font-family: ; font-size: 14px !important; font-style:  !important; font-weight:  !important; font-variant:  !important; text-decoration-line:  !important; text-decoration-style:  !important; line-height: em !important; text-transform:  !important; letter-spacing: px !important; word-spacing: px !important}
-}
-</style><ul class="pagelayer-list-ul pagelayer-list-type-none">
-<div pagelayer-id="7oh4158" class="p-7oh4158 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Εφαρμογές web & πλατφόρμες</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="tgs2284" class="p-tgs2284 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Αυτοματισμοί & διασυνδέσεις API</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="9nj6666" class="p-9nj6666 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">CRM, dashboards, εσωτερικά εργαλεία</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="asz3264" class="p-asz3264 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Συνεχής υποστήριξη & εξέλιξη</span>
-					</span>
-
-			</li></div>
-<div pagelayer-id="d4f6170" class="p-d4f6170 pagelayer-list_item">
-<li class="pagelayer-list-li">
-
-					<span class="pagelayer-list-icon-holder">
-						<i class="pagelayer-list-icon fas fa-dot-circle"></i>
-						<span class="pagelayer-list-item">Απεριόριστες αναθεωρήσεις</span>
-					</span>
-
-			</li></div>
-</ul></div>
-<div style="text-align:center; padding: 10px 0 20px;"><a href="#contact" class="pricing-cta">Ζητήστε Προσφορά</a></div>
-</div></div>
-</div></div>
-</div></div>
-</div></div>
-</div></div>
-</div></div>	</div><!-- .entry-content -->
+</div>
+	</div><!-- .entry-content -->
 
 <div pagelayer-id="zz85132" id="faq" class="p-zz85132 pagelayer-row pagelayer-row-stretch-auto pagelayer-height-default">
 <style pagelayer-style-id="zz85132">.p-zz85132 .pagelayer-col-holder{padding: 10px}
@@ -6732,10 +6008,10 @@ overflow: hidden;
 .p-qep154 .pagelayer-row-svg .pagelayer-svg-top{width:100%;height:100px}
 .p-qep154 .pagelayer-svg-bottom .pagelayer-shape-fill{fill:#d62828}
 .p-qep154 .pagelayer-row-svg .pagelayer-svg-bottom{width:100%;height:100px}
-.p-qep154{padding-top: 0px; padding-right: 0px; padding-bottom: 65px; padding-left: 0px}
-@media (max-width: 768px) and (min-width: 501px){.p-qep154{padding-top: 0px; padding-right: 40px; padding-bottom: 50px; padding-left: 40px}
+.p-qep154{padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
+@media (max-width: 768px) and (min-width: 501px){.p-qep154{padding-top: 0px; padding-right: 40px; padding-bottom: 0px; padding-left: 40px}
 }
-@media (max-width: 500px){.p-qep154{padding-top: 0px; padding-right: 30px; padding-bottom: 40px; padding-left: 30px}
+@media (max-width: 500px){.p-qep154{padding-top: 0px; padding-right: 30px; padding-bottom: 0px; padding-left: 30px}
 }
 </style>
 			
@@ -7542,6 +6818,22 @@ body.pagelayer-body {
 	color: var(--redstar-ink);
 }
 
+.pagelayer-footer {
+	background: var(--redstar-ink);
+}
+
+.p-vb0w001 {
+	padding-bottom: 0 !important;
+}
+
+.p-zz85132 {
+	padding-bottom: 0 !important;
+}
+
+.p-qep154 {
+	padding-bottom: 0 !important;
+}
+
 .p-ztx2748 {
 	background: linear-gradient(90deg, #5a0711 0%, var(--redstar-primary) 58%, var(--redstar-ember) 100%) !important;
 }
@@ -7620,28 +6912,210 @@ body.pagelayer-body {
 	color: var(--redstar-surface) !important;
 }
 
-.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks.active,
-.p-8sx3670 .pagelayer-tabs-holder .pagelayer-tablinks:hover {
-	background-color: var(--redstar-primary) !important;
-	color: var(--redstar-surface) !important;
-}
-
-.p-8sx3670 .pagelayer-tab {
-	background-color: var(--redstar-surface) !important;
-}
-
-.p-5di1242,
-.p-c862280,
-.p-vsz5543 {
-	background: linear-gradient(135deg, var(--redstar-primary-dark) 0%, var(--redstar-primary) 58%, var(--redstar-ember) 100%) !important;
-	box-shadow: 0 14px 34px rgba(214, 40, 40, 0.28);
-}
-
-.p-5di1242 .pagelayer-service-icon i,
-.p-c862280 .pagelayer-service-icon i,
-.p-vsz5543 .pagelayer-service-icon i,
 .pagelayer-image-caption {
 	color: var(--redstar-primary) !important;
+}
+
+/* ── Pricing 3-Card Grid ── */
+.rs-pricing-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	max-width: 1100px;
+	margin: 32px auto 0;
+	padding: 0 16px;
+	align-items: start;
+}
+
+.rs-pricing-card {
+	background: var(--redstar-surface);
+	border: 1px solid var(--redstar-border);
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 4px 24px rgba(25, 6, 8, 0.10);
+	transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+	position: relative;
+}
+
+.rs-pricing-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 40px rgba(25, 6, 8, 0.18);
+}
+
+/* Featured card */
+.rs-pricing-featured {
+	transform: scale(1.04);
+	border: 2px solid var(--redstar-primary);
+	box-shadow: 0 4px 24px rgba(214, 40, 40, 0.18), 0 0 0 1px rgba(214, 40, 40, 0.10);
+	z-index: 1;
+}
+
+.rs-pricing-featured:hover {
+	transform: scale(1.04) translateY(-4px);
+	box-shadow: 0 12px 40px rgba(214, 40, 40, 0.28), 0 0 0 1px rgba(214, 40, 40, 0.15);
+}
+
+/* Ribbon */
+.rs-pricing-ribbon {
+	position: absolute;
+	top: 16px;
+	right: -32px;
+	background: linear-gradient(135deg, var(--redstar-primary-dark), var(--redstar-primary));
+	color: var(--redstar-surface);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	padding: 6px 40px;
+	transform: rotate(35deg);
+	z-index: 2;
+	text-transform: uppercase;
+}
+
+/* Image header */
+.rs-pricing-img {
+	position: relative;
+	height: 180px;
+	background-size: cover;
+	background-position: center;
+}
+
+.rs-pricing-img-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to bottom, rgba(25, 6, 8, 0.08), rgba(25, 6, 8, 0.35));
+}
+
+/* Price badge (inline above CTA) */
+.rs-pricing-badge {
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--redstar-primary-dark) 0%, var(--redstar-primary) 58%, var(--redstar-ember) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 24px rgba(214, 40, 40, 0.35);
+	margin: 0 auto 16px;
+}
+
+.rs-pricing-amount {
+	color: var(--redstar-surface);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.rs-pricing-sub {
+	color: rgba(255, 247, 244, 0.75);
+	font-size: 11px;
+	font-weight: 400;
+	margin-top: 2px;
+}
+
+/* Body */
+.rs-pricing-body {
+	padding: 24px 24px 28px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.rs-pricing-title {
+	color: var(--redstar-ink);
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0 0 8px;
+}
+
+.rs-pricing-desc {
+	color: #654f52;
+	font-size: 15px;
+	line-height: 1.5;
+	margin: 0 0 20px;
+}
+
+.rs-pricing-features {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 auto;
+}
+
+.rs-pricing-features li {
+	position: relative;
+	padding: 8px 0 8px 22px;
+	color: var(--redstar-ink);
+	font-size: 15px;
+	line-height: 1.4;
+	border-bottom: 1px solid rgba(143, 17, 17, 0.08);
+}
+
+.rs-pricing-features li:last-child {
+	border-bottom: none;
+}
+
+.rs-pricing-features li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 13px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--redstar-primary);
+}
+
+.rs-pricing-cta-wrap {
+	text-align: center;
+	padding-top: 20px;
+}
+
+/* Tablet: 2+1 */
+@media (max-width: 768px) and (min-width: 501px) {
+	.rs-pricing-grid {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 700px;
+	}
+	.rs-pricing-featured {
+		transform: none;
+		grid-column: 1 / -1;
+		max-width: 340px;
+		justify-self: center;
+	}
+	.rs-pricing-featured:hover {
+		transform: translateY(-4px);
+	}
+}
+
+/* Mobile: single column */
+@media (max-width: 500px) {
+	.rs-pricing-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		padding: 0;
+	}
+	.rs-pricing-featured {
+		transform: none;
+	}
+	.rs-pricing-featured:hover {
+		transform: translateY(-4px);
+	}
+	.rs-pricing-img {
+		height: 140px;
+	}
+	.rs-pricing-badge {
+		width: 96px;
+		height: 96px;
+	}
+	.rs-pricing-amount {
+		font-size: 16px;
+	}
+	.rs-pricing-ribbon {
+		font-size: 11px;
+		padding: 5px 36px;
+	}
 }
 
 .p-d4i5395 img,
