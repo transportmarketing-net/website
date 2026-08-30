@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Analytics 4 — Replace G-212798DHFW with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-212798DHFW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-212798DHFW');</script>
   <title>DD Sintering Industrial Website Case Study | RedStar</title>
   <meta name="description" content="Case study για B2B industrial website οδοντιατρικής παραγωγής με σαφή υπηρεσίες, credibility και τεχνικό positioning.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -464,6 +467,32 @@
       color: #fff9f7;
       font-weight: 800;
       text-decoration: none;
+    }
+
+
+    .rs-hero,
+    .article-hero {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rs-hero::after,
+    .article-hero::after {
+      background: linear-gradient(180deg, rgba(255, 249, 247, 0) 0%, rgba(255, 249, 247, 0.14) 46%, var(--rs-surface) 100%);
+      bottom: -1px;
+      content: "";
+      height: clamp(68px, 7vw, 108px);
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      z-index: 0;
+    }
+
+    .rs-hero > .rs-shell,
+    .article-hero__grid {
+      position: relative;
+      z-index: 1;
     }
 
     @media (max-width: 980px) {
