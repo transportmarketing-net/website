@@ -67,18 +67,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://transportmarketing.net/redstar/about/</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://transportmarketing.net/redstar/contact/</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://transportmarketing.net/redstar/privacy/</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -185,12 +173,6 @@
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
-  </url>
-  <url>
-    <loc>https://transportmarketing.net/redstar/blog/custom-web-efarmogi-aftomatopoiisi-epixeirimatikon-diadikasion/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://transportmarketing.net/redstar/blog/custom-web-efarmogi-aftomatopoiisi-epixeirimatikon-diadikasion/</loc>

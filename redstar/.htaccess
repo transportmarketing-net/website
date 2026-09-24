@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# 301 redirects for old year-slug blog URLs
+RewriteRule ^blog/gimati-mme-xanoun-pelates-xoris-istoselida-2026/?$ /redstar/blog/gimati-mme-xanoun-pelates-xoris-istoselida/ [R=301,L]
+RewriteRule ^blog/custom-web-efarmogi-aftomatopoiisi-epixeiriseon-2026/?$ /redstar/blog/custom-web-efarmogi-aftomatopoiisi-epixeiriseon/ [R=301,L]
+RewriteRule ^blog/custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/?$ /redstar/blog/custom-efarmogi-vs-saas-ellinikes-epixeiriseis/ [R=301,L]
+RewriteRule ^blog/apo-excel-se-custom-platforma-odigos-mme-ellada-2026/?$ /redstar/blog/apo-excel-se-custom-platforma-odigos-mme-ellada/ [R=301,L]
+RewriteRule ^blog/custom-staffing-platform-antikatastasi-ergaleion-meiwsi-chronou-2026/?$ /redstar/blog/custom-staffing-platform-antikatastasi-ergaleion-meiwsi-chronou/ [R=301,L]
