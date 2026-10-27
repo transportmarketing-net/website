@@ -1,1003 +1,582 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="el" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>BlueLine | SaaS Πλατφόρμες</title>
-    <meta name="description" content="SaaS πλατφόρμες για ξενοδοχεία, e-commerce, email marketing και ιατρεία. HotelSystem, eShopPoint, EmailPoint, DoctorPoint. Αθήνα.">
-    <meta name="keywords" content="SaaS, cloud, hotel management, e-commerce, email marketing, doctor software, Athens">
+    <title>BlueLine | Enterprise SaaS Πλατφόρμες</title>
+    <meta name="description" content="SaaS πλατφόρμες για ξενοδοχεία, e-commerce, επικοινωνία και ιατρεία. HotelSystem, eShopPoint, CommunicationsPoint, MedPoint, Point8. Αθήνα.">
+    <meta name="keywords" content="SaaS, cloud, hotel management, e-commerce, communications, medical software, Athens">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="BlueLine">
-    <meta property="og:title" content="BlueLine | SaaS Πλατφόρμες">
-    <meta property="og:description" content="SaaS πλατφόρμες για ξενοδοχεία, e-commerce, email marketing και ιατρεία.">
+    <meta property="og:title" content="BlueLine | Enterprise SaaS Πλατφόρμες">
+    <meta property="og:description" content="SaaS πλατφόρμες για ξενοδοχεία, e-commerce, επικοινωνία και ιατρεία.">
 
     <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Fonts: Poppins + Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&subset=greek&display=swap" rel="stylesheet">
-
-    <style>
-        /* ===== RESET & VARIABLES ===== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bl-primary: #4285f4;
-            --bl-primary-dark: #1a5cc7;
-            --bl-primary-bright: #5e9ff5;
-            --bl-navy: #0a1628;
-            --bl-ink: #060d1a;
-            --bl-surface: #f4f8ff;
-            --bl-surface-soft: #e7eef8;
-            --bl-surface-card: #dfe8f0;
-            --bl-border: rgba(66, 133, 244, 0.24);
-            --bl-glow: rgba(66, 133, 244, 0.3);
-            --bl-white: #ffffff;
-            --bl-text: #1a1a2e;
-            --bl-text-secondary: #4a5568;
-            --bl-text-muted: #718096;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bl-surface);
-            color: var(--bl-text);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
-
-        /* ===== HEADER / NAV ===== */
-        .site-header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            padding: 16px 24px;
-            transition: padding 0.3s ease;
-        }
-
-        .site-header.scrolled { padding: 10px 24px; }
-
-        .nav-pill {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: var(--bl-surface);
-            border: 1px solid rgba(66, 133, 244, 0.1);
-            border-radius: 999px;
-            box-shadow: 0 18px 55px rgba(6, 13, 26, 0.09);
-            padding: 10px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: clamp(18px, 2vw, 30px);
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 6px;
-            flex-shrink: 0;
-        }
-
-        .nav-logo-text {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: var(--bl-primary);
-            letter-spacing: -0.02em;
-        }
-
-        .nav-logo-text span { color: var(--bl-ink); }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: clamp(12px, 2vw, 28px);
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--bl-ink);
-            text-decoration: none;
-            font-size: clamp(14px, 1.3vw, 16px);
-            font-weight: 500;
-            transition: color 180ms ease;
-            white-space: nowrap;
-        }
-
-        .nav-links a:hover { color: var(--bl-primary); }
-
-        .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--bl-primary) 0%, var(--bl-primary-bright) 100%);
-            color: var(--bl-white) !important;
-            padding: 10px 22px;
-            border-radius: 20px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 12px 28px var(--bl-glow);
-            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .nav-cta:hover {
-            background: linear-gradient(135deg, var(--bl-primary-dark) 0%, var(--bl-primary) 100%);
-            box-shadow: 0 16px 34px rgba(66, 133, 244, 0.36);
-            transform: translateY(-1px);
-        }
-
-        /* Hamburger */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 4px;
-            background: none;
-            border: none;
-            z-index: 101;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: var(--bl-ink);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(244, 248, 255, 0.98);
-            backdrop-filter: blur(20px);
-            z-index: 99;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .mobile-menu.active { display: flex; }
-
-        .mobile-menu a {
-            color: var(--bl-ink);
-            text-decoration: none;
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .mobile-menu a:hover { color: var(--bl-primary); }
-
-        /* ===== HERO ===== */
-        .hero {
-            padding-top: 120px;
-            padding-bottom: 100px;
-            background:
-                linear-gradient(135deg, rgba(6, 13, 26, 0.88) 0%, rgba(10, 22, 40, 0.7) 40%, rgba(66, 133, 244, 0.2) 100%),
-                linear-gradient(220deg, #0a1628 0%, #1a2744 40%, #0d2137 100%);
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Subtle grid pattern */
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(66, 133, 244, 0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(66, 133, 244, 0.06) 1px, transparent 1px);
-            background-size: 60px 60px;
-            z-index: 0;
-        }
-
-        .hero-inner {
-            max-width: 1170px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-label {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--bl-primary-bright);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            background: rgba(66, 133, 244, 0.15);
-            padding: 6px 16px;
-            border-radius: 20px;
-        }
-
-        .hero-title {
-            font-size: clamp(36px, 5vw, 58px);
-            font-weight: 800;
-            color: var(--bl-white);
-            line-height: 1.1;
-            margin-bottom: 20px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-subtitle {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.7;
-            margin-bottom: 32px;
-            max-width: 480px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .btn-hero {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            border-radius: 20px;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 300ms ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-hero--primary {
-            background: linear-gradient(135deg, var(--bl-primary) 0%, var(--bl-primary-bright) 100%);
-            color: var(--bl-white);
-            box-shadow: 0 12px 28px var(--bl-glow);
-        }
-
-        .btn-hero--primary:hover {
-            background: linear-gradient(135deg, var(--bl-primary-dark) 0%, var(--bl-primary) 100%);
-            transform: translateY(-1px);
-            box-shadow: 0 16px 34px rgba(66, 133, 244, 0.36);
-        }
-
-        .btn-hero--outline {
-            background: transparent;
-            color: var(--bl-white);
-            border: 1.5px solid rgba(255, 255, 255, 0.25);
-        }
-
-        .btn-hero--outline:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .btn-hero svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        /* Hero right - Project Mockups (2x2 grid) */
-        .project-mockups {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .mockup-frame {
-            background: #1a1a2e;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            transition: transform 400ms ease, box-shadow 400ms ease;
-            text-decoration: none;
-        }
-
-        .mockup-frame:hover {
-            transform: scale(1.05);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-            z-index: 10;
-        }
-
-        .mockup-topbar {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 10px 14px;
-            background: #252538;
-        }
-
-        .mockup-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-        }
-
-        .mockup-content {
-            padding: 24px;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .mockup-brand {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800;
-            font-size: 20px;
-            color: var(--bl-white);
-            margin-bottom: 6px;
-        }
-
-        .mockup-desc {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.5);
-            line-height: 1.5;
-        }
-
-        .mockup-tag {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 3px 10px;
-            border-radius: 10px;
-            width: fit-content;
-        }
-
-        .mockup-tag--blue {
-            background: rgba(66, 133, 244, 0.2);
-            color: var(--bl-primary-bright);
-        }
-
-        .mockup-tag--purple {
-            background: rgba(139, 92, 246, 0.2);
-            color: #a78bfa;
-        }
-
-        .mockup-tag--teal {
-            background: rgba(20, 184, 166, 0.2);
-            color: #2dd4bf;
-        }
-
-        .mockup-tag--coral {
-            background: rgba(224, 85, 85, 0.2);
-            color: #f07070;
-        }
-
-        /* ===== SECTIONS SHARED ===== */
-        .section {
-            padding: 100px 24px;
-        }
-
-        .section-inner {
-            max-width: 1170px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--bl-primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: clamp(32px, 4vw, 50px);
-            font-weight: 800;
-            color: var(--bl-ink);
-            line-height: 1.2;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .section-subtitle {
-            font-size: 17px;
-            color: var(--bl-text-secondary);
-            line-height: 1.7;
-            max-width: 600px;
-            margin-bottom: 48px;
-        }
-
-        .centered { text-align: center; }
-        .section-subtitle.centered { margin-left: auto; margin-right: auto; }
-        .section-label.centered { display: block; }
-
-        /* ===== PRODUCTS ===== */
-        .section-products {
-            background: var(--bl-white);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .product-card {
-            background: var(--bl-surface);
-            border: 1px solid rgba(66, 133, 244, 0.08);
-            border-radius: 20px;
-            padding: 36px 28px;
-            position: relative;
-            overflow: hidden;
-            transition: all 400ms ease;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
-
-        .product-card:hover {
-            background: var(--bl-white);
-            box-shadow: 0 24px 60px rgba(6, 13, 26, 0.1);
-            transform: translateY(-6px);
-        }
-
-        .product-card:hover::before { opacity: 1; }
-
-        .product-card--hotel::before { background: linear-gradient(90deg, #4285f4, #5e9ff5); }
-        .product-card--eshop::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
-        .product-card--email::before { background: linear-gradient(90deg, #14b8a6, #2dd4bf); }
-        .product-card--doctor::before { background: linear-gradient(90deg, #e05555, #f07070); }
-
-        .product-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .product-icon--hotel { background: linear-gradient(135deg, #4285f4, #5e9ff5); }
-        .product-icon--eshop { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
-        .product-icon--email { background: linear-gradient(135deg, #14b8a6, #2dd4bf); }
-        .product-icon--doctor { background: linear-gradient(135deg, #e05555, #f07070); }
-
-        .product-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: var(--bl-white);
-        }
-
-        .product-card h3 {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--bl-ink);
-            margin-bottom: 8px;
-        }
-
-        .product-card > p {
-            font-size: 15px;
-            color: var(--bl-text-secondary);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .product-features {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-
-        .product-features li {
-            font-size: 14px;
-            color: var(--bl-text-secondary);
-            padding: 6px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .product-features li::before {
-            content: '✓';
-            font-weight: 700;
-            font-size: 13px;
-            color: var(--bl-primary);
-        }
-
-        .btn-product {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 300ms ease;
-            border: 1.5px solid rgba(66, 133, 244, 0.2);
-            color: var(--bl-text-secondary);
-            background: transparent;
-        }
-
-        .btn-product:hover {
-            border-color: var(--bl-primary);
-            color: var(--bl-primary);
-            background: rgba(66, 133, 244, 0.05);
-        }
-
-        .btn-product svg {
-            width: 14px;
-            height: 14px;
-            fill: currentColor;
-            transition: transform 300ms ease;
-        }
-
-        .btn-product:hover svg { transform: translateX(3px); }
-
-        /* ===== CONTACT ===== */
-        .section-contact {
-            background: var(--bl-navy);
-            color: var(--bl-white);
-        }
-
-        .contact-centered {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-centered h2 {
-            font-size: clamp(28px, 4vw, 42px);
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .contact-centered > p {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            text-align: left;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-        }
-
-        .contact-detail-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(66, 133, 244, 0.15);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-detail-icon svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--bl-primary-bright);
-        }
-
-        .contact-detail strong {
-            display: block;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: rgba(255, 255, 255, 0.4);
-            margin-bottom: 4px;
-        }
-
-        .contact-detail a, .contact-detail span {
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .contact-detail a:hover { color: var(--bl-primary-bright); }
-
-        /* ===== FOOTER ===== */
-        .site-footer {
-            background: var(--bl-ink);
-            padding: 40px 24px 24px;
-        }
-
-        .footer-inner {
-            max-width: 1170px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-brand {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800;
-            font-size: 16px;
-            color: var(--bl-primary);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.4);
-            text-decoration: none;
-            font-size: 13px;
-            transition: color 200ms ease;
-        }
-
-        .footer-links a:hover { color: var(--bl-white); }
-
-        .footer-copy {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.2);
-        }
-
-        .footer-parent {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-parent a {
-            color: rgba(255, 255, 255, 0.45);
-            text-decoration: none;
-            font-size: 12px;
-            transition: color 200ms ease;
-        }
-
-        .footer-parent a:hover { color: var(--bl-white); }
-
-        .footer-dots { display: flex; gap: 3px; }
-        .footer-dot { width: 5px; height: 5px; border-radius: 50%; }
-        .footer-dot--blue { background: #4285f4; }
-        .footer-dot--red { background: #ea4335; }
-        .footer-dot--green { background: #34a853; }
-
-        /* ===== SCROLL REVEAL ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .product-card.reveal:nth-child(2) { transition-delay: 100ms; }
-        .product-card.reveal:nth-child(3) { transition-delay: 200ms; }
-        .product-card.reveal:nth-child(4) { transition-delay: 300ms; }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-            .products-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
-            .project-mockups {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Open Sans', 'system-ui', 'sans-serif'],
+                        heading: ['Poppins', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#18181B',
+                        secondary: '#3F3F46',
+                        accent: '#2563EB',
+                        bglight: '#FAFAFA',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
             }
         }
+    </script>
 
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-cta { display: none; }
-            .hamburger { display: flex; }
-
-            .hero { padding-top: 100px; padding-bottom: 60px; min-height: auto; }
-            .section { padding: 60px 16px; }
-            .footer-inner { flex-direction: column; text-align: center; }
-            .footer-links { flex-wrap: wrap; justify-content: center; }
-        }
-
-        @media (max-width: 480px) {
-            .hero-buttons { flex-direction: column; }
-            .btn-hero { width: 100%; justify-content: center; }
-        }
-
+    <style>
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
             }
-            .reveal { opacity: 1; transform: none; }
         }
     </style>
 </head>
-<body>
+<body class="bg-bglight text-primary antialiased">
 
-    <!-- Header -->
-    <header class="site-header" id="site-header">
-        <nav class="nav-pill">
-            <a href="#hero" class="nav-logo">
-                <span class="nav-logo-text"><span>Blue</span>Line</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#hero">Αρχική</a></li>
-                <li><a href="#products">Προϊόντα</a></li>
-                <li><a href="#contact">Επικοινωνία</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Επικοινωνία</a>
-            <button class="hamburger" id="hamburger" aria-label="Μενού">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="fixed top-4 left-4 right-4 z-50 motion-reduce:transition-none">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white/80 backdrop-blur-xl rounded-2xl border border-white/20 shadow-lg px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="#hero" class="flex items-center space-x-2 group">
+                        <div class="w-8 h-8 bg-gradient-to-br from-accent to-blue-700 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span class="font-heading font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                            BlueLine
+                        </span>
+                    </a>
+
+                    <!-- Desktop Nav -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#hero" class="text-sm font-medium text-secondary hover:text-accent transition-colors duration-200">Αρχική</a>
+                        <a href="#products" class="text-sm font-medium text-secondary hover:text-accent transition-colors duration-200">Προϊόντα</a>
+                        <a href="#contact" class="text-sm font-medium text-secondary hover:text-accent transition-colors duration-200">Επικοινωνία</a>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="#contact" class="hidden md:inline-flex items-center px-6 py-2.5 bg-accent text-white text-sm font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
+                        Ξεκινήστε
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer" aria-label="Μενού">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="#hero" class="mobile-link">Αρχική</a>
-        <a href="#products" class="mobile-link">Προϊόντα</a>
-        <a href="#contact" class="mobile-link">Επικοινωνία</a>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white/95 backdrop-blur-xl">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#hero" class="mobile-link text-2xl font-heading font-semibold text-primary hover:text-accent transition-colors duration-200">Αρχική</a>
+            <a href="#products" class="mobile-link text-2xl font-heading font-semibold text-primary hover:text-accent transition-colors duration-200">Προϊόντα</a>
+            <a href="#contact" class="mobile-link text-2xl font-heading font-semibold text-primary hover:text-accent transition-colors duration-200">Επικοινωνία</a>
+            <a href="#contact" class="inline-flex items-center px-8 py-3 bg-accent text-white text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg cursor-pointer">
+                Ξεκινήστε
+            </a>
+        </div>
     </div>
 
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <span class="hero-label">SaaS Products</span>
-                <h1 class="hero-title">Τα SaaS Προϊόντα μας</h1>
-                <p class="hero-subtitle">Σχεδιάζουμε και αναπτύσσουμε τα δικά μας SaaS προϊόντα. Από hotel management μέχρι e-commerce και ιατρικό λογισμικό, scalable cloud πλατφόρμες.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn-hero btn-hero--primary">Δείτε τα Προϊόντα ↓</a>
-                    <a href="#contact" class="btn-hero btn-hero--outline">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        Επικοινωνία
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="hero-bg.jpg" alt="" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/75 to-accent/60"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <div class="text-center">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8">
+                    <span class="text-sm font-medium text-white/90">Enterprise SaaS Solutions</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="font-heading font-bold text-5xl sm:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+                    Καινοτόμες
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        SaaS Πλατφόρμες
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Σχεδιάζουμε και αναπτύσσουμε enterprise-grade λογισμικό. Από hotel management μέχρι e-commerce, medical software και AI automation.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#products" class="inline-flex items-center px-8 py-4 bg-accent text-white text-base font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105 cursor-pointer focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-accent">
+                        Εξερευνήστε τα Προϊόντα
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-md text-white text-base font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-200 cursor-pointer focus-visible:ring-2 focus-visible:ring-white">
+                        Επικοινωνήστε
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
                     </a>
                 </div>
             </div>
 
-            <div class="project-mockups">
-                <div class="mockup-frame">
-                    <div class="mockup-topbar">
-                        <span class="mockup-dot" style="background:#ff5f57"></span>
-                        <span class="mockup-dot" style="background:#febc2e"></span>
-                        <span class="mockup-dot" style="background:#28c840"></span>
+            <!-- Product Preview Cards -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 hover:bg-white/20 transition-all duration-200 cursor-pointer group">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
                     </div>
-                    <div class="mockup-content">
-                        <div class="mockup-brand">HotelSystem</div>
-                        <div class="mockup-desc">All-in-one hotel management system. Reservations, housekeeping, billing.</div>
-                        <span class="mockup-tag mockup-tag--blue">Hotel Management</span>
-                    </div>
+                    <h3 class="font-heading font-semibold text-white text-sm">HotelSystem</h3>
                 </div>
-                <div class="mockup-frame">
-                    <div class="mockup-topbar">
-                        <span class="mockup-dot" style="background:#ff5f57"></span>
-                        <span class="mockup-dot" style="background:#febc2e"></span>
-                        <span class="mockup-dot" style="background:#28c840"></span>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 hover:bg-white/20 transition-all duration-200 cursor-pointer group">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
                     </div>
-                    <div class="mockup-content">
-                        <div class="mockup-brand">eShopPoint</div>
-                        <div class="mockup-desc">Ολοκληρωμένη e-commerce πλατφόρμα με headless αρχιτεκτονική.</div>
-                        <span class="mockup-tag mockup-tag--purple">E-Commerce</span>
-                    </div>
+                    <h3 class="font-heading font-semibold text-white text-sm">eShopPoint</h3>
                 </div>
-                <div class="mockup-frame">
-                    <div class="mockup-topbar">
-                        <span class="mockup-dot" style="background:#ff5f57"></span>
-                        <span class="mockup-dot" style="background:#febc2e"></span>
-                        <span class="mockup-dot" style="background:#28c840"></span>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 hover:bg-white/20 transition-all duration-200 cursor-pointer group">
+                    <div class="w-12 h-12 bg-teal-500/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
                     </div>
-                    <div class="mockup-content">
-                        <div class="mockup-brand">EmailPoint</div>
-                        <div class="mockup-desc">Email marketing & αυτοματισμοί για growth-focused teams.</div>
-                        <span class="mockup-tag mockup-tag--teal">Email Automation</span>
-                    </div>
+                    <h3 class="font-heading font-semibold text-white text-sm">Comms<span class="hidden sm:inline">Point</span></h3>
                 </div>
-                <div class="mockup-frame">
-                    <div class="mockup-topbar">
-                        <span class="mockup-dot" style="background:#ff5f57"></span>
-                        <span class="mockup-dot" style="background:#febc2e"></span>
-                        <span class="mockup-dot" style="background:#28c840"></span>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 hover:bg-white/20 transition-all duration-200 cursor-pointer group">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
                     </div>
-                    <div class="mockup-content">
-                        <div class="mockup-brand">DoctorPoint</div>
-                        <div class="mockup-desc">Ιατρικό λογισμικό για ραντεβού, ιστορικό & τιμολόγηση.</div>
-                        <span class="mockup-tag mockup-tag--coral">Medical Software</span>
+                    <h3 class="font-heading font-semibold text-white text-sm">MedPoint</h3>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 hover:bg-white/20 transition-all duration-200 cursor-pointer group col-span-2 md:col-span-1">
+                    <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
                     </div>
+                    <h3 class="font-heading font-semibold text-white text-sm">Point8</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products -->
-    <section class="section section-products" id="products">
-        <div class="section-inner">
-            <span class="section-label centered">Προϊόντα</span>
-            <h2 class="section-title centered">SaaS Πλατφόρμες</h2>
-            <p class="section-subtitle centered">Enterprise-grade λογισμικό, σχεδιασμένο για Ελληνικές και διεθνείς επιχειρήσεις.</p>
+    <!-- Products Section -->
+    <section id="products" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-accent/10 text-accent text-sm font-semibold rounded-full mb-4">
+                    ΠΡΟΪΟΝΤΑ
+                </span>
+                <h2 class="font-heading font-bold text-4xl sm:text-5xl text-primary mb-6">
+                    SaaS Πλατφόρμες που Μετασχηματίζουν Επιχειρήσεις
+                </h2>
+                <p class="text-lg text-secondary max-w-2xl mx-auto">
+                    Enterprise-grade λογισμικό σχεδιασμένο για Ελληνικές και διεθνείς επιχειρήσεις.
+                </p>
+            </div>
 
-            <div class="products-grid">
+            <!-- Products Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+
                 <!-- HotelSystem -->
-                <div class="product-card product-card--hotel reveal">
-                    <div class="product-icon product-icon--hotel">
-                        <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+                <article class="group bg-gradient-to-br from-white to-blue-50/50 rounded-2xl border border-gray-200/80 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">
+                            Hotel Management
+                        </span>
                     </div>
-                    <h3>HotelSystem</h3>
-                    <p>All-in-one hotel management system για boutique hotels, chains και resorts.</p>
-                    <ul class="product-features">
-                        <li>Smart Booking Engine</li>
-                        <li>Channel Manager (Booking, Expedia)</li>
-                        <li>Housekeeping & Operations</li>
-                        <li>Dynamic Pricing</li>
-                        <li>Financial Reports & Analytics</li>
-                        <li>AADE MyData Integration</li>
-                        <li>White Label Solution</li>
+
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-3">HotelSystem</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        All-in-one hotel management system για boutique hotels, chains και resorts. Πλήρης διαχείριση κρατήσεων, housekeeping και οικονομικών.
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Smart Booking Engine & Channel Manager
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Housekeeping & Operations Management
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Dynamic Pricing & Financial Reports
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            AADE MyData Integration
+                        </li>
                     </ul>
-                    <a href="http://hotelssystem.net/" target="_blank" class="btn-product">
+
+                    <a href="http://hotelssystem.net/" target="_blank" class="inline-flex items-center text-accent font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 group-hover:gap-3 gap-2">
                         Μάθετε περισσότερα
-                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
                     </a>
-                </div>
+                </article>
 
                 <!-- eShopPoint -->
-                <div class="product-card product-card--eshop reveal">
-                    <div class="product-icon product-icon--eshop">
-                        <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0020 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                <article class="group bg-gradient-to-br from-white to-purple-50/50 rounded-2xl border border-gray-200/80 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">
+                            E-Commerce
+                        </span>
                     </div>
-                    <h3>eShopPoint</h3>
-                    <p>Ολοκληρωμένη e-commerce πλατφόρμα με headless αρχιτεκτονική και multi-vendor support.</p>
-                    <ul class="product-features">
-                        <li>Headless Commerce API</li>
-                        <li>Multi-Vendor Marketplace</li>
-                        <li>Inventory Management</li>
-                        <li>Payment Gateway Integration</li>
-                        <li>Order Fulfillment Automation</li>
-                        <li>SEO & Analytics Dashboard</li>
-                    </ul>
-                    <a href="#contact" class="btn-product">
-                        Μάθετε περισσότερα
-                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-                    </a>
-                </div>
 
-                <!-- EmailPoint -->
-                <div class="product-card product-card--email reveal">
-                    <div class="product-icon product-icon--email">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    </div>
-                    <h3>EmailPoint</h3>
-                    <p>Email marketing platform με αυτοματισμούς, segmentation και real-time analytics.</p>
-                    <ul class="product-features">
-                        <li>Drag & Drop Email Builder</li>
-                        <li>Marketing Automation Flows</li>
-                        <li>Audience Segmentation</li>
-                        <li>A/B Testing</li>
-                        <li>Deliverability Monitoring</li>
-                        <li>API & Webhook Integrations</li>
-                    </ul>
-                    <a href="#contact" class="btn-product">
-                        Μάθετε περισσότερα
-                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-                    </a>
-                </div>
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-3">eShopPoint</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Ολοκληρωμένη e-commerce πλατφόρμα με headless αρχιτεκτονική και multi-vendor support. Scalable λύση για online επιχειρήσεις.
+                    </p>
 
-                <!-- DoctorPoint -->
-                <div class="product-card product-card--doctor reveal">
-                    <div class="product-icon product-icon--doctor">
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                    </div>
-                    <h3>DoctorPoint</h3>
-                    <p>Ολοκληρωμένο ιατρικό λογισμικό για ιδιωτικά ιατρεία και πολυϊατρεία.</p>
-                    <ul class="product-features">
-                        <li>Online Ραντεβού</li>
-                        <li>Ιατρικό Ιστορικό</li>
-                        <li>Ηλεκτρονικές Συνταγές</li>
-                        <li>SMS Υπενθυμίσεις</li>
-                        <li>Τιμολόγηση & Αποδείξεις</li>
-                        <li>GDPR Compliant</li>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Headless Commerce API
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Multi-Vendor Marketplace Support
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Inventory & Order Fulfillment
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            SEO Optimization & Analytics
+                        </li>
                     </ul>
-                    <a href="#contact" class="btn-product">
+
+                    <a href="#contact" class="inline-flex items-center text-accent font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 group-hover:gap-3 gap-2">
                         Μάθετε περισσότερα
-                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
                     </a>
-                </div>
+                </article>
+
+                <!-- CommunicationsPoint -->
+                <article class="group bg-gradient-to-br from-white to-teal-50/50 rounded-2xl border border-gray-200/80 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </div>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-semibold rounded-full">
+                            Communications
+                        </span>
+                    </div>
+
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-3">CommunicationsPoint</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Unified communications platform για email, SMS, push notifications και marketing automation. Ολοκληρωμένη λύση επικοινωνίας.
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Multi-Channel Messaging (Email, SMS, Push)
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Marketing Automation Flows
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Audience Segmentation & A/B Testing
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            API & Webhook Integrations
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="inline-flex items-center text-accent font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 group-hover:gap-3 gap-2">
+                        Μάθετε περισσότερα
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- MedPoint -->
+                <article class="group bg-gradient-to-br from-white to-red-50/50 rounded-2xl border border-gray-200/80 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-semibold rounded-full">
+                            Medical Software
+                        </span>
+                    </div>
+
+                    <h3 class="font-heading font-bold text-2xl text-primary mb-3">MedPoint</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Ολοκληρωμένο ιατρικό λογισμικό για ιδιωτικά ιατρεία και πολυϊατρεία. Διαχείριση ραντεβού, ιατρικού ιστορικού και τιμολόγησης.
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Online Ραντεβού & Ημερολόγιο
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Ιατρικό Ιστορικό & Συνταγές
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            SMS Υπενθυμίσεις Ραντεβού
+                        </li>
+                        <li class="flex items-center text-sm text-secondary">
+                            <svg class="w-5 h-5 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            GDPR Compliant & Ασφάλεια
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="inline-flex items-center text-accent font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 group-hover:gap-3 gap-2">
+                        Μάθετε περισσότερα
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- Point8 - Full Width -->
+                <article class="group md:col-span-2 bg-gradient-to-br from-white to-amber-50/50 rounded-2xl border border-gray-200/80 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full">
+                            AI Automation
+                        </span>
+                    </div>
+
+                    <div class="md:flex md:items-start md:gap-8">
+                        <div class="md:flex-1">
+                            <h3 class="font-heading font-bold text-2xl text-primary mb-3">Point8</h3>
+                            <p class="text-secondary mb-6 leading-relaxed">
+                                AI-powered automation platform για intelligent workflows, task routing και predictive analytics. Αυτοματοποίηση διαδικασιών με τεχνητή νοημοσύνη.
+                            </p>
+                        </div>
+
+                        <div class="md:flex-1">
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-sm text-secondary">
+                                    <svg class="w-5 h-5 text-amber-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    AI Workflow Automation
+                                </li>
+                                <li class="flex items-center text-sm text-secondary">
+                                    <svg class="w-5 h-5 text-amber-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Intelligent Task Routing
+                                </li>
+                                <li class="flex items-center text-sm text-secondary">
+                                    <svg class="w-5 h-5 text-amber-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Natural Language Commands
+                                </li>
+                                <li class="flex items-center text-sm text-secondary">
+                                    <svg class="w-5 h-5 text-amber-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Custom AI Agents & Predictive Analytics
+                                </li>
+                            </ul>
+
+                            <a href="#contact" class="inline-flex items-center text-accent font-semibold hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 group-hover:gap-3 gap-2">
+                                Μάθετε περισσότερα
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section section-contact" id="contact">
-        <div class="section-inner">
-            <div class="contact-centered">
-                <h2>Επικοινωνήστε μαζί μας</h2>
-                <p>Ενδιαφέρεστε για κάποιο από τα προϊόντα μας; Επικοινωνήστε μαζί μας και θα σας απαντήσουμε εντός 24 ωρών.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-secondary to-primary">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-full mb-4">
+                    ΕΠΙΚΟΙΝΩΝΙΑ
+                </span>
+                <h2 class="font-heading font-bold text-4xl sm:text-5xl text-white mb-6">
+                    Ας Δημιουργήσουμε Κάτι Εξαιρετικό Μαζί
+                </h2>
+                <p class="text-lg text-white/80 max-w-2xl mx-auto">
+                    Ενδιαφέρεστε για κάποιο από τα προϊόντα μας; Επικοινωνήστε μαζί μας και θα σας απαντήσουμε εντός 24 ωρών.
+                </p>
+            </div>
 
-                <div class="contact-details">
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon">
-                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+            <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Phone -->
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
                         </div>
                         <div>
-                            <strong>Τηλέφωνο</strong>
-                            <a href="tel:6989442438">698 944 24 38</a>
+                            <h3 class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">Τηλέφωνο</h3>
+                            <a href="tel:6989442438" class="text-white text-lg font-semibold hover:text-blue-300 transition-colors duration-200">
+                                698 944 24 38
+                            </a>
                         </div>
                     </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon">
-                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                         </div>
                         <div>
-                            <strong>Email</strong>
-                            <a href="mailto:info@blueline.dev">info@blueline.dev</a>
+                            <h3 class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">Email</h3>
+                            <a href="mailto:info@blueline.dev" class="text-white text-lg font-semibold hover:text-blue-300 transition-colors duration-200 break-all">
+                                info@blueline.dev
+                            </a>
                         </div>
                     </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
                         </div>
                         <div>
-                            <strong>Τοποθεσία</strong>
-                            <span>Αθήνα, Ελλάδα</span>
+                            <h3 class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">Τοποθεσία</h3>
+                            <p class="text-white text-lg font-semibold">Αθήνα, Ελλάδα</p>
                         </div>
                     </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon">
-                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:bg-white/20 transition-all duration-200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                         </div>
                         <div>
-                            <strong>Διαθεσιμότητα</strong>
-                            <span>Δευτέρα - Παρασκευή, 09:00 - 18:00</span>
+                            <h3 class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">Διαθεσιμότητα</h3>
+                            <p class="text-white text-lg font-semibold">Δευτ - Παρ, 09:00 - 18:00</p>
                         </div>
                     </div>
                 </div>
@@ -1006,70 +585,66 @@
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <span class="footer-brand">BlueLine</span>
-            <div class="footer-links">
-                <a href="#products">Προϊόντα</a>
-                <a href="#contact">Επικοινωνία</a>
+    <footer class="bg-primary py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Brand -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-accent to-blue-700 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <span class="font-heading font-bold text-xl text-white">BlueLine</span>
+                </div>
+
+                <!-- Links -->
+                <div class="flex items-center gap-8">
+                    <a href="#products" class="text-sm text-white/60 hover:text-white transition-colors duration-200">Προϊόντα</a>
+                    <a href="#contact" class="text-sm text-white/60 hover:text-white transition-colors duration-200">Επικοινωνία</a>
+                </div>
+
+                <!-- Parent Company -->
+                <div class="flex items-center gap-3">
+                    <div class="flex gap-1">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                    </div>
+                    <a href="https://transportmarketing.net" class="text-sm text-white/60 hover:text-white transition-colors duration-200">
+                        Transport Marketing
+                    </a>
+                </div>
             </div>
-            <div class="footer-parent">
-                <span class="footer-dots">
-                    <span class="footer-dot footer-dot--blue"></span>
-                    <span class="footer-dot footer-dot--red"></span>
-                    <span class="footer-dot footer-dot--green"></span>
-                </span>
-                <a href="https://transportmarketing.net">Transport Marketing</a>
+
+            <div class="mt-8 pt-8 border-t border-white/10 text-center">
+                <p class="text-sm text-white/40">&copy; 2026 BlueLine. All rights reserved.</p>
             </div>
-            <span class="footer-copy">&copy; 2026 BlueLine</span>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll
-        const header = document.getElementById('site-header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 20);
-        });
-
-        // Hamburger
-        const hamburger = document.getElementById('hamburger');
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-        document.querySelectorAll('.mobile-link').forEach(link => {
+
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
+                mobileMenu.classList.add('hidden');
             });
         });
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
+        // Close mobile menu on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
         });
-
-        // Scroll reveal
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15 });
-
-        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-        } else {
-            document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
-        }
     </script>
 
 </body>
