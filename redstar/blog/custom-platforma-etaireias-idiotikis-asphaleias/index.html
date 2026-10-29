@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-212798DHFW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-212798DHFW');</script>
+  <title>Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar | RedStar Blog</title>
+  <meta name="description" content="Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ιδιωτικής ασφάλειας: βάρδιες, πιστοποιήσεις φυλάκων &amp; αυτόματες αναφορές σε ένα σύστημα.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://transportmarketing.net/redstar/blog/custom-platforma-etaireias-idiotikis-asphaleias/">
+  <link rel="icon" type="image/svg+xml" href="../../sitepad-data/brand/favicons/favicon.svg">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar | RedStar Blog">
+  <meta property="og:description" content="Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ιδιωτικής ασφάλειας: βάρδιες, πιστοποιήσεις φυλάκων &amp; αυτόματες αναφορές σε ένα σύστημα.">
+  <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platforma-etaireias-idiotikis-asphaleias/">
+  <meta property="og:site_name" content="RedStar Digital Agency">
+  <meta property="og:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/56ce9024-a7a2-4306-9a75-2a22e3f8057f.png">
+  <meta property="og:image:alt" content="Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar">
+  <meta name="twitter:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/56ce9024-a7a2-4306-9a75-2a22e3f8057f.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar | RedStar Blog">
+  <meta name="twitter:description" content="Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ιδιωτικής ασφάλειας: βάρδιες, πιστοποιήσεις φυλάκων &amp; αυτόματες αναφορές σε ένα σύστημα.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
+  <meta property="article:published_time" content="2026-10-29">
+  <meta property="article:modified_time" content="2026-10-29">
+  <meta property="article:section" content="Blog">
+  <style>
+    :root {
+      --rs-red: #d62828;
+      --rs-red-dark: #8f1111;
+      --rs-red-soft: #fff1ee;
+      --rs-ink: #17080a;
+      --rs-muted: #665457;
+      --rs-surface: #fff9f7;
+      --rs-line: #ecd8d2;
+      --rs-cream: #fff4ed;
+      --rs-teal: #0f766e;
+      --rs-blue: #213b7d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--rs-surface);
+      color: var(--rs-ink);
+      font-family: Inter, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .rs-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 18px max(24px, calc((100% - 1180px) / 2));
+      border-bottom: 1px solid var(--rs-line);
+      background: rgba(255, 249, 247, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+    }
+
+    .rs-logo {
+      display: inline-flex;
+      align-items: center;
+      min-width: 178px;
+      text-decoration: none;
+    }
+
+    .rs-logo img {
+      width: 178px;
+      height: auto;
+    }
+
+    .rs-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-weight: 700;
+      color: var(--rs-muted);
+    }
+
+    .rs-nav a {
+      min-height: 40px;
+      padding: 9px 13px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .rs-nav a:hover,
+    .rs-nav a:focus-visible,
+    .rs-nav a.is-active {
+      color: var(--rs-red-dark);
+      background: var(--rs-red-soft);
+      outline: none;
+    }
+
+    .rs-main {
+      min-height: 70vh;
+      padding-bottom: 48px;
+    }
+
+    .rs-shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .rs-eyebrow {
+      margin: 0 0 14px;
+      color: #ff5b4d;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 40px;
+      font-family: Manrope, Inter, Arial, sans-serif;
+      letter-spacing: 0;
+      line-height: 1.12;
+    }
+
+    h1 {
+      max-width: 840px;
+      font-size: 3.25rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .rs-lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: rgba(255, 249, 247, 0.82);
+      font-size: 1.08rem;
+      font-weight: 500;
+    }
+
+    .rs-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .rs-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid var(--rs-red);
+      border-radius: 8px;
+      background: var(--rs-red);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .rs-button.secondary {
+      border-color: rgba(255, 249, 247, 0.46);
+      background: rgba(255, 249, 247, 0.08);
+      color: #fff9f7;
+    }
+
+    .rs-button:hover,
+    .rs-button:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .article-hero {
+      padding: 58px 0 140px;
+      background:
+        linear-gradient(120deg, rgba(23, 8, 10, 0.94), rgba(91, 8, 18, 0.84)),
+        url("../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg") center / cover;
+      color: #fff9f7;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .article-hero::after {
+      background: linear-gradient(180deg, rgba(255, 249, 247, 0) 0%, rgba(255, 249, 247, 0.14) 46%, var(--rs-surface) 100%);
+      bottom: -1px;
+      content: "";
+      height: clamp(68px, 7vw, 108px);
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      z-index: 0;
+    }
+
+    .article-hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+      align-items: end;
+      gap: 34px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-hero--text-only .article-hero__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .article-hero h1 {
+      font-size: 3rem;
+    }
+
+    .article-hero__copy {
+      padding-bottom: 42px;
+    }
+
+    .article-figure {
+      margin: 0 0 40px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 249, 247, 0.22);
+      border-radius: 8px;
+      background: #130608;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    .article-figure img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      object-position: center;
+      padding: 12px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 48px;
+      padding: 58px 0 84px;
+    }
+
+    .article-content {
+      display: grid;
+      gap: 34px;
+    }
+
+    .article-content h2 {
+      margin: 0 0 16px;
+    }
+
+    .article-content h3 {
+      margin: 0 0 12px;
+    }
+
+    .article-content p {
+      margin: 0 0 16px;
+      color: var(--rs-muted);
+      font-size: 1.02rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 16px;
+      padding-left: 20px;
+      color: var(--rs-muted);
+    }
+
+    .article-content li {
+      padding-left: 4px;
+    }
+
+    .article-content blockquote {
+      margin: 0 0 16px;
+      padding: 16px 20px;
+      border-left: 4px solid var(--rs-red);
+      background: var(--rs-cream);
+      border-radius: 0 8px 8px 0;
+      color: var(--rs-ink);
+      font-style: italic;
+    }
+
+    .article-content pre {
+      margin: 0 0 16px;
+      padding: 16px;
+      background: var(--rs-ink);
+      color: #fff9f7;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .article-content code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+    }
+
+    .article-content img {
+      border-radius: 8px;
+      margin: 0 0 16px;
+    }
+
+    .article-content a {
+      color: var(--rs-red-dark);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .article-content a:hover,
+    .article-content a:focus-visible {
+      color: var(--rs-red);
+      outline: none;
+    }
+
+    .article-meta {
+      color: var(--rs-red-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .article-aside {
+      position: sticky;
+      top: 96px;
+      align-self: start;
+      display: grid;
+      gap: 14px;
+    }
+
+    .article-panel {
+      border: 1px solid var(--rs-line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 18px;
+      box-shadow: 0 16px 40px rgba(23, 8, 10, 0.06);
+    }
+
+    .article-panel strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--rs-ink);
+    }
+
+    .article-panel span,
+    .article-panel a {
+      color: var(--rs-muted);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .article-panel a:hover,
+    .article-panel a:focus-visible {
+      color: var(--rs-red-dark);
+      outline: none;
+    }
+
+    .rs-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px max(24px, calc((100% - 1180px) / 2));
+      background: var(--rs-ink);
+      color: #fff9f7;
+    }
+
+    .rs-footer div {
+      display: grid;
+      gap: 4px;
+    }
+
+    .rs-footer span {
+      color: rgba(255, 249, 247, 0.72);
+    }
+
+    .rs-footer a {
+      color: #fff9f7;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .rs-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .rs-nav {
+        justify-content: flex-start;
+      }
+
+      h1,
+      .article-hero h1 {
+        font-size: 2.45rem;
+      }
+
+      .article-hero__grid,
+      .article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .article-aside {
+        position: static;
+      }
+    }
+
+    @media (max-width: 620px) {
+      body {
+        font-size: 15px;
+      }
+
+      .rs-header {
+        padding: 16px 20px;
+      }
+
+      .rs-logo img {
+        width: 150px;
+      }
+
+      .rs-nav {
+        width: 100%;
+        gap: 6px;
+      }
+
+      .rs-nav a {
+        min-height: 38px;
+        padding: 8px 10px;
+      }
+
+      .rs-shell {
+        width: min(100% - 32px, 1180px);
+      }
+
+      h1,
+      .article-hero h1 {
+        font-size: 2.1rem;
+      }
+
+      h2 {
+        font-size: 1.65rem;
+      }
+
+      .article-hero {
+        padding-top: 42px;
+      }
+
+      .article-hero__copy {
+        padding-bottom: 28px;
+      }
+
+      .article-layout {
+        gap: 34px;
+        padding: 42px 0 58px;
+      }
+
+      .rs-footer {
+        flex-direction: column;
+        padding: 28px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+
+      .rs-button:hover,
+      .rs-button:focus-visible {
+        transform: none;
+      }
+    }
+  </style>
+  <script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar",
+    "description": "Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ιδιωτικής ασφάλειας: βάρδιες, πιστοποιήσεις φυλάκων &amp; αυτόματες αναφορές σε ένα σύστημα.",
+    "image": "https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/56ce9024-a7a2-4306-9a75-2a22e3f8057f.png",
+    "author": {
+      "@type": "Person",
+      "name": "Alexandros Kourtis"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RedStar Digital Agency",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://transportmarketing.net/redstar/sitepad-data/brand/RedStar.png"
+      }
+    },
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "mainEntityOfPage": "https://transportmarketing.net/redstar/blog/custom-platforma-etaireias-idiotikis-asphaleias/",
+    "articleSection": "Blog",
+    "inLanguage": "el_GR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "RedStar",
+        "item": "https://transportmarketing.net/redstar/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://transportmarketing.net/redstar/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar",
+        "item": "https://transportmarketing.net/redstar/blog/custom-platforma-etaireias-idiotikis-asphaleias/"
+      }
+    ]
+  }
+]</script>
+</head>
+<body>
+  <header class="rs-header">
+    <a class="rs-logo" href="../../index.html" aria-label="RedStar homepage">
+      <img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar Digital Agency">
+    </a>
+    <nav class="rs-nav" aria-label="Primary navigation">
+        <a href="../../index.html">Αρχική</a>
+        <a href="../../index.html#services">Υπηρεσίες</a>
+        <a href="../../index.html#portfolio">Portfolio</a>
+        <a class="is-active" href="../../blog/index.html">Blog</a>
+        <a href="../../contact/index.html">Επικοινωνία</a>
+    </nav>
+  </header>
+  <main class="rs-main">
+    <article>
+      <section class="article-hero">
+        <div class="rs-shell article-hero__grid">
+          <div class="article-hero__copy">
+            <p class="rs-eyebrow">Blog</p>
+            <h1>Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar</h1>
+            <p class="rs-lead">Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ιδιωτικής ασφάλειας: βάρδιες, πιστοποιήσεις φυλάκων &amp; αυτόματες αναφορές σε ένα σύστημα.</p>
+            <div class="rs-actions">
+              <a class="rs-button" href="../../blog/index.html">Blog</a>
+              <a class="rs-button secondary" href="../../contact/index.html">Επικοινωνία</a>
+            </div>
+          </div>
+              <figure class="article-figure">
+                <img src="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/56ce9024-a7a2-4306-9a75-2a22e3f8057f.png" alt="Custom Πλατφόρμα Εταιρείας Ιδιωτικής Ασφάλειας | RedStar" fetchpriority="high">
+              </figure>
+        </div>
+      </section>
+      <div class="rs-shell article-layout">
+        <div class="article-content">
+          <p class="article-meta">Blog / 29/10/2026</p>
+          <article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Ιδιωτικής Ασφάλειας</h2> <p>Αν διαχειρίζεσαι μια εταιρεία ιδιωτικής ασφάλειας, ξέρεις ακριβώς για τι μιλάμε: δεκάδες φύλακες σε διαφορετικά σημεία, βάρδιες που αλλάζουν κάθε εβδομάδα, αναφορές που πρέπει να φτάσουν στον πελάτη μέχρι τα ξημερώματα, και ένας διαχειριστής που προσπαθεί να συντονίσει τα πάντα μέσα από Excel και WhatsApp. Αυτό δεν είναι λειτουργία — είναι επιβίωση.</p> <p>Στη <strong>RedStar</strong> έχουμε χτίσει custom πλατφόρμες για εταιρείες ιδιωτικής ασφάλειας που έλυσαν ακριβώς αυτό το πρόβλημα. Σε αυτό το άρθρο εξηγούμε τι χτίζουμε, πώς το χτίζουμε και γιατί η προσέγγισή μας αποδίδει — με αριθμούς και λογική, όχι με marketing.</p> <div style="background:#f4f4f4; border-left: 4px solid #c0392b; padding: 16px 20px; margin: 24px 0;">
+<h3>Key Takeaways</h3>
+<ul> <li><strong>Ένα ενιαίο σύστημα</strong> αντικαθιστά 4-5 διαφορετικά εργαλεία που δεν επικοινωνούν μεταξύ τους.</li> <li><strong>Ο αυτοματισμός αναφορών</strong> εξαλείφει ώρες χειρόγραφης δουλειάς σε καθημερινή βάση.</li> <li><strong>Ο προγραμματισμός βαρδιών</strong> με κανόνες συμμόρφωσης (εργατικό δίκαιο, πιστοποιήσεις) γίνεται αυτόματα.</li> <li><strong>Η διαχείριση προσωπικού</strong> περιλαμβάνει αρχείο πιστοποιητικών, ιστορικό βαρδιών και live παρακολούθηση θέσεων.</li> <li>Χτίζουμε σε <strong>Laravel + Vue.js</strong> με multi-tenant αρχιτεκτονική, κατάλληλη και για αλυσίδες εταιρειών.</li>
+</ul>
+</div> <h2>Το Πραγματικό Πρόβλημα των Εταιρειών Ιδιωτικής Ασφάλειας</h2> <p>Μια εταιρεία ιδιωτικής ασφάλειας με 80-150 φύλακες αντιμετωπίζει κάθε μέρα συγκεκριμένες επιχειρησιακές προκλήσεις που δεν υπάρχουν σε άλλους κλάδους:</p> <ul> <li><strong>Πιστοποιήσεις και άδειες:</strong> Κάθε φύλακας πρέπει να έχει σε ισχύ την άδεια εργασίας από το Υπουργείο Προστασίας του Πολίτη. Αν λήξει, δεν μπορεί να τοποθετηθεί σε κανένα σημείο νόμιμα.</li> <li><strong>Τοποθέτηση ανά αντικείμενο:</strong> Κάποια αντικείμενα απαιτούν φύλακες με ειδική εκπαίδευση (armed security, πυρασφάλεια, VIP προστασία). Το λάθος matching κοστίζει — σε νομικό και επιχειρηματικό επίπεδο.</li> <li><strong>24ωρη κάλυψη:</strong> Βάρδιες πρωί/απόγευμα/νύχτα, με εναλλαγές, απουσίες και αντικαταστάσεις που αποφασίζονται κάποιες φορές σε λίγα λεπτά.</li> <li><strong>Αναφορές προς πελάτες:</strong> Κάθε βάρδια πρέπει να τεκμηριώνεται — ώρα άφιξης, ώρα αναχώρησης, περιστατικά, παρατηρήσεις. Και ο πελάτης θέλει αυτά τα δεδομένα αμέσως.</li>
+</ul> <p>Κανένα generic HR εργαλείο δεν χειρίζεται αυτή τη συνθετότητα. Γι' αυτό χτίζουμε custom.</p> <h2>Η Αρχιτεκτονική της Πλατφόρμας: Τι Χτίζουμε Πραγματικά</h2> <h3>1. Μητρώο Προσωπικού με Πλήρη Αρχείο Πιστοποιήσεων</h3> <p>Το πρώτο layer της πλατφόρμας είναι το <strong>αρχείο κάθε φύλακα</strong>. Δεν εννοούμε ένα απλό profile με ονοματεπώνυμο. Εννοούμε:</p> <ul> <li>Ημερομηνία λήξης άδειας ΥΠΡΟ (με αυτόματες ειδοποιήσεις 30 και 7 ημέρες πριν)</li> <li>Εκπαιδεύσεις και πιστοποιητικά (π.χ. Α' Βοηθειών, Πυρόσβεσης, Οπλοχρησία)</li> <li>Ιστορικό τοποθετήσεων ανά αντικείμενο</li> <li>Αξιολογήσεις και παρατηρήσεις από supervisors</li> <li>Σύμβαση εργασίας και εργατικές ώρες ανά εβδομάδα</li>
+</ul> <p>Το σύστημα γνωρίζει ποιος φύλακας είναι διαθέσιμος, ποιος έχει όλες τις απαιτούμενες πιστοποιήσεις για ένα αντικείμενο, και ποιος δεν μπορεί να τοποθετηθεί σήμερα χωρίς να χρειαστεί να ρωτήσεις κανέναν.</p> <h3>2. Έξυπνος Προγραμματισμός Βαρδιών</h3> <p>Ο scheduler είναι η καρδιά του συστήματος. Χτίζουμε εργαλείο drag-and-drop με <strong>Vue.js</strong> στο frontend, όπου ο διαχειριστής βλέπει calendar view με όλα τα αντικείμενα, τις ανοιχτές θέσεις και τους διαθέσιμους φύλακες.</p> <p>Το σύστημα <strong>αρνείται αυτόματα</strong> τοποθετήσεις που παραβιάζουν:</p>
+<ul> <li>Ελάχιστη ανάπαυση μεταξύ βαρδιών (11 ώρες βάσει εργατικής νομοθεσίας)</li> <li>Μέγιστες εβδομαδιαίες ώρες</li> <li>Έλλειψη απαιτούμενης πιστοποίησης για συγκεκριμένο αντικείμενο</li> <li>Λήξη άδειας ΥΠΡΟ</li>
+</ul> <p>Παράλληλα, όταν ένας φύλακας αναφέρει αδυναμία προσέλευσης (μέσα από το mobile app του), το σύστημα εμφανίζει αυτόματα λίστα διαθέσιμων αντικαταστατών με τα κατάλληλα προσόντα — ταξινομημένους κατά εγγύτητα τοποθεσίας.</p> <h3>3. Mobile App για Φύλακες: Check-In, Αναφορές, Περιστατικά</h3> <p>Κάθε φύλακας έχει πρόσβαση σε lightweight mobile εφαρμογή (Progressive Web App ή native, ανάλογα με τις ανάγκες). Μέσα από αυτή:</p> <ul> <li><strong>GPS check-in/check-out</strong> κατά την έναρξη και λήξη βάρδιας — επαληθεύεται η τοποθεσία αυτόματα</li> <li><strong>Καταχώριση περιστατικών</strong> με φωτογραφία, κείμενο και timestamp</li> <li><strong>Ημερήσια αναφορά βάρδιας</strong> που συμπληρώνεται από τον φύλακα και αποστέλλεται αυτόματα στον πελάτη</li> <li>Πρόσβαση στο πρόγραμμα της εβδομάδας και ειδοποιήσεις για αλλαγές</li>
+</ul> <h3>4. Αυτοματισμός Αναφορών προς Πελάτες</h3> <p>Αυτό είναι το σημείο που οι περισσότερες εταιρείες χάνουν τις περισσότερες ώρες. Ένας supervisor κάθεται και γράφει το ίδιο report ξανά και ξανά, αντιγράφοντας δεδομένα από χαρτιά ή WhatsApp μηνύματα.</p> <p>Στη RedStar χτίζουμε <strong>pipeline αυτόματης δημιουργίας αναφορών</strong> με Laravel, που:</p> <ul> <li>Συγκεντρώνει δεδομένα από check-ins, περιστατικά και ημερήσιες αναφορές φυλάκων</li> <li>Δημιουργεί branded PDF αναφορά ανά αντικείμενο και ανά πελάτη</li> <li>Αποστέλλει αυτόματα με email ή μέσω client portal στο τέλος κάθε βάρδιας ή εβδομάδας</li> <li>Παράγει μηνιαία στατιστικά (ώρες κάλυψης, περιστατικά, συμμόρφωση SLA)</li>
+</ul> <p>Ο πελάτης βλέπει τα δεδομένα σε πραγματικό χρόνο μέσα από το δικό του portal — χωρίς να χρειάζεται να τηλεφωνήσει σε κανέναν.</p> <h2>Τεχνολογικό Stack: Γιατί Laravel και Vue.js</h2> <p>Δεν επιλέγουμε τεχνολογίες για να εντυπωσιάσουμε. Επιλέγουμε αυτές που λύνουν το πρόβλημα πιο αποτελεσματικά για τον συγκεκριμένο κλάδο.</p> <ul> <li><strong>Laravel (PHP):</strong> Robust backend για την επιχειρησιακή λογική, τα APIs, τον scheduler και τους αυτοματισμούς. Ευρεία κοινότητα, γρήγορη ανάπτυξη, εξαιρετική ασφάλεια.</li> <li><strong>Vue.js:</strong> Reactive frontend για τον scheduler, τα dashboards και τα real-time updates. Γρήγορο, ελαφρύ, ιδανικό για πολύπλοκα UI.</li> <li><strong>Multi-tenant αρχιτεκτονική:</strong> Αν η εταιρεία ασφάλειας έχει θυγατρικές ή franchises, κάθε οντότητα έχει τα δικά της δεδομένα, απομονωμένα αλλά διαχειρίσιμα κεντρικά.</li> <li><strong>WebSockets / Pusher:</strong> Για real-time ειδοποιήσεις — αν ένας φύλακας δεν κάνει check-in εγκαίρως, ο supervisor ειδοποιείται αμέσως.</li>
+</ul> <h2>Η Διαδικασία Ανάπτυξης: Από την Ανάλυση ως το Launch</h2> <p>Δεν ξεκινάμε να γράφουμε κώδικα την πρώτη μέρα. Η διαδικασία μας για custom εφαρμογές Αθήνα / Ελλάδα ακολουθεί συγκεκριμένα βήματα:</p> <ol> <li><strong>Discovery (1-2 εβδομάδες):</strong> Καταγράφουμε επακριβώς τις ροές εργασίας, τα pain points, τους ρόλους χρηστών και τους κανόνες επιχειρησιακής λογικής. Μιλάμε με dispatchers, supervisors και διευθυντές.</li> <li><strong>Σχεδιασμός Αρχιτεκτονικής:</strong> Database schema, API design, user roles, authentication. Τα πάντα τεκμηριώνονται πριν γραφεί γραμμή κώδικα.</li> <li><strong>Iterative Development:</strong> Sprints 2 εβδομάδων με παραδοτέα που μπορεί να δει και να δοκιμάσει ο πελάτης.</li> <li><strong>Staging & Testing:</strong> Ρεαλιστικά σενάρια χρήσης, load testing, security audit.</li> <li><strong>Launch & Training:</strong> Εκπαίδευση ομάδας, documentation, και υποστήριξη για τους πρώτους μήνες λειτουργίας.</li>
+</ol> <h2>Τι Αλλάζει Μετά την Εφαρμογή</h2> <p>Από εταιρείες ιδιωτικής ασφάλειας που έχουμε συνεργαστεί, οι πιο συνηθισμένες βελτιώσεις που αναφέρουν είναι:</p> <ul> <li>Μείωση χρόνου προγραμματισμού βαρδιών από 3-4 ώρες σε λιγότερο από 30 λεπτά εβδομαδιαίως</li> <li>Μηδενικές τοποθετήσεις φυλάκων με ληγμένες άδειες (λόγω αυτόματου ελέγχου)</li> <li>Αναφορές προς πελάτες που παράγονται αυτόματα αντί να γράφονται χειρόγραφα</li> <li>Ορατότητα σε πραγματικό χρόνο για κάθε αντικείμενο, χωρίς τηλεφωνήματα</li>
+</ul> <h2>Συχνές Ερωτήσεις</h2> <h3>Πόσο χρόνο παίρνει η ανάπτυξη μιας τέτοιας πλατφόρμας;</h3>
+<p>Μια πλήρης πλατφόρμα διαχείρισης προσωπικού, βαρδιών και αναφορών για εταιρεία ιδιωτικής ασφάλειας χτίζεται συνήθως σε 10-16 εβδομάδες, ανάλογα με την πολυπλοκότητα των integrations και τον αριθμό των custom ροών εργασίας. Ξεκινάμε με MVP που καλύπτει τα βασικά και επεκτεινόμαστε iterative.</p> <h3>Μπορεί η πλατφόρμα να ενσωματωθεί με υπάρχοντα συστήματα (μισθοδοσία, ΕΦΚΑ, κ.λπ.);</h3>
+<p>Ναι. Χτίζουμε APIs που επικοινωνούν με συστήματα μισθοδοσίας, λογιστικά προγράμματα ή εξωτερικές βάσεις δεδομένων. Αν υπάρχει API ή δυνατότητα export/import, μπορούμε να ενσωματώσουμε. Αξιολογούμε την τεχνική εφαρμοσιμότητα κατά το Discovery.</p> <h3>Είναι κατάλληλο και για μικρότερες εταιρείες ή μόνο για μεγάλες;</h3>
+<p>Εξαρτάται από τον αριθμό των φυλάκων και την πολυπλοκότητα των αναγκών. Για εταιρείες με 20-30 φύλακες, συχνά ξεκινάμε με μικρότερο scope που καλύπτει τα κρίσιμα σημεία (βάρδιες + αναφορές) και επεκτείνεται όταν η εταιρεία μεγαλώσει. Η αρχιτεκτονική είναι scalable από την αρχή.</p> <h2>Επόμενα Βήματα</h2> <p>Αν διαχειρίζεσαι εταιρεία ιδιωτικής ασφάλειας και αναγνωρίζεις τα προβλήματα που περιγράψαμε, δεν χρειάζεσαι ένα ακόμα γενικό εργαλείο. Χρειάζεσαι κάτι που καταλαβαίνει τον κλάδο σου.</p> <p>Στη <strong>RedStar</strong> δεν πουλάμε templates. Αναλύουμε την επιχείρησή σου, χτίζουμε αυτό που χρειάζεσαι, και παραδίδουμε σύστημα που λειτουργεί τη μέρα που ανοίγει — όχι μετά από έξι μήνες debugging. Επικοινώνησε μαζί μας για μια τεχνική συνάντηση χωρίς δεσμεύσεις.</p> </article>
+<p>Related: <a href="/custom-staffing-platform-antikatastasi-ergaleion-meiwsi-chronou">αντικατάσταση εργαλείων διαχείρισης</a></p>
+<p>Related: <a href="/multi-tenancy-laravel-saas-platforma-epicheiriseis">multi-tenant αρχιτεκτονική Laravel</a></p>
+<p>Related: <a href="/custom-platformes-etaireies-anthropinou-dynamikou">custom HR πλατφόρμες διαχείρισης</a></p>
+<p>Related: <a href="/apo-excel-se-custom-platforma-odigos-mme-ellada">από Excel σε custom πλατφόρμα</a></p>
+<p>Related: <a href="/automatismoi-epikoinonias-pelaton-custom-systimata">αυτοματισμοί αναφορών προς πελάτες</a></p>
+        </div>
+        <aside class="article-aside" aria-label="Article details">
+          <div class="article-panel">
+            <strong>Author</strong>
+            <span>Alexandros Kourtis</span>
+          </div>
+          <div class="article-panel">
+            <strong>Date</strong>
+            <span>29/10/2026</span>
+          </div>
+
+        </aside>
+      </div>
+    </article>
+  </main>
+  <footer class="rs-footer">
+    <div>
+      <strong>RedStar Digital Agency</strong>
+      <span>Custom εφαρμογές, websites και αυτοματισμοί με παραγωγική τεχνική βάση.</span>
+    </div>
+    <a href="../../contact/index.html">Συζητήστε το επόμενο project</a>
+  </footer>
+</body>
+</html>
