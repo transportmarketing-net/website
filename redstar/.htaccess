@@ -1,8 +1,30 @@
 RewriteEngine On
 
-# 301 redirects for old year-slug blog URLs
+# Removed service hub and retired specialist pages.
+RewriteRule ^services/?$ /redstar/#solutions [R=301,L,NE]
+RewriteRule ^services/(?:branding-design|seo|wordpress)/?$ /redstar/services/website-development/ [R=301,L]
+RewriteRule ^services/(?:laravel-development|saas-development)/?$ /redstar/services/custom-web-apps/ [R=301,L]
+RewriteRule ^privacy-policy/?$ /redstar/privacy/ [R=301,L]
+RewriteRule ^cookie-policy/?$ /redstar/cookies/ [R=301,L]
+
+# Case studies now live in the portfolio, separate from editorial notes.
+RewriteRule ^blog/(kotzia-pediatric-pulmonology-platform|lumencia-medical-marketing|extratzis-staffing-platform|akeraio-creative-portfolio|helppoint-volunteer-platform|ellinity-tour-saas|sedd-volunteer-rescue|transport-marketing-brand-hub|cisemc-consulting-website|dd-sintering-industrial-website|strive-hotel-staffing-website|panorama-residences-real-estate|noor-sprouts-retail-website|sass-academic-support-platform|toner-ink-eshop)/?$ /redstar/portfolio/$1/ [R=301,L]
+
+# Consolidate duplicate editorial URLs.
+RewriteRule ^blog/custom-efarmogi-vs-saas-ellinikes-epixeiriseis/?$ /redstar/blog/custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/ [R=301,L]
+RewriteRule ^blog/custom-web-efarmogi-aftomatopoiisi-epixeiriseon(?:-2026)?/?$ /redstar/blog/custom-web-efarmogi-aftomatopoiisi-epixeirimatikon-diadikasion/ [R=301,L]
 RewriteRule ^blog/gimati-mme-xanoun-pelates-xoris-istoselida-2026/?$ /redstar/blog/gimati-mme-xanoun-pelates-xoris-istoselida/ [R=301,L]
-RewriteRule ^blog/custom-web-efarmogi-aftomatopoiisi-epixeiriseon-2026/?$ /redstar/blog/custom-web-efarmogi-aftomatopoiisi-epixeiriseon/ [R=301,L]
-RewriteRule ^blog/custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/?$ /redstar/blog/custom-efarmogi-vs-saas-ellinikes-epixeiriseis/ [R=301,L]
 RewriteRule ^blog/apo-excel-se-custom-platforma-odigos-mme-ellada-2026/?$ /redstar/blog/apo-excel-se-custom-platforma-odigos-mme-ellada/ [R=301,L]
 RewriteRule ^blog/custom-staffing-platform-antikatastasi-ergaleion-meiwsi-chronou-2026/?$ /redstar/blog/custom-staffing-platform-antikatastasi-ergaleion-meiwsi-chronou/ [R=301,L]
+
+ErrorDocument 404 /redstar/404.html
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+</IfModule>

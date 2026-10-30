@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 191" width="1128" height="191">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17080a"/>
+      <stop offset="100%" stop-color="#2a1015"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark background -->
+  <rect width="1128" height="191" fill="url(#bg-grad)"/>
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1128" height="2" fill="#d62828" opacity="0.8"/>
+  <!-- Red circle mark (left, smaller for this narrow format) -->
+  <circle cx="200" cy="96" r="55" fill="#EF3E36"/>
+  <!-- Trail lines -->
+  <path d="M150,144 Q183,116 220,52" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M156,150 Q188,122 222,60" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M162,155 Q193,128 224,68" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Star -->
+  <polygon points="222,40 225,47 232,47 227,52 229,59 222,54.5 215,59 217,52 212,47 219,47" fill="#FFFFFF"/>
+  <!-- Text: RedStar -->
+  <text x="330" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="44" fill="#FFFFFF">RedStar</text>
+  <!-- DIGITAL AGENCY -->
+  <text x="333" y="115" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="15" letter-spacing="3" fill="#FFFFFF" opacity="0.7">DIGITAL AGENCY</text>
+  <!-- Tagline -->
+  <text x="333" y="145" font-family="Arial, Helvetica, sans-serif" font-weight="300" font-size="13" fill="#FFFFFF" opacity="0.5">Web Development &amp; Custom Applications | Athens, Greece</text>
+  <!-- Website URL right-aligned -->
+  <text x="920" y="105" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="14" fill="#d62828">redstar.transportmarketing.net</text>
+  <!-- Bottom accent line -->
+  <rect x="0" y="189" width="1128" height="2" fill="#d62828" opacity="0.8"/>
+</svg>

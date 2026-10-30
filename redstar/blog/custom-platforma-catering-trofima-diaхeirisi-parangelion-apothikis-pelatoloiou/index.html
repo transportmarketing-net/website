@@ -1,614 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-212798DHFW"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-212798DHFW');</script>
-  <title>Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar | RedStar Blog</title>
-  <meta name="description" content="Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Custom Πλατφόρμα για Catering &amp;amp; Τρόφιμα | RedStar | RedStar</title>
+  <meta name="description" content="Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp;amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.">
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://transportmarketing.net/redstar/blog/custom-platforma-catering-trofima-diaхeirisi-parangelion-apothikis-pelatoloiou/">
   <link rel="icon" type="image/svg+xml" href="../../sitepad-data/brand/favicons/favicon.svg">
+  <meta name="theme-color" content="#2b0a0f">
   <meta property="og:locale" content="el_GR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar | RedStar Blog">
-  <meta property="og:description" content="Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.">
-  <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platforma-catering-trofima-diaхeirisi-parangelion-apothikis-pelatoloiou/">
   <meta property="og:site_name" content="RedStar Digital Agency">
-  <meta property="og:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/87666fca-98df-454a-882a-07c7809ca8e1.jpg">
-  <meta property="og:image:alt" content="Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar">
-  <meta name="twitter:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/87666fca-98df-454a-882a-07c7809ca8e1.jpg">
+  <meta property="og:title" content="Custom Πλατφόρμα για Catering &amp;amp; Τρόφιμα | RedStar | RedStar">
+  <meta property="og:description" content="Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp;amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.">
+  <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platforma-catering-trofima-diaхeirisi-parangelion-apothikis-pelatoloiou/">
+  <meta property="og:image" content="https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar | RedStar Blog">
-  <meta name="twitter:description" content="Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
-  <meta property="article:published_time" content="2026-10-15">
-  <meta property="article:modified_time" content="2026-10-15">
-  <meta property="article:section" content="Blog">
-  <style>
-    :root {
-      --rs-red: #d62828;
-      --rs-red-dark: #8f1111;
-      --rs-red-soft: #fff1ee;
-      --rs-ink: #17080a;
-      --rs-muted: #665457;
-      --rs-surface: #fff9f7;
-      --rs-line: #ecd8d2;
-      --rs-cream: #fff4ed;
-      --rs-teal: #0f766e;
-      --rs-blue: #213b7d;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--rs-surface);
-      color: var(--rs-ink);
-      font-family: Inter, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
-      letter-spacing: 0;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .rs-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 18px max(24px, calc((100% - 1180px) / 2));
-      border-bottom: 1px solid var(--rs-line);
-      background: rgba(255, 249, 247, 0.96);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-    }
-
-    .rs-logo {
-      display: inline-flex;
-      align-items: center;
-      min-width: 178px;
-      text-decoration: none;
-    }
-
-    .rs-logo img {
-      width: 178px;
-      height: auto;
-    }
-
-    .rs-nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 8px;
-      flex-wrap: wrap;
-      font-weight: 700;
-      color: var(--rs-muted);
-    }
-
-    .rs-nav a {
-      min-height: 40px;
-      padding: 9px 13px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .rs-nav a:hover,
-    .rs-nav a:focus-visible,
-    .rs-nav a.is-active {
-      color: var(--rs-red-dark);
-      background: var(--rs-red-soft);
-      outline: none;
-    }
-
-    .rs-main {
-      min-height: 70vh;
-      padding-bottom: 48px;
-    }
-
-    .rs-shell {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .rs-eyebrow {
-      margin: 0 0 14px;
-      color: #ff5b4d;
-      font-size: 0.86rem;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0 0 40px;
-      font-family: Manrope, Inter, Arial, sans-serif;
-      letter-spacing: 0;
-      line-height: 1.12;
-    }
-
-    h1 {
-      max-width: 840px;
-      font-size: 3.25rem;
-      font-weight: 800;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 800;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-
-    .rs-lead {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: rgba(255, 249, 247, 0.82);
-      font-size: 1.08rem;
-      font-weight: 500;
-    }
-
-    .rs-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .rs-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 18px;
-      border: 1px solid var(--rs-red);
-      border-radius: 8px;
-      background: var(--rs-red);
-      color: #fff;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .rs-button.secondary {
-      border-color: rgba(255, 249, 247, 0.46);
-      background: rgba(255, 249, 247, 0.08);
-      color: #fff9f7;
-    }
-
-    .rs-button:hover,
-    .rs-button:focus-visible {
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .article-hero {
-      padding: 58px 0 140px;
-      background:
-        linear-gradient(120deg, rgba(23, 8, 10, 0.94), rgba(91, 8, 18, 0.84)),
-        url("../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg") center / cover;
-      color: #fff9f7;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .article-hero::after {
-      background: linear-gradient(180deg, rgba(255, 249, 247, 0) 0%, rgba(255, 249, 247, 0.14) 46%, var(--rs-surface) 100%);
-      bottom: -1px;
-      content: "";
-      height: clamp(68px, 7vw, 108px);
-      left: 0;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
-      z-index: 0;
-    }
-
-    .article-hero__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
-      align-items: end;
-      gap: 34px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .article-hero--text-only .article-hero__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .article-hero h1 {
-      font-size: 3rem;
-    }
-
-    .article-hero__copy {
-      padding-bottom: 42px;
-    }
-
-    .article-figure {
-      margin: 0 0 40px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 249, 247, 0.22);
-      border-radius: 8px;
-      background: #130608;
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
-    }
-
-    .article-figure img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: contain;
-      object-position: center;
-      padding: 12px;
-    }
-
-    .article-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 48px;
-      padding: 58px 0 84px;
-    }
-
-    .article-content {
-      display: grid;
-      gap: 34px;
-    }
-
-    .article-content h2 {
-      margin: 0 0 16px;
-    }
-
-    .article-content h3 {
-      margin: 0 0 12px;
-    }
-
-    .article-content p {
-      margin: 0 0 16px;
-      color: var(--rs-muted);
-      font-size: 1.02rem;
-    }
-
-    .article-content ul,
-    .article-content ol {
-      display: grid;
-      gap: 10px;
-      margin: 0 0 16px;
-      padding-left: 20px;
-      color: var(--rs-muted);
-    }
-
-    .article-content li {
-      padding-left: 4px;
-    }
-
-    .article-content blockquote {
-      margin: 0 0 16px;
-      padding: 16px 20px;
-      border-left: 4px solid var(--rs-red);
-      background: var(--rs-cream);
-      border-radius: 0 8px 8px 0;
-      color: var(--rs-ink);
-      font-style: italic;
-    }
-
-    .article-content pre {
-      margin: 0 0 16px;
-      padding: 16px;
-      background: var(--rs-ink);
-      color: #fff9f7;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-      line-height: 1.5;
-    }
-
-    .article-content code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-    }
-
-    .article-content img {
-      border-radius: 8px;
-      margin: 0 0 16px;
-    }
-
-    .article-content a {
-      color: var(--rs-red-dark);
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .article-content a:hover,
-    .article-content a:focus-visible {
-      color: var(--rs-red);
-      outline: none;
-    }
-
-    .article-meta {
-      color: var(--rs-red-dark);
-      font-size: 0.78rem;
-      font-weight: 800;
-      line-height: 1.3;
-      text-transform: uppercase;
-    }
-
-    .article-aside {
-      position: sticky;
-      top: 96px;
-      align-self: start;
-      display: grid;
-      gap: 14px;
-    }
-
-    .article-panel {
-      border: 1px solid var(--rs-line);
-      border-radius: 8px;
-      background: #fff;
-      padding: 18px;
-      box-shadow: 0 16px 40px rgba(23, 8, 10, 0.06);
-    }
-
-    .article-panel strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--rs-ink);
-    }
-
-    .article-panel span,
-    .article-panel a {
-      color: var(--rs-muted);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .article-panel a:hover,
-    .article-panel a:focus-visible {
-      color: var(--rs-red-dark);
-      outline: none;
-    }
-
-    .rs-footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 30px max(24px, calc((100% - 1180px) / 2));
-      background: var(--rs-ink);
-      color: #fff9f7;
-    }
-
-    .rs-footer div {
-      display: grid;
-      gap: 4px;
-    }
-
-    .rs-footer span {
-      color: rgba(255, 249, 247, 0.72);
-    }
-
-    .rs-footer a {
-      color: #fff9f7;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    @media (max-width: 980px) {
-      .rs-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .rs-nav {
-        justify-content: flex-start;
-      }
-
-      h1,
-      .article-hero h1 {
-        font-size: 2.45rem;
-      }
-
-      .article-hero__grid,
-      .article-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .article-aside {
-        position: static;
-      }
-    }
-
-    @media (max-width: 620px) {
-      body {
-        font-size: 15px;
-      }
-
-      .rs-header {
-        padding: 16px 20px;
-      }
-
-      .rs-logo img {
-        width: 150px;
-      }
-
-      .rs-nav {
-        width: 100%;
-        gap: 6px;
-      }
-
-      .rs-nav a {
-        min-height: 38px;
-        padding: 8px 10px;
-      }
-
-      .rs-shell {
-        width: min(100% - 32px, 1180px);
-      }
-
-      h1,
-      .article-hero h1 {
-        font-size: 2.1rem;
-      }
-
-      h2 {
-        font-size: 1.65rem;
-      }
-
-      .article-hero {
-        padding-top: 42px;
-      }
-
-      .article-hero__copy {
-        padding-bottom: 28px;
-      }
-
-      .article-layout {
-        gap: 34px;
-        padding: 42px 0 58px;
-      }
-
-      .rs-footer {
-        flex-direction: column;
-        padding: 28px 20px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-
-      .rs-button:hover,
-      .rs-button:focus-visible {
-        transform: none;
-      }
-    }
-  </style>
-  <script type="application/ld+json">[
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar",
-    "description": "Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.",
-    "image": "https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/87666fca-98df-454a-882a-07c7809ca8e1.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Alexandros Kourtis"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "RedStar Digital Agency",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://transportmarketing.net/redstar/sitepad-data/brand/RedStar.png"
-      }
-    },
-    "datePublished": "2026-10-15",
-    "dateModified": "2026-10-15",
-    "mainEntityOfPage": "https://transportmarketing.net/redstar/blog/custom-platforma-catering-trofima-diaхeirisi-parangelion-apothikis-pelatoloiou/",
-    "articleSection": "Blog",
-    "inLanguage": "el_GR"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "RedStar",
-        "item": "https://transportmarketing.net/redstar/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://transportmarketing.net/redstar/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar",
-        "item": "https://transportmarketing.net/redstar/blog/custom-platforma-catering-trofima-diaхeirisi-parangelion-apothikis-pelatoloiou/"
-      }
-    ]
-  }
-]</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap&amp;subset=greek">
+  <link rel="stylesheet" href="../../assets/css/redstar.css">
+  <script src="../../assets/js/redstar.js" defer></script>
 </head>
 <body>
-  <header class="rs-header">
-    <a class="rs-logo" href="../../index.html" aria-label="RedStar homepage">
-      <img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar Digital Agency">
-    </a>
-    <nav class="rs-nav" aria-label="Primary navigation">
-        <a href="../../index.html">Αρχική</a>
-        <a href="../../index.html#services">Υπηρεσίες</a>
-        <a href="../../index.html#portfolio">Portfolio</a>
-        <a class="is-active" href="../../blog/index.html">Blog</a>
-        <a href="../../contact/index.html">Επικοινωνία</a>
-    </nav>
+  <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a class="brand" href="../../index.html" aria-label="RedStar, αρχική">
+        <img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70">
+      </a>
+      <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
+        <a class="nav-link" href="../../services/website-development/index.html">Ιστοσελίδες</a>
+        <a class="nav-link" href="../../services/eshop-development/index.html">E-shop</a>
+        <a class="nav-link" href="../../services/custom-web-apps/index.html">Εφαρμογές</a>
+        <a class="nav-link" href="../../portfolio/index.html">Έργα</a>
+        <a class="nav-link" href="../../about/index.html">Σχετικά</a>
+        <a class="nav-link" href="../../blog/index.html" aria-current="page">Σημειώσεις</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
   </header>
-  <main class="rs-main">
-    <article>
-      <section class="article-hero">
-        <div class="rs-shell article-hero__grid">
-          <div class="article-hero__copy">
-            <p class="rs-eyebrow">Blog</p>
-            <h1>Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar</h1>
-            <p class="rs-lead">Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.</p>
-            <div class="rs-actions">
-              <a class="rs-button" href="../../blog/index.html">Blog</a>
-              <a class="rs-button secondary" href="../../contact/index.html">Επικοινωνία</a>
-            </div>
-          </div>
-              <figure class="article-figure">
-                <img src="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/87666fca-98df-454a-882a-07c7809ca8e1.jpg" alt="Custom Πλατφόρμα για Catering &amp; Τρόφιμα | RedStar" fetchpriority="high">
-              </figure>
-        </div>
-      </section>
-      <div class="rs-shell article-layout">
-        <div class="article-content">
-          <p class="article-meta">Blog / 15/10/2026</p>
-          <article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Τροφίμων και Catering</h2> <p>Αν διαχειρίζεσαι μια εταιρεία τροφίμων ή catering, ξέρεις ήδη πόσο χαοτική μπορεί να γίνει η καθημερινή λειτουργία: παραγγελίες που έρχονται από παντού, αποθήκη που δεν «μιλάει» με το λογιστήριο, πελάτες που θέλουν ιστορικό και τιμολόγια on demand. Η RedStar χτίζει custom web εφαρμογές που ενοποιούν όλες αυτές τις λειτουργίες σε ένα σύστημα — σχεδιασμένο ακριβώς για τις ανάγκες σου, όχι για τον «μέσο χρήστη» κάποιου generic SaaS.</p> <div style="background:#f8f8f8; border-left:4px solid #c0392b; padding:20px; margin:24px 0;">
+  <div class="mobile-drawer" id="mobile-menu" data-mobile-drawer hidden>
+    <button class="mobile-drawer__scrim" type="button" aria-label="Κλείσιμο μενού" data-menu-scrim></button>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Μενού">
+      <div class="mobile-drawer__top">
+        <a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a>
+        <button class="mobile-drawer__close" type="button" aria-label="Κλείσιμο μενού" data-menu-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+      <nav class="mobile-nav" aria-label="Πλοήγηση κινητού">
+        <div class="mobile-nav__group"><span class="mobile-nav__group-title">Λύσεις</span><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a></div>
+        <a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a>
+      </nav>
+      <div class="mobile-drawer__footer"><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </div>
+<main id="main-content"><article><section class="article-hero"><div class="article-hero__media"><img src="../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>Custom Πλατφόρμα για Catering &amp;amp; Τρόφιμα | RedStar</h1><p>Η RedStar χτίζει custom web εφαρμογές για εταιρείες τροφίμων &amp;amp; catering: παραγγελίες, αποθήκη και CRM σε ένα σύστημα. Laravel, Vue.js, αποτελέσματα.</p></div></section><div class="container article-layout"><div class="article-content"><article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Τροφίμων και Catering</h2> <p>Αν διαχειρίζεσαι μια εταιρεία τροφίμων ή catering, ξέρεις ήδη πόσο χαοτική μπορεί να γίνει η καθημερινή λειτουργία: παραγγελίες που έρχονται από παντού, αποθήκη που δεν «μιλάει» με το λογιστήριο, πελάτες που θέλουν ιστορικό και τιμολόγια on demand. Η RedStar χτίζει custom web εφαρμογές που ενοποιούν όλες αυτές τις λειτουργίες σε ένα σύστημα - σχεδιασμένο ακριβώς για τις ανάγκες σου, όχι για τον «μέσο χρήστη» κάποιου generic SaaS.</p> <div style="background:#f8f8f8; border-left:4px solid #c0392b; padding:20px; margin:24px 0;">
 <h3>Key Takeaways</h3>
 <ul>
 <li><strong>Ένα ενιαίο σύστημα</strong> που συνδέει παραγγελίες, αποθήκη και πελατολόγιο εξαλείφει τα σφάλματα και γλιτώνει ώρες χειρωνακτικής δουλειάς.</li>
-<li><strong>Οι custom πλατφόρμες</strong> σε Laravel και Vue.js προσαρμόζονται στις ροές εργασίας σου — όχι το αντίθετο.</li>
+<li><strong>Οι custom πλατφόρμες</strong> σε Laravel και Vue.js προσαρμόζονται στις ροές εργασίας σου - όχι το αντίθετο.</li>
 <li><strong>Αυτοματοποίηση επιχειρησιακών διαδικασιών</strong> σημαίνει λιγότερα λάθη, ταχύτερη εξυπηρέτηση και μετρήσιμη αύξηση παραγωγικότητας.</li>
 <li><strong>CRM ανάπτυξη</strong> ενσωματωμένη στο ίδιο σύστημα δίνει πλήρη εικόνα κάθε πελάτη, από το πρώτο αίτημα έως τη χρέωση.</li>
-<li><strong>Ο ψηφιακός μετασχηματισμός ΜΜΕ</strong> δεν είναι贵ό όνειρο — είναι μια επένδυση που αποσβένεται γρήγορα.</li>
+<li><strong>Ο ψηφιακός μετασχηματισμός ΜΜΕ</strong> δεν είναι贵ό όνειρο - είναι μια επένδυση που αποσβένεται γρήγορα.</li>
 </ul>
-</div> <h2>Το Πρόβλημα που Λύνουμε: Τα «Νησιά» Πληροφορίας</h2> <p>Η πλειονότητα των εταιρειών τροφίμων και catering στην Ελλάδα λειτουργεί με ένα παζλ εργαλείων: Excel για την αποθήκη, email για τις παραγγελίες, ένα ξεχωριστό πρόγραμμα για τιμολόγηση και ένα notebook για το πελατολόγιο. Κάθε «νησί» πληροφορίας δημιουργεί τριβή, καθυστερήσεις και — το χειρότερο — ανθρώπινα λάθη που κοστίζουν.</p> <p>Όταν μια εταιρεία catering δέχεται μια νέα παραγγελία, ο ιδανικός κόσμος μοιάζει έτσι: η παραγγελία καταχωρείται αυτόματα, το απόθεμα ενημερώνεται, ο πελάτης λαμβάνει επιβεβαίωση και η ομάδα παραγωγής βλέπει τη νέα εργασία στο dashboard της. Στην πραγματικότητα, αυτές οι πέντε ενέργειες γίνονται από διαφορετικά άτομα, σε διαφορετικά εργαλεία, με κίνδυνο να «πέσει» κάτι στις χαραμάδες.</p> <p><strong>Αυτό ακριβώς λύνουμε.</strong></p> <h2>Η Αρχιτεκτονική μιας Custom Πλατφόρμας για Τρόφιμα & Catering</h2> <p>Δεν υπάρχει ένα «template» που ταιριάζει σε όλους. Κάθε επιχείρηση έχει τη δική της λογική. Αυτό που έχουμε δει να λειτουργεί στην πράξη, όμως, είναι ένα σύστημα με τρεις πυλώνες:</p> <h3>1. Διαχείριση Παραγγελιών (Order Management)</h3> <p>Ο πυρήνας κάθε πλατφόρμας για εταιρεία catering. Χτίζουμε modules που χειρίζονται:</p> <ul>
+</div> <h2>Το Πρόβλημα που Λύνουμε: Τα «Νησιά» Πληροφορίας</h2> <p>Η πλειονότητα των εταιρειών τροφίμων και catering στην Ελλάδα λειτουργεί με ένα παζλ εργαλείων: Excel για την αποθήκη, email για τις παραγγελίες, ένα ξεχωριστό πρόγραμμα για τιμολόγηση και ένα notebook για το πελατολόγιο. Κάθε «νησί» πληροφορίας δημιουργεί τριβή, καθυστερήσεις και - το χειρότερο - ανθρώπινα λάθη που κοστίζουν.</p> <p>Όταν μια εταιρεία catering δέχεται μια νέα παραγγελία, ο ιδανικός κόσμος μοιάζει έτσι: η παραγγελία καταχωρείται αυτόματα, το απόθεμα ενημερώνεται, ο πελάτης λαμβάνει επιβεβαίωση και η ομάδα παραγωγής βλέπει τη νέα εργασία στο dashboard της. Στην πραγματικότητα, αυτές οι πέντε ενέργειες γίνονται από διαφορετικά άτομα, σε διαφορετικά εργαλεία, με κίνδυνο να «πέσει» κάτι στις χαραμάδες.</p> <p><strong>Αυτό ακριβώς λύνουμε.</strong></p> <h2>Η Αρχιτεκτονική μιας Custom Πλατφόρμας για Τρόφιμα & Catering</h2> <p>Δεν υπάρχει ένα «template» που ταιριάζει σε όλους. Κάθε επιχείρηση έχει τη δική της λογική. Αυτό που έχουμε δει να λειτουργεί στην πράξη, όμως, είναι ένα σύστημα με τρεις πυλώνες:</p> <h3>1. Διαχείριση Παραγγελιών (Order Management)</h3> <p>Ο πυρήνας κάθε πλατφόρμας για εταιρεία catering. Χτίζουμε modules που χειρίζονται:</p> <ul>
 <li>Εισερχόμενες παραγγελίες από πολλαπλά κανάλια (web form, τηλέφωνο, email parsing)</li>
 <li>Workflow έγκρισης και ανάθεσης σε ομάδες παραγωγής</li>
 <li>Αυτόματες ειδοποιήσεις (SMS, email) σε πελάτες και προσωπικό</li>
 <li>Παρακολούθηση κατάστασης παραγγελίας σε πραγματικό χρόνο</li>
 <li>Ιστορικό παραγγελιών ανά πελάτη, με δυνατότητα επανάληψης με ένα κλικ</li>
-</ul> <p>Χρησιμοποιούμε <strong>Laravel</strong> για το backend — δομημένο, ασφαλές, εύκολα επεκτάσιμο — και <strong>Vue.js</strong> για reactive interfaces που ανταποκρίνονται άμεσα χωρίς page reloads. Αν έχεις ψάξει για <em>Laravel developer Αθήνα</em> ή <em>Vue.js developer Αθήνα</em>, ξέρεις ήδη γιατί αυτός ο συνδυασμός κυριαρχεί στις σύγχρονες custom web εφαρμογές.</p> <h3>2. Διαχείριση Αποθήκης (Inventory Management)</h3> <p>Η αποθήκη είναι το αδύναμο σημείο των περισσότερων επιχειρήσεων τροφίμων. Χτίζουμε inventory modules που:</p> <ul>
+</ul> <p>Χρησιμοποιούμε <strong>Laravel</strong> για το backend - δομημένο, ασφαλές, εύκολα επεκτάσιμο - και <strong>Vue.js</strong> για reactive interfaces που ανταποκρίνονται άμεσα χωρίς page reloads. Αν έχεις ψάξει για <em>Laravel developer Αθήνα</em> ή <em>Vue.js developer Αθήνα</em>, ξέρεις ήδη γιατί αυτός ο συνδυασμός κυριαρχεί στις σύγχρονες custom web εφαρμογές.</p> <h3>2. Διαχείριση Αποθήκης (Inventory Management)</h3> <p>Η αποθήκη είναι το αδύναμο σημείο των περισσότερων επιχειρήσεων τροφίμων. Χτίζουμε inventory modules που:</p> <ul>
 <li>Ενημερώνουν αυτόματα το απόθεμα με κάθε επιβεβαιωμένη παραγγελία</li>
 <li>Στέλνουν alerts όταν ένα προϊόν πλησιάζει σε minimum stock level</li>
 <li>Παρακολουθούν ημερομηνίες λήξης και δίνουν FIFO προτεραιότητα</li>
@@ -620,48 +85,37 @@
 <li>Σημειώσεις από προηγούμενες επικοινωνίες</li>
 <li>Αυτόματες υπενθυμίσεις follow-up</li>
 <li>Segmentation για στοχευμένες προσφορές (lead generation)</li>
-</ul> <p>Αυτό δεν είναι απλώς ψηφιακό αρχείο — είναι εργαλείο <strong>lead generation</strong> και retention που λειτουργεί αθόρυβα στο παρασκήνιο.</p> <h2>Πώς Δουλεύει η Διαδικασία στη RedStar</h2> <p>Δεν αρχίζουμε να γράφουμε κώδικα από την πρώτη συνάντηση. Η διαδικασία μας έχει δομή:</p> <ol>
-<li><strong>Discovery Session (1-2 εβδομάδες):</strong> Χαρτογραφούμε τις υπάρχουσες ροές εργασίας, εντοπίζουμε τα pain points και ορίζουμε τι πρέπει να χτιστεί — και τι όχι.</li>
+</ul> <p>Αυτό δεν είναι απλώς ψηφιακό αρχείο - είναι εργαλείο <strong>lead generation</strong> και retention που λειτουργεί αθόρυβα στο παρασκήνιο.</p> <h2>Πώς Δουλεύει η Διαδικασία στη RedStar</h2> <p>Δεν αρχίζουμε να γράφουμε κώδικα από την πρώτη συνάντηση. Η διαδικασία μας έχει δομή:</p> <ol>
+<li><strong>Discovery Session (1-2 εβδομάδες):</strong> Χαρτογραφούμε τις υπάρχουσες ροές εργασίας, εντοπίζουμε τα pain points και ορίζουμε τι πρέπει να χτιστεί - και τι όχι.</li>
 <li><strong>Αρχιτεκτονικός Σχεδιασμός:</strong> Database schema, API structure, user roles και permissions. Εδώ αποφαίνουμε αν χρειάζεσαι multi-tenant αρχιτεκτονική (π.χ. αν εξυπηρετείς πολλαπλά branches ή franchise).</li>
-<li><strong>Iterative Development:</strong> Παραδίδουμε σε sprints. Βλέπεις λειτουργικό κώδικα νωρίς — όχι μόνο mockups.</li>
+<li><strong>Iterative Development:</strong> Παραδίδουμε σε sprints. Βλέπεις λειτουργικό κώδικα νωρίς - όχι μόνο mockups.</li>
 <li><strong>Testing & QA:</strong> Unit tests, integration tests, load testing για σενάρια peak demand (π.χ. Χριστούγεννα, εταιρικές εκδηλώσεις).</li>
 <li><strong>Go-live & Υποστήριξη:</strong> Εκπαίδευση ομάδας, documentation και ongoing support.</li>
 </ol> <h2>Πότε Αξίζει να Χτίσεις Custom vs. να Αγοράσεις Έτοιμο</h2> <p>Είμαστε ειλικρινείς: δεν χρειάζονται όλοι custom πλατφόρμα. Αν η επιχείρησή σου λειτουργεί με τυποποιημένες διαδικασίες και μικρό όγκο, ένα έτοιμο SaaS εργαλείο μπορεί να αρκεί.</p> <p>Η custom λύση αξίζει όταν:</p> <ul>
 <li>Έχεις διαδικασίες που κανένα έτοιμο εργαλείο δεν καλύπτει</li>
 <li>Θέλεις να ενοποιήσεις 3+ διαφορετικά συστήματα</li>
-<li>Σχεδιάζεις scale — περισσότεροι πελάτες, νέα σημεία, νέες κατηγορίες προϊόντων</li>
+<li>Σχεδιάζεις scale - περισσότεροι πελάτες, νέα σημεία, νέες κατηγορίες προϊόντων</li>
 <li>Τα monthly fees ενός SaaS υπερβαίνουν το κόστος κατοχής custom λύσης</li>
 <li>Έχεις ανάγκη για πλήρη έλεγχο δεδομένων και compliance (π.χ. GDPR)</li>
 </ul> <h2>Ερωτήσεις & Απαντήσεις</h2> <h3>Πόσο καιρό παίρνει η ανάπτυξη μιας τέτοιας πλατφόρμας;</h3>
-<p>Εξαρτάται από την πολυπλοκότητα, αλλά ένα πλήρες σύστημα με order management, inventory και CRM συνήθως παραδίδεται σε <strong>8-16 εβδομάδες</strong>. Αν ξεκινήσουμε με MVP (minimum viable product) — π.χ. μόνο παραγγελίες και αποθήκη — μπορούμε να είμαστε live σε 4-6 εβδομάδες και να προσθέσουμε modules αργότερα.</p> <h3>Μπορεί το σύστημα να συνδεθεί με το λογιστικό μου πρόγραμμα;</h3>
+<p>Εξαρτάται από την πολυπλοκότητα, αλλά ένα πλήρες σύστημα με order management, inventory και CRM συνήθως παραδίδεται σε <strong>8-16 εβδομάδες</strong>. Αν ξεκινήσουμε με MVP (minimum viable product) - π.χ. μόνο παραγγελίες και αποθήκη - μπορούμε να είμαστε live σε 4-6 εβδομάδες και να προσθέσουμε modules αργότερα.</p> <h3>Μπορεί το σύστημα να συνδεθεί με το λογιστικό μου πρόγραμμα;</h3>
 <p>Ναι. Χτίζουμε API integrations με τα πιο διαδεδομένα λογιστικά συστήματα (Entersoft, SoftOne, myDATA). Η εξαγωγή τιμολογίων, η σύνδεση με φορολογικές υπηρεσίες και η αυτόματη ενημέρωση λογιστικών εγγραφών είναι standard για εμάς.</p> <h3>Τι γίνεται αν αλλάξουν οι ανάγκες μου;</h3>
-<p>Ακριβώς γι' αυτό χτίζουμε modular αρχιτεκτονική. Κάθε νέο feature ή τροποποίηση γίνεται χωρίς να «σπάει» ό,τι ήδη λειτουργεί. Η <strong>ανάπτυξη λογισμικού</strong> που κάνουμε είναι επενδυτική — χτίζεις κάτι που ακολουθεί την ανάπτυξή σου.</p> <h2>Ο Ψηφιακός Μετασχηματισμός δεν Είναι Πολυτέλεια</h2> <p>Οι εταιρείες που επενδύουν σε <strong>αυτοματοποίηση επιχειρησιακών διαδικασιών</strong> δεν το κάνουν επειδή έχουν τεράστιους προϋπολογισμούς. Το κάνουν επειδή έχουν κουραστεί να χάνουν χρόνο σε διαδικασίες που μπορεί να τρέξει ένα σύστημα — και θέλουν οι άνθρωποί τους να εστιάσουν σε αυτό που πραγματικά μετράει: την ποιότητα του προϊόντος και την εξυπηρέτηση του πελάτη.</p> <p>Στη <strong>RedStar</strong>, δεν πουλάμε υπεσχέσεις. Σου δείχνουμε ακριβώς τι θα χτίσουμε, πώς θα λειτουργεί και τι αποτέλεσμα μπορείς να περιμένεις. Αν αυτό ακούγεται σαν τη συνομιλία που ψάχνεις, είμαστε εδώ.</p> </article>
-<p>Related: <a href="/apo-excel-se-custom-platforma-odigos-mme-ellada">από Excel σε custom πλατφόρμα</a></p>
-<p>Related: <a href="/custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026">custom εφαρμογή vs generic SaaS</a></p>
-<p>Related: <a href="/custom-platforma-xondriko-emporio-paraggelies-timokatalogos-crm">διαχείριση παραγγελιών και CRM</a></p>
-<p>Related: <a href="/automatismoi-epikoinonias-pelaton-custom-systimata">αυτοματισμοί επικοινωνίας πελατών</a></p>
-<p>Related: <a href="/custom-platformes-logistics-tracking-automatismoi-real-time">παρακολούθηση παραγγελίας σε πραγματικό χρόνο</a></p>
-        </div>
-        <aside class="article-aside" aria-label="Article details">
-          <div class="article-panel">
-            <strong>Author</strong>
-            <span>Alexandros Kourtis</span>
-          </div>
-          <div class="article-panel">
-            <strong>Date</strong>
-            <span>15/10/2026</span>
-          </div>
-
-        </aside>
+<p>Ακριβώς γι' αυτό χτίζουμε modular αρχιτεκτονική. Κάθε νέο feature ή τροποποίηση γίνεται χωρίς να «σπάει» ό,τι ήδη λειτουργεί. Η <strong>ανάπτυξη λογισμικού</strong> που κάνουμε είναι επενδυτική - χτίζεις κάτι που ακολουθεί την ανάπτυξή σου.</p> <h2>Ο Ψηφιακός Μετασχηματισμός δεν Είναι Πολυτέλεια</h2> <p>Οι εταιρείες που επενδύουν σε <strong>αυτοματοποίηση επιχειρησιακών διαδικασιών</strong> δεν το κάνουν επειδή έχουν τεράστιους προϋπολογισμούς. Το κάνουν επειδή έχουν κουραστεί να χάνουν χρόνο σε διαδικασίες που μπορεί να τρέξει ένα σύστημα - και θέλουν οι άνθρωποί τους να εστιάσουν σε αυτό που πραγματικά μετράει: την ποιότητα του προϊόντος και την εξυπηρέτηση του πελάτη.</p> <p>Στη <strong>RedStar</strong>, δεν πουλάμε υπεσχέσεις. Σου δείχνουμε ακριβώς τι θα χτίσουμε, πώς θα λειτουργεί και τι αποτέλεσμα μπορείς να περιμένεις. Αν αυτό ακούγεται σαν τη συνομιλία που ψάχνεις, είμαστε εδώ.</p> </article>
+<p>Related: <a href="../apo-excel-se-custom-platforma-odigos-mme-ellada/index.html">από Excel σε custom πλατφόρμα</a></p>
+<p>Related: <a href="../custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/index.html">custom εφαρμογή vs generic SaaS</a></p>
+<p>Related: <a href="../custom-platforma-xondriko-emporio-paraggelies-timokatalogos-crm/index.html">διαχείριση παραγγελιών και CRM</a></p>
+<p>Related: <a href="../automatismoi-epikoinonias-pelaton-custom-systimata/index.html">αυτοματισμοί επικοινωνίας πελατών</a></p>
+<p>Related: <a href="../custom-platformes-logistics-tracking-automatismoi-real-time/index.html">παρακολούθηση παραγγελίας σε πραγματικό χρόνο</a></p></div><aside class="article-aside" aria-label="Στοιχεία άρθρου"><div class="article-aside__panel"><strong>Συντάκτης</strong><span>Αλέξανδρος Κούρτης</span></div><div class="article-aside__panel"><a href="../index.html">Όλες οι σημειώσεις</a></div></aside></div></article><section class="final-cta"><div class="container final-cta__inner"><div><p class="eyebrow">Έχεις κάτι συγκεκριμένο στο μυαλό;</p><h2>Ας δούμε αν ταιριάζουμε.</h2><p>Σε 30 λεπτά ξεκαθαρίζουμε ανάγκη, κόστος και επόμενο βήμα.</p></div><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__intro"><a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a><p>Ιστοσελίδες και εργαλεία για επιχειρήσεις που θέλουν καθαρή δουλειά και άμεση συνεργασία.</p></div>
+        <nav aria-label="Λύσεις"><h2>Λύσεις</h2><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a></nav>
+        <nav aria-label="RedStar"><h2>RedStar</h2><a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a></nav>
       </div>
-    </article>
-  </main>
-  <footer class="rs-footer">
-    <div>
-      <strong>RedStar Digital Agency</strong>
-      <span>Custom εφαρμογές, websites και αυτοματισμοί με παραγωγική τεχνική βάση.</span>
+      <div class="site-footer__bottom"><span>© <span data-year>2026</span> RedStar.</span><div class="site-footer__legal"><a href="../../privacy/index.html">Απόρρητο</a><a href="../../terms/index.html">Όροι</a><a href="../../cookies/index.html">Cookies</a></div></div>
     </div>
-    <a href="../../contact/index.html">Συζητήστε το επόμενο project</a>
   </footer>
+  <aside class="consent" data-consent hidden aria-label="Ρυθμίσεις cookies"><p>Χρησιμοποιούμε προαιρετικά στατιστικά για να βλέπουμε τι βοηθά. Δεν ξεκινούν χωρίς επιλογή.</p><div class="consent__actions"><button class="button" type="button" data-consent-accept>Αποδοχή</button><button class="button button--glass" type="button" data-consent-reject>Μόνο απαραίτητα</button></div></aside>
 </body>
 </html>

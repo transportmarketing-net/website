@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- White background -->
+  <rect width="400" height="400" fill="#FFFFFF"/>
+  <!-- Red circle centered, with padding -->
+  <circle cx="200" cy="210" r="160" fill="#EF3E36"/>
+  <!-- Trail lines -->
+  <path d="M36,344 C110,296 170,220 260,90" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+  <path d="M52,360 C124,304 184,224 264,100" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <path d="M72,370 C136,312 196,232 266,112" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <!-- Star -->
+  <polygon points="260,60 267.6,77 287,75 275,90 287,105 267.6,103 260,120 252.4,103 233,105 245,90 233,77 252.4,77" fill="#FFFFFF"/>
+</svg>

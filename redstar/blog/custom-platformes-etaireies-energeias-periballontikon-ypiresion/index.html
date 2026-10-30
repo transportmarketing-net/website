@@ -1,619 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-212798DHFW"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-212798DHFW');</script>
-  <title>Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar | RedStar Blog</title>
+  <title>Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar | RedStar</title>
   <meta name="description" content="Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ενέργειας: διαχείριση συμβολαίων, παρακολούθηση κατανάλωσης και αυτοματισμοί αναφορών σε ένα σύστημα.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://transportmarketing.net/redstar/blog/custom-platformes-etaireies-energeias-periballontikon-ypiresion/">
   <link rel="icon" type="image/svg+xml" href="../../sitepad-data/brand/favicons/favicon.svg">
+  <meta name="theme-color" content="#2b0a0f">
   <meta property="og:locale" content="el_GR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar | RedStar Blog">
+  <meta property="og:site_name" content="RedStar Digital Agency">
+  <meta property="og:title" content="Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar | RedStar">
   <meta property="og:description" content="Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ενέργειας: διαχείριση συμβολαίων, παρακολούθηση κατανάλωσης και αυτοματισμοί αναφορών σε ένα σύστημα.">
   <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platformes-etaireies-energeias-periballontikon-ypiresion/">
-  <meta property="og:site_name" content="RedStar Digital Agency">
-  <meta property="og:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/a23f16a6-700b-4d6c-99e6-87f1316534ee.jpg">
-  <meta property="og:image:alt" content="Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar">
-  <meta name="twitter:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/a23f16a6-700b-4d6c-99e6-87f1316534ee.jpg">
+  <meta property="og:image" content="https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar | RedStar Blog">
-  <meta name="twitter:description" content="Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ενέργειας: διαχείριση συμβολαίων, παρακολούθηση κατανάλωσης και αυτοματισμοί αναφορών σε ένα σύστημα.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
-  <meta property="article:published_time" content="2026-10-21">
-  <meta property="article:modified_time" content="2026-10-21">
-  <meta property="article:section" content="Blog">
-  <style>
-    :root {
-      --rs-red: #d62828;
-      --rs-red-dark: #8f1111;
-      --rs-red-soft: #fff1ee;
-      --rs-ink: #17080a;
-      --rs-muted: #665457;
-      --rs-surface: #fff9f7;
-      --rs-line: #ecd8d2;
-      --rs-cream: #fff4ed;
-      --rs-teal: #0f766e;
-      --rs-blue: #213b7d;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--rs-surface);
-      color: var(--rs-ink);
-      font-family: Inter, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
-      letter-spacing: 0;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .rs-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 18px max(24px, calc((100% - 1180px) / 2));
-      border-bottom: 1px solid var(--rs-line);
-      background: rgba(255, 249, 247, 0.96);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-    }
-
-    .rs-logo {
-      display: inline-flex;
-      align-items: center;
-      min-width: 178px;
-      text-decoration: none;
-    }
-
-    .rs-logo img {
-      width: 178px;
-      height: auto;
-    }
-
-    .rs-nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 8px;
-      flex-wrap: wrap;
-      font-weight: 700;
-      color: var(--rs-muted);
-    }
-
-    .rs-nav a {
-      min-height: 40px;
-      padding: 9px 13px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .rs-nav a:hover,
-    .rs-nav a:focus-visible,
-    .rs-nav a.is-active {
-      color: var(--rs-red-dark);
-      background: var(--rs-red-soft);
-      outline: none;
-    }
-
-    .rs-main {
-      min-height: 70vh;
-      padding-bottom: 48px;
-    }
-
-    .rs-shell {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .rs-eyebrow {
-      margin: 0 0 14px;
-      color: #ff5b4d;
-      font-size: 0.86rem;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0 0 40px;
-      font-family: Manrope, Inter, Arial, sans-serif;
-      letter-spacing: 0;
-      line-height: 1.12;
-    }
-
-    h1 {
-      max-width: 840px;
-      font-size: 3.25rem;
-      font-weight: 800;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 800;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-
-    .rs-lead {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: rgba(255, 249, 247, 0.82);
-      font-size: 1.08rem;
-      font-weight: 500;
-    }
-
-    .rs-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .rs-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 18px;
-      border: 1px solid var(--rs-red);
-      border-radius: 8px;
-      background: var(--rs-red);
-      color: #fff;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .rs-button.secondary {
-      border-color: rgba(255, 249, 247, 0.46);
-      background: rgba(255, 249, 247, 0.08);
-      color: #fff9f7;
-    }
-
-    .rs-button:hover,
-    .rs-button:focus-visible {
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .article-hero {
-      padding: 58px 0 140px;
-      background:
-        linear-gradient(120deg, rgba(23, 8, 10, 0.94), rgba(91, 8, 18, 0.84)),
-        url("../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg") center / cover;
-      color: #fff9f7;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .article-hero::after {
-      background: linear-gradient(180deg, rgba(255, 249, 247, 0) 0%, rgba(255, 249, 247, 0.14) 46%, var(--rs-surface) 100%);
-      bottom: -1px;
-      content: "";
-      height: clamp(68px, 7vw, 108px);
-      left: 0;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
-      z-index: 0;
-    }
-
-    .article-hero__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
-      align-items: end;
-      gap: 34px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .article-hero--text-only .article-hero__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .article-hero h1 {
-      font-size: 3rem;
-    }
-
-    .article-hero__copy {
-      padding-bottom: 42px;
-    }
-
-    .article-figure {
-      margin: 0 0 40px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 249, 247, 0.22);
-      border-radius: 8px;
-      background: #130608;
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
-    }
-
-    .article-figure img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: contain;
-      object-position: center;
-      padding: 12px;
-    }
-
-    .article-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 48px;
-      padding: 58px 0 84px;
-    }
-
-    .article-content {
-      display: grid;
-      gap: 34px;
-    }
-
-    .article-content h2 {
-      margin: 0 0 16px;
-    }
-
-    .article-content h3 {
-      margin: 0 0 12px;
-    }
-
-    .article-content p {
-      margin: 0 0 16px;
-      color: var(--rs-muted);
-      font-size: 1.02rem;
-    }
-
-    .article-content ul,
-    .article-content ol {
-      display: grid;
-      gap: 10px;
-      margin: 0 0 16px;
-      padding-left: 20px;
-      color: var(--rs-muted);
-    }
-
-    .article-content li {
-      padding-left: 4px;
-    }
-
-    .article-content blockquote {
-      margin: 0 0 16px;
-      padding: 16px 20px;
-      border-left: 4px solid var(--rs-red);
-      background: var(--rs-cream);
-      border-radius: 0 8px 8px 0;
-      color: var(--rs-ink);
-      font-style: italic;
-    }
-
-    .article-content pre {
-      margin: 0 0 16px;
-      padding: 16px;
-      background: var(--rs-ink);
-      color: #fff9f7;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-      line-height: 1.5;
-    }
-
-    .article-content code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-    }
-
-    .article-content img {
-      border-radius: 8px;
-      margin: 0 0 16px;
-    }
-
-    .article-content a {
-      color: var(--rs-red-dark);
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .article-content a:hover,
-    .article-content a:focus-visible {
-      color: var(--rs-red);
-      outline: none;
-    }
-
-    .article-meta {
-      color: var(--rs-red-dark);
-      font-size: 0.78rem;
-      font-weight: 800;
-      line-height: 1.3;
-      text-transform: uppercase;
-    }
-
-    .article-aside {
-      position: sticky;
-      top: 96px;
-      align-self: start;
-      display: grid;
-      gap: 14px;
-    }
-
-    .article-panel {
-      border: 1px solid var(--rs-line);
-      border-radius: 8px;
-      background: #fff;
-      padding: 18px;
-      box-shadow: 0 16px 40px rgba(23, 8, 10, 0.06);
-    }
-
-    .article-panel strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--rs-ink);
-    }
-
-    .article-panel span,
-    .article-panel a {
-      color: var(--rs-muted);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .article-panel a:hover,
-    .article-panel a:focus-visible {
-      color: var(--rs-red-dark);
-      outline: none;
-    }
-
-    .rs-footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 30px max(24px, calc((100% - 1180px) / 2));
-      background: var(--rs-ink);
-      color: #fff9f7;
-    }
-
-    .rs-footer div {
-      display: grid;
-      gap: 4px;
-    }
-
-    .rs-footer span {
-      color: rgba(255, 249, 247, 0.72);
-    }
-
-    .rs-footer a {
-      color: #fff9f7;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    @media (max-width: 980px) {
-      .rs-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .rs-nav {
-        justify-content: flex-start;
-      }
-
-      h1,
-      .article-hero h1 {
-        font-size: 2.45rem;
-      }
-
-      .article-hero__grid,
-      .article-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .article-aside {
-        position: static;
-      }
-    }
-
-    @media (max-width: 620px) {
-      body {
-        font-size: 15px;
-      }
-
-      .rs-header {
-        padding: 16px 20px;
-      }
-
-      .rs-logo img {
-        width: 150px;
-      }
-
-      .rs-nav {
-        width: 100%;
-        gap: 6px;
-      }
-
-      .rs-nav a {
-        min-height: 38px;
-        padding: 8px 10px;
-      }
-
-      .rs-shell {
-        width: min(100% - 32px, 1180px);
-      }
-
-      h1,
-      .article-hero h1 {
-        font-size: 2.1rem;
-      }
-
-      h2 {
-        font-size: 1.65rem;
-      }
-
-      .article-hero {
-        padding-top: 42px;
-      }
-
-      .article-hero__copy {
-        padding-bottom: 28px;
-      }
-
-      .article-layout {
-        gap: 34px;
-        padding: 42px 0 58px;
-      }
-
-      .rs-footer {
-        flex-direction: column;
-        padding: 28px 20px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-
-      .rs-button:hover,
-      .rs-button:focus-visible {
-        transform: none;
-      }
-    }
-  </style>
-  <script type="application/ld+json">[
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar",
-    "description": "Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ενέργειας: διαχείριση συμβολαίων, παρακολούθηση κατανάλωσης και αυτοματισμοί αναφορών σε ένα σύστημα.",
-    "image": "https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/a23f16a6-700b-4d6c-99e6-87f1316534ee.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Alexandros Kourtis"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "RedStar Digital Agency",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://transportmarketing.net/redstar/sitepad-data/brand/RedStar.png"
-      }
-    },
-    "datePublished": "2026-10-21",
-    "dateModified": "2026-10-21",
-    "mainEntityOfPage": "https://transportmarketing.net/redstar/blog/custom-platformes-etaireies-energeias-periballontikon-ypiresion/",
-    "articleSection": "Blog",
-    "inLanguage": "el_GR"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "RedStar",
-        "item": "https://transportmarketing.net/redstar/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://transportmarketing.net/redstar/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar",
-        "item": "https://transportmarketing.net/redstar/blog/custom-platformes-etaireies-energeias-periballontikon-ypiresion/"
-      }
-    ]
-  }
-]</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap&amp;subset=greek">
+  <link rel="stylesheet" href="../../assets/css/redstar.css">
+  <script src="../../assets/js/redstar.js" defer></script>
 </head>
 <body>
-  <header class="rs-header">
-    <a class="rs-logo" href="../../index.html" aria-label="RedStar homepage">
-      <img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar Digital Agency">
-    </a>
-    <nav class="rs-nav" aria-label="Primary navigation">
-        <a href="../../index.html">Αρχική</a>
-        <a href="../../index.html#services">Υπηρεσίες</a>
-        <a href="../../index.html#portfolio">Portfolio</a>
-        <a class="is-active" href="../../blog/index.html">Blog</a>
-        <a href="../../contact/index.html">Επικοινωνία</a>
-    </nav>
+  <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a class="brand" href="../../index.html" aria-label="RedStar, αρχική">
+        <img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70">
+      </a>
+      <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
+        <a class="nav-link" href="../../services/website-development/index.html">Ιστοσελίδες</a>
+        <a class="nav-link" href="../../services/eshop-development/index.html">E-shop</a>
+        <a class="nav-link" href="../../services/custom-web-apps/index.html">Εφαρμογές</a>
+        <a class="nav-link" href="../../portfolio/index.html">Έργα</a>
+        <a class="nav-link" href="../../about/index.html">Σχετικά</a>
+        <a class="nav-link" href="../../blog/index.html" aria-current="page">Σημειώσεις</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
   </header>
-  <main class="rs-main">
-    <article>
-      <section class="article-hero">
-        <div class="rs-shell article-hero__grid">
-          <div class="article-hero__copy">
-            <p class="rs-eyebrow">Blog</p>
-            <h1>Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar</h1>
-            <p class="rs-lead">Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ενέργειας: διαχείριση συμβολαίων, παρακολούθηση κατανάλωσης και αυτοματισμοί αναφορών σε ένα σύστημα.</p>
-            <div class="rs-actions">
-              <a class="rs-button" href="../../blog/index.html">Blog</a>
-              <a class="rs-button secondary" href="../../contact/index.html">Επικοινωνία</a>
-            </div>
-          </div>
-              <figure class="article-figure">
-                <img src="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/a23f16a6-700b-4d6c-99e6-87f1316534ee.jpg" alt="Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar" fetchpriority="high">
-              </figure>
-        </div>
-      </section>
-      <div class="rs-shell article-layout">
-        <div class="article-content">
-          <p class="article-meta">Blog / 21/10/2026</p>
-          <article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Ενέργειας και Περιβαλλοντικών Υπηρεσιών</h2> <p>Αν διαχειρίζεστε μια εταιρεία ενέργειας ή παροχής περιβαλλοντικών υπηρεσιών στην Ελλάδα, ξέρετε ήδη πόσο περίπλοκο είναι το επιχειρηματικό σας τοπίο: δεκάδες ή εκατοντάδες συμβόλαια με διαφορετικούς όρους, ανάγκη παρακολούθησης κατανάλωσης σε πραγματικό χρόνο, υποχρεωτικές αναφορές προς ρυθμιστικές αρχές και πελάτες, και μια ομάδα που πνίγεται σε Excel και emails. Η λύση δεν είναι ένα ακόμα generic ERP. Είναι μια <strong>custom πλατφόρμα</strong> χτισμένη ακριβώς για τις δικές σας διαδικασίες.</p> <p>Στη RedStar έχουμε αναπτύξει custom web εφαρμογές για εταιρείες του κλάδου ενέργειας και περιβάλλοντος, χρησιμοποιώντας Laravel στο backend και Vue.js στο frontend — ένα stack που μας επιτρέπει να χτίζουμε σταθερά, επεκτάσιμα και συντηρήσιμα συστήματα. Παρακάτω σας εξηγούμε ακριβώς πώς το κάνουμε.</p> <div style="background:#f4f8ff;border-left:4px solid #2563eb;padding:18px 22px;margin:28px 0;border-radius:6px;">
-<h3 style="margin-top:0;">🔑 Key Takeaways</h3>
+  <div class="mobile-drawer" id="mobile-menu" data-mobile-drawer hidden>
+    <button class="mobile-drawer__scrim" type="button" aria-label="Κλείσιμο μενού" data-menu-scrim></button>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Μενού">
+      <div class="mobile-drawer__top">
+        <a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a>
+        <button class="mobile-drawer__close" type="button" aria-label="Κλείσιμο μενού" data-menu-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+      <nav class="mobile-nav" aria-label="Πλοήγηση κινητού">
+        <div class="mobile-nav__group"><span class="mobile-nav__group-title">Λύσεις</span><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a></div>
+        <a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a>
+      </nav>
+      <div class="mobile-drawer__footer"><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </div>
+<main id="main-content"><article><section class="article-hero"><div class="article-hero__media"><img src="../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>Custom Πλατφόρμες για Εταιρείες Ενέργειας | RedStar</h1><p>Πώς η RedStar χτίζει custom πλατφόρμες για εταιρείες ενέργειας: διαχείριση συμβολαίων, παρακολούθηση κατανάλωσης και αυτοματισμοί αναφορών σε ένα σύστημα.</p></div></section><div class="container article-layout"><div class="article-content"><article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Ενέργειας και Περιβαλλοντικών Υπηρεσιών</h2> <p>Αν διαχειρίζεστε μια εταιρεία ενέργειας ή παροχής περιβαλλοντικών υπηρεσιών στην Ελλάδα, ξέρετε ήδη πόσο περίπλοκο είναι το επιχειρηματικό σας τοπίο: δεκάδες ή εκατοντάδες συμβόλαια με διαφορετικούς όρους, ανάγκη παρακολούθησης κατανάλωσης σε πραγματικό χρόνο, υποχρεωτικές αναφορές προς ρυθμιστικές αρχές και πελάτες, και μια ομάδα που πνίγεται σε Excel και emails. Η λύση δεν είναι ένα ακόμα generic ERP. Είναι μια <strong>custom πλατφόρμα</strong> χτισμένη ακριβώς για τις δικές σας διαδικασίες.</p> <p>Στη RedStar έχουμε αναπτύξει custom web εφαρμογές για εταιρείες του κλάδου ενέργειας και περιβάλλοντος, χρησιμοποιώντας Laravel στο backend και Vue.js στο frontend - ένα stack που μας επιτρέπει να χτίζουμε σταθερά, επεκτάσιμα και συντηρήσιμα συστήματα. Παρακάτω σας εξηγούμε ακριβώς πώς το κάνουμε.</p> <div style="background:#f4f8ff;border-left:4px solid #2563eb;padding:18px 22px;margin:28px 0;border-radius:6px;">
+<h3 style="margin-top:0;"> Key Takeaways</h3>
 <ul>
-<li>Οι εταιρείες ενέργειας χρειάζονται <strong>ενιαία πλατφόρμα</strong> για συμβόλαια, κατανάλωση και αναφορές — όχι τρία διαφορετικά εργαλεία.</li>
+<li>Οι εταιρείες ενέργειας χρειάζονται <strong>ενιαία πλατφόρμα</strong> για συμβόλαια, κατανάλωση και αναφορές - όχι τρία διαφορετικά εργαλεία.</li>
 <li>Οι <strong>αυτοματισμοί αναφορών</strong> μειώνουν τον χρόνο εργασίας κατά εκατοντάδες ώρες ετησίως.</li>
 <li>Η αρχιτεκτονική <strong>multi-tenant SaaS</strong> επιτρέπει κλιμάκωση χωρίς αναδιάρθρωση του κώδικα.</li>
 <li>Η ενσωμάτωση με <strong>εξωτερικά APIs</strong> (μετρητές, ρυθμιστικές αρχές) είναι εφικτή και οικονομικά αποδοτική.</li>
 <li>Ένα καλά σχεδιασμένο σύστημα αποσβένεται σε <strong>λιγότερο από 12 μήνες</strong> από την εξοικονόμηση λειτουργικού κόστους.</li>
 </ul>
-</div> <h2>Το Πρόβλημα που Λύνουμε: Ο Κατακερματισμός των Δεδομένων</h2> <p>Η πιο συχνή εικόνα που συναντάμε σε εταιρείες ενέργειας και περιβαλλοντικών υπηρεσιών είναι αυτή: τα συμβόλαια σε έναν φάκελο του Google Drive, η κατανάλωση σε ένα Excel που ενημερώνει χειροκίνητα κάποιος υπάλληλος, και οι αναφορές να φτιάχνονται από μηδέν κάθε μήνα αντιγράφοντας δεδομένα από τρία διαφορετικά μέρη.</p> <p>Αυτό δεν είναι πρόβλημα οργάνωσης. Είναι πρόβλημα αρχιτεκτονικής. Και η λύση του δεν έρχεται από κάποιο έτοιμο SaaS εξωτερικού — έρχεται από μια <strong>custom πλατφόρμα επιχείρησης</strong> που σχεδιάζεται γύρω από τις δικές σας ροές εργασίας.</p> <h2>Τα Τρία Βασικά Modules που Χτίζουμε</h2> <h3>1. Διαχείριση Συμβολαίων (Contract Management)</h3> <p>Το module διαχείρισης συμβολαίων είναι η ραχοκοκαλιά του συστήματος. Αυτό που χτίζουμε δεν είναι απλά ένα αρχείο — είναι ένα <strong>ζωντανό σύστημα</strong> που γνωρίζει την κατάσταση κάθε συμβολαίου σε πραγματικό χρόνο.</p> <ul>
+</div> <h2>Το Πρόβλημα που Λύνουμε: Ο Κατακερματισμός των Δεδομένων</h2> <p>Η πιο συχνή εικόνα που συναντάμε σε εταιρείες ενέργειας και περιβαλλοντικών υπηρεσιών είναι αυτή: τα συμβόλαια σε έναν φάκελο του Google Drive, η κατανάλωση σε ένα Excel που ενημερώνει χειροκίνητα κάποιος υπάλληλος, και οι αναφορές να φτιάχνονται από μηδέν κάθε μήνα αντιγράφοντας δεδομένα από τρία διαφορετικά μέρη.</p> <p>Αυτό δεν είναι πρόβλημα οργάνωσης. Είναι πρόβλημα αρχιτεκτονικής. Και η λύση του δεν έρχεται από κάποιο έτοιμο SaaS εξωτερικού - έρχεται από μια <strong>custom πλατφόρμα επιχείρησης</strong> που σχεδιάζεται γύρω από τις δικές σας ροές εργασίας.</p> <h2>Τα Τρία Βασικά Modules που Χτίζουμε</h2> <h3>1. Διαχείριση Συμβολαίων (Contract Management)</h3> <p>Το module διαχείρισης συμβολαίων είναι η ραχοκοκαλιά του συστήματος. Αυτό που χτίζουμε δεν είναι απλά ένα αρχείο - είναι ένα <strong>ζωντανό σύστημα</strong> που γνωρίζει την κατάσταση κάθε συμβολαίου σε πραγματικό χρόνο.</p> <ul>
 <li><strong>Δυναμικές φόρμες συμβολαίων</strong> με προσαρμοσμένα πεδία ανά τύπο πελάτη (οικιακός, επαγγελματικός, βιομηχανικός)</li>
 <li><strong>Αυτόματες ειδοποιήσεις</strong> για λήξεις, ανανεώσεις και παραβάσεις SLA</li>
-<li><strong>Ιστορικό αλλαγών</strong> με audit trail — ξέρετε πάντα ποιος άλλαξε τι και πότε</li>
+<li><strong>Ιστορικό αλλαγών</strong> με audit trail - ξέρετε πάντα ποιος άλλαξε τι και πότε</li>
 <li><strong>Σύνδεση με τιμολόγηση</strong>: κάθε συμβόλαιο τροφοδοτεί αυτόματα τη διαδικασία χρέωσης</li>
-</ul> <p>Χρησιμοποιούμε <strong>Laravel</strong> για το backend αυτού του module, με Eloquent relationships που αντικατοπτρίζουν ακριβώς τη δομή των δικών σας συμβολαίων. Δεν προσαρμόζετε τις διαδικασίες σας στο λογισμικό — το λογισμικό προσαρμόζεται σε εσάς.</p> <h3>2. Παρακολούθηση Κατανάλωσης (Consumption Monitoring)</h3> <p>Εδώ βρίσκεται το τεχνικό βάρος της πλατφόρμας. Η παρακολούθηση κατανάλωσης απαιτεί:</p> <ul>
+</ul> <p>Χρησιμοποιούμε <strong>Laravel</strong> για το backend αυτού του module, με Eloquent relationships που αντικατοπτρίζουν ακριβώς τη δομή των δικών σας συμβολαίων. Δεν προσαρμόζετε τις διαδικασίες σας στο λογισμικό - το λογισμικό προσαρμόζεται σε εσάς.</p> <h3>2. Παρακολούθηση Κατανάλωσης (Consumption Monitoring)</h3> <p>Εδώ βρίσκεται το τεχνικό βάρος της πλατφόρμας. Η παρακολούθηση κατανάλωσης απαιτεί:</p> <ul>
 <li><strong>Ενσωμάτωση με smart meters και IoT συσκευές</strong> μέσω REST APIs ή MQTT protocols</li>
 <li><strong>Real-time data ingestion</strong> με queue workers (Laravel Queues + Redis) που επεξεργάζονται χιλιάδες μετρήσεις ανά λεπτό χωρίς να επιβαρύνουν την εφαρμογή</li>
-<li><strong>Dashboards με γραφήματα</strong> κατανάλωσης ανά ημέρα, εβδομάδα, μήνα — χτισμένα με Vue.js για άμεση απόκριση χωρίς reload σελίδας</li>
+<li><strong>Dashboards με γραφήματα</strong> κατανάλωσης ανά ημέρα, εβδομάδα, μήνα - χτισμένα με Vue.js για άμεση απόκριση χωρίς reload σελίδας</li>
 <li><strong>Ειδοποιήσεις ανωμαλιών</strong>: το σύστημα αναγνωρίζει μη φυσιολογικές καταναλώσεις και ειδοποιεί αυτόματα την ομάδα σας</li>
-</ul> <p>Για εταιρείες που δεν έχουν ακόμα smart meters, χτίζουμε <strong>manual entry interfaces</strong> με validation rules που μειώνουν τα λάθη εισαγωγής κατά 90%.</p> <h3>3. Αυτοματισμοί Αναφορών (Report Automation)</h3> <p>Αυτό είναι το module που «πουλάει» πιο εύκολα στους decision makers — γιατί ο αντίκτυπός του είναι μετρήσιμος από την πρώτη εβδομάδα.</p> <p>Χτίζουμε ένα σύστημα αναφορών που:</p> <ul>
-<li>Παράγει αυτόματα τις <strong>μηνιαίες αναφορές κατανάλωσης</strong> ανά πελάτη σε PDF ή Excel — χωρίς να πατήσει κανείς κουμπί</li>
+</ul> <p>Για εταιρείες που δεν έχουν ακόμα smart meters, χτίζουμε <strong>manual entry interfaces</strong> με validation rules που μειώνουν τα λάθη εισαγωγής κατά 90%.</p> <h3>3. Αυτοματισμοί Αναφορών (Report Automation)</h3> <p>Αυτό είναι το module που «πουλάει» πιο εύκολα στους decision makers - γιατί ο αντίκτυπός του είναι μετρήσιμος από την πρώτη εβδομάδα.</p> <p>Χτίζουμε ένα σύστημα αναφορών που:</p> <ul>
+<li>Παράγει αυτόματα τις <strong>μηνιαίες αναφορές κατανάλωσης</strong> ανά πελάτη σε PDF ή Excel - χωρίς να πατήσει κανείς κουμπί</li>
 <li>Αποστέλλει τις αναφορές <strong>αυτόματα μέσω email</strong> στους πελάτες με branded templates</li>
 <li>Παράγει <strong>αναφορές συμμόρφωσης</strong> για ρυθμιστικές αρχές (ΡΑΕΚ, Υπουργείο Περιβάλλοντος) στο απαιτούμενο format</li>
 <li>Προσφέρει <strong>self-service portal</strong> στους πελάτες όπου μπορούν να κατεβάζουν τις δικές τους αναφορές</li>
@@ -623,42 +88,31 @@
 <li><strong>Agile Ανάπτυξη σε Sprints:</strong> Κάθε sprint διαρκεί δύο εβδομάδες και παραδίδει λειτουργικό κομμάτι της εφαρμογής που μπορείτε να δοκιμάσετε.</li>
 <li><strong>Testing & QA:</strong> Automated testing με PHPUnit και feature tests που διασφαλίζουν ότι κάθε αλλαγή δεν σπάει κάτι άλλο.</li>
 <li><strong>Deployment & Υποστήριξη:</strong> CI/CD pipeline, monitoring και SLA υποστήριξης μετά την παράδοση.</li>
-</ol> <h2>Ένα Πραγματικό Παράδειγμα από την Πράξη</h2> <p>Ας πούμε ότι μια εταιρεία διαχείρισης αποβλήτων με 200+ συμβόλαια εταιρικών πελατών μας ζητάει να λύσουμε ένα συγκεκριμένο πρόβλημα: κάθε μήνα, η ομάδα της ξοδεύει 40+ ώρες για να φτιάξει χειροκίνητα αναφορές κατανάλωσης που στέλνει σε κάθε πελάτη.</p> <p>Η λύση μας: ένα σύστημα όπου κάθε φορτηγό καταγράφει τα δρομολόγια του μέσω mobile app, αυτά συνδέονται αυτόματα με το αντίστοιχο συμβόλαιο, και στο τέλος κάθε μήνα το σύστημα παράγει και αποστέλλει αυτόματα 200+ εξατομικευμένες αναφορές. Αποτέλεσμα: από 40 ώρες σε μηδέν ώρες χειροκίνητης εργασίας.</p> <p>Αυτό δεν είναι φαντασία — είναι αυτοματοποίηση επιχειρησιακών διαδικασιών με <strong>custom web εφαρμογή</strong> που χτίστηκε σε λιγότερο από 3 μήνες.</p> <h2>Συχνές Ερωτήσεις (Q&A)</h2> <div style="background:#f9fafb;border:1px solid #e5e7eb;padding:18px 22px;border-radius:8px;margin:24px 0;">
+</ol> <h2>Ένα Πραγματικό Παράδειγμα από την Πράξη</h2> <p>Ας πούμε ότι μια εταιρεία διαχείρισης αποβλήτων με 200+ συμβόλαια εταιρικών πελατών μας ζητάει να λύσουμε ένα συγκεκριμένο πρόβλημα: κάθε μήνα, η ομάδα της ξοδεύει 40+ ώρες για να φτιάξει χειροκίνητα αναφορές κατανάλωσης που στέλνει σε κάθε πελάτη.</p> <p>Η λύση μας: ένα σύστημα όπου κάθε φορτηγό καταγράφει τα δρομολόγια του μέσω mobile app, αυτά συνδέονται αυτόματα με το αντίστοιχο συμβόλαιο, και στο τέλος κάθε μήνα το σύστημα παράγει και αποστέλλει αυτόματα 200+ εξατομικευμένες αναφορές. Αποτέλεσμα: από 40 ώρες σε μηδέν ώρες χειροκίνητης εργασίας.</p> <p>Αυτό δεν είναι φαντασία - είναι αυτοματοποίηση επιχειρησιακών διαδικασιών με <strong>custom web εφαρμογή</strong> που χτίστηκε σε λιγότερο από 3 μήνες.</p> <h2>Συχνές Ερωτήσεις (Q&A)</h2> <div style="background:#f9fafb;border:1px solid #e5e7eb;padding:18px 22px;border-radius:8px;margin:24px 0;">
 <h3>Πόσο κοστίζει μια τέτοια custom πλατφόρμα;</h3>
 <p>Δεν υπάρχει ενιαία τιμή, γιατί κάθε εταιρεία έχει διαφορετικές ανάγκες. Ένα σύστημα με τα τρία βασικά modules (συμβόλαια, κατανάλωση, αναφορές) για μια μεσαία εταιρεία συνήθως απαιτεί επένδυση που κυμαίνεται μεταξύ €8.000 και €25.000, ανάλογα με την πολυπλοκότητα των integrations και τον αριθμό των χρηστών. Η απόσβεση, ωστόσο, έρχεται γρήγορα: μια εταιρεία που εξοικονομεί 40 ώρες εργασίας το μήνα αποσβένει την επένδυση σε λιγότερο από ένα χρόνο.</p>
 </div> <div style="background:#f9fafb;border:1px solid #e5e7eb;padding:18px 22px;border-radius:8px;margin:24px 0;">
 <h3>Μπορούμε να συνδέσουμε την πλατφόρμα με υπάρχοντα συστήματα (ERP, billing);</h3>
-<p>Ναι — αυτό είναι στην πραγματικότητα η πιο συνηθισμένη περίπτωση. Χτίζουμε RESTful APIs και webhooks που επικοινωνούν με τα περισσότερα δημοφιλή ERPs (SAP, Entersoft, SoftOne) και billing platforms. Κάνουμε πρώτα ένα τεχνικό audit των υπαρχόντων συστημάτων σας για να αξιολογήσουμε τη δυνατότητα ενσωμάτωσης πριν δεσμευτούμε σε timeline.</p>
+<p>Ναι - αυτό είναι στην πραγματικότητα η πιο συνηθισμένη περίπτωση. Χτίζουμε RESTful APIs και webhooks που επικοινωνούν με τα περισσότερα δημοφιλή ERPs (SAP, Entersoft, SoftOne) και billing platforms. Κάνουμε πρώτα ένα τεχνικό audit των υπαρχόντων συστημάτων σας για να αξιολογήσουμε τη δυνατότητα ενσωμάτωσης πριν δεσμευτούμε σε timeline.</p>
 </div> <div style="background:#f9fafb;border:1px solid #e5e7eb;padding:18px 22px;border-radius:8px;margin:24px 0;">
 <h3>Τι γίνεται μετά την παράδοση; Ποιος συντηρεί το σύστημα;</h3>
-<p>Προσφέρουμε συμβόλαια συντήρησης και υποστήριξης που καλύπτουν bug fixes, security updates, και προσθήκη νέων features. Όλος ο κώδικας που χτίζουμε είναι πλήρως documented και σας παραδίδεται — δεν υπάρχει vendor lock-in. Μπορείτε να συνεργαστείτε μαζί μας ή με οποιονδήποτε άλλο developer αν χρειαστεί.</p>
-</div> <h2>Γιατί να Επιλέξετε Custom Ανάπτυξη αντί για Έτοιμο Λογισμικό;</h2> <p>Η απάντηση είναι απλή: γιατί ο κλάδος σας έχει ειδικές ανάγκες που κανένα έτοιμο λογισμικό δεν καλύπτει πλήρως. Τα generic SaaS εργαλεία σας αναγκάζουν να προσαρμόσετε τις διαδικασίες σας στο λογισμικό — χάνετε ευελιξία, πληρώνετε για features που δεν χρειάζεστε, και εξαρτάστε από αποφάσεις ενός vendor που δεν σας γνωρίζει.</p> <p>Μια <strong>custom πλατφόρμα</strong> από Laravel developer με εμπειρία στον κλάδο ενέργειας σημαίνει ότι το σύστημα μεγαλώνει μαζί σας, προσαρμόζεται στις αλλαγές της αγοράς και παραμένει υπό τον πλήρη έλεγχό σας.</p> <h2>Ξεκινήστε τη Συνομιλία</h2> <p>Αν αναγνωρίζετε τον εαυτό σας σε αυτό που περιγράψαμε — αν έχετε κουραστεί από τα Excel, τα scattered δεδομένα και τις χειροκίνητες αναφορές — αξίζει να κάνουμε μια πρώτη συζήτηση. Δεν θα σας παρουσιάσουμε slides με γενικόλογες υποσχέσεις. Θα καθίσουμε, θα ακούσουμε τις διαδικασίες σας και θα σας πούμε ειλικρινά αν και πώς μπορούμε να βοηθήσουμε.</p> <p>Η <strong>RedStar</strong> χτίζει custom web εφαρμογές για επιχειρήσεις στην Ελλάδα που θέλουν να αυτοματοποιήσουν, να κλιμακωθούν και να αποκτήσουν έλεγχο των δεδομένων τους. Από custom εφαρμογές στην Αθήνα μέχρι SaaS πλατφόρμες πανελλαδικής εμβέλειας — είμαστε εδώ.</p> </article>
-<p>Related: <a href="/multi-tenancy-laravel-saas-platforma-epicheiriseis">αρχιτεκτονική multi-tenant SaaS</a></p>
-<p>Related: <a href="/apo-excel-se-custom-platforma-odigos-mme-ellada">από Excel σε custom πλατφόρμα</a></p>
-<p>Related: <a href="/custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026">custom εφαρμογή vs έτοιμο SaaS</a></p>
-<p>Related: <a href="/custom-platformes-etaireies-ypiresion-symvolaia-timologisi-epikoinonia">διαχείριση συμβολαίων και τιμολόγησης</a></p>
-<p>Related: <a href="/ai-integration-custom-web-efarmogi-epixeiriseis-ellada">AI ενσωμάτωση σε custom εφαρμογές</a></p>
-        </div>
-        <aside class="article-aside" aria-label="Article details">
-          <div class="article-panel">
-            <strong>Author</strong>
-            <span>Alexandros Kourtis</span>
-          </div>
-          <div class="article-panel">
-            <strong>Date</strong>
-            <span>21/10/2026</span>
-          </div>
-
-        </aside>
+<p>Προσφέρουμε συμβόλαια συντήρησης και υποστήριξης που καλύπτουν bug fixes, security updates, και προσθήκη νέων features. Όλος ο κώδικας που χτίζουμε είναι πλήρως documented και σας παραδίδεται - δεν υπάρχει vendor lock-in. Μπορείτε να συνεργαστείτε μαζί μας ή με οποιονδήποτε άλλο developer αν χρειαστεί.</p>
+</div> <h2>Γιατί να Επιλέξετε Custom Ανάπτυξη αντί για Έτοιμο Λογισμικό;</h2> <p>Η απάντηση είναι απλή: γιατί ο κλάδος σας έχει ειδικές ανάγκες που κανένα έτοιμο λογισμικό δεν καλύπτει πλήρως. Τα generic SaaS εργαλεία σας αναγκάζουν να προσαρμόσετε τις διαδικασίες σας στο λογισμικό - χάνετε ευελιξία, πληρώνετε για features που δεν χρειάζεστε, και εξαρτάστε από αποφάσεις ενός vendor που δεν σας γνωρίζει.</p> <p>Μια <strong>custom πλατφόρμα</strong> από Laravel developer με εμπειρία στον κλάδο ενέργειας σημαίνει ότι το σύστημα μεγαλώνει μαζί σας, προσαρμόζεται στις αλλαγές της αγοράς και παραμένει υπό τον πλήρη έλεγχό σας.</p> <h2>Ξεκινήστε τη Συνομιλία</h2> <p>Αν αναγνωρίζετε τον εαυτό σας σε αυτό που περιγράψαμε - αν έχετε κουραστεί από τα Excel, τα scattered δεδομένα και τις χειροκίνητες αναφορές - αξίζει να κάνουμε μια πρώτη συζήτηση. Δεν θα σας παρουσιάσουμε slides με γενικόλογες υποσχέσεις. Θα καθίσουμε, θα ακούσουμε τις διαδικασίες σας και θα σας πούμε ειλικρινά αν και πώς μπορούμε να βοηθήσουμε.</p> <p>Η <strong>RedStar</strong> χτίζει custom web εφαρμογές για επιχειρήσεις στην Ελλάδα που θέλουν να αυτοματοποιήσουν, να κλιμακωθούν και να αποκτήσουν έλεγχο των δεδομένων τους. Από custom εφαρμογές στην Αθήνα μέχρι SaaS πλατφόρμες πανελλαδικής εμβέλειας - είμαστε εδώ.</p> </article>
+<p>Related: <a href="../multi-tenancy-laravel-saas-platforma-epicheiriseis/index.html">αρχιτεκτονική multi-tenant SaaS</a></p>
+<p>Related: <a href="../apo-excel-se-custom-platforma-odigos-mme-ellada/index.html">από Excel σε custom πλατφόρμα</a></p>
+<p>Related: <a href="../custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/index.html">custom εφαρμογή vs έτοιμο SaaS</a></p>
+<p>Related: <a href="../custom-platformes-etaireies-ypiresion-symvolaia-timologisi-epikoinonia/index.html">διαχείριση συμβολαίων και τιμολόγησης</a></p>
+<p>Related: <a href="../ai-integration-custom-web-efarmogi-epixeiriseis-ellada/index.html">AI ενσωμάτωση σε custom εφαρμογές</a></p></div><aside class="article-aside" aria-label="Στοιχεία άρθρου"><div class="article-aside__panel"><strong>Συντάκτης</strong><span>Αλέξανδρος Κούρτης</span></div><div class="article-aside__panel"><a href="../index.html">Όλες οι σημειώσεις</a></div></aside></div></article><section class="final-cta"><div class="container final-cta__inner"><div><p class="eyebrow">Έχεις κάτι συγκεκριμένο στο μυαλό;</p><h2>Ας δούμε αν ταιριάζουμε.</h2><p>Σε 30 λεπτά ξεκαθαρίζουμε ανάγκη, κόστος και επόμενο βήμα.</p></div><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__intro"><a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a><p>Ιστοσελίδες και εργαλεία για επιχειρήσεις που θέλουν καθαρή δουλειά και άμεση συνεργασία.</p></div>
+        <nav aria-label="Λύσεις"><h2>Λύσεις</h2><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a></nav>
+        <nav aria-label="RedStar"><h2>RedStar</h2><a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a></nav>
       </div>
-    </article>
-  </main>
-  <footer class="rs-footer">
-    <div>
-      <strong>RedStar Digital Agency</strong>
-      <span>Custom εφαρμογές, websites και αυτοματισμοί με παραγωγική τεχνική βάση.</span>
+      <div class="site-footer__bottom"><span>© <span data-year>2026</span> RedStar.</span><div class="site-footer__legal"><a href="../../privacy/index.html">Απόρρητο</a><a href="../../terms/index.html">Όροι</a><a href="../../cookies/index.html">Cookies</a></div></div>
     </div>
-    <a href="../../contact/index.html">Συζητήστε το επόμενο project</a>
   </footer>
+  <aside class="consent" data-consent hidden aria-label="Ρυθμίσεις cookies"><p>Χρησιμοποιούμε προαιρετικά στατιστικά για να βλέπουμε τι βοηθά. Δεν ξεκινούν χωρίς επιλογή.</p><div class="consent__actions"><button class="button" type="button" data-consent-accept>Αποδοχή</button><button class="button button--glass" type="button" data-consent-reject>Μόνο απαραίτητα</button></div></aside>
 </body>
 </html>

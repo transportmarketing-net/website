@@ -1,639 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-212798DHFW"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-212798DHFW');</script>
-  <title>Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί | RedStar Blog</title>
-  <meta name="description" content="Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp;amp; Αυτοματισμοί | RedStar</title>
+  <meta name="description" content="Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp;amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.">
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://transportmarketing.net/redstar/blog/custom-platformes-lianiko-emporio-apotheма-crm-aftomatismoi/">
   <link rel="icon" type="image/svg+xml" href="../../sitepad-data/brand/favicons/favicon.svg">
+  <meta name="theme-color" content="#2b0a0f">
   <meta property="og:locale" content="el_GR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί | RedStar Blog">
-  <meta property="og:description" content="Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.">
-  <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platformes-lianiko-emporio-apotheма-crm-aftomatismoi/">
   <meta property="og:site_name" content="RedStar Digital Agency">
-  <meta property="og:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/0d0ae112-71a2-4dbd-8401-063be6ebd288.jpg">
-  <meta property="og:image:alt" content="Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί">
-  <meta name="twitter:image" content="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/0d0ae112-71a2-4dbd-8401-063be6ebd288.jpg">
+  <meta property="og:title" content="Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp;amp; Αυτοματισμοί | RedStar">
+  <meta property="og:description" content="Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp;amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.">
+  <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platformes-lianiko-emporio-apotheма-crm-aftomatismoi/">
+  <meta property="og:image" content="https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί | RedStar Blog">
-  <meta name="twitter:description" content="Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
-  <meta property="article:published_time" content="2026-10-20">
-  <meta property="article:modified_time" content="2026-10-20">
-  <meta property="article:section" content="Blog">
-  <style>
-    :root {
-      --rs-red: #d62828;
-      --rs-red-dark: #8f1111;
-      --rs-red-soft: #fff1ee;
-      --rs-ink: #17080a;
-      --rs-muted: #665457;
-      --rs-surface: #fff9f7;
-      --rs-line: #ecd8d2;
-      --rs-cream: #fff4ed;
-      --rs-teal: #0f766e;
-      --rs-blue: #213b7d;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--rs-surface);
-      color: var(--rs-ink);
-      font-family: Inter, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
-      letter-spacing: 0;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .rs-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 18px max(24px, calc((100% - 1180px) / 2));
-      border-bottom: 1px solid var(--rs-line);
-      background: rgba(255, 249, 247, 0.96);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-    }
-
-    .rs-logo {
-      display: inline-flex;
-      align-items: center;
-      min-width: 178px;
-      text-decoration: none;
-    }
-
-    .rs-logo img {
-      width: 178px;
-      height: auto;
-    }
-
-    .rs-nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 8px;
-      flex-wrap: wrap;
-      font-weight: 700;
-      color: var(--rs-muted);
-    }
-
-    .rs-nav a {
-      min-height: 40px;
-      padding: 9px 13px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .rs-nav a:hover,
-    .rs-nav a:focus-visible,
-    .rs-nav a.is-active {
-      color: var(--rs-red-dark);
-      background: var(--rs-red-soft);
-      outline: none;
-    }
-
-    .rs-main {
-      min-height: 70vh;
-      padding-bottom: 48px;
-    }
-
-    .rs-shell {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .rs-eyebrow {
-      margin: 0 0 14px;
-      color: #ff5b4d;
-      font-size: 0.86rem;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0 0 40px;
-      font-family: Manrope, Inter, Arial, sans-serif;
-      letter-spacing: 0;
-      line-height: 1.12;
-    }
-
-    h1 {
-      max-width: 840px;
-      font-size: 3.25rem;
-      font-weight: 800;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 800;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-
-    .rs-lead {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: rgba(255, 249, 247, 0.82);
-      font-size: 1.08rem;
-      font-weight: 500;
-    }
-
-    .rs-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .rs-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 18px;
-      border: 1px solid var(--rs-red);
-      border-radius: 8px;
-      background: var(--rs-red);
-      color: #fff;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .rs-button.secondary {
-      border-color: rgba(255, 249, 247, 0.46);
-      background: rgba(255, 249, 247, 0.08);
-      color: #fff9f7;
-    }
-
-    .rs-button:hover,
-    .rs-button:focus-visible {
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .article-hero {
-      padding: 58px 0 140px;
-      background:
-        linear-gradient(120deg, rgba(23, 8, 10, 0.94), rgba(91, 8, 18, 0.84)),
-        url("../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg") center / cover;
-      color: #fff9f7;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .article-hero::after {
-      background: linear-gradient(180deg, rgba(255, 249, 247, 0) 0%, rgba(255, 249, 247, 0.14) 46%, var(--rs-surface) 100%);
-      bottom: -1px;
-      content: "";
-      height: clamp(68px, 7vw, 108px);
-      left: 0;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
-      z-index: 0;
-    }
-
-    .article-hero__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
-      align-items: end;
-      gap: 34px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .article-hero--text-only .article-hero__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .article-hero h1 {
-      font-size: 3rem;
-    }
-
-    .article-hero__copy {
-      padding-bottom: 42px;
-    }
-
-    .article-figure {
-      margin: 0 0 40px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 249, 247, 0.22);
-      border-radius: 8px;
-      background: #130608;
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
-    }
-
-    .article-figure img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: contain;
-      object-position: center;
-      padding: 12px;
-    }
-
-    .article-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 48px;
-      padding: 58px 0 84px;
-    }
-
-    .article-content {
-      display: grid;
-      gap: 34px;
-    }
-
-    .article-content h2 {
-      margin: 0 0 16px;
-    }
-
-    .article-content h3 {
-      margin: 0 0 12px;
-    }
-
-    .article-content p {
-      margin: 0 0 16px;
-      color: var(--rs-muted);
-      font-size: 1.02rem;
-    }
-
-    .article-content ul,
-    .article-content ol {
-      display: grid;
-      gap: 10px;
-      margin: 0 0 16px;
-      padding-left: 20px;
-      color: var(--rs-muted);
-    }
-
-    .article-content li {
-      padding-left: 4px;
-    }
-
-    .article-content blockquote {
-      margin: 0 0 16px;
-      padding: 16px 20px;
-      border-left: 4px solid var(--rs-red);
-      background: var(--rs-cream);
-      border-radius: 0 8px 8px 0;
-      color: var(--rs-ink);
-      font-style: italic;
-    }
-
-    .article-content pre {
-      margin: 0 0 16px;
-      padding: 16px;
-      background: var(--rs-ink);
-      color: #fff9f7;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-      line-height: 1.5;
-    }
-
-    .article-content code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-    }
-
-    .article-content img {
-      border-radius: 8px;
-      margin: 0 0 16px;
-    }
-
-    .article-content a {
-      color: var(--rs-red-dark);
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .article-content a:hover,
-    .article-content a:focus-visible {
-      color: var(--rs-red);
-      outline: none;
-    }
-
-    .article-meta {
-      color: var(--rs-red-dark);
-      font-size: 0.78rem;
-      font-weight: 800;
-      line-height: 1.3;
-      text-transform: uppercase;
-    }
-
-    .article-aside {
-      position: sticky;
-      top: 96px;
-      align-self: start;
-      display: grid;
-      gap: 14px;
-    }
-
-    .article-panel {
-      border: 1px solid var(--rs-line);
-      border-radius: 8px;
-      background: #fff;
-      padding: 18px;
-      box-shadow: 0 16px 40px rgba(23, 8, 10, 0.06);
-    }
-
-    .article-panel strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--rs-ink);
-    }
-
-    .article-panel span,
-    .article-panel a {
-      color: var(--rs-muted);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .article-panel a:hover,
-    .article-panel a:focus-visible {
-      color: var(--rs-red-dark);
-      outline: none;
-    }
-
-    .rs-footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 30px max(24px, calc((100% - 1180px) / 2));
-      background: var(--rs-ink);
-      color: #fff9f7;
-    }
-
-    .rs-footer div {
-      display: grid;
-      gap: 4px;
-    }
-
-    .rs-footer span {
-      color: rgba(255, 249, 247, 0.72);
-    }
-
-    .rs-footer a {
-      color: #fff9f7;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    @media (max-width: 980px) {
-      .rs-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .rs-nav {
-        justify-content: flex-start;
-      }
-
-      h1,
-      .article-hero h1 {
-        font-size: 2.45rem;
-      }
-
-      .article-hero__grid,
-      .article-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .article-aside {
-        position: static;
-      }
-    }
-
-    @media (max-width: 620px) {
-      body {
-        font-size: 15px;
-      }
-
-      .rs-header {
-        padding: 16px 20px;
-      }
-
-      .rs-logo img {
-        width: 150px;
-      }
-
-      .rs-nav {
-        width: 100%;
-        gap: 6px;
-      }
-
-      .rs-nav a {
-        min-height: 38px;
-        padding: 8px 10px;
-      }
-
-      .rs-shell {
-        width: min(100% - 32px, 1180px);
-      }
-
-      h1,
-      .article-hero h1 {
-        font-size: 2.1rem;
-      }
-
-      h2 {
-        font-size: 1.65rem;
-      }
-
-      .article-hero {
-        padding-top: 42px;
-      }
-
-      .article-hero__copy {
-        padding-bottom: 28px;
-      }
-
-      .article-layout {
-        gap: 34px;
-        padding: 42px 0 58px;
-      }
-
-      .rs-footer {
-        flex-direction: column;
-        padding: 28px 20px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-
-      .rs-button:hover,
-      .rs-button:focus-visible {
-        transform: none;
-      }
-    }
-  </style>
-  <script type="application/ld+json">[
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί",
-    "description": "Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.",
-    "image": "https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/0d0ae112-71a2-4dbd-8401-063be6ebd288.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Alexandros Kourtis"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "RedStar Digital Agency",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://transportmarketing.net/redstar/sitepad-data/brand/RedStar.png"
-      }
-    },
-    "datePublished": "2026-10-20",
-    "dateModified": "2026-10-20",
-    "mainEntityOfPage": "https://transportmarketing.net/redstar/blog/custom-platformes-lianiko-emporio-apotheма-crm-aftomatismoi/",
-    "articleSection": "Blog",
-    "inLanguage": "el_GR"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "RedStar",
-        "item": "https://transportmarketing.net/redstar/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://transportmarketing.net/redstar/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί",
-        "item": "https://transportmarketing.net/redstar/blog/custom-platformes-lianiko-emporio-apotheма-crm-aftomatismoi/"
-      }
-    ]
-  }
-]</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap&amp;subset=greek">
+  <link rel="stylesheet" href="../../assets/css/redstar.css">
+  <script src="../../assets/js/redstar.js" defer></script>
 </head>
 <body>
-  <header class="rs-header">
-    <a class="rs-logo" href="../../index.html" aria-label="RedStar homepage">
-      <img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar Digital Agency">
-    </a>
-    <nav class="rs-nav" aria-label="Primary navigation">
-        <a href="../../index.html">Αρχική</a>
-        <a href="../../index.html#services">Υπηρεσίες</a>
-        <a href="../../index.html#portfolio">Portfolio</a>
-        <a class="is-active" href="../../blog/index.html">Blog</a>
-        <a href="../../contact/index.html">Επικοινωνία</a>
-    </nav>
+  <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a class="brand" href="../../index.html" aria-label="RedStar, αρχική">
+        <img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70">
+      </a>
+      <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
+        <a class="nav-link" href="../../services/website-development/index.html">Ιστοσελίδες</a>
+        <a class="nav-link" href="../../services/eshop-development/index.html">E-shop</a>
+        <a class="nav-link" href="../../services/custom-web-apps/index.html">Εφαρμογές</a>
+        <a class="nav-link" href="../../portfolio/index.html">Έργα</a>
+        <a class="nav-link" href="../../about/index.html">Σχετικά</a>
+        <a class="nav-link" href="../../blog/index.html" aria-current="page">Σημειώσεις</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
   </header>
-  <main class="rs-main">
-    <article>
-      <section class="article-hero">
-        <div class="rs-shell article-hero__grid">
-          <div class="article-hero__copy">
-            <p class="rs-eyebrow">Blog</p>
-            <h1>Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί</h1>
-            <p class="rs-lead">Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.</p>
-            <div class="rs-actions">
-              <a class="rs-button" href="../../blog/index.html">Blog</a>
-              <a class="rs-button secondary" href="../../contact/index.html">Επικοινωνία</a>
-            </div>
-          </div>
-              <figure class="article-figure">
-                <img src="https://autopilot-ljsckkmc.on-forge.com/storage/images/stock/0d0ae112-71a2-4dbd-8401-063be6ebd288.jpg" alt="Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp; Αυτοματισμοί" fetchpriority="high">
-              </figure>
-        </div>
-      </section>
-      <div class="rs-shell article-layout">
-        <div class="article-content">
-          <p class="article-meta">Blog / 20/10/2026</p>
-          <article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Λιανικού Εμπορίου</h2> <p>Αν διαχειρίζεσαι μια εταιρεία λιανικού εμπορίου στην Ελλάδα, το πιθανότερο είναι ότι κάποια στιγμή έχεις βρεθεί να ζογκλάρεις ανάμεσα σε τρία διαφορετικά Excel, ένα παλιό ERP που «τρέχει» μόνο στον υπολογιστή της γραμματείας, και μια εφαρμογή πωλήσεων που δεν μιλάει με τίποτα από τα υπόλοιπα. Η RedStar χτίζει custom εφαρμογές που λύνουν ακριβώς αυτό το πρόβλημα — όχι με off-the-shelf λογισμικό που θα προσαρμόσεις στη δουλειά σου, αλλά με ένα σύστημα που χτίζεται γύρω από τη δουλειά σου.</p> <div style="background:#f8f8f8; border-left:4px solid #c0392b; padding:20px; margin:24px 0;">
+  <div class="mobile-drawer" id="mobile-menu" data-mobile-drawer hidden>
+    <button class="mobile-drawer__scrim" type="button" aria-label="Κλείσιμο μενού" data-menu-scrim></button>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Μενού">
+      <div class="mobile-drawer__top">
+        <a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a>
+        <button class="mobile-drawer__close" type="button" aria-label="Κλείσιμο μενού" data-menu-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
+      <nav class="mobile-nav" aria-label="Πλοήγηση κινητού">
+        <div class="mobile-nav__group"><span class="mobile-nav__group-title">Λύσεις</span><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a></div>
+        <a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a>
+      </nav>
+      <div class="mobile-drawer__footer"><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </div>
+<main id="main-content"><article><section class="article-hero"><div class="article-hero__media"><img src="../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>Custom Πλατφόρμες Λιανικής: Απόθεμα, CRM &amp;amp; Αυτοματισμοί</h1><p>Η RedStar χτίζει custom εφαρμογές για λιανικό εμπόριο με Laravel &amp;amp; Vue.js. Διαχείριση αποθέματος, CRM και αυτοματισμοί πωλήσεων σε ένα ενιαίο σύστημα.</p></div></section><div class="container article-layout"><div class="article-content"><article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Λιανικού Εμπορίου</h2> <p>Αν διαχειρίζεσαι μια εταιρεία λιανικού εμπορίου στην Ελλάδα, το πιθανότερο είναι ότι κάποια στιγμή έχεις βρεθεί να ζογκλάρεις ανάμεσα σε τρία διαφορετικά Excel, ένα παλιό ERP που «τρέχει» μόνο στον υπολογιστή της γραμματείας, και μια εφαρμογή πωλήσεων που δεν μιλάει με τίποτα από τα υπόλοιπα. Η RedStar χτίζει custom εφαρμογές που λύνουν ακριβώς αυτό το πρόβλημα - όχι με off-the-shelf λογισμικό που θα προσαρμόσεις στη δουλειά σου, αλλά με ένα σύστημα που χτίζεται γύρω από τη δουλειά σου.</p> <div style="background:#f8f8f8; border-left:4px solid #c0392b; padding:20px; margin:24px 0;">
 <h3>Key Takeaways</h3>
-<ul> <li><strong>Ένα ενιαίο σύστημα</strong> για απόθεμα, πελατολόγιο και πωλήσεις εξαλείφει τα silos δεδομένων και μειώνει το λειτουργικό κόστος.</li> <li><strong>Οι αυτοματισμοί πωλήσεων</strong> (αποστολή προσφορών, υπενθυμίσεις, follow-ups) απελευθερώνουν χρόνο για τους ανθρώπους σου να κλείνουν deals.</li> <li><strong>Η custom ανάπτυξη με Laravel & Vue.js</strong> εγγυάται επεκτασιμότητα — το σύστημα μεγαλώνει μαζί με την επιχείρηση.</li> <li><strong>Η ενσωμάτωση real-time δεδομένων</strong> αποθέματος αποτρέπει τα overselling και βελτιώνει την εμπειρία του πελάτη.</li> <li><strong>Η RedStar</strong> δεν πουλάει «πακέτα» — σχεδιάζει, αναπτύσσει και παραδίδει λύσεις που μετριούνται σε αποτελέσματα.</li>
+<ul> <li><strong>Ένα ενιαίο σύστημα</strong> για απόθεμα, πελατολόγιο και πωλήσεις εξαλείφει τα silos δεδομένων και μειώνει το λειτουργικό κόστος.</li> <li><strong>Οι αυτοματισμοί πωλήσεων</strong> (αποστολή προσφορών, υπενθυμίσεις, follow-ups) απελευθερώνουν χρόνο για τους ανθρώπους σου να κλείνουν deals.</li> <li><strong>Η custom ανάπτυξη με Laravel & Vue.js</strong> εγγυάται επεκτασιμότητα - το σύστημα μεγαλώνει μαζί με την επιχείρηση.</li> <li><strong>Η ενσωμάτωση real-time δεδομένων</strong> αποθέματος αποτρέπει τα overselling και βελτιώνει την εμπειρία του πελάτη.</li> <li><strong>Η RedStar</strong> δεν πουλάει «πακέτα» - σχεδιάζει, αναπτύσσει και παραδίδει λύσεις που μετριούνται σε αποτελέσματα.</li>
 </ul>
-</div> <h2>Το Πρόβλημα που Λύνουμε: Η Αποσύνδεση των Συστημάτων</h2> <p>Η πλειονότητα των εταιρειών λιανικού εμπορίου λειτουργεί με αποσπασματικά εργαλεία. Το απόθεμα είναι σε ένα σύστημα, το πελατολόγιο σε ένα CRM που αγοράστηκε πριν χρόνια, και οι πωλητές χρησιμοποιούν email και σημειωματάρια για να παρακολουθούν τις ευκαιρίες τους. Το αποτέλεσμα; Λάθη, καθυστερήσεις, χαμένες πωλήσεις και αδυναμία να δεις την πλήρη εικόνα της επιχείρησής σου σε πραγματικό χρόνο.</p> <p>Ο ψηφιακός μετασχηματισμός για τις ΜΜΕ δεν είναι θέμα «τεχνολογίας για την τεχνολογία». Είναι θέμα επιβίωσης και ανταγωνιστικότητας. Και στη RedStar, το ξέρουμε αυτό γιατί το έχουμε δει από κοντά — σε κάθε project που αναλαμβάνουμε.</p> <h2>Η Αρχιτεκτονική μιας Custom Πλατφόρμας Λιανικού</h2> <p>Όταν ξεκινάμε τη σχεδίαση μιας custom πλατφόρμας για εταιρεία λιανικού εμπορίου, δεν αρχίζουμε από το κώδικα. Αρχίζουμε από τις ροές εργασίας. Τι κάνει ο αποθηκάριος κάθε πρωί; Πώς ενημερώνεται ο πωλητής για τα διαθέσιμα στοκ; Πότε και πώς επικοινωνεί κάποιος με έναν πελάτη που δεν έχει αγοράσει εδώ και τρεις μήνες;</p> <p>Αυτές οι ερωτήσεις ορίζουν την αρχιτεκτονική. Στη συνέχεια, χτίζουμε με <strong>Laravel</strong> στο backend και <strong>Vue.js</strong> στο frontend — μια στοίβα τεχνολογιών που μας επιτρέπει να παραδώσουμε γρήγορα, να κλιμακωθούμε εύκολα και να διατηρήσουμε τον κώδικα καθαρό και συντηρήσιμο μακροπρόθεσμα.</p> <h3>1. Διαχείριση Αποθέματος σε Πραγματικό Χρόνο</h3> <p>Το module διαχείρισης αποθέματος είναι η καρδιά κάθε πλατφόρμας λιανικής. Χτίζουμε συστήματα που:</p>
+</div> <h2>Το Πρόβλημα που Λύνουμε: Η Αποσύνδεση των Συστημάτων</h2> <p>Η πλειονότητα των εταιρειών λιανικού εμπορίου λειτουργεί με αποσπασματικά εργαλεία. Το απόθεμα είναι σε ένα σύστημα, το πελατολόγιο σε ένα CRM που αγοράστηκε πριν χρόνια, και οι πωλητές χρησιμοποιούν email και σημειωματάρια για να παρακολουθούν τις ευκαιρίες τους. Το αποτέλεσμα; Λάθη, καθυστερήσεις, χαμένες πωλήσεις και αδυναμία να δεις την πλήρη εικόνα της επιχείρησής σου σε πραγματικό χρόνο.</p> <p>Ο ψηφιακός μετασχηματισμός για τις ΜΜΕ δεν είναι θέμα «τεχνολογίας για την τεχνολογία». Είναι θέμα επιβίωσης και ανταγωνιστικότητας. Και στη RedStar, το ξέρουμε αυτό γιατί το έχουμε δει από κοντά - σε κάθε project που αναλαμβάνουμε.</p> <h2>Η Αρχιτεκτονική μιας Custom Πλατφόρμας Λιανικού</h2> <p>Όταν ξεκινάμε τη σχεδίαση μιας custom πλατφόρμας για εταιρεία λιανικού εμπορίου, δεν αρχίζουμε από το κώδικα. Αρχίζουμε από τις ροές εργασίας. Τι κάνει ο αποθηκάριος κάθε πρωί; Πώς ενημερώνεται ο πωλητής για τα διαθέσιμα στοκ; Πότε και πώς επικοινωνεί κάποιος με έναν πελάτη που δεν έχει αγοράσει εδώ και τρεις μήνες;</p> <p>Αυτές οι ερωτήσεις ορίζουν την αρχιτεκτονική. Στη συνέχεια, χτίζουμε με <strong>Laravel</strong> στο backend και <strong>Vue.js</strong> στο frontend - μια στοίβα τεχνολογιών που μας επιτρέπει να παραδώσουμε γρήγορα, να κλιμακωθούμε εύκολα και να διατηρήσουμε τον κώδικα καθαρό και συντηρήσιμο μακροπρόθεσμα.</p> <h3>1. Διαχείριση Αποθέματος σε Πραγματικό Χρόνο</h3> <p>Το module διαχείρισης αποθέματος είναι η καρδιά κάθε πλατφόρμας λιανικής. Χτίζουμε συστήματα που:</p>
 <ul> <li>Παρακολουθούν <strong>stock levels σε πραγματικό χρόνο</strong> ανά αποθήκη, κατάστημα ή online channel</li> <li>Ενεργοποιούν αυτόματες <strong>ειδοποιήσεις reorder</strong> όταν ένα προϊόν φτάσει σε κατώφλι</li> <li>Δίνουν <strong>barcode scanning</strong> και ιστορικό κινήσεων ανά SKU</li> <li>Ενσωματώνονται με προμηθευτές για <strong>αυτόματη ενημέρωση τιμοκαταλόγων</strong></li> <li>Αποτρέπουν το overselling σε omnichannel περιβάλλοντα (physical + e-commerce)</li>
 </ul> <p>Αυτό δεν είναι απλώς «αποθήκη». Είναι ένα εργαλείο λήψης αποφάσεων που σου λέει ακριβώς τι να παραγγείλεις, πότε και πόσο.</p> <h3>2. CRM Ανάπτυξη: Το Πελατολόγιο που Δουλεύει για Σένα</h3> <p>Ένα γενικό CRM δεν καταλαβαίνει ότι στο λιανικό εμπόριο, η σχέση με τον πελάτη χτίζεται διαφορετικά από το B2B. Το custom CRM που αναπτύσσουμε για εταιρείες λιανικής περιλαμβάνει:</p>
-<ul> <li><strong>Πλήρες ιστορικό αγορών</strong> ανά πελάτη με αυτόματη κατηγοριοποίηση (VIP, occasional, churned)</li> <li><strong>Segmentation engine</strong> για στοχευμένες καμπάνιες βάσει συμπεριφοράς</li> <li><strong>Loyalty program module</strong> ενσωματωμένο — πόντοι, επίπεδα, δώρα</li> <li><strong>Αυτόματα triggers</strong> για επικοινωνία: γενέθλια, επέτειοι αγοράς, inactive alerts</li> <li>Πλήρης ενσωμάτωση με email marketing και SMS gateways</li>
-</ul> <p>Αυτό που χτίζουμε δεν είναι απλώς μια βάση δεδομένων με ονόματα. Είναι ένα <strong>σύστημα αφοσίωσης πελατών</strong> που λειτουργεί αυτόματα.</p> <h3>3. Αυτοματισμοί Πωλήσεων: Από το Lead στο Invoice</h3> <p>Οι αυτοματισμοί επιχειρήσεων είναι εκεί που η custom πλατφόρμα δείχνει την πραγματική της αξία. Χτίζουμε ροές που καλύπτουν ολόκληρο τον κύκλο πωλήσεων:</p> <ol> <li><strong>Lead capture & scoring:</strong> Αυτόματη εισαγωγή leads από web forms, social media ή εξωτερικές πηγές, με βαθμολόγηση βάσει κριτηρίων που ορίζεις εσύ.</li> <li><strong>Αυτόματη δημιουργία και αποστολή προσφορών:</strong> Ο πωλητής επιλέγει προϊόντα, το σύστημα δημιουργεί branded PDF και το στέλνει αυτόματα.</li> <li><strong>Follow-up sequences:</strong> Εάν δεν υπάρχει απάντηση σε 48 ώρες, το σύστημα στέλνει reminder — χωρίς να χρειαστεί να το θυμηθεί κανείς.</li> <li><strong>Pipeline management:</strong> Visual kanban για κάθε πωλητή, με real-time ενημέρωση για κάθε deal.</li> <li><strong>Αυτόματη έκδοση τιμολογίου</strong> μετά την αποδοχή προσφοράς — ενσωμάτωση με λογιστικά συστήματα ή myDATA.</li>
+<ul> <li><strong>Πλήρες ιστορικό αγορών</strong> ανά πελάτη με αυτόματη κατηγοριοποίηση (VIP, occasional, churned)</li> <li><strong>Segmentation engine</strong> για στοχευμένες καμπάνιες βάσει συμπεριφοράς</li> <li><strong>Loyalty program module</strong> ενσωματωμένο - πόντοι, επίπεδα, δώρα</li> <li><strong>Αυτόματα triggers</strong> για επικοινωνία: γενέθλια, επέτειοι αγοράς, inactive alerts</li> <li>Πλήρης ενσωμάτωση με email marketing και SMS gateways</li>
+</ul> <p>Αυτό που χτίζουμε δεν είναι απλώς μια βάση δεδομένων με ονόματα. Είναι ένα <strong>σύστημα αφοσίωσης πελατών</strong> που λειτουργεί αυτόματα.</p> <h3>3. Αυτοματισμοί Πωλήσεων: Από το Lead στο Invoice</h3> <p>Οι αυτοματισμοί επιχειρήσεων είναι εκεί που η custom πλατφόρμα δείχνει την πραγματική της αξία. Χτίζουμε ροές που καλύπτουν ολόκληρο τον κύκλο πωλήσεων:</p> <ol> <li><strong>Lead capture & scoring:</strong> Αυτόματη εισαγωγή leads από web forms, social media ή εξωτερικές πηγές, με βαθμολόγηση βάσει κριτηρίων που ορίζεις εσύ.</li> <li><strong>Αυτόματη δημιουργία και αποστολή προσφορών:</strong> Ο πωλητής επιλέγει προϊόντα, το σύστημα δημιουργεί branded PDF και το στέλνει αυτόματα.</li> <li><strong>Follow-up sequences:</strong> Εάν δεν υπάρχει απάντηση σε 48 ώρες, το σύστημα στέλνει reminder - χωρίς να χρειαστεί να το θυμηθεί κανείς.</li> <li><strong>Pipeline management:</strong> Visual kanban για κάθε πωλητή, με real-time ενημέρωση για κάθε deal.</li> <li><strong>Αυτόματη έκδοση τιμολογίου</strong> μετά την αποδοχή προσφοράς - ενσωμάτωση με λογιστικά συστήματα ή myDATA.</li>
 </ol> <h2>Γιατί Custom και Όχι Off-the-Shelf;</h2> <p>Είναι η ερώτηση που μας κάνουν σχεδόν σε κάθε πρώτη συνάντηση. Και η απάντηση είναι απλή: γιατί η επιχείρησή σου δεν είναι τυπική, και δεν πρέπει να αναγκαστείς να δουλεύεις με τον τρόπο που επιβάλλει ένα γενικό λογισμικό.</p> <p>Τα έτοιμα πακέτα έχουν αδυναμίες που συσσωρεύονται με τον καιρό: <em>licensing fees που αυξάνονται</em>, <em>features που δεν χρειάζεσαι και πληρώνεις</em>, <em>αδυναμία να προσαρμοστούν</em> στις ιδιαιτερότητες της αγοράς ή της ροής σου. Μια custom εφαρμογή Αθήνα-based, αναπτυγμένη από ομάδα που γνωρίζει την ελληνική επιχειρηματική πραγματικότητα, σε δίνει:</p> <ul> <li>Πλήρη ιδιοκτησία του κώδικα</li> <li>Ενσωμάτωση με ελληνικά εργαλεία (myDATA, e-invoicing, ελληνικές τράπεζες)</li> <li>Επεκτασιμότητα χωρίς εξάρτηση από τρίτο vendor</li> <li>Support από ανθρώπους που κατανοούν το business context σου</li>
-</ul> <h2>Η Διαδικασία μας: Από το Discovery ως το Go-Live</h2> <p>Η διαφάνεια στη διαδικασία είναι κάτι που διαφοροποιεί τη RedStar. Δεν παραδίδουμε «εκπλήξεις» — ούτε ευχάριστες ούτε δυσάρεστες. Κάθε project περνάει από συγκεκριμένα στάδια:</p> <ol> <li><strong>Discovery & Requirements Analysis (1-2 εβδομάδες):</strong> Κατανοούμε τις ροές εργασίας, τους χρήστες, τις ενσωματώσεις και τα KPIs επιτυχίας.</li> <li><strong>Wireframing & Architecture Design:</strong> Παρουσιάζουμε την αρχιτεκτονική και τα wireframes πριν γράψουμε μια γραμμή κώδικα.</li> <li><strong>Agile Development σε Sprints:</strong> Παραδίδουμε λειτουργικά τμήματα σε κύκλους, με demo σε κάθε sprint.</li> <li><strong>Testing & QA:</strong> Πλήρης έλεγχος σε πραγματικά σενάρια χρήσης.</li> <li><strong>Training & Go-Live:</strong> Εκπαίδευση της ομάδας σου και υποστήριξη κατά το launch.</li> <li><strong>Ongoing Support:</strong> Δεν εξαφανιζόμαστε μετά το παράδοσμα.</li>
+</ul> <h2>Η Διαδικασία μας: Από το Discovery ως το Go-Live</h2> <p>Η διαφάνεια στη διαδικασία είναι κάτι που διαφοροποιεί τη RedStar. Δεν παραδίδουμε «εκπλήξεις» - ούτε ευχάριστες ούτε δυσάρεστες. Κάθε project περνάει από συγκεκριμένα στάδια:</p> <ol> <li><strong>Discovery & Requirements Analysis (1-2 εβδομάδες):</strong> Κατανοούμε τις ροές εργασίας, τους χρήστες, τις ενσωματώσεις και τα KPIs επιτυχίας.</li> <li><strong>Wireframing & Architecture Design:</strong> Παρουσιάζουμε την αρχιτεκτονική και τα wireframes πριν γράψουμε μια γραμμή κώδικα.</li> <li><strong>Agile Development σε Sprints:</strong> Παραδίδουμε λειτουργικά τμήματα σε κύκλους, με demo σε κάθε sprint.</li> <li><strong>Testing & QA:</strong> Πλήρης έλεγχος σε πραγματικά σενάρια χρήσης.</li> <li><strong>Training & Go-Live:</strong> Εκπαίδευση της ομάδας σου και υποστήριξη κατά το launch.</li> <li><strong>Ongoing Support:</strong> Δεν εξαφανιζόμαστε μετά το παράδοσμα.</li>
 </ol> <h2>Ερωτήσεις & Απαντήσεις</h2> <h3>Πόσο καιρό παίρνει η ανάπτυξη μιας custom πλατφόρμας λιανικής;</h3>
-<p>Εξαρτάται από την πολυπλοκότητα, αλλά ένα ολοκληρωμένο σύστημα με διαχείριση αποθέματος, CRM και αυτοματισμούς πωλήσεων συνήθως ολοκληρώνεται σε <strong>3 έως 6 μήνες</strong>. Η διαδικασία discovery και σχεδίασης είναι κρίσιμη — όσο πιο σαφείς είναι οι απαιτήσεις, τόσο πιο γρήγορη και ακριβής είναι η ανάπτυξη.</p> <h3>Μπορεί το σύστημα να ενσωματωθεί με το υπάρχον ERP ή e-shop μου;</h3>
-<p>Ναι — και αυτό είναι ένα από τα πιο συνηθισμένα σενάρια. Αναπτύσσουμε custom API connectors για WooCommerce, Skroutz, Shopify, Softone, και οποιοδήποτε άλλο σύστημα διαθέτει API. Ακόμα και αν δεν υπάρχει API, μπορούμε να δουλέψουμε με file imports ή webhooks.</p> <h3>Ποιο είναι το κόστος μιας τέτοιας πλατφόρμας;</h3>
-<p>Δεν υπάρχει ένα «τιμοκατάλογος» γιατί κάθε project είναι διαφορετικό. Αυτό που μπορούμε να πούμε με σιγουριά είναι ότι το ROI μιας custom λύσης — μέσα από την εξοικονόμηση χρόνου, τη μείωση λαθών και την αύξηση πωλήσεων — συνήθως δικαιολογεί την επένδυση μέσα στο πρώτο χρόνο λειτουργίας.</p> <h2>Το Αποτέλεσμα: Μια Πλατφόρμα που Δουλεύει για Σένα</h2> <p>Στο τέλος της ημέρας, αυτό που χτίζουμε δεν είναι απλώς λογισμικό. Είναι ένα λειτουργικό εργαλείο που εξοικονομεί ώρες εργασίας κάθε εβδομάδα, αποτρέπει λάθη που κοστίζουν, και δίνει στην ομάδα σου τη δυνατότητα να εστιάσει σε αυτό που πραγματικά μετράει: τους πελάτες και τις πωλήσεις.</p> <p>Αν είσαι decision maker σε εταιρεία λιανικού εμπορίου και έχεις κουραστεί να μπαλώνεις συστήματα που δεν μιλούν μεταξύ τους, η RedStar είναι έτοιμη να καθίσει απέναντί σου, να ακούσει ακριβώς τι χρειάζεσαι, και να σου πει με ειλικρίνεια τι μπορεί να χτιστεί, σε πόσο χρόνο, και με ποιο κόστος.</p> <p><strong>Αυτό είναι το custom web εφαρμογή που αξίζει η επιχείρησή σου.</strong></p> </article>
-<p>Related: <a href="/apo-excel-se-custom-platforma-odigos-mme-ellada">από Excel σε custom πλατφόρμα</a></p>
-<p>Related: <a href="/custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026">custom εφαρμογή vs SaaS λογισμικό</a></p>
-<p>Related: <a href="/custom-platforma-xondriko-emporio-paraggelies-timokatalogos-crm">πλατφόρμα για χονδρικό εμπόριο</a></p>
-<p>Related: <a href="/automatismoi-epikoinonias-pelaton-custom-systimata">αυτοματισμοί επικοινωνίας πελατών</a></p>
-<p>Related: <a href="/ai-integration-custom-web-efarmogi-epixeiriseis-ellada">AI σε custom εφαρμογές</a></p>
-        </div>
-        <aside class="article-aside" aria-label="Article details">
-          <div class="article-panel">
-            <strong>Author</strong>
-            <span>Alexandros Kourtis</span>
-          </div>
-          <div class="article-panel">
-            <strong>Date</strong>
-            <span>20/10/2026</span>
-          </div>
-
-        </aside>
+<p>Εξαρτάται από την πολυπλοκότητα, αλλά ένα ολοκληρωμένο σύστημα με διαχείριση αποθέματος, CRM και αυτοματισμούς πωλήσεων συνήθως ολοκληρώνεται σε <strong>3 έως 6 μήνες</strong>. Η διαδικασία discovery και σχεδίασης είναι κρίσιμη - όσο πιο σαφείς είναι οι απαιτήσεις, τόσο πιο γρήγορη και ακριβής είναι η ανάπτυξη.</p> <h3>Μπορεί το σύστημα να ενσωματωθεί με το υπάρχον ERP ή e-shop μου;</h3>
+<p>Ναι - και αυτό είναι ένα από τα πιο συνηθισμένα σενάρια. Αναπτύσσουμε custom API connectors για WooCommerce, Skroutz, Shopify, Softone, και οποιοδήποτε άλλο σύστημα διαθέτει API. Ακόμα και αν δεν υπάρχει API, μπορούμε να δουλέψουμε με file imports ή webhooks.</p> <h3>Ποιο είναι το κόστος μιας τέτοιας πλατφόρμας;</h3>
+<p>Δεν υπάρχει ένα «τιμοκατάλογος» γιατί κάθε project είναι διαφορετικό. Αυτό που μπορούμε να πούμε με σιγουριά είναι ότι το ROI μιας custom λύσης - μέσα από την εξοικονόμηση χρόνου, τη μείωση λαθών και την αύξηση πωλήσεων - συνήθως δικαιολογεί την επένδυση μέσα στο πρώτο χρόνο λειτουργίας.</p> <h2>Το Αποτέλεσμα: Μια Πλατφόρμα που Δουλεύει για Σένα</h2> <p>Στο τέλος της ημέρας, αυτό που χτίζουμε δεν είναι απλώς λογισμικό. Είναι ένα λειτουργικό εργαλείο που εξοικονομεί ώρες εργασίας κάθε εβδομάδα, αποτρέπει λάθη που κοστίζουν, και δίνει στην ομάδα σου τη δυνατότητα να εστιάσει σε αυτό που πραγματικά μετράει: τους πελάτες και τις πωλήσεις.</p> <p>Αν είσαι decision maker σε εταιρεία λιανικού εμπορίου και έχεις κουραστεί να μπαλώνεις συστήματα που δεν μιλούν μεταξύ τους, η RedStar είναι έτοιμη να καθίσει απέναντί σου, να ακούσει ακριβώς τι χρειάζεσαι, και να σου πει με ειλικρίνεια τι μπορεί να χτιστεί, σε πόσο χρόνο, και με ποιο κόστος.</p> <p><strong>Αυτό είναι το custom web εφαρμογή που αξίζει η επιχείρησή σου.</strong></p> </article>
+<p>Related: <a href="../apo-excel-se-custom-platforma-odigos-mme-ellada/index.html">από Excel σε custom πλατφόρμα</a></p>
+<p>Related: <a href="../custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/index.html">custom εφαρμογή vs SaaS λογισμικό</a></p>
+<p>Related: <a href="../custom-platforma-xondriko-emporio-paraggelies-timokatalogos-crm/index.html">πλατφόρμα για χονδρικό εμπόριο</a></p>
+<p>Related: <a href="../automatismoi-epikoinonias-pelaton-custom-systimata/index.html">αυτοματισμοί επικοινωνίας πελατών</a></p>
+<p>Related: <a href="../ai-integration-custom-web-efarmogi-epixeiriseis-ellada/index.html">AI σε custom εφαρμογές</a></p></div><aside class="article-aside" aria-label="Στοιχεία άρθρου"><div class="article-aside__panel"><strong>Συντάκτης</strong><span>Αλέξανδρος Κούρτης</span></div><div class="article-aside__panel"><a href="../index.html">Όλες οι σημειώσεις</a></div></aside></div></article><section class="final-cta"><div class="container final-cta__inner"><div><p class="eyebrow">Έχεις κάτι συγκεκριμένο στο μυαλό;</p><h2>Ας δούμε αν ταιριάζουμε.</h2><p>Σε 30 λεπτά ξεκαθαρίζουμε ανάγκη, κόστος και επόμενο βήμα.</p></div><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section></main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__intro"><a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a><p>Ιστοσελίδες και εργαλεία για επιχειρήσεις που θέλουν καθαρή δουλειά και άμεση συνεργασία.</p></div>
+        <nav aria-label="Λύσεις"><h2>Λύσεις</h2><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a></nav>
+        <nav aria-label="RedStar"><h2>RedStar</h2><a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a></nav>
       </div>
-    </article>
-  </main>
-  <footer class="rs-footer">
-    <div>
-      <strong>RedStar Digital Agency</strong>
-      <span>Custom εφαρμογές, websites και αυτοματισμοί με παραγωγική τεχνική βάση.</span>
+      <div class="site-footer__bottom"><span>© <span data-year>2026</span> RedStar.</span><div class="site-footer__legal"><a href="../../privacy/index.html">Απόρρητο</a><a href="../../terms/index.html">Όροι</a><a href="../../cookies/index.html">Cookies</a></div></div>
     </div>
-    <a href="../../contact/index.html">Συζητήστε το επόμενο project</a>
   </footer>
+  <aside class="consent" data-consent hidden aria-label="Ρυθμίσεις cookies"><p>Χρησιμοποιούμε προαιρετικά στατιστικά για να βλέπουμε τι βοηθά. Δεν ξεκινούν χωρίς επιλογή.</p><div class="consent__actions"><button class="button" type="button" data-consent-accept>Αποδοχή</button><button class="button button--glass" type="button" data-consent-reject>Μόνο απαραίτητα</button></div></aside>
 </body>
 </html>
