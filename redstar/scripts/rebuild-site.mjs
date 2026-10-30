@@ -289,7 +289,7 @@ for (const legal of legalPages) {
   write(`${legal.slug}/index.html`, page({ title: `${legal.title} | RedStar`, description: legal.description, route: `/${legal.slug}/`, prefix: '../', body }));
 }
 
-const curatedBlog = new Set([
+const featuredBlog = new Set([
   'apo-excel-se-custom-platforma-odigos-mme-ellada',
   'automatismoi-epikoinonias-pelaton-custom-systimata',
   'custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026',
@@ -338,7 +338,7 @@ for (const slug of blogSlugs) {
   const title = curated?.title || cleanText(titleMatch[1]);
   const description = curated?.description || (descriptionMatch ? cleanText(descriptionMatch[1]) : title);
   const date = curated?.date || dateMatch?.[1] || '';
-  const indexed = curatedBlog.has(slug) && Boolean(date);
+  const indexed = true;
   let content = curated?.body || contentMatch[1].replace(/<p class="article-meta">[\s\S]*?<\/p>/i, '').trim();
   content = content.replace(/href="\/([^"#?]+)\/?"/g, (full, linkedSlug) => blogSlugs.includes(linkedSlug) ? `href="../${linkedSlug}/index.html"` : full);
   blogEntries.push({ slug, title, description, date, indexed });
@@ -346,8 +346,10 @@ for (const slug of blogSlugs) {
   write(`blog/${slug}/index.html`, page({ title: `${title} | RedStar`, description, route: `/blog/${slug}/`, prefix: '../../', active: 'blog', body: articleBody, robots: indexed ? undefined : 'noindex, follow', type: 'article' }));
 }
 
-const visibleBlogEntries = blogEntries.filter((entry) => entry.indexed).sort((a, b) => b.date.localeCompare(a.date));
-const blogBody = `<section class="article-hero"><div class="article-hero__media"><img src="../${nebula}" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>Χρήσιμες σημειώσεις.</h1><p>Πρακτικά. Σύντομα.</p></div></section><section class="section"><div class="container"><div class="blog-list">${visibleBlogEntries.map((entry) => `<a class="blog-card" href="${entry.slug}/index.html"><span class="blog-card__meta">${new Intl.DateTimeFormat('el-GR', { month: 'short', year: 'numeric' }).format(new Date(`${entry.date}T12:00:00Z`))}</span><div><h2>${escapeText(entry.title)}</h2><p>${escapeText(entry.description)}</p></div>${external}</a>`).join('')}</div></div></section>${finalCta()}`;
+const visibleBlogEntries = blogEntries.sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.title.localeCompare(b.title, 'el'));
+const featuredBlogEntries = visibleBlogEntries.filter((entry) => featuredBlog.has(entry.slug));
+const archiveBlogEntries = visibleBlogEntries.filter((entry) => !featuredBlog.has(entry.slug));
+const blogBody = `<section class="article-hero"><div class="article-hero__media"><img src="../${nebula}" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>Χρήσιμες σημειώσεις.</h1><p>Πρακτικά. Σύντομα.</p></div></section><section class="section"><div class="container"><div class="blog-list">${featuredBlogEntries.map((entry) => `<a class="blog-card" href="${entry.slug}/index.html"><span class="blog-card__meta">${new Intl.DateTimeFormat('el-GR', { month: 'short', year: 'numeric' }).format(new Date(`${entry.date}T12:00:00Z`))}</span><div><h2>${escapeText(entry.title)}</h2><p>${escapeText(entry.description)}</p></div>${external}</a>`).join('')}</div></div></section><section class="section section--soft"><div class="container"><div class="section-heading"><div><p class="eyebrow">Αρχείο</p><h2>Όλες οι σημειώσεις.</h2></div><p>${archiveBlogEntries.length} ακόμη άρθρα, χωρίς περιττές περιγραφές.</p></div><div class="blog-archive">${archiveBlogEntries.map((entry) => `<a class="blog-archive__item" href="${entry.slug}/index.html"><h3>${escapeText(entry.title)}</h3>${arrow}</a>`).join('')}</div></div></section>${finalCta()}`;
 write('blog/index.html', page({ title: 'Σημειώσεις | RedStar', description: 'Πρακτικές σημειώσεις για ιστοσελίδες, e-shop, αυτοματισμούς και ψηφιακές αποφάσεις επιχειρήσεων.', route: '/blog/', prefix: '../', active: 'blog', body: blogBody }));
 
 const notFoundBody = `<section class="article-hero"><div class="article-hero__media"><img src="${nebula}" alt="" width="1920" height="1080"></div><div class="container"><p class="eyebrow">404</p><h1>Αυτή η σελίδα δεν υπάρχει.</h1><p>Μπορείς να επιστρέψεις στην αρχική ή να δεις τα έργα.</p><div class="hero__actions"><a class="button" href="index.html">Αρχική</a><a class="button button--glass" href="portfolio/index.html">Έργα</a></div></div></section>`;
