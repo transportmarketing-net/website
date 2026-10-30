@@ -26,13 +26,34 @@ function escapeText(value = '') {
     .replaceAll('"', '&quot;');
 }
 
+function decodeTextEntities(value = '') {
+  let decoded = String(value);
+  for (let pass = 0; pass < 4; pass += 1) {
+    const next = decoded
+      .replaceAll('&amp;', '&')
+      .replaceAll('&quot;', '"')
+      .replaceAll('&#39;', "'")
+      .replaceAll('&nbsp;', ' ')
+      .replaceAll('&lt;', '<')
+      .replaceAll('&gt;', '>');
+    if (next === decoded) break;
+    decoded = next;
+  }
+  return decoded;
+}
+
+function normalizeNestedHtmlEntities(value = '') {
+  let normalized = String(value);
+  for (let pass = 0; pass < 4; pass += 1) {
+    const next = normalized.replace(/&amp;(amp|quot|#39|nbsp|lt|gt);/gi, '&$1;');
+    if (next === normalized) break;
+    normalized = next;
+  }
+  return normalized;
+}
+
 function cleanText(value = '') {
-  return value
-    .replace(/<[^>]*>/g, '')
-    .replaceAll('&amp;', '&')
-    .replaceAll('&quot;', '"')
-    .replaceAll('&#39;', "'")
-    .replaceAll('&nbsp;', ' ')
+  return decodeTextEntities(String(value).replace(/<[^>]*>/g, ''))
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -335,11 +356,11 @@ for (const slug of blogSlugs) {
   const contentMatch = original.match(/<div class="article-content">([\s\S]*?)<\/div>\s*<aside/i);
   if (!titleMatch || !contentMatch) continue;
   const curated = curatedArticles[slug];
-  const title = curated?.title || cleanText(titleMatch[1]);
+  const title = curated?.title || cleanText(titleMatch[1]).replace(/\s*\|\s*RedStar\s*$/i, '');
   const description = curated?.description || (descriptionMatch ? cleanText(descriptionMatch[1]) : title);
   const date = curated?.date || dateMatch?.[1] || '';
   const indexed = true;
-  let content = curated?.body || contentMatch[1].replace(/<p class="article-meta">[\s\S]*?<\/p>/i, '').trim();
+  let content = curated?.body || normalizeNestedHtmlEntities(contentMatch[1].replace(/<p class="article-meta">[\s\S]*?<\/p>/i, '').trim());
   content = content.replace(/href="\/([^"#?]+)\/?"/g, (full, linkedSlug) => blogSlugs.includes(linkedSlug) ? `href="../${linkedSlug}/index.html"` : full);
   blogEntries.push({ slug, title, description, date, indexed });
   const articleBody = `<article><section class="article-hero"><div class="article-hero__media"><img src="../../${nebula}" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>${escapeText(title)}</h1><p>${escapeText(description)}</p></div></section><div class="container article-layout"><div class="article-content">${content}</div><aside class="article-aside" aria-label="Στοιχεία άρθρου"><div class="article-aside__panel"><strong>Συντάκτης</strong><span>Αλέξανδρος Κούρτης</span></div>${date ? `<div class="article-aside__panel"><strong>Ημερομηνία</strong><span>${new Intl.DateTimeFormat('el-GR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${date}T12:00:00Z`))}</span></div>` : ''}<div class="article-aside__panel"><a href="../index.html">Όλες οι σημειώσεις</a></div></aside></div></article>${finalCta()}`;
