@@ -65,11 +65,13 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + var(--space-8));
 }
 
 body {
+  overflow-x: clip;
   margin: 0;
   background: var(--color-page);
   color: var(--color-ink);
@@ -1846,7 +1848,7 @@ li {
 
 .site-footer__top {
   display: grid;
-  grid-template-columns: minmax(16rem, 1fr) repeat(2, minmax(10rem, 0.45fr));
+  grid-template-columns: minmax(16rem, 1fr) repeat(3, minmax(8rem, 0.45fr));
   gap: var(--space-12);
   padding-block-end: var(--space-16);
   border-block-end: 0.0625rem solid rgba(255, 255, 255, 0.14);
@@ -1872,6 +1874,30 @@ li {
   display: grid;
   align-content: start;
   gap: var(--space-3);
+}
+
+.site-footer__contact {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  min-inline-size: 0;
+  color: var(--color-on-dark-muted);
+  font-style: normal;
+}
+
+.site-footer__contact strong {
+  color: var(--color-on-dark);
+}
+
+.site-footer__contact a {
+  color: var(--color-on-dark);
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.site-footer__contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
 
 .site-footer nav a {
@@ -1987,6 +2013,10 @@ li {
     min-block-size: 29rem;
   }
 
+  .browser-stage .browser-card {
+    inline-size: min(72%, 33rem);
+  }
+
   .page-hero__visual {
     max-inline-size: 42rem;
   }
@@ -1997,6 +2027,14 @@ li {
   .about-split,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .site-footer__top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__intro {
+    grid-column: 1 / -1;
   }
 
   .solution-card--lead {

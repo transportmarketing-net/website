@@ -133,6 +133,7 @@ function footer(prefix = '') {
         <div class="site-footer__intro"><a class="brand" href="${prefix}index.html"><img src="${prefix}sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a><p>Ιστοσελίδες και εργαλεία για επιχειρήσεις που θέλουν καθαρή δουλειά και άμεση συνεργασία.</p></div>
         <nav aria-label="Λύσεις"><h2>Λύσεις</h2><a href="${prefix}services/website-development/index.html">Ιστοσελίδες</a><a href="${prefix}services/eshop-development/index.html">E-shop</a><a href="${prefix}services/custom-web-apps/index.html">Εφαρμογές</a></nav>
         <nav aria-label="RedStar"><h2>RedStar</h2><a href="${prefix}portfolio/index.html">Έργα</a><a href="${prefix}about/index.html">Σχετικά</a><a href="${prefix}blog/index.html">Σημειώσεις</a><a href="${prefix}contact/index.html">Επικοινωνία</a></nav>
+        <address class="site-footer__contact"><h2>Στοιχεία</h2><strong>Alexandros Kourtis</strong><span>Ξενοκλέους 25, Αθήνα</span><a href="mailto:akourtisdev@gmail.com">akourtisdev@gmail.com</a><a href="tel:+306989442438">+30 698 944 2438</a><span>ΑΦΜ: 153468535</span></address>
       </div>
       <div class="site-footer__bottom"><span>© <span data-year>2026</span> RedStar.</span><div class="site-footer__legal"><a href="${prefix}privacy/index.html">Απόρρητο</a><a href="${prefix}terms/index.html">Όροι</a><a href="${prefix}cookies/index.html">Cookies</a></div></div>
     </div>
