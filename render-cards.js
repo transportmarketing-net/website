@@ -10,6 +10,7 @@ const CARDS = [
     { file: 'card-blueline.html', name: 'blueline' },
     { file: 'card-redstar.html', name: 'redstar' },
     { file: 'card-greenpromo.html', name: 'greenpromo' },
+    { file: 'card-amberlane.html', name: 'amberlane' },
 ];
 
 const PASS_META = {
@@ -48,6 +49,12 @@ const PASS_META = {
         label: 'Director',
         bg: '12,26,16', fg: '255,255,255', lb: '52,168,83',
         org: 'GreenPromo', header: 'GP',
+    },
+    'amberlane': {
+        desc: 'AmberLane — Operations & Management',
+        label: 'Director',
+        bg: '26,20,8', fg: '255,255,255', lb: '232,145,45',
+        org: 'AmberLane', header: 'AL',
     },
 };
 

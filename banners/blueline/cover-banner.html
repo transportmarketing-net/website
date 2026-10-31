@@ -75,6 +75,12 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
+        /* Circuit icon beside title */
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 60px;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +93,23 @@
             <div class="logo-dot" style="background: #ea4335;"></div>
             <div class="logo-dot" style="background: #34a853;"></div>
         </div>
-        <div class="logo-text">BLUELINE</div>
+        <div class="logo-text">
+            BLUELINE
+            <svg class="icon" width="140" height="140" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#4285f4"/>
+                <line x1="45" y1="72" x2="155" y2="72" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+                <line x1="45" y1="100" x2="155" y2="100" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+                <line x1="45" y1="128" x2="155" y2="128" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="75" cy="72" r="6" fill="#4285f4" stroke="#FFFFFF" stroke-width="3"/>
+                <circle cx="125" cy="100" r="6" fill="#4285f4" stroke="#FFFFFF" stroke-width="3"/>
+                <circle cx="90" cy="128" r="6" fill="#4285f4" stroke="#FFFFFF" stroke-width="3"/>
+                <line x1="75" y1="78" x2="75" y2="94" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+                <line x1="125" y1="106" x2="125" y2="122" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+                <polygon points="148,68 155,72 148,76" fill="#FFFFFF"/>
+                <polygon points="148,96 155,100 148,104" fill="#FFFFFF"/>
+                <polygon points="148,124 155,128 148,132" fill="#FFFFFF"/>
+            </svg>
+        </div>
     </div>
 </body>
 </html>

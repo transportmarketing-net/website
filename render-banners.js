@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
-const STYLES = ['redstar', 'greenpromo', 'blueline', 'gradient', 'dark-minimal', 'transit-map'];
+const STYLES = ['redstar', 'greenpromo', 'blueline', 'amberlane', 'gradient', 'dark-minimal', 'transit-map'];
 const BANNER_TYPES = [
     { name: 'cover-banner.html', output: 'cover-bg.jpg', width: 2480, height: 3508 },
     { name: 'section-break-banner.html', output: 'section-break-new.jpeg', width: 900, height: 1600 },

@@ -550,28 +550,6 @@
       line-height: 1.55;
     }
 
-    .journey {
-      text-align: center;
-      padding-top: 70px;
-      padding-bottom: 86px;
-    }
-
-    .journey .headline {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .journey p {
-      margin: 22px auto 0;
-      max-width: 530px;
-    }
-
-    .path-map {
-      width: min(100%, 800px);
-      margin: 54px auto 0;
-      color: var(--cream);
-    }
-
     .cta-band {
       padding-top: 34px;
       padding-bottom: 104px;
@@ -862,81 +840,6 @@
       line-height: 1.35;
     }
 
-    .solution-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
-      gap: clamp(40px, 8vw, 96px);
-      align-items: center;
-    }
-
-    .solution-copy p {
-      margin: 26px 0 0;
-      max-width: 540px;
-      color: color-mix(in srgb, var(--cream) 80%, transparent);
-    }
-
-    .package {
-      padding: 32px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, var(--amber-light), var(--amber));
-      color: var(--ink);
-      box-shadow: var(--shadow);
-    }
-
-    .package h3 {
-      margin: 0 0 10px;
-      font-family: var(--font-display);
-      font-size: 24px;
-      letter-spacing: -0.04em;
-    }
-
-    .price-row {
-      display: flex;
-      gap: 18px;
-      align-items: baseline;
-      padding-bottom: 22px;
-      border-bottom: 1px solid rgba(24, 24, 23, 0.2);
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .package ul {
-      list-style: none;
-      padding: 0;
-      margin: 24px 0 28px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px 20px;
-      font-size: 14px;
-      font-weight: 700;
-      color: color-mix(in srgb, var(--ink) 82%, transparent);
-    }
-
-    .package li::before {
-      content: "✓ ";
-      font-weight: 900;
-    }
-
-    .package .dark-button {
-      width: 100%;
-    }
-
-    .stack {
-      text-align: center;
-    }
-
-    .stack-grid {
-      max-width: 830px;
-      margin: 44px auto 0;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px 36px;
-      color: color-mix(in srgb, var(--ink) 78%, transparent);
-      font-family: var(--font-display);
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
 
     .compare {
       text-align: center;
@@ -1325,8 +1228,7 @@
       }
 
       .expert-grid,
-      .case-layout,
-      .solution-grid {
+      .case-layout {
         grid-template-columns: 1fr;
       }
 
@@ -1336,10 +1238,6 @@
 
       .portrait {
         min-height: 320px;
-      }
-
-      .stack-grid {
-        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -1424,13 +1322,8 @@
         min-height: 270px;
       }
 
-      .case-metrics,
-      .package ul {
+      .case-metrics {
         grid-template-columns: 1fr;
-      }
-
-      .stack-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
 
       .compare-table {
@@ -1503,7 +1396,7 @@
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
         <a class="pill pill-outline" href="mailto:director@transportmarketing.net" data-en="Book a call">Κλείστε κλήση</a>
-        <a class="pill pill-primary" href="#solution" data-en="Get staffed">Βρείτε προσωπικό</a>
+        <a class="pill pill-primary" href="#process" data-en="Get staffed">Βρείτε προσωπικό</a>
         <svg class="briefcase" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7h3.5A1.5 1.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-9A1.5 1.5 0 0 1 4.5 7H8Zm2 0h4V5.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V7Zm-5 5.5V17a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-4.5a19.6 19.6 0 0 1-7 1.25 19.6 19.6 0 0 1-7-1.25Zm0-3.5v1.3a17.3 17.3 0 0 0 7 1.45 17.3 17.3 0 0 0 7-1.45V9H5Z" fill="currentColor"/>
         </svg>
@@ -1520,7 +1413,7 @@
       <a href="#process" data-en="Process">Διαδικασία</a>
       <a href="#case-studies" data-en="Case Studies">Μελέτες</a>
       <a href="mailto:director@transportmarketing.net" data-en="Book a call">Κλείστε κλήση</a>
-      <a href="#solution" data-en="Get staffed">Βρείτε προσωπικό</a>
+      <a href="#process" data-en="Get staffed">Βρείτε προσωπικό</a>
       <div class="language-switch mobile-language-switch" role="group" aria-label="Επιλογή γλώσσας" data-label-en="Language selection">
         <button type="button" class="is-active" data-lang="el" aria-pressed="true">EL</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -1624,40 +1517,6 @@
         </div>
       </section>
 
-      <section class="section section-dark journey">
-        <div class="section-inner">
-          <p class="eyebrow" data-en="Reduce hiring friction and stabilize operations">Μειώστε την τριβή στις προσλήψεις και σταθεροποιήστε τη λειτουργία</p>
-          <h2 class="headline" data-en="Here is why you should use AmberLane for staffing">Γιατί να χρησιμοποιήσετε την AmberLane για στελέχωση</h2>
-          <p class="body-copy" data-en="Move from scattered referrals, late-night calls, and uncertain paperwork into one managed flow from role request to worker arrival.">Περάστε από σκόρπιες συστάσεις, βραδινά τηλεφωνήματα και αβέβαια χαρτιά σε μία οργανωμένη ροή από το αίτημα ρόλου έως την άφιξη εργαζομένου.</p>
-          <svg class="path-map" viewBox="0 0 900 260" role="img" aria-label="Διαδρομή στελέχωσης AmberLane σε σύγκριση με πρόχειρη πρόσληψη" data-label-en="AmberLane staffing path compared with ad hoc hiring">
-            <defs>
-              <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
-            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M140 128 C210 128 205 45 276 45 H620" stroke="var(--amber-light)" stroke-width="8" filter="url(#glow)"/>
-              <path d="M140 128 C215 128 210 213 310 213 H778" stroke="rgba(246,241,232,0.16)" stroke-width="6"/>
-            </g>
-            <g fill="var(--cream)" font-family="Geist, Noto Sans, sans-serif" font-size="13" font-weight="700">
-              <text x="74" y="112" data-en="Open role">Ανοιχτός ρόλος</text>
-              <text x="246" y="28" data-en="Role brief">Περιγραφή ρόλου</text>
-              <text x="395" y="28" data-en="Shortlist">Λίστα</text>
-              <text x="544" y="28" data-en="Arrival plan">Πλάνο άφιξης</text>
-              <text x="650" y="50" data-en="First shift">Πρώτη βάρδια</text>
-              <text x="282" y="239" opacity=".46" data-en="Referrals">Συστάσεις</text>
-              <text x="420" y="239" opacity=".46" data-en="Messages">Μηνύματα</text>
-              <text x="564" y="239" opacity=".46" data-en="Paperwork">Χαρτιά</text>
-              <text x="696" y="239" opacity=".46" data-en="Delays">Καθυστερήσεις</text>
-            </g>
-            <g>
-              <circle cx="642" cy="45" r="14" fill="var(--amber-light)"/>
-              <path d="M635 45l5 5 10-12" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="795" cy="213" r="14" fill="#e36d3e"/>
-              <path d="M790 208l10 10M800 208l-10 10" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
-            </g>
-          </svg>
-        </div>
-      </section>
-
       <section class="cta-band section-dark">
         <div class="cta-card">
           <h2 data-en="Ready to staff your next season without last-minute panic?">Έτοιμοι να στελεχώσετε την επόμενη σεζόν χωρίς πανικό τελευταίας στιγμής;</h2>
@@ -1671,7 +1530,6 @@
             <p class="eyebrow" data-en="Here is why you should trust AmberLane">Γιατί μπορείτε να εμπιστευτείτε την AmberLane</p>
             <h2 class="headline" data-en="We are operators in staffing that holds under pressure.">Είμαστε πρακτικοί συνεργάτες στη στελέχωση που αντέχει στην πίεση.</h2>
             <p data-en="AmberLane is built around practical recruitment, direct communication, and clean execution. The goal is simple: give business owners a reliable path from urgent staffing need to people who can actually work.">Η AmberLane χτίστηκε γύρω από πρακτική πρόσληψη, άμεση επικοινωνία και καθαρή εκτέλεση. Ο στόχος είναι απλός: να δώσει στους επιχειρηματίες αξιόπιστη διαδρομή από την ανάγκη στελέχωσης έως ανθρώπους που μπορούν όντως να εργαστούν.</p>
-            <p data-en="We match the worker profile to the job environment, not to a generic role title. That means fewer surprises, better first weeks, and a process that managers can follow without chasing ten different people.">Ταιριάζουμε το προφίλ του εργαζομένου με το πραγματικό περιβάλλον εργασίας, όχι με έναν γενικό τίτλο ρόλου. Αυτό σημαίνει λιγότερες εκπλήξεις, καλύτερες πρώτες εβδομάδες και διαδικασία που οι υπεύθυνοι μπορούν να παρακολουθήσουν χωρίς ατελείωτο κυνηγητό.</p>
           </div>
           <div class="portrait">
             <img src="images/person_1.jpg" alt="Σύμβουλος στελέχωσης AmberLane" data-alt-en="AmberLane staffing advisor">
@@ -1782,55 +1640,6 @@
                 <div class="case-metric"><strong data-en="5wk">5εβδ.</strong><span data-en="planning window from brief to first arrivals.">παράθυρο σχεδιασμού από περιγραφή έως πρώτες αφίξεις.</span></div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-dark" id="solution">
-        <div class="section-inner solution-grid">
-          <div class="solution-copy">
-            <p class="eyebrow" data-en="Let's talk staffing">Ας μιλήσουμε για στελέχωση</p>
-            <h2 class="headline" data-en="Our workforce pipeline solution">Η λύση μας για ροή προσωπικού</h2>
-            <p data-en="We build a role-by-role hiring process for businesses that need dependable people, not random applications. Each request becomes a tracked staffing lane with sourcing, screening, compliance, onboarding, and replacement terms.">Χτίζουμε διαδικασία πρόσληψης ανά ρόλο για επιχειρήσεις που χρειάζονται αξιόπιστους ανθρώπους, όχι τυχαίες αιτήσεις. Κάθε αίτημα γίνεται οργανωμένη ροή στελέχωσης με αναζήτηση, έλεγχο, συμμόρφωση, ένταξη και όρους αντικατάστασης.</p>
-            <p data-en="AmberLane helps teams understand who they need, where candidates can come from, what paperwork is required, and what timeline is realistic before pressure reaches the operation.">Η AmberLane βοηθά τις ομάδες να καταλάβουν ποιον χρειάζονται, από πού μπορούν να έρθουν υποψήφιοι, ποια χαρτιά απαιτούνται και ποιο χρονοδιάγραμμα είναι ρεαλιστικό πριν η πίεση φτάσει στη λειτουργία.</p>
-          </div>
-          <aside class="package" aria-label="Πακέτο στελέχωσης AmberLane" data-label-en="AmberLane staffing package">
-            <h3 data-en="Staffing pipeline build">Χτίσιμο ροής στελέχωσης</h3>
-            <div class="price-row"><span data-en="from consultation">από συμβουλευτική</span><span data-en="custom per role">προσαρμοσμένο ανά ρόλο</span></div>
-            <ul>
-              <li data-en="Role definition">Ορισμός ρόλου</li>
-              <li data-en="Candidate sourcing">Αναζήτηση υποψηφίων</li>
-              <li data-en="Screening calls">Κλήσεις ελέγχου</li>
-              <li data-en="Document tracking">Παρακολούθηση εγγράφων</li>
-              <li data-en="Compliance support">Υποστήριξη συμμόρφωσης</li>
-              <li data-en="Arrival planning">Πλάνο άφιξης</li>
-              <li data-en="Manager handover">Παράδοση σε υπεύθυνο</li>
-              <li data-en="Replacement support">Υποστήριξη αντικατάστασης</li>
-            </ul>
-            <a class="dark-button" href="mailto:director@transportmarketing.net" data-en="Build my pipeline">Χτίστε τη ροή μου</a>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section section-light stack">
-        <div class="section-inner">
-          <h2 class="headline" data-en="We plug into your operating stack">Κουμπώνουμε στη λειτουργική σας ροή</h2>
-          <div class="stack-grid" aria-label="Λειτουργικές περιοχές που υποστηρίζει η AmberLane" data-label-en="Operational areas AmberLane supports">
-            <span data-en="Hotels">Ξενοδοχεία</span>
-            <span data-en="Resorts">Τουριστικές μονάδες</span>
-            <span data-en="Logistics">Εφοδιαστική</span>
-            <span data-en="Construction">Κατασκευές</span>
-            <span data-en="Warehouses">Αποθήκες</span>
-            <span data-en="Payroll">Μισθοδοσία</span>
-            <span data-en="Permits">Άδειες</span>
-            <span data-en="Insurance">Ασφάλιση</span>
-            <span data-en="Housing">Διαμονή</span>
-            <span data-en="Onboarding">Ένταξη</span>
-            <span data-en="Care">Φροντίδα</span>
-            <span data-en="Offices">Γραφεία</span>
-            <span data-en="Factories">Εργοστάσια</span>
-            <span data-en="Restaurants">Εστιατόρια</span>
-            <span data-en="Homes">Κατοικίες</span>
           </div>
         </div>
       </section>
