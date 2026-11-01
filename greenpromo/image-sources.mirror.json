@@ -1,0 +1,31 @@
+{
+  "site": "GreenPromo Habitline mirror",
+  "updated": "2026-10-31",
+  "disclosure": "All four campaign visuals are AI-generated illustrative images. They do not depict GreenPromo staff, customers, testimonials, or completed client campaigns.",
+  "assets": [
+    {
+      "file": "images/greenpromo/door-to-door.webp",
+      "source": "OpenAI image generation",
+      "license": "Generated asset for this project",
+      "prompt_summary": "Professional leaflet worker placing flyers into Athens apartment mailboxes; warm documentary editorial photography; no logos or text."
+    },
+    {
+      "file": "images/greenpromo/hand-to-hand.webp",
+      "source": "OpenAI image generation",
+      "license": "Generated asset for this project",
+      "prompt_summary": "Promoter handing a flyer to a pedestrian on an Athens street; candid editorial photography; no logos or text."
+    },
+    {
+      "file": "images/greenpromo/reporting.webp",
+      "source": "OpenAI image generation",
+      "license": "Generated asset for this project",
+      "prompt_summary": "Campaign reporting flat lay with Athens map, route pins, tablet proof-photo grid, charts, and printed leaflets."
+    },
+    {
+      "file": "images/greenpromo/business-distribution.webp",
+      "source": "OpenAI image generation",
+      "license": "Generated asset for this project",
+      "prompt_summary": "Promoter placing leaflets in an approved display stand inside a local Athens cafe or business."
+    }
+  ]
+}
