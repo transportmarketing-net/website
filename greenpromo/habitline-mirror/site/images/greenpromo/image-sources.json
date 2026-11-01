@@ -1,0 +1,104 @@
+{
+  "project": "GreenPromo local mirror",
+  "updated": "2026-11-01",
+  "stockLicense": "https://www.pexels.com/legal-pages/license/",
+  "sources": [
+    {
+      "file": "source/flyer-street-mico-medel.jpg",
+      "creator": "Mico Medel",
+      "source": "https://www.pexels.com/photo/person-distributing-flyers-on-urban-street-corner-38752819/",
+      "provider": "Pexels",
+      "usedFor": ["hero-background-v2.webp", "about-hero-v2.webp"]
+    },
+    {
+      "file": "source/handout-rider-the-pham.jpg",
+      "creator": "The Pham",
+      "source": "https://www.pexels.com/photo/woman-in-green-apron-giving-leaflets-to-rider-on-motorcycle-in-city-24424044/",
+      "provider": "Pexels",
+      "usedFor": ["hero-handout-v2.webp", "landscape-handout-v2.webp", "portrait-handout-v2.webp"]
+    },
+    {
+      "file": "source/athens-street-sabrina-so.jpg",
+      "creator": "Sabrina So",
+      "source": "https://www.pexels.com/photo/people-walking-on-the-street-in-between-buildings-13519263/",
+      "provider": "Pexels",
+      "usedFor": ["landscape-athens-v2.webp", "portrait-athens-v2.webp", "about-athens-v2.webp"]
+    },
+    {
+      "file": "source/cafe-team-vitaly-gariev.jpg",
+      "creator": "Vitaly Gariev",
+      "source": "https://www.pexels.com/photo/friendly-cafe-staff-ready-to-serve-customers-36729736/",
+      "provider": "Pexels",
+      "usedFor": ["landscape-business-v2.webp", "square-business-v2.webp"]
+    },
+    {
+      "file": "source/cafe-owner-e-alfro.jpg",
+      "creator": "E. Alfro",
+      "source": "https://www.pexels.com/photo/man-behind-cafe-counter-18128090/",
+      "provider": "Pexels",
+      "usedFor": ["portrait-owner-v2.webp"]
+    },
+    {
+      "file": "source/cafe-counter-pavel-danilyuk.jpg",
+      "creator": "Pavel Danilyuk",
+      "source": "https://www.pexels.com/photo/a-woman-standing-behind-the-counter-of-a-coffee-shop-6612738/",
+      "provider": "Pexels",
+      "usedFor": ["hero-business-v2.webp"]
+    },
+    {
+      "file": "source/cafe-customer-mike-jones.jpg",
+      "creator": "Mike Jones",
+      "source": "https://www.pexels.com/photo/a-woman-at-a-counter-talking-to-a-customer-9050560/",
+      "provider": "Pexels",
+      "usedFor": ["portrait-business-v2.webp", "square-customer-v2.webp"]
+    },
+    {
+      "file": "source/print-design-ketut-subiyanto.jpg",
+      "creator": "Ketut Subiyanto",
+      "source": "https://www.pexels.com/photo/person-holding-papers-with-graphic-design-4623113/",
+      "provider": "Pexels",
+      "usedFor": ["square-print-v2.webp", "about-print-v2.webp"]
+    },
+    {
+      "file": "source/print-shop-antoni-shkraba.jpg",
+      "creator": "Antoni Shkraba Studio",
+      "source": "https://www.pexels.com/photo/man-working-with-printing-tools-6620974/",
+      "provider": "Pexels",
+      "usedFor": ["landscape-print-v2.webp", "portrait-print-v2.webp", "square-production-v2.webp"]
+    },
+    {
+      "file": "source/apartment-mailboxes-arif-koroglu.jpg",
+      "creator": "Arif Koroglu",
+      "source": "https://www.pexels.com/photo/close-up-of-mailboxes-in-an-apartment-building-5332291/",
+      "provider": "Pexels",
+      "usedFor": ["landscape-mailboxes-v2.webp", "square-mailboxes-v2.webp"]
+    },
+    {
+      "file": "source/door-to-door-ai.png",
+      "creator": "OpenAI image generation",
+      "source": "Generated for GreenPromo in this workspace",
+      "provider": "OpenAI",
+      "seed": null,
+      "usedFor": ["landscape-door-v2.webp", "portrait-door-v2.webp", "square-door-v2.webp"],
+      "disclosure": "Photorealistic illustrative scene; not documentary evidence of an actual GreenPromo campaign."
+    },
+    {
+      "file": "source/reporting-dashboard-transparent.png",
+      "creator": "OpenAI image generation",
+      "source": "Generated for GreenPromo in this workspace",
+      "provider": "OpenAI",
+      "seed": null,
+      "usedFor": ["reporting-dashboard-v2.png"],
+      "disclosure": "Illustrative reporting interface; not a literal software screenshot."
+    },
+    {
+      "file": "source/reporting-kit-landscape.png",
+      "creator": "OpenAI image generation",
+      "source": "Generated for GreenPromo in this workspace",
+      "provider": "OpenAI",
+      "seed": null,
+      "usedFor": ["reporting-kit-v2.webp", "landscape-report-v2.webp", "square-report-v2.webp"],
+      "disclosure": "Illustrative campaign report mockup; not a literal client report."
+    }
+  ]
+}
