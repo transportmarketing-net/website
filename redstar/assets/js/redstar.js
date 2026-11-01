@@ -55,13 +55,13 @@
     ? [...drawer.querySelectorAll('a[href], button:not([disabled])')]
     : [];
 
-  const closeDrawer = () => {
+  const closeDrawer = (restoreFocus = true) => {
     if (!drawer) return;
     drawer.classList.remove('is-open');
     drawer.hidden = true;
     drawerOpen?.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('menu-open');
-    lastFocused?.focus();
+    if (restoreFocus) lastFocused?.focus();
   };
 
   const openDrawer = () => {
@@ -78,6 +78,13 @@
   drawerClose?.addEventListener('click', closeDrawer);
   drawerScrim?.addEventListener('click', closeDrawer);
   drawer?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeDrawer));
+
+  const desktopNavigation = window.matchMedia('(min-width: 64.001rem)');
+  const closeDrawerAtDesktop = (event) => {
+    if (event.matches && drawer && !drawer.hidden) closeDrawer(false);
+  };
+  if (desktopNavigation.addEventListener) desktopNavigation.addEventListener('change', closeDrawerAtDesktop);
+  else desktopNavigation.addListener(closeDrawerAtDesktop);
 
   drawer?.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {

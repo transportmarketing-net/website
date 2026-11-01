@@ -64,7 +64,7 @@ function head({ title, description, route = '/', prefix = '', robots = 'index, f
 <html lang="el">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>${escapeText(title)}</title>
   <meta name="description" content="${escapeText(description)}">
   <meta name="robots" content="${robots}">
