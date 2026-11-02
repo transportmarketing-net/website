@@ -47,6 +47,7 @@ ALLOWED_SITE_CLASSES = {
     "gp-documentation-visual",
     "gp-feature-business",
     "gp-feature-door",
+    "gp-faq",
     "gp-feature-hand",
     "gp-feature-print",
     "gp-feature-zones",

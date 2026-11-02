@@ -97,7 +97,10 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) {
 }
 
 /* Intro: two bounded marquee rails with a centered, non-dominating report mockup. */
-.gp-intro { padding-top: clamp(2.5rem, 5vw, 5rem); }
+.gp-intro {
+  overflow-x: clip;
+  padding-top: clamp(2.5rem, 5vw, 5rem);
+}
 
 .gp-intro-stage {
   height: clamp(31rem, 48vw, 42rem);
@@ -489,6 +492,31 @@ body:not(:has(.gp-hero)) img[src*="landscape-"] {
     grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
     align-items: center;
   }
+}
+
+@media (min-width: 64rem) and (max-width: 74.999rem) {
+  .gp-faq > .container > .grid {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 2rem;
+  }
+
+  .gp-faq > .container > .grid > * { min-width: 0; }
+
+  body:has(.gp-hero) footer .grid { gap: 2rem; }
+
+  body:has(.gp-hero) footer form {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  body:has(.gp-hero) footer form input[type="email"] {
+    flex: 1 1 14rem;
+    width: auto !important;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  body:has(.gp-hero) footer a { overflow-wrap: anywhere; }
 }
 
 @container (max-width: 34rem) {
