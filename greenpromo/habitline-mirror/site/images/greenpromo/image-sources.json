@@ -1,7 +1,7 @@
 {
   "project": "GreenPromo local mirror",
-  "updated": "2026-11-01",
-  "stockLicense": "https://www.pexels.com/legal-pages/license/",
+  "updated": "2026-11-02",
+  "stockLicense": "https://www.pexels.com/license/",
   "sources": [
     {
       "file": "source/flyer-street-mico-medel.jpg",
@@ -23,6 +23,56 @@
       "source": "https://www.pexels.com/photo/people-walking-on-the-street-in-between-buildings-13519263/",
       "provider": "Pexels",
       "usedFor": ["landscape-athens-v2.webp", "portrait-athens-v2.webp", "about-athens-v2.webp"]
+    },
+    {
+      "file": "source/athens-monastiraki-8k.jpg",
+      "creator": "8 K",
+      "source": "https://www.pexels.com/photo/street-scene-in-monastiraki-athens-37844351/",
+      "provider": "Pexels",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "downloaded": "2026-11-02",
+      "usedFor": ["athens-monastiraki-landscape-v3.webp"]
+    },
+    {
+      "file": "source/athens-cafe-shir-danieli.jpg",
+      "creator": "Shir Danieli",
+      "source": "https://www.pexels.com/photo/street-scene-outside-cafe-in-athens-greece-35465138/",
+      "provider": "Pexels",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "downloaded": "2026-11-02",
+      "usedFor": ["athens-cafe-landscape-v3.webp"]
+    },
+    {
+      "file": "source/athens-exarchia-daniel-droscher.jpg",
+      "creator": "Daniel Dröscher",
+      "source": "https://www.pexels.com/photo/aerial-view-of-umbrellas-at-the-market-in-the-exarchia-area-of-athens-greece-21939800/",
+      "provider": "Pexels",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "downloaded": "2026-11-02",
+      "usedFor": ["athens-exarchia-portrait-v3.webp"]
+    },
+    {
+      "file": "source/athens-plaka-filippos-zikopoulos.jpg",
+      "creator": "Filippos Zikopoulos",
+      "source": "https://www.pexels.com/photo/athens-27695784/",
+      "provider": "Pexels",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "downloaded": "2026-11-02",
+      "usedFor": ["athens-plaka-portrait-v3.webp", "athens-plaka-square-v3.webp"]
+    },
+    {
+      "file": "source/athens-shop-tom-schonmann.jpg",
+      "creator": "Tom Schönmann",
+      "source": "https://www.pexels.com/photo/charming-athens-street-scene-with-greek-signage-36795948/",
+      "provider": "Pexels",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "downloaded": "2026-11-02",
+      "usedFor": ["athens-shop-square-v3.webp"]
     },
     {
       "file": "source/cafe-team-vitaly-gariev.jpg",

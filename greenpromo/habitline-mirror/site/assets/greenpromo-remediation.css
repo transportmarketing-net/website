@@ -1,0 +1,681 @@
+/* GreenPromo responsive media adaptation.
+   The protected template bundle remains untouched; all changes are scoped here. */
+
+:root {
+  --gp-nav-offset: 7rem;
+  --gp-radius-card: 1.5rem;
+  --gp-shadow-media: 0 1.5rem 4rem rgb(24 24 27 / 18%);
+}
+
+html { scroll-padding-top: var(--gp-nav-offset); }
+
+#features,
+#usecase,
+#metrics,
+#coverage,
+#smart-assist { scroll-margin-top: var(--gp-nav-offset); }
+
+img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) {
+  display: block;
+}
+
+/* Hero: retain the existing photograph and make the foreground composition fluid. */
+.gp-hero {
+  min-height: max(56rem, 100svh);
+  justify-content: flex-start;
+  padding-top: clamp(8.5rem, 10vw, 10.5rem);
+}
+
+.gp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 76%) 0%, rgb(0 0 0 / 44%) 38%, rgb(0 0 0 / 9%) 72%, rgb(0 0 0 / 34%) 100%),
+    linear-gradient(180deg, rgb(0 0 0 / 42%) 0%, transparent 34%, rgb(0 0 0 / 20%) 72%, rgb(0 0 0 / 78%) 100%);
+}
+
+.gp-hero > img[src*="hero-background-v2"] {
+  object-position: center 44%;
+  filter: saturate(.9) contrast(1.04) brightness(.9);
+  transform: scale(1.012);
+}
+
+.gp-hero-visual {
+  height: clamp(27rem, 36vw, 31rem);
+  margin-top: clamp(2.5rem, 5vw, 5rem);
+  isolation: isolate;
+}
+
+.gp-hero-visual img[src*="hero-handout-v2"],
+.gp-hero-visual img[src*="hero-business-v2"] {
+  top: clamp(1.5rem, 4vw, 4.5rem);
+  object-fit: cover;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: var(--gp-radius-card);
+  box-shadow: 0 1.5rem 4.5rem rgb(0 0 0 / 42%);
+}
+
+.gp-hero-visual img[src*="hero-handout-v2"] {
+  inset-inline-start: clamp(.5rem, 9vw, 8rem);
+  width: clamp(8rem, 12vw, 10rem);
+  height: clamp(8rem, 12vw, 10rem);
+  aspect-ratio: 1;
+}
+
+.gp-hero-visual img[src*="hero-business-v2"] {
+  inset-inline-end: clamp(.5rem, 7vw, 4.5rem);
+  bottom: auto;
+  width: clamp(10rem, 18vw, 15rem);
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.gp-hero-visual img[src*="reporting-dashboard-v2"] {
+  z-index: 2 !important;
+  width: clamp(15rem, 25vw, 21.5rem);
+  height: auto;
+  max-height: 29rem;
+  margin-top: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 1.75rem 2.5rem rgb(0 0 0 / 42%));
+}
+
+.gp-hero > .bg-body-bg {
+  height: 7.5rem;
+  background: linear-gradient(180deg, transparent 0%, var(--color-body-bg) 88%);
+}
+
+.gp-hero > img[src*="vector-01"] {
+  bottom: -2.5rem;
+  height: clamp(10rem, 18vw, 15rem);
+  object-fit: cover;
+  object-position: top center;
+  opacity: .96;
+}
+
+/* Intro: two bounded marquee rails with a centered, non-dominating report mockup. */
+.gp-intro { padding-top: clamp(2.5rem, 5vw, 5rem); }
+
+.gp-intro-stage {
+  height: clamp(31rem, 48vw, 42rem);
+  margin-top: clamp(1rem, 3vw, 2.5rem);
+  padding-block: 0;
+  isolation: isolate;
+}
+
+.gp-intro-row {
+  position: absolute;
+  left: 50%;
+  width: 100vw;
+  max-width: 120rem;
+  margin: 0;
+  padding-block: 1rem;
+  transform: translateX(-50%);
+}
+
+.gp-intro-row-top { top: clamp(1rem, 4vw, 3.5rem); }
+.gp-intro-row-bottom { bottom: clamp(1rem, 4vw, 3.5rem); }
+
+.gp-intro-row img[src*="square-"] {
+  object-fit: cover;
+  object-position: center;
+}
+
+.gp-intro-phone img[src*="reporting-dashboard-v2"] {
+  width: auto;
+  height: clamp(22rem, 39vw, 36rem);
+  max-width: min(52vw, 22rem);
+  object-fit: contain;
+  filter: drop-shadow(0 1.5rem 2rem rgb(24 24 27 / 20%));
+}
+
+/* Services: balanced cards, Athens-specific context, and safe wrapping. */
+#features .rounded-3xl,
+#features [class*="rounded-"] { isolation: isolate; }
+
+.gp-feature-door,
+.gp-feature-hand,
+.gp-feature-business,
+.gp-feature-zones,
+.gp-feature-print { container-type: inline-size; }
+
+.gp-feature-door,
+.gp-feature-hand {
+  min-height: clamp(38rem, 53vw, 46rem);
+}
+
+.gp-feature-door {
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-feature-door > div:nth-child(2) {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+
+.gp-feature-door img[src*="landscape-door-v2"] {
+  width: min(100%, 28rem);
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 46%;
+  border-radius: 1.25rem;
+  box-shadow: var(--gp-shadow-media);
+}
+
+.gp-feature-door > div:last-child { margin-top: auto; }
+
+.gp-feature-hand {
+  position: relative;
+  background-image:
+    linear-gradient(180deg, rgb(15 12 10 / 72%) 0%, rgb(15 12 10 / 44%) 42%, rgb(15 12 10 / 75%) 100%),
+    url("../images/greenpromo/athens-monastiraki-landscape-v3.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.gp-feature-hand > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gp-feature-hand > div:first-child p { color: rgb(245 245 244 / 88%); }
+
+.gp-feature-hand > div:last-child {
+  margin-top: auto;
+  background: rgb(22 19 17 / 66%);
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 24%);
+}
+
+.gp-feature-hand .space-y-4 > .group {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  align-items: stretch;
+  gap: .75rem;
+}
+
+.gp-feature-hand .space-y-4 > .group > div:first-child { width: auto; }
+
+.gp-feature-hand .space-y-4 > .group > div:last-child {
+  min-width: 0;
+  gap: .5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.gp-feature-hand .space-y-4 > .group > div:last-child > span:last-child {
+  margin-inline-start: auto;
+  text-align: end;
+}
+
+.gp-feature-business {
+  min-height: clamp(28rem, 43vw, 34rem);
+  background-image: url("../images/greenpromo/athens-cafe-landscape-v3.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.gp-feature-business > .absolute {
+  background: linear-gradient(90deg, rgb(11 10 9 / 88%) 0%, rgb(11 10 9 / 62%) 44%, rgb(11 10 9 / 22%) 100%);
+}
+
+.gp-feature-business > .grid { min-height: inherit; }
+
+.gp-feature-business img[src*="reporting-dashboard-v2"] {
+  z-index: 2;
+  width: clamp(14rem, 26vw, 22rem);
+  height: auto;
+  max-height: 31rem;
+  margin-bottom: -4.5rem;
+  padding-top: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 1.5rem 2rem rgb(0 0 0 / 30%));
+}
+
+.gp-feature-business img[src*="square-production-v2"] {
+  top: 18%;
+  right: auto;
+  left: 2%;
+  width: clamp(5.5rem, 10vw, 9rem);
+  height: clamp(5.5rem, 10vw, 9rem);
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: var(--gp-shadow-media);
+}
+
+.gp-feature-zones {
+  min-height: clamp(43rem, 62vw, 52rem);
+  background-image: url("../images/greenpromo/athens-exarchia-portrait-v3.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.gp-feature-zones > .absolute {
+  background: linear-gradient(180deg, rgb(0 0 0 / 34%) 0%, rgb(0 0 0 / 56%) 45%, rgb(0 0 0 / 88%) 100%);
+}
+
+.gp-feature-zones .grid-cols-2.md\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.5rem, 2vw, 1.875rem);
+}
+
+.gp-feature-zones .mt-7\.5.md\:gap-7\.5 {
+  gap: clamp(.5rem, 2vw, 1.875rem);
+}
+
+.gp-feature-print {
+  min-height: clamp(43rem, 62vw, 52rem);
+}
+
+.gp-feature-print > .relative {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.gp-feature-print .w-sm {
+  width: auto;
+  max-width: 24rem;
+}
+
+.gp-feature-print > .relative > div:last-child {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-top: clamp(2rem, 6vw, 5rem);
+}
+
+.gp-feature-print img[src*="landscape-report-v2"] {
+  width: min(100%, 30rem);
+  height: auto;
+  aspect-ratio: 5 / 3;
+  margin-top: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.25rem;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 30%);
+}
+
+#features img[src*="images/greenpromo/"]:not([src*="reporting-dashboard-v2"]) {
+  object-fit: cover;
+}
+
+#features img[src*="reporting-dashboard-v2"] { object-fit: contain; }
+
+/* Use cases and metrics. */
+#usecase .container { overflow: hidden; }
+
+#usecase [role="tabpanel"] > div {
+  overflow: hidden;
+  border-radius: var(--gp-radius-card);
+  box-shadow: 0 1.375rem 3.125rem rgb(24 24 27 / 12%);
+}
+
+#usecase [role="tabpanel"] img[src*="images/greenpromo/"] {
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--gp-radius-card);
+}
+
+#usecase [role="tabpanel"] > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgb(0 0 0 / 30%), transparent 56%);
+}
+
+#usecase [role="tabpanel"] > div > div { z-index: 2; }
+
+#metrics .group {
+  width: clamp(17rem, 23vw, 23.75rem);
+  height: clamp(20rem, 34vw, 32rem);
+  isolation: isolate;
+}
+
+#metrics .group::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(0 0 0 / 10%) 0%, rgb(0 0 0 / 4%) 45%, rgb(0 0 0 / 86%) 100%);
+}
+
+#metrics .group > img {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.002);
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+
+#metrics .group:hover > img { transform: scale(1.035); }
+#metrics .group > div { z-index: 2; }
+
+/* Coverage cards. */
+#coverage video,
+.gp-coverage-slider video {
+  object-fit: cover;
+  object-position: center;
+}
+
+.gp-coverage-slider .swiper-slide > div {
+  overflow: hidden;
+  border-radius: var(--gp-radius-card);
+  box-shadow: 0 1.375rem 3rem rgb(24 24 27 / 14%);
+}
+
+.gp-coverage-slider .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: var(--gp-radius-card);
+  background: linear-gradient(180deg, rgb(0 0 0 / 55%), transparent 42%, rgb(0 0 0 / 62%));
+}
+
+.gp-coverage-slider .swiper-slide > div > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Documentation: stack through tablet widths, then compose on desktop. */
+.gp-documentation-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.gp-documentation-grid > div:first-child { max-width: 44rem; }
+
+.gp-documentation-visual {
+  width: min(100%, 64rem);
+  height: clamp(27rem, 66vw, 36rem);
+  aspect-ratio: auto;
+  margin-inline: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.gp-documentation-visual > div:first-child {
+  top: 5%;
+  right: -2%;
+  width: min(62%, 22rem);
+}
+
+.gp-documentation-visual > div:first-child img[src*="reporting-dashboard-v2"] {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: rotate(-11deg);
+  filter: drop-shadow(0 1.875rem 2.125rem rgb(24 24 27 / 22%));
+}
+
+.gp-documentation-visual > div:nth-child(2) {
+  top: 8%;
+  left: 4%;
+  width: min(40%, 17rem);
+}
+
+.gp-documentation-visual > div:nth-child(2) img {
+  width: 100%;
+  margin-inline-start: 0;
+  object-fit: cover;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 1rem;
+  box-shadow: 0 1.125rem 2.375rem rgb(24 24 27 / 18%);
+}
+
+#smart-assist .gp-documentation-grid + .grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  margin-top: clamp(3rem, 8vw, 6rem);
+}
+
+#smart-assist .gp-documentation-grid + .grid > div { min-width: 0; }
+
+.gp-final-cta img[src*="reporting-dashboard-v2"],
+body:not(:has(.gp-hero)) img[src*="reporting-dashboard-v2"] {
+  object-fit: contain;
+  filter: drop-shadow(0 1.875rem 2.125rem rgb(24 24 27 / 20%));
+}
+
+.gp-audiences img[src*="square-"] { object-fit: cover; }
+
+.gp-audiences [class*="bg-default-200"] {
+  border: 1px solid rgb(39 39 42 / 5%);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 80%) inset;
+}
+
+.gp-final-cta img[src*="square-"],
+.gp-final-cta img[src*="athens-shop-"] {
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Preserve the prior media treatment on secondary pages now that CSS is external. */
+body:not(:has(.gp-hero)) img[src*="about-hero-v2"],
+body:not(:has(.gp-hero)) img[src*="about-athens-v2"],
+body:not(:has(.gp-hero)) img[src*="about-print-v2"] {
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+body:not(:has(.gp-hero)) img[src*="reporting-kit-v2"] {
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--gp-radius-card);
+}
+
+body:not(:has(.gp-hero)) img[src*="portrait-"] {
+  object-fit: cover;
+  object-position: center top;
+}
+
+body:not(:has(.gp-hero)) img[src*="landscape-"] {
+  object-fit: cover;
+  border-radius: .875rem;
+}
+
+@media (min-width: 64rem) {
+  .gp-documentation-grid {
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+    align-items: center;
+  }
+}
+
+@container (max-width: 34rem) {
+  .gp-feature-hand .space-y-4 > .group > div:last-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gp-feature-hand .space-y-4 > .group > div:last-child > span:last-child {
+    margin-inline-start: 1.5rem;
+    text-align: start;
+  }
+}
+
+@media (max-width: 63.999rem) {
+  .gp-feature-business img[src*="reporting-dashboard-v2"] {
+    max-height: 27rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .gp-feature-zones,
+  .gp-feature-print { min-height: auto; }
+
+  .gp-documentation-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  .gp-documentation-visual > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 47.999rem) {
+  :root { --gp-nav-offset: 5rem; }
+
+  .gp-hero {
+    min-height: 52rem;
+    padding-top: 8rem;
+  }
+
+  .gp-hero::before {
+    background:
+      linear-gradient(180deg, rgb(0 0 0 / 56%) 0%, rgb(0 0 0 / 36%) 44%, rgb(0 0 0 / 84%) 100%),
+      linear-gradient(90deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 8%));
+  }
+
+  .gp-hero > img[src*="hero-background-v2"] {
+    object-position: 62% center;
+    transform: none;
+  }
+
+  .gp-hero-visual {
+    height: 24rem;
+    margin-top: 2.25rem;
+  }
+
+  .gp-hero-visual img[src*="hero-handout-v2"] {
+    top: 2.5rem;
+    inset-inline-start: 0;
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+
+  .gp-hero-visual img[src*="hero-business-v2"] {
+    top: 2.5rem;
+    inset-inline-end: 0;
+    width: 8.5rem;
+  }
+
+  .gp-hero-visual img[src*="reporting-dashboard-v2"] {
+    width: 12.5rem;
+    max-height: 23rem;
+  }
+
+  .gp-hero > img[src*="vector-01"] { height: 8rem; }
+
+  .gp-intro { padding-top: 3.5rem; }
+
+  .gp-intro-stage {
+    height: 29rem;
+    margin-inline: -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .gp-intro-row { padding-block: .5rem; }
+  .gp-intro-row-top { top: .5rem; }
+  .gp-intro-row-bottom { bottom: .5rem; }
+
+  .gp-intro-phone img[src*="reporting-dashboard-v2"] {
+    height: 21rem;
+    max-width: 12rem;
+  }
+
+  #features > .container { padding-inline: 1rem; }
+
+  .gp-feature-door,
+  .gp-feature-hand { min-height: auto; }
+
+  .gp-feature-door > div:nth-child(2) { padding-inline: 1rem; }
+
+  .gp-feature-hand .space-y-4 { padding-inline-end: .75rem; }
+
+  .gp-feature-business {
+    min-height: 39rem;
+    background-position: 58% center;
+  }
+
+  .gp-feature-business > .absolute {
+    background: linear-gradient(180deg, rgb(11 10 9 / 88%) 0%, rgb(11 10 9 / 56%) 58%, rgb(11 10 9 / 32%) 100%);
+  }
+
+  .gp-feature-business img[src*="reporting-dashboard-v2"] {
+    width: min(78vw, 17rem);
+    max-height: 25rem;
+    margin-bottom: -4rem;
+  }
+
+  .gp-feature-business img[src*="square-production-v2"] {
+    left: 1rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .gp-feature-zones .mt-7\.5.md\:gap-7\.5 { grid-template-columns: 1fr; }
+
+  .gp-feature-zones .mt-7\.5.md\:gap-7\.5 > div { min-height: 8rem; }
+
+  .gp-feature-print > .relative > div:last-child { min-height: 17rem; }
+
+  #usecase .container { padding: 1.25rem; }
+  #usecase [role="tabpanel"] > div { border-radius: 1rem; }
+
+  #metrics .group::before {
+    background: linear-gradient(180deg, rgb(0 0 0 / 8%), rgb(0 0 0 / 82%));
+  }
+
+  .gp-documentation-visual {
+    height: clamp(25rem, 125vw, 31rem);
+    border-radius: 1.5rem;
+  }
+
+  .gp-documentation-visual > div:first-child {
+    top: 8%;
+    right: -4%;
+    width: min(72%, 19rem);
+  }
+
+  .gp-coverage-slider .swiper-slide > div { border-radius: 1.25rem; }
+}
+
+@media (max-width: 25rem) {
+  .gp-hero h1 { font-size: 2rem; }
+
+  .gp-hero-visual img[src*="hero-handout-v2"] {
+    width: 5.75rem;
+    height: 5.75rem;
+  }
+
+  .gp-hero-visual img[src*="hero-business-v2"] { width: 7rem; }
+
+  .gp-feature-hand .space-y-4 > .group {
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    gap: .5rem;
+  }
+
+  .gp-feature-zones .grid-cols-2.md\:grid-cols-3 { gap: .25rem; }
+  .gp-feature-zones .grid-cols-2.md\:grid-cols-3 img { width: 4rem; height: 4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .gp-intro [class*="animate-"],
+  #features [class*="animate-"],
+  #metrics [class*="animate-"],
+  .gp-coverage-slider [class*="animate-"] {
+    animation: none !important;
+  }
+
+  #metrics .group > img,
+  #metrics .group:hover > img {
+    transform: none;
+    transition: none;
+  }
+
+  .gp-documentation-visual > div:first-child img[src*="reporting-dashboard-v2"] {
+    transition: none;
+  }
+}
