@@ -2,7 +2,7 @@
    The protected template bundle remains untouched; all changes are scoped here. */
 
 :root {
-  --gp-nav-offset: 7rem;
+  --gp-nav-offset: 8rem;
   --gp-radius-card: 1.5rem;
   --gp-shadow-media: 0 1.5rem 4rem rgb(24 24 27 / 18%);
 }
@@ -516,6 +516,8 @@ body:not(:has(.gp-hero)) img[src*="landscape-"] {
 }
 
 @media (min-width: 48rem) and (max-width: 63.999rem) {
+  :root { --gp-nav-offset: 7rem; }
+
   .gp-documentation-visual > div:nth-child(2) {
     display: flex;
     flex-direction: column;

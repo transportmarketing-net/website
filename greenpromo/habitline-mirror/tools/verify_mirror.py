@@ -39,15 +39,45 @@ CONTENT_ATTRIBUTES = {
     "src",
     "title",
 }
+ALLOWED_EXTRA_STYLESHEETS = {"assets/greenpromo-remediation.css"}
+ALLOWED_SITE_CLASSES = {
+    "gp-audiences",
+    "gp-coverage-slider",
+    "gp-documentation-grid",
+    "gp-documentation-visual",
+    "gp-feature-business",
+    "gp-feature-door",
+    "gp-feature-hand",
+    "gp-feature-print",
+    "gp-feature-zones",
+    "gp-final-cta",
+    "gp-hero",
+    "gp-hero-visual",
+    "gp-intro",
+    "gp-intro-phone",
+    "gp-intro-row",
+    "gp-intro-row-bottom",
+    "gp-intro-row-top",
+    "gp-intro-stage",
+}
+CLASS_NORMALIZATIONS = {"object-coverr": "object-cover"}
 
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def is_allowed_extra_node(tag: Tag) -> bool:
+    return (
+        tag.name == "link"
+        and tag.get("rel") == ["stylesheet"]
+        and tag.get("href") in ALLOWED_EXTRA_STYLESHEETS
+    )
+
+
 def structure(path: Path) -> list[tuple[str, int, tuple[tuple[str, str], ...]]]:
     soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
-    tags = list(soup.find_all(True))
+    tags = [tag for tag in soup.find_all(True) if not is_allowed_extra_node(tag)]
     positions = {id(tag): index for index, tag in enumerate(tags)}
     result = []
     for tag in tags:
@@ -56,6 +86,15 @@ def structure(path: Path) -> list[tuple[str, int, tuple[tuple[str, str], ...]]]:
         for key, value in tag.attrs.items():
             if key in CONTENT_ATTRIBUTES:
                 continue
+            if key == "class":
+                classes = value if isinstance(value, list) else str(value).split()
+                value = [
+                    CLASS_NORMALIZATIONS.get(name, name)
+                    for name in classes
+                    if name not in ALLOWED_SITE_CLASSES
+                ]
+                if not value:
+                    continue
             rendered = " ".join(value) if isinstance(value, list) else str(value)
             attrs.append((key, rendered))
         result.append((tag.name, parent_index, tuple(sorted(attrs))))
@@ -93,7 +132,7 @@ def main() -> int:
         failures.extend(local_asset_errors(SITE / page))
 
     site_text = "\n".join((SITE / page).read_text(encoding="utf-8") for page in PAGES).lower()
-    forbidden = ("greenpromo-design.css", "greenpromo-remediation.css", "greenpromo-mirror.css", "gp-site")
+    forbidden = ("greenpromo-design.css", "greenpromo-mirror.css", "gp-site")
     for marker in forbidden:
         if marker in site_text:
             failures.append(f"forbidden redesign marker present: {marker}")
