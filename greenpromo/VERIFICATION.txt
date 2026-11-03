@@ -1,0 +1,51 @@
+IVgreen Logo Implementation - Verification Checklist
+====================================================
+
+✓ GENERATION (28 files)
+  - Master files: master-transparent.png, master-transparent-notag.png, iv-mark.png
+  - Header logos: 6 variants (dark-bg, light-bg, all-white, all-dark, on-white, on-black)
+  - Favicons: 5 sizes + multi-size ICO
+  - Logo marks: 3 variants (dark-bg, light-bg, transparent)
+  - Social media: 2 profiles + 3 covers
+  - OG images: PNG + WebP
+  - Wallpapers: 2 desktop + 1 mobile
+
+✓ LEGACY PATHS (11 files copied for backwards compatibility)
+  - images/logo-black.png (922w)
+  - images/logo-white.png (922w)
+  - images/greenpromo/logo-black.png
+  - images/greenpromo/logo-white.png
+  - images/logo-mark-black.png, logo-mark-white.png
+  - favicon.ico, favicon.png (root)
+  - images/favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png
+
+✓ HTML UPDATES (11 pages)
+  - Alt text: "GreenPromo" → "IVgreen" across all pages
+  - Favicon links: Added apple-touch-icon, 16x16, 32x32, 512x512 to all pages
+  - OG images: Updated to images/ivgreen/og-image.webp in index, services, packages
+  - JSON-LD schema: Added LocalBusiness with logo + image fields to index.html
+
+FILES UPDATED:
+  - index.html
+  - about.html
+  - contact.html
+  - pricing.html
+  - faqs.html
+  - download.html
+  - waitlist.html
+  - privacy-policy.html
+  - services.html
+  - packages.html
+  - quote.html
+
+MANUAL VERIFICATION STEPS:
+1. Run local server: python3 -m http.server 8000
+2. Open http://localhost:8000/
+3. Check header logo displays correctly (pink IV + dark green "green")
+4. Check favicon shows in browser tab (pink IV on green square)
+5. Hard refresh (Ctrl+Shift+R) to clear favicon cache
+6. Test OG image with https://www.opengraph.xyz/ or Facebook Debugger
+7. Validate JSON-LD with https://validator.schema.org/
+
+DEPLOYMENT:
+Ready to commit and push. All references preserved, no broken links.
