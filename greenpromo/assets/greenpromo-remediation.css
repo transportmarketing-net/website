@@ -126,10 +126,23 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) {
 
 .gp-intro-phone img[src*="reporting-dashboard-v2"] {
   width: auto;
-  height: clamp(22rem, 39vw, 36rem);
-  max-width: min(52vw, 22rem);
+  height: clamp(20rem, 34vw, 32rem);
+  max-width: min(46vw, 20rem);
   object-fit: contain;
   filter: drop-shadow(0 1.5rem 2rem rgb(24 24 27 / 20%));
+}
+
+.gp-intro-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  background: radial-gradient(
+    ellipse 30% 80% at center,
+    var(--body-bg, #f5f5f0) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 /* Services: balanced cards, Athens-specific context, and safe wrapping. */
@@ -569,8 +582,8 @@ body:not(:has(.gp-hero)) img[src*="landscape-"] {
   .gp-intro-row-bottom { bottom: .5rem; }
 
   .gp-intro-phone img[src*="reporting-dashboard-v2"] {
-    height: 21rem;
-    max-width: 12rem;
+    height: 18rem;
+    max-width: 10rem;
   }
 
   #features > .container { padding-inline: 1rem; }
@@ -647,6 +660,27 @@ body:not(:has(.gp-hero)) img[src*="landscape-"] {
 
   .gp-feature-zones .grid-cols-2.md\:grid-cols-3 { gap: .25rem; }
   .gp-feature-zones .grid-cols-2.md\:grid-cols-3 img { width: 4rem; height: 4rem; }
+}
+
+/* Section spacing: reduce excessive vertical gaps */
+.gp-intro { padding-bottom: clamp(4rem, 8vw, 8rem); }
+
+#features { padding-bottom: clamp(4rem, 8vw, 8rem) !important; }
+
+#usecase { padding-top: clamp(2rem, 5vw, 4rem); }
+
+#metrics { padding-top: clamp(4rem, 7vw, 6rem) !important; padding-bottom: clamp(4rem, 7vw, 6rem) !important; }
+
+/* Pricing carousel: ensure card text isn't hard-truncated */
+#metrics .animate-marquee > div {
+  min-height: 0;
+}
+
+#metrics .animate-marquee > div > .relative.z-10:last-child p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  line-height: 1.4;
 }
 
 @media (prefers-reduced-motion: reduce) {
