@@ -418,7 +418,7 @@ def main():
     # Step 2: Separate tagline
     master_notag = separate_tagline(master_transparent)
 
-    # Step 3: Extract IV mark
+    # Step 3: Extract IV mark from no-tagline version
     iv_mark = extract_iv_mark(master_notag)
 
     # Save master files
@@ -428,7 +428,7 @@ def main():
         "iv-mark.png": iv_mark,
     }
 
-    # Generate all variants
+    # Generate header variants (NO tagline for compact navbar)
     outputs.update(generate_header_logos(master_notag))
 
     favicon_sizes = generate_favicons(iv_mark)
