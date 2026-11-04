@@ -2085,12 +2085,7 @@ li {
   }
 
   .site-header__bar {
-    grid-template-columns: auto 1fr auto;
-  }
-
-  .header-actions {
-    grid-column: 3;
-    justify-self: end;
+    grid-template-columns: 1fr auto;
   }
 
   .menu-toggle {
@@ -2109,6 +2104,23 @@ li {
   .hero__copy,
   .page-hero__copy {
     max-inline-size: 50rem;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero__actions,
+  .page-hero__actions {
+    justify-content: center;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    margin-inline: auto;
+  }
+
+  .hero__lead,
+  .page-hero__lead {
+    margin-inline: auto;
   }
 
   .browser-stage {
@@ -2231,7 +2243,7 @@ li {
 
   .hero__actions,
   .page-hero__actions {
-    align-items: stretch;
+    align-items: center;
     flex-direction: column;
   }
 
