@@ -79,22 +79,28 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) { display:
 .gp-hero-actions > a:last-child { background: rgb(20 40 30 / 55%); backdrop-filter: none; }
 .gp-hero-visual {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-areas: "handoff center door";
   align-items: center;
-  gap: clamp(1rem, 3vw, 3rem);
-  width: min(100%, 43rem);
+  gap: clamp(.75rem, 1.8vw, 1.25rem);
+  width: min(100%, 40rem);
   margin: 2.5rem auto 0;
   isolation: isolate;
 }
-.gp-hero-visual img { width: 100%; height: auto; }
-.gp-hero-visual img:first-child, .gp-hero-visual img:last-child {
+.gp-hero-handoff { grid-area: handoff; }
+.gp-hero-door { grid-area: door; }
+.gp-hero-center { grid-area: center; min-width: 0; }
+.gp-hero-visual > .gp-hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 1.125rem;
   border: 1px solid rgb(255 255 255 / 18%);
   box-shadow: 0 .5rem 1.5rem rgb(0 0 0 / 15%);
+  filter: saturate(.85);
 }
-.gp-hero-visual img[src*="reporting-dashboard-v2"] { max-height: 23rem; object-fit: contain; filter: drop-shadow(0 .75rem 1.5rem rgb(0 0 0 / 20%)); }
 .gp-hero-fade { position: absolute; inset: auto 0 0; height: 3rem; z-index: 2; pointer-events: none; background: linear-gradient(transparent, var(--gp-surface)); }
 
 /* Two quiet image rails around one photographic focal point. */
@@ -223,8 +229,7 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) { display:
   .gp-hero-description { max-width: 34ch; }
   .gp-hero-actions { flex-direction: column; width: 100%; }
   .gp-hero-actions > a { width: min(100%, 22rem); }
-  .gp-hero-visual { gap: .625rem; margin-top: 2rem; }
-  .gp-hero-visual img:first-child, .gp-hero-visual img:last-child { border-radius: .75rem; }
+  .gp-hero-visual { margin-top: 2rem; }
   .gp-intro-heading > p { font-size: 1rem; }
   .gp-intro-tags { gap: .375rem; }
   .gp-intro-tags span { font-size: .8125rem; padding: .375rem .625rem; }
@@ -245,6 +250,16 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) { display:
   .gp-business-copy .gp-service-note { margin-top: 1.5rem; }
   .gp-planner { padding: 1.125rem; }
   .gp-zone-list { font-size: .875rem; gap: .75rem; }
+}
+
+@media (max-width: 39.999rem) {
+  .gp-hero-visual {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "center center" "handoff door";
+    max-width: 22rem;
+    gap: .75rem;
+  }
+  .gp-hero-visual > .gp-hero-center { width: min(100%, 16rem); justify-self: center; }
 }
 
 /* The original twelve-column FAQ grid spent more than the viewport on gaps at 1024px. */

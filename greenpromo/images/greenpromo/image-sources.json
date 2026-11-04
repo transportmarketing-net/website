@@ -1,6 +1,6 @@
 {
   "project": "GreenPromo local mirror",
-  "updated": "2026-11-02",
+  "updated": "2026-11-04",
   "stockLicense": "https://www.pexels.com/license/",
   "sources": [
     {
@@ -149,6 +149,48 @@
       "seed": null,
       "usedFor": ["reporting-kit-v2.webp", "landscape-report-v2.webp", "square-report-v2.webp"],
       "disclosure": "Illustrative campaign report mockup; not a literal client report."
+    },
+    {
+      "file": "source/hero-brochure-table-rodrigo-rodrigues.jpg",
+      "creator": "Rodrigo Rodrigues | WOLF Λ R T",
+      "source": "https://unsplash.com/photos/brochure-reforma-tributaria-2020-on-a-dark-table-JhyFdSsZBPY",
+      "provider": "Unsplash",
+      "assetId": "JhyFdSsZBPY",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "downloaded": "2026-11-04",
+      "usedFor": [
+        "hero-brochure-table.webp"
+      ],
+      "disclosure": "Stock photograph of printed material, selected by the user; not a photograph of a completed GreenPromo campaign."
+    },
+    {
+      "file": "source/hero-brochure-hand-david-emrich.jpg",
+      "creator": "David Emrich",
+      "source": "https://unsplash.com/photos/person-holding-book-uH03NpIt-JQ",
+      "provider": "Unsplash",
+      "assetId": "uH03NpIt-JQ",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "downloaded": "2026-11-04",
+      "usedFor": [
+        "hero-brochure-hand.webp"
+      ],
+      "disclosure": "Stock photograph of printed material, selected by the user; not a photograph of a completed GreenPromo campaign."
+    },
+    {
+      "file": "source/hero-flyer-distribution-ron-lach.jpg",
+      "creator": "Ron Lach",
+      "source": "https://www.pexels.com/photo/volunteer-search-party-10349612/",
+      "provider": "Pexels",
+      "assetId": 10349612,
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "downloaded": "2026-11-04",
+      "usedFor": [
+        "hero-flyer-distribution.webp"
+      ],
+      "disclosure": "Stock photograph selected by the user; not a photograph of a completed GreenPromo campaign."
     }
   ]
 }

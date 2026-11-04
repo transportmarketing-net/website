@@ -1,7 +1,22 @@
-/* Wordmark-only sizing. Preserve the existing lettering height and header UI. */
-.gp-home .gp-header-brand { width: calc(9.5rem * 697 / 894); }
+/* Fit the current wordmark to its header pill; preserve the footer sizing. */
+.gp-home .navbar > .container > div > div.gp-brand-pill {
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: .5rem .75rem;
+}
+.gp-home .navbar .gp-header-brand {
+  justify-content: center;
+  width: calc(3rem * 697 / 247);
+  height: 3rem;
+}
 .gp-home .gp-footer-brand { width: min(calc(20rem * 697 / 894), 100%); }
 .gp-home .gp-brand-art { aspect-ratio: 697 / 247; }
-@media (max-width: 768px) {
-  .gp-home .navbar .gp-header-brand { width: calc(8rem * 697 / 894); }
+@media (max-width: 47.999rem) {
+  .gp-home .navbar > .container > div > div.gp-brand-pill { padding-inline: .5rem; }
+  .gp-home .navbar .gp-header-brand {
+    width: calc(2.75rem * 697 / 247);
+    height: 2.75rem;
+  }
 }
