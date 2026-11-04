@@ -46,7 +46,7 @@
     "wp-content/themes/s1_2021/dist/img/ramp-path.svg",
     "wp-content/themes/s1_2021/dist/img/research-banner.jpg",
     "wp-content/themes/s1_2021/dist/img/who-we-are-banner-v2.jpg",
-    "wp-content/themes/s1_2021/dist/js/carousel.min.js?ver=1.12"
+    "wp-content/themes/s1_2021/dist/js/carousel.min.js"
   ],
   "sha256": {
     "brand-assets/arrow-right.svg": "b985f576aa525c0defd970dce9254a3f1b3ae43a91028ca1bbd035bee112bcf0",
@@ -63,13 +63,13 @@
     "brand-assets/scroll-to-top-button.svg": "dd2cedfee1f724f3848b8c95fe4dbb7d8388a236cd61c3fc2ea015d960c1a6b4",
     "brand-assets/software-workspace.webp": "491412505205025a11798221a5b9f10a6b205a83ba1dfeeba03eba0bc156f40c",
     "brand-assets/theme.css": "504fb279f4ae1e93db7a83b3bd2fad91c9c27751a97b934fa762789a63435204",
-    "contact.html": "f556671fd9889b2d85d0fbe7987679ea5cdc97889d8095d987bfff4463ac0a5a",
+    "contact.html": "d92c466968111bf34f769d5b7aebbaa80bb7516658897a43d8f596afc8c35e37",
     "image-sources.json": "697857d322e135251a06cc8d7cf53736da55f5fd6d2c254d8efd93b98d3c4204",
-    "index.html": "7fce846dd8ab1ab7ccd88e3277326946ff2008168a6b524687087bc519ab6af3",
-    "terms/copyright.html": "8985e8255b9b2f5006ca364c29b45c4b5c1ca40a09131a9670c62f1809efde49",
-    "terms/privacy-policy.html": "49f7291c0fc1b5a3ec41aa08c017e8dd62e71daf879b8812d1d3c17b322bb1db",
-    "terms/privacy-policy/privacy-inquiries.html": "1791e134b1430d7be111cbda421b7ba20cb5ccb44f0e1a01516f2c6204045e5d",
-    "terms/terms-of-use.html": "ecdb039bdbce5fd9ee380999e1ade4d0438f97978ab797595422209a3f16c647",
+    "index.html": "6c4b6b0211b9ebcccbb331fc0cd7700efaf8d42dd452ec1d9408a9a75f770fea",
+    "terms/copyright.html": "6420b99ab78ed1367c82073a6d8577d4e5120860f37e89409632f8d57def367d",
+    "terms/privacy-policy.html": "baeaf657efb571fa874f5707bb79d9cd5c3a6a3752b90c1e1da4e219e752a0bc",
+    "terms/privacy-policy/privacy-inquiries.html": "d4d75297978cc844390505c9ec270df5550a754e71ed633869f8cc4d72f9e5df",
+    "terms/terms-of-use.html": "24f7269913c1609355978d0b8458d8bfd884ade16265be46ef5360012facfe80",
     "wp-content/themes/s1_2021/dist/img/abstract-line.svg": "69f30439095b8f336e45023de39a68134d5fe11ccd569eef72c0a8d7f5be1889",
     "wp-content/themes/s1_2021/dist/img/arrow-right.svg": "b985f576aa525c0defd970dce9254a3f1b3ae43a91028ca1bbd035bee112bcf0",
     "wp-content/themes/s1_2021/dist/img/blog-banner.jpg": "f55771109e31d5ed3447beecb37e894cd2733001d43c008c8dada49529e82bbd",
@@ -87,6 +87,6 @@
     "wp-content/themes/s1_2021/dist/img/ramp-path.svg": "e7bb63202dd5558ea6e255697c68a23f85aa0ffecd090ff92cf053ece6472f73",
     "wp-content/themes/s1_2021/dist/img/research-banner.jpg": "6a70b7699c7d4deca302f6ad6cf81757a63d5b2c9a36fcadcaad4c281d482275",
     "wp-content/themes/s1_2021/dist/img/who-we-are-banner-v2.jpg": "16df505934030ea384d048c55f4879eec41a5a03888906ee30e60faff5260504",
-    "wp-content/themes/s1_2021/dist/js/carousel.min.js?ver=1.12": "ef7461c0051b325805c887adc6357a464dae3efad3720214b91799a501afb62c"
+    "wp-content/themes/s1_2021/dist/js/carousel.min.js": "ef7461c0051b325805c887adc6357a464dae3efad3720214b91799a501afb62c"
   }
 }
