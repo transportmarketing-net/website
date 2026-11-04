@@ -2,17 +2,49 @@
 
 Generated on 2026-11-03 from source: `watermarked_img_7026846379294150435.jpg`
 
+## Website Logo Update — 2026-11-04
+
+The website wordmarks now use **promo**, lowercase and right-aligned beneath
+“green”, in the IV pink (`#E3327B`). Its visible lettering is 60px tall in the
+894×247 source canvas, approximately 15% taller than the former tagline.
+
+- `images/ivgreen/logo-promo.svg` is the self-contained, editable source. It keeps
+  the original complete wordmark silhouette and a separate `promo-label` vector
+  layer outlined from Liberation Sans Bold Italic. No font download is needed
+  to view or export this file.
+- `master-transparent.png`, light/dark, monochrome, and white/black-background
+  website PNGs are exported at 894×247 with transparent padding preserved.
+- The four black/white compatibility aliases under `images/` and
+  `images/greenpromo/` are exported at 922×254.
+- The homepage displays the light-background PNG directly. Do not apply a
+  silhouette mask or recoloring gradient, as that would change the pink label.
+
+Regenerate **only the website logo files** with:
+
+```bash
+python3 scripts/generate_ivgreen_logos.py --website-logos-only
+```
+
+This mode requires the system librsvg/Cairo Python bindings. The committed SVG
+contains the artwork and outlined label; regeneration does not need the original
+Downloads JPEG or the lettering font. FontTools and Liberation Sans Bold Italic
+are used only when initially creating a missing SVG from the original master.
+
+Website-only export leaves favicons, standalone IV marks, social graphics,
+sharing images, and wallpapers unchanged. The full legacy-pack command below
+also refreshes the website logos from the SVG after its other exports.
+
 ## Brand Colors
 
 - Dark green: `#1A4632` (RGB 26, 70, 50)
 - Hot pink: `#E3327B` (RGB 227, 50, 123)
 - Cream: `#F0F2E7` (RGB 240, 242, 231)
 
-## Generated Files (28 total)
+## Generated Files
 
 ### Master Files (`images/ivgreen/`)
 
-- `master-transparent.png` - Full logo with tagline, transparent background
+- `master-transparent.png` - Full website logo with pink promo label, transparent background
 - `master-transparent-notag.png` - Logo only (no tagline), transparent background
 - `iv-mark.png` - Just "IV" letters, square-padded for icons
 
@@ -112,7 +144,7 @@ images/apple-touch-icon.png        (180x180)
   "name": "IVgreen",
   "logo": "https://transportmarketing.net/greenpromo/images/ivgreen/logo-dark-bg.png",
   "image": "https://transportmarketing.net/greenpromo/images/ivgreen/og-image.webp",
-  "slogan": "new era, new target"
+  "slogan": "promo"
 }
 </script>
 ```
@@ -125,4 +157,14 @@ To regenerate all variants:
 python3 scripts/generate_ivgreen_logos.py
 ```
 
-All 28 files will be created in `images/ivgreen/` and legacy paths automatically updated.
+The raster variants in `images/ivgreen/` and compatibility copies are refreshed.
+The editable website SVG source is retained.
+
+## Website prefix removal — 2026-11-04
+
+Website wordmarks show **green promo**. The IV vector layer is removed from
+the editable SVG; its viewBox is `197 0 697 247`. Website variants export at
+697×247, and compatibility aliases at 922×326. The logo-only CSS preserves
+visible lettering height while trimming the removed prefix's empty space.
+Regenerate with `--website-logos-only`. The editable SVG is required; the
+website exporter never reconstructs the removed prefix from the old JPEG.

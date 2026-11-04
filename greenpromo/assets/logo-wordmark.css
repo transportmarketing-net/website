@@ -1,0 +1,7 @@
+/* Wordmark-only sizing. Preserve the existing lettering height and header UI. */
+.gp-home .gp-header-brand { width: calc(9.5rem * 697 / 894); }
+.gp-home .gp-footer-brand { width: min(calc(20rem * 697 / 894), 100%); }
+.gp-home .gp-brand-art { aspect-ratio: 697 / 247; }
+@media (max-width: 768px) {
+  .gp-home .navbar .gp-header-brand { width: calc(8rem * 697 / 894); }
+}

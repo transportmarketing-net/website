@@ -2587,3 +2587,15 @@ a.contact-card:hover {
     transform: none;
   }
 }
+
+/* Image and text fit corrections, preserving the existing inner-page layouts. */
+.service-detail-image img {
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.page-hero-copy, .page-hero-copy h1, .page-lead { min-width: 0; max-width: 100%; }
+.page-hero-copy h1 { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .page-hero-copy h1 { font-size: clamp(2.25rem, 10vw, 3.25rem); line-height: 1.08; }
+}

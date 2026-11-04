@@ -95,8 +95,8 @@ export const SERVICES = [
       "Ενιαίο χρονοδιάγραμμα παραγωγής και διανομής",
       "Προσφορά ανά ποσότητα και προδιαγραφές",
     ],
-    image: "images/generated/greenpromo-reporting.webp",
-    alt: "Έντυπα, αναφορά και υλικό σχεδιασμού καμπάνιας GreenPromo",
+    image: "images/greenpromo/landscape-print-v2.webp",
+    alt: "Δείγματα χαρτιού και εκτυπωτικός εξοπλισμός σε τυπογραφείο",
   },
 ];
 

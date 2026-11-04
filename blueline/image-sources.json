@@ -1,0 +1,25 @@
+{
+  "images": [
+    {
+      "id": "software-workspace",
+      "provider": "Unsplash",
+      "asset_url": "https://unsplash.com/photos/laptop-displaying-code-on-a-desk-dTmj5aXbKp4",
+      "creator": "Dawit (@oneminch)",
+      "creator_url": "https://unsplash.com/@oneminch",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "verified_date": "2026-11-04",
+      "download_date": "2026-11-04",
+      "download_url": "https://images.unsplash.com/photo-1756946565798-382eb6bfeda2?auto=format&fit=crop&w=1600&h=900&q=85&fm=webp",
+      "derivatives": [
+        {
+          "path": "brand-assets/software-workspace.webp",
+          "width": 1600,
+          "height": 900,
+          "bytes": 211038
+        }
+      ],
+      "usage": "Illustrative software-development workspace in the homepage contact CTA; does not depict a claimed BlueLine office, employee or completed client project."
+    }
+  ]
+}

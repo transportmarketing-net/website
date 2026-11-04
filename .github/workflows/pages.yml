@@ -1,0 +1,30 @@
+name: Publish static websites
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: false
+      - name: Package public sites
+        run: python3 scripts/build-pages.py --output "${{ runner.temp }}/public-sites"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/public-sites
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

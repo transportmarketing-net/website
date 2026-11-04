@@ -4,8 +4,11 @@ IVgreen Logo Variants Generator
 Generates all logo formats, favicons, social media assets from source JPEG.
 """
 
+import argparse
+import base64
 import os
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 import numpy as np
@@ -21,6 +24,78 @@ BLACK = (0, 0, 0)
 PROJECT_ROOT = Path(__file__).parent.parent
 SOURCE_PATH = Path.home() / "Downloads" / "watermarked_img_7026846379294150435.jpg"
 OUTPUT_DIR = PROJECT_ROOT / "images" / "ivgreen"
+WEBSITE_SVG_PATH = OUTPUT_DIR / "logo-promo.svg"
+
+
+def _outline_text(font_path, text):
+    """Outline text from a TTF font, return (svg_path_commands, bounds)."""
+    from fontTools.ttLib import TTFont
+    from fontTools.pens.svgPathPen import SVGPathPen
+    from fontTools.pens.boundsPen import BoundsPen
+    from fontTools.pens.transformPen import TransformPen
+
+    with TTFont(font_path) as font:
+        glyphs = font.getGlyphSet()
+        cmap = font.getBestCmap()
+        advances = font["hmtx"].metrics
+        outline = SVGPathPen(glyphs)
+        bounds = BoundsPen(glyphs)
+        offset = 0
+        for char in text:
+            name = cmap[ord(char)]
+            transform = (1, 0, 0, -1, offset, 0)
+            glyphs[name].draw(TransformPen(outline, transform))
+            glyphs[name].draw(TransformPen(bounds, transform))
+            offset += advances[name][0]
+    return outline.getCommands(), bounds.bounds
+
+
+def create_website_logo_source():
+    """The editable SVG is the source; do not rebuild an obsolete prefix."""
+    raise FileNotFoundError("Restore images/ivgreen/logo-promo.svg before exporting website logos.")
+
+
+def generate_website_logos():
+    """Export only website wordmarks; never touch favicons or campaign artwork."""
+    import gi
+    import cairo
+
+    gi.require_version("Rsvg", "2.0")
+    from gi.repository import Rsvg
+
+    if not WEBSITE_SVG_PATH.exists():
+        create_website_logo_source()
+    ET.register_namespace("", "http://www.w3.org/2000/svg")
+    svg_source = WEBSITE_SVG_PATH.read_text(encoding="utf-8")
+
+    def export(filename, word_color="#1A4632", mono=None, background=None):
+        root = ET.fromstring(svg_source)
+        for node in root.iter():
+            if node.get("id") in {"green-ink", "promo-ink"}:
+                color = mono or (word_color if node.get("id") == "green-ink" else "#E3327B")
+                node.set("fill", color)
+        surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 697, 247)
+        context = cairo.Context(surface)
+        if background:
+            context.set_source_rgb(*(value / 255 for value in background))
+            context.paint()
+        viewport = Rsvg.Rectangle()
+        viewport.x = viewport.y = 0
+        viewport.width, viewport.height = 697, 247
+        handle = Rsvg.Handle.new_from_data(ET.tostring(root, encoding="utf-8"))
+        handle.render_document(context, viewport)
+        surface.write_to_png(str(OUTPUT_DIR / filename))
+
+    export("master-transparent.png")
+    export("logo-light-bg.png")
+    export("logo-dark-bg.png", word_color="#F0F2E7")
+    export("logo-all-white.png", mono="#FFFFFF")
+    export("logo-all-dark.png", mono="#1A4632")
+    export("logo-on-white.png", background=WHITE)
+    export("logo-on-black.png", word_color="#F0F2E7", background=BLACK)
+    outputs = {name: None for name in ["logo-light-bg.png", "logo-dark-bg.png"]}
+    copy_to_legacy_paths(outputs, website_only=True)
+    print("Website logos exported: green wordmark with pink promo, no IV prefix.")
 
 def euclidean_distance(c1, c2):
     """Calculate Euclidean distance between two RGB colors."""
@@ -352,7 +427,7 @@ def save_all(outputs):
             img.save(path, "PNG", optimize=True)
         print(f"  ✓ {filename}")
 
-def copy_to_legacy_paths(outputs):
+def copy_to_legacy_paths(outputs, website_only=False):
     """Copy files to legacy paths for backwards compatibility."""
     print("\nCopying to legacy paths...")
 
@@ -371,6 +446,8 @@ def copy_to_legacy_paths(outputs):
     ]
 
     for source_name, dest_rel, width in legacy_mappings:
+        if website_only and source_name not in {"logo-light-bg.png", "logo-dark-bg.png"}:
+            continue
         source_path = OUTPUT_DIR / source_name
         dest_path = PROJECT_ROOT / dest_rel
 
@@ -399,6 +476,14 @@ def copy_to_legacy_paths(outputs):
         print(f"  ✓ {dest_rel}")
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--website-logos-only", action="store_true",
+                        help="Export the promo website logos and aliases without changing other brand assets.")
+    args = parser.parse_args()
+    if args.website_logos_only:
+        generate_website_logos()
+        return
+
     print("=" * 60)
     print("IVgreen Logo Variants Generator")
     print("=" * 60)
@@ -461,6 +546,9 @@ def main():
 
     # Copy to legacy paths
     copy_to_legacy_paths(outputs)
+
+    # Keep website exports on the promo source even after a full legacy-pack run.
+    generate_website_logos()
 
     print("\n" + "=" * 60)
     print("✓ Generation complete!")
