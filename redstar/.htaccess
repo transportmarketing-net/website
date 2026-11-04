@@ -1,8 +1,9 @@
 RewriteEngine On
 
-# Removed service hub and retired specialist pages.
-RewriteRule ^services/?$ /redstar/#solutions [R=301,L,NE]
-RewriteRule ^services/(?:branding-design|seo|wordpress)/?$ /redstar/services/website-development/ [R=301,L]
+# Legacy service slugs redirect to new categories.
+RewriteRule ^services/branding-design/?$ /redstar/services/branding/ [R=301,L]
+RewriteRule ^services/seo/?$ /redstar/services/digital-marketing/ [R=301,L]
+RewriteRule ^services/wordpress/?$ /redstar/services/website-development/ [R=301,L]
 RewriteRule ^services/(?:laravel-development|saas-development)/?$ /redstar/services/custom-web-apps/ [R=301,L]
 RewriteRule ^privacy-policy/?$ /redstar/privacy/ [R=301,L]
 RewriteRule ^cookie-policy/?$ /redstar/cookies/ [R=301,L]

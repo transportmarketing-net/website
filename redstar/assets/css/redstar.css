@@ -429,7 +429,8 @@ li {
   inset-block-start: calc(100% + var(--space-3));
   inset-inline-start: 50%;
   display: grid;
-  inline-size: min(26rem, calc(100vw - 2rem));
+  grid-template-columns: 1fr 1fr;
+  inline-size: min(44rem, calc(100vw - 2rem));
   padding: var(--space-2);
   border: 0.0625rem solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-md);
@@ -1459,6 +1460,90 @@ li {
   color: var(--color-muted);
 }
 
+/* Sub-service cards */
+.sub-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--space-4);
+}
+
+.sub-service-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  border: 0.0625rem solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  transition: border-color var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
+}
+
+.sub-service-card:hover {
+  border-color: var(--color-line-strong);
+  transform: translateY(-0.125rem);
+}
+
+.sub-service-card strong {
+  display: block;
+  margin-block-end: var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.sub-service-card p {
+  margin-block-end: var(--space-4);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.sub-service-card__price {
+  margin-block-start: auto;
+  padding-block-start: var(--space-3);
+  border-block-start: 0.0625rem solid var(--color-line);
+  color: var(--color-brand);
+  font-size: var(--text-sm);
+  font-weight: 750;
+}
+
+/* Services hub grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--space-5);
+}
+
+.services-grid .solution-card {
+  min-block-size: 16rem;
+  padding: var(--space-8);
+}
+
+.services-grid .solution-card h3 {
+  font-size: var(--text-2xl);
+}
+
+/* Tech band */
+.tech-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding-block: var(--space-6);
+}
+
+.tech-band span {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: opacity var(--duration-fast) var(--ease-out), filter var(--duration-fast) var(--ease-out);
+}
+
+.tech-band span:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
 /* Portfolio and blog */
 .filter-bar {
   display: flex;
@@ -2214,7 +2299,8 @@ li {
   .solutions-layout,
   .pricing-grid,
   .deliverables,
-  .value-index {
+  .value-index,
+  .sub-services-grid {
     grid-template-columns: 1fr;
   }
 
