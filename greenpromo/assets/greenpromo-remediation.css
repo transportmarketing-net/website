@@ -57,7 +57,7 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) { display:
   min-height: 0;
   justify-content: flex-start;
   padding-top: clamp(8.5rem, 10vw, 10rem);
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   background-color: var(--gp-ink);
 }
 .gp-hero::before {
@@ -222,7 +222,7 @@ img[src*="images/greenpromo/"]:not([src$=".svg"]):not([src*="logo-"]) { display:
   .gp-home .navbar .gp-header-brand { width: 8rem; }
   .gp-home .navbar > .container > div > div:last-child { padding: .25rem; gap: .25rem; box-shadow: none; }
   .gp-home .navbar a[aria-label], .gp-home .navbar button[aria-controls="mobile-menu"] { border-radius: .75rem; }
-  .gp-hero { padding-top: 8rem; padding-bottom: 3rem; }
+  .gp-hero { padding-top: 8rem; padding-bottom: 5rem; }
   .gp-hero > img { object-position: 63% center; }
   .gp-hero::before { background: linear-gradient(180deg, rgb(9 18 14 / 65%), rgb(9 18 14 / 72%)); }
   .gp-hero h1 { font-size: clamp(2.5rem, 8vw, 3.5rem); max-width: 14ch; }
@@ -491,17 +491,36 @@ body:not(:has(.gp-hero)) img[src*="landscape-"] {
 
 #metrics { padding-top: clamp(4rem, 7vw, 6rem) !important; padding-bottom: clamp(4rem, 7vw, 6rem) !important; }
 
-/* Pricing carousel: ensure card text isn't hard-truncated */
-#metrics .animate-marquee > div {
+/* Pricing cards support mouse dragging, touch, trackpad, and keyboard scrolling. */
+.gp-pricing-rail {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gp-line) transparent;
+  cursor: grab;
+}
+.gp-pricing-rail.is-dragging { cursor: grabbing; user-select: none; }
+.gp-pricing-rail img { -webkit-user-drag: none; user-select: none; }
+.gp-pricing-rail:focus-visible { outline: 3px solid #c03b76; outline-offset: -3px; }
+.gp-pricing-track { width: max-content; padding-inline: 1rem; }
+#metrics .gp-pricing-track > div {
+  flex: 0 0 auto;
   min-height: 0;
 }
 
-#metrics .animate-marquee > div > .relative.z-10:last-child p {
+#metrics .gp-pricing-track > div > .relative.z-10:last-child p {
   white-space: normal;
   overflow: visible;
   text-overflow: unset;
   line-height: 1.4;
 }
+
+.gp-coverage-note { max-width: 42rem; margin: 1rem auto 2rem; color: var(--gp-muted); font-size: 1rem; line-height: 1.6; text-align: center; }
+.gp-coverage-media { height: clamp(18rem, 40vw, 34.5rem); flex-shrink: 0; }
+.gp-service-facts { position: relative; width: min(100%, 55rem); margin-top: 2rem; background: var(--gp-surface); }
+.gp-service-facts h3 { color: var(--gp-ink); font-size: clamp(1.125rem, 2vw, 1.625rem); font-weight: 600; line-height: 1.25; text-wrap: balance; }
+.gp-service-facts p { margin-top: .625rem; color: var(--gp-muted); font-size: clamp(.875rem, 1.4vw, 1rem); line-height: 1.5; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -534,8 +553,6 @@ body:not(:has(.gp-hero)) img[src*="landscape-"] {
 }
 .gp-home .gp-coverage-slider .pointer-events-none[class*="blur-"] { display: none; }
 .gp-home .gp-coverage-slider .swiper-slide > div > .absolute { position: absolute; }
-.gp-home #metrics:hover .animate-marquee,
-.gp-home #metrics:focus-within .animate-marquee { animation-play-state: paused; }
 .gp-home .gp-documentation-visual { background-image: none; background-color: var(--gp-card); }
 .gp-home .gp-documentation-visual > div:nth-child(2) > div:nth-child(n+2) { display: none; }
 .gp-home .gp-documentation-visual .animate-float { animation: none; }
