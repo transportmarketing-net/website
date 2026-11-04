@@ -396,7 +396,7 @@ li {
   border-radius: var(--radius-sm);
   background: transparent;
   color: var(--color-on-dark-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
@@ -620,7 +620,7 @@ li {
 
 .hero {
   min-block-size: 52rem;
-  padding-block: 9.5rem 7rem;
+  padding-block: 9.5rem 11rem;
 }
 
 .hero__media,
@@ -791,7 +791,7 @@ li {
 
 .page-hero {
   min-block-size: 43rem;
-  padding-block: 10rem 7rem;
+  padding-block: 10rem 11rem;
 }
 
 .page-hero__grid {
@@ -837,7 +837,7 @@ li {
 
 .article-hero {
   min-block-size: 40rem;
-  padding-block: 10rem 8rem;
+  padding-block: 10rem 12rem;
 }
 
 .article-hero h1 {
@@ -2234,7 +2234,7 @@ li {
   }
 
   .hero {
-    padding-block: 7rem var(--space-16);
+    padding-block: 7rem 6rem;
   }
 
   .hero h1 {
@@ -2376,7 +2376,7 @@ li {
 
   .page-hero {
     min-block-size: auto;
-    padding-block: 8rem var(--space-16);
+    padding-block: 8rem 6rem;
   }
 
   .page-hero h1 {
@@ -2393,7 +2393,7 @@ li {
 
   .article-hero {
     min-block-size: auto;
-    padding-block: 8rem var(--space-16);
+    padding-block: 8rem 6rem;
   }
 
   .article-hero h1 {
@@ -2528,7 +2528,7 @@ li {
   .page-hero,
   .article-hero {
     min-block-size: auto;
-    padding-block: 7rem var(--space-16);
+    padding-block: 7rem 6rem;
   }
 
   .hero__grid,
