@@ -9,16 +9,23 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { bankTransferSection, paymentMethods } from './payment-details.mjs';
 import { enquiryBanner, quoteRequestForm, refreshHomepageBanners } from './banners.mjs';
+import { orderedProjects, displayCategory, projectCard, projectImage, refreshHomepagePortfolio, mergePortfolioSitemap } from './portfolio.mjs';
 
 const root = process.cwd();
+const portfolioOnly = process.argv.includes('--portfolio-only');
 // Refresh only the payment-brand slot in the manually maintained homepage.
 const homepagePath = path.join(root, 'index.html');
-if (fs.existsSync(homepagePath)) {
+if (!portfolioOnly && fs.existsSync(homepagePath)) {
   const homepage = fs.readFileSync(homepagePath, 'utf8');
   const updated = refreshHomepageBanners(homepage.replace(/<section class="rs-payments" id="payment-methods"[\s\S]*?<\/section>/, paymentMethods()));
   if (updated !== homepage) fs.writeFileSync(homepagePath, updated);
 }
-const projects = JSON.parse(fs.readFileSync(path.join(root, 'sitepad-data/portfolio-projects.json'), 'utf8'));
+const projects = orderedProjects(JSON.parse(fs.readFileSync(path.join(root, 'sitepad-data/portfolio-projects.json'), 'utf8')));
+if (fs.existsSync(homepagePath)) {
+  const homepage = fs.readFileSync(homepagePath, 'utf8');
+  const updated = refreshHomepagePortfolio(homepage, projects);
+  if (updated !== homepage) fs.writeFileSync(homepagePath, updated);
+}
 const canonicalRoot = 'https://transportmarketing.net/redstar';
 const bookingUrl = 'https://calendar.app.google/BivggDamyF6eLgFb6';
 const nebula = 'sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg';
@@ -30,9 +37,10 @@ const externalSvg = '<svg viewBox="0 0 24 24" aria-hidden="true" width="16" heig
 
 /* ── Helpers ── */
 function write(relativePath, content) {
+  if (portfolioOnly && !relativePath.startsWith('portfolio/')) return;
   const output = path.join(root, relativePath);
   fs.mkdirSync(path.dirname(output), { recursive: true });
-  const normalized = content.replaceAll('\u2014', '-').replaceAll('\u2013', '-');
+  const normalized = content.replaceAll('\u2014', '-').replaceAll('\u2013', '-').replace(/[ \t]+$/gm, '');
   fs.writeFileSync(output, normalized.trimStart());
 }
 
@@ -80,6 +88,7 @@ function head({ title, description, route = '/', prefix = '', robots = 'index, f
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
   <link rel="stylesheet" href="${prefix}assets/css/redstar.css">
   <script src="${prefix}assets/js/redstar.js" defer></script>
+  ${route.startsWith('/portfolio/') ? `<link rel="stylesheet" href="${prefix}assets/css/portfolio.css">` : ''}
   ${route === '/contact/' ? `<script src="${prefix}assets/js/quote-request.js" defer></script>` : ''}
 </head>`;
 }
@@ -399,38 +408,17 @@ for (const s of services) {
    BUILD: Portfolio index
    ═══════════════════════════════════════════ */
 
-function categoryFor(project) {
-  const v = `${project.category} ${project.title}`.toLowerCase();
-  if (v.includes('shop') || v.includes('retail')) return 'commerce';
-  if (v.includes('platform') || v.includes('saas')) return 'platforms';
-  return 'websites';
-}
-function displayCategory(project) {
-  const c = categoryFor(project);
-  if (c === 'commerce') return 'E-shop';
-  if (c === 'platforms') return 'Εφαρμογη';
-  return 'Ιστοσελιδα';
-}
-
-const portfolioCards = projects.map(p => `
-        <a class="case-card" href="${p.slug}/index.html" data-category="${categoryFor(p)}">
-          <div class="case-card__img"><img src="../${p.image}" alt="${esc(p.imageAlt || p.title)}" loading="lazy" width="720" height="450"></div>
-          <div class="case-card__body">
-            <span class="case-card__meta">${displayCategory(p)}</span>
-            <h2 class="case-card__title">${esc(p.title)}</h2>
-            <p class="case-card__excerpt">${esc(p.outcomes?.[0] || p.excerpt)}</p>
-          </div>
-        </a>`).join('');
+const portfolioCards = projects.map((project, index) => projectCard(project, index)).join('\n');
 
 const portfolioBody = `
     ${rsHero({ eyebrow: 'RedStar Portfolio', title: 'Εργα που δουλευουν.', lead: 'Πραγματικες λυσεις για πραγματικες επιχειρησεις.', prefix: '../' }).trimStart()}
     <section class="rs-section">
       <div class="rs-shell">
         <div class="portfolio-filters" aria-label="Φιλτρα εργων">
-          <button class="is-active" type="button" data-filter="all">Ολα</button>
-          <button type="button" data-filter="websites">Ιστοσελιδες</button>
-          <button type="button" data-filter="commerce">E-shop</button>
-          <button type="button" data-filter="platforms">Εφαρμογες</button>
+          <button class="is-active" type="button" aria-pressed="true" data-filter="all">Ολα</button>
+          <button type="button" aria-pressed="false" data-filter="websites">Ιστοσελιδες</button>
+          <button type="button" aria-pressed="false" data-filter="commerce">E-shop</button>
+          <button type="button" aria-pressed="false" data-filter="platforms">Εφαρμογες</button>
         </div>
         <div class="portfolio-grid">${portfolioCards}
         </div>
@@ -456,12 +444,12 @@ for (const p of projects) {
     ${rsHero({ eyebrow: displayCategory(p), title: esc(p.title), lead: esc(p.outcomes?.[0] || p.excerpt), prefix, short: true }).trimStart()}
     <section class="rs-section">
       <div class="rs-shell">
-        <div class="case-hero-img"><img src="${prefix}${p.image}" alt="${esc(p.imageAlt || p.title)}" width="1440" height="900"></div>
+        <div class="case-hero-img">${projectImage(p, prefix, true)}</div>
         <div class="case-meta">
           <div class="case-sidebar">
             <dl>
               <dt>Κατηγορια</dt><dd>${esc(p.category)}</dd>
-              ${p.liveUrl ? `<dt>Live</dt><dd><a href="${esc(p.liveUrl)}" target="_blank" rel="noopener">${esc(p.title)} ${externalSvg}</a></dd>` : ''}
+              ${p.liveUrl ? `<dt>Ιστοσελίδα</dt><dd><a class="portfolio-detail__live" href="${esc(p.liveUrl)}" target="_blank" rel="noopener noreferrer">Προβολή ιστοσελίδας ${externalSvg}</a></dd>` : ''}
               ${p.stack ? `<dt>Stack</dt><dd>${p.stack.join(', ')}</dd>` : ''}
             </dl>
           </div>
@@ -482,6 +470,13 @@ for (const p of projects) {
   }));
 }
 console.log(`  portfolio/ (${projects.length} case studies)`);
+
+if (portfolioOnly) {
+  const sitemap = path.join(root, 'sitemap.xml');
+  fs.writeFileSync(sitemap, mergePortfolioSitemap(fs.readFileSync(sitemap, 'utf8'), projects, canonicalRoot));
+  console.log('  Homepage portfolio and sitemap refreshed; other pages preserved.');
+  process.exit(0);
+}
 
 
 /* ═══════════════════════════════════════════
@@ -710,9 +705,11 @@ const sitemapRoutes = [
   '/en/cookies/'
 ];
 
+const existingSitemap = fs.existsSync(path.join(root, 'sitemap.xml')) ? fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8') : '';
+const retainedRoutes = [...existingSitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]).filter(url => url.startsWith(canonicalRoot)).map(url => url.slice(canonicalRoot.length));
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapRoutes.map(r => `  <url><loc>${canonicalRoot}${r}</loc></url>`).join('\n')}
+${[...new Set([...sitemapRoutes, ...retainedRoutes])].map(r => `  <url><loc>${canonicalRoot}${r}</loc></url>`).join('\n')}
 </urlset>
 `);
 console.log('  sitemap.xml');

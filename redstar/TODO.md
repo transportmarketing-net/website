@@ -49,3 +49,14 @@ Updated 13 November 2026. Read `CONTEXT.md` for recovered history and local chec
 - [x] Run current local regression and merged-page/link verification.
 - Future pushes require an online local runner labelled `redstar-local`.
 - Generic kit fixture/theme issues and existing legal review notices remain as above.
+
+
+## Featured portfolio, 14 November 2026
+
+- [x] Add ten projects and refresh SASS/ST.RIVE, twelve featured and 25 total.
+- [x] Capture all twelve public sites, matching the supplied Universe/Fortistis views.
+- [x] Add responsive WebP images, provenance, detail pages and direct live links.
+- [x] Share homepage/listing generation and retain upstream sitemap routes.
+- [x] Verify 70 layouts, images, keyboard/live links, filters, contrast and consent locally.
+- [x] Preserve the six legal pages and homepage outside the portfolio section.
+- Publish through the established local runner and verify the exact live artifact.

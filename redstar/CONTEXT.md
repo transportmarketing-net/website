@@ -277,3 +277,51 @@ old names were excluded by the Pages extension allowlist; the first publish was
 cancelled before deployment and replaced with the corrected artifact. Final
 browser layout smoke passed 32 desktop/mobile combinations. The article table
 fix is retained by the generator.
+
+
+## Featured project expansion, 14 November 2026
+
+Implemented the approved twelve-project feature plan in this release checkout;
+the original dirty worktree remains intact. Added ten records, updated the existing
+SASS/ST.RIVE records, and retained all other projects: 25 total. The homepage and
+portfolio share the order HotelSystem, GreenPromo, BlueLine, Dr. Matzoukas,
+Universe, SASS, ST.RIVE, Cycle Box, Pilates Box, VlachosTax, Management Services
+Buildings, Fortistis, followed by the thirteen other projects. HotelSystem links
+to the requested hotelssystem.net domain, including its double s.
+
+Captured twelve live public sites with local Playwright/Chrome, without account
+sessions or form submissions. Universe matches the supplied campus-community
+section; Fortistis uses the public ?theme=light option and product grid. The
+other ten captures show their homepages; the SASS welcome page is public. ST.RIVE's
+optional analytics banner was dismissed using its native continue-without-analytics
+control. Original 1440x900 PNGs live in ~/.cache/redstar-portfolio-captures; 24 WebP
+variants at 720/1440px total roughly 1 MB. Provenance, viewport, timestamp and
+SHA-256 values are in sitepad-data/portfolio-captures.json.
+
+The shared scripts/portfolio.mjs renderer gives cards separate project-detail and
+live-site links without nested anchors. The new tokenized stylesheet is scoped
+to portfolio cards; the homepage stylesheet link sits inside its existing marked
+portfolio boundary. Filter buttons now expose aria-pressed. All 25 detail pages
+use the canonical portfolio routes; no new blog copies were generated.
+
+The builder's --portfolio-only mode preserves unrelated pages and merges new
+sitemap URLs without dropping upstream routes. The full builder uses the same
+renderer and also retains existing sitemap routes. Tested repeat generation of
+all 25 details plus homepage/index/sitemap: byte-identical. The six legal pages
+and homepage outside the portfolio boundary match their previous committed bytes.
+
+Current local verification: 70 layouts at 280/320/414/768/1440px across the homepage,
+portfolio and twelve featured details; 50 card images loaded; 30 text states
+(default/hover/focus); carousel arrows and traversal; keyboard navigation and
+intercepted live-tab opening; filters with 16 websites, 3 e-shops and 6 applications.
+No JavaScript page errors. Scoped axe scans of the homepage portfolio and listing
+grid found zero violations. Consent passed 13/13. All 108 HTML pages returned 200
+and had no missing local href/src targets. New tokens validated, new CSS passed
+the hardcode check, and generated text passed git diff --check. The copied generic
+accuracy report remains 5/37 on missing kit fixtures and existing issues; this is
+not a whole-site accessibility/quality pass. Real desktop views, all twelve source
+captures and the updated ST.RIVE capture were inspected.
+
+Release continues to use only the existing local ephemeral runner with label
+redstar-local; no hosted runner or billing changes are authorized. No backend or
+database changes belong to this portfolio release.

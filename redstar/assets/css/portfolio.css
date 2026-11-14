@@ -1,0 +1,67 @@
+@import url("./portfolio-tokens.css");
+
+/* Scoped to generated project cards; the surrounding site stays unchanged. */
+#portfolio .redstar-project-card[data-project],
+.case-card[data-project] {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.portfolio-card__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+.portfolio-card__main:hover { color: inherit; }
+.portfolio-card__main:focus-visible,
+.portfolio-card__live:focus-visible,
+.portfolio-detail__live:focus-visible {
+  outline: var(--space-portfolio-outline) solid var(--color-portfolio-focus);
+  outline-offset: calc(-1 * var(--space-portfolio-focus-offset));
+  border-radius: var(--radius-portfolio);
+}
+.portfolio-card__main:active { background: var(--color-portfolio-active); }
+.portfolio-card__main .redstar-project-card__title,
+.portfolio-card__main .case-card__title { margin: 0; overflow-wrap: anywhere; }
+.portfolio-card__main .redstar-project-card__media,
+.portfolio-card__main .case-card__img { flex-shrink: 0; }
+.portfolio-card__main .case-card__img img { object-fit: contain; }
+.portfolio-card__detail,
+.portfolio-card__live,
+.portfolio-detail__live {
+  font-family: var(--font-portfolio);
+  font-size: var(--text-portfolio-action);
+  font-weight: var(--weight-portfolio-strong);
+  line-height: var(--leading-portfolio-action);
+  color: var(--color-portfolio-link);
+}
+.portfolio-card__detail { display: inline-flex; align-items: center; gap: var(--space-portfolio-gap); }
+.portfolio-card__live {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-portfolio-gap);
+  min-height: var(--size-portfolio-target);
+  margin-inline: var(--space-portfolio-card);
+  padding-block: var(--space-portfolio-gap);
+  margin-bottom: var(--space-portfolio-compact);
+  border-top: var(--size-portfolio-border) solid var(--color-portfolio-line);
+  text-decoration: none;
+}
+.portfolio-card__live:hover,
+.portfolio-detail__live:hover { background: var(--color-portfolio-hover); color: var(--color-portfolio-link); text-decoration: underline; }
+.portfolio-card__live:active,
+.portfolio-detail__live:active { background: var(--color-portfolio-active); }
+.portfolio-card__live svg,
+.portfolio-detail__live svg { width: var(--size-portfolio-icon); height: var(--size-portfolio-icon); flex-shrink: 0; }
+.portfolio-detail__live { display: inline-flex; align-items: center; gap: var(--space-portfolio-gap); min-height: var(--size-portfolio-target); }
+.case-card[data-project]:focus-within { border-color: var(--color-portfolio-link); }
+.case-meta > *, .case-sidebar, .case-body { min-width: 0; overflow-wrap: anywhere; }
+
+/* A narrow phone must show a complete card, including both actions. */
+#portfolio .redstar-portfolio__track {
+  grid-auto-columns: clamp(var(--size-portfolio-track-min), 84vw, var(--size-portfolio-track-max));
+}

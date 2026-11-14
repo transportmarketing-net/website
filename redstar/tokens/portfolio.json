@@ -1,0 +1,124 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Portfolio actions and screenshot presentation within the existing RedStar palette.",
+  "semantic": {
+    "portfolio": {
+      "surface": {
+        "$type": "color",
+        "$value": "#fff9f7"
+      },
+      "ink": {
+        "$type": "color",
+        "$value": "#17080a"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#665457"
+      },
+      "line": {
+        "$type": "color",
+        "$value": "#ecd8d2"
+      },
+      "link": {
+        "$type": "color",
+        "$value": "#8f1111"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#fff1ee"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "#f9dfd9"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "#8f1111"
+      }
+    }
+  },
+  "space": {
+    "portfolio": {
+      "card": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "compact": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "outline": {
+        "$type": "dimension",
+        "$value": "3px"
+      },
+      "focus-offset": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "zero": {
+        "$type": "dimension",
+        "$value": "0px"
+      }
+    }
+  },
+  "size": {
+    "portfolio": {
+      "border": {
+        "$type": "dimension",
+        "$value": "1px"
+      },
+      "target": {
+        "$type": "dimension",
+        "$value": "44px"
+      },
+      "icon": {
+        "$type": "dimension",
+        "$value": "18px"
+      },
+      "track-min": {
+        "$type": "dimension",
+        "$value": "240px"
+      },
+      "track-max": {
+        "$type": "dimension",
+        "$value": "480px"
+      }
+    }
+  },
+  "radius": {
+    "portfolio": {
+      "$type": "dimension",
+      "$value": "8px"
+    }
+  },
+  "font": {
+    "family": {
+      "portfolio": {
+        "$type": "fontFamily",
+        "$value": "Inter, Arial, sans-serif"
+      }
+    },
+    "size": {
+      "portfolio-action": {
+        "$type": "dimension",
+        "$value": "0.875rem"
+      }
+    },
+    "weight": {
+      "portfolio-strong": {
+        "$type": "fontWeight",
+        "$value": 700
+      }
+    },
+    "leading": {
+      "portfolio-action": {
+        "$type": "number",
+        "$value": 1.5
+      }
+    }
+  }
+}

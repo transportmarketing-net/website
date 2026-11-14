@@ -69,8 +69,9 @@
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var filter = btn.getAttribute('data-filter');
-        filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+        filterBtns.forEach(function (b) { b.classList.remove('is-active'); b.setAttribute('aria-pressed', 'false'); });
         btn.classList.add('is-active');
+        btn.setAttribute('aria-pressed', 'true');
         cards.forEach(function (card) {
           if (filter === 'all' || card.getAttribute('data-category') === filter) {
             card.style.display = '';

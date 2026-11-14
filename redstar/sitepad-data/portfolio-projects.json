@@ -389,11 +389,11 @@
     "focusKeyword": "hotel staffing website",
     "category": "Training Website",
     "portfolioMeta": "11 / Training website",
-    "image": "sitepad-data/uploads/2026/05/project-strive.png",
-    "imageAlt": "ST.RIVE Workforce website screenshot",
+    "image": "assets/images/portfolio/strive-hotel-staffing-website-1440.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας ST.RIVE Workforce",
     "liveUrl": "https://striveworkforce.gr/",
     "publishedAt": "2026-08-27",
-    "excerpt": "Εκπαιδευτικό και staffing site για ξενοδοχειακή αγορά, με άμεσο μήνυμα γύρω από στελέχωση και ανάγκες εργοδοτών.",
+    "excerpt": "Δίγλωσση ιστοσελίδα υπηρεσιών στελέχωσης για επιχειρήσεις και οικιακής υποστήριξης για ιδιώτες.",
     "summary": "Το ST.RIVE Workforce μιλά σε επιχειρήσεις που χρειάζονται στελέχωση και κατάρτιση στον ξενοδοχειακό χώρο. Το site έπρεπε να δώσει άμεση κατανόηση του offer και να εμπνεύσει επαγγελματική εμπιστοσύνη.",
     "challenge": "Η ξενοδοχειακή στελέχωση είναι πρακτικό πρόβλημα, όχι αφηρημένη υπηρεσία. Η πρόκληση ήταν να παρουσιαστεί η αξία με σαφή γλώσσα και να διατηρηθεί σοβαρή, δραστήρια αισθητική.",
     "solution": [
@@ -416,7 +416,12 @@
       "Πιο δυνατό πρώτο μήνυμα για ξενοδοχειακούς πελάτες.",
       "Καθαρή παρουσίαση του staffing/training offer.",
       "Σταθερή mobile εμπειρία για άμεση αξιολόγηση."
-    ]
+    ],
+    "featuredOrder": 7,
+    "imageSmall": "assets/images/portfolio/strive-hotel-staffing-website-720.webp",
+    "imageWidth": 1440,
+    "imageHeight": 900,
+    "filterCategory": "websites"
   },
   {
     "slug": "panorama-residences-real-estate",
@@ -503,8 +508,8 @@
     "focusKeyword": "academic support platform",
     "category": "EdTech Platform",
     "portfolioMeta": "14 / EdTech platform",
-    "image": "sitepad-data/uploads/2026/05/project-sass.png",
-    "imageAlt": "SASS Platform screenshot - Student Academic Support Services",
+    "image": "assets/images/portfolio/sass-academic-support-platform-1440.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας SASS Platform",
     "liveUrl": "https://sass.acg.edu/",
     "publishedAt": "2026-08-27",
     "excerpt": "Σύστημα διαχείρισης ακαδημαϊκής υποστήριξης για το Deree (ACG) με PHP 8, Service/Repository pattern, ραντεβού, βάρδιες και τρεις ρόλους χρηστών.",
@@ -531,7 +536,12 @@
       "Ενιαίο σύστημα που αντικαθιστά χειροκίνητη οργάνωση tutoring.",
       "Τρεις ρόλοι με ξεχωριστή εμπειρία και ξεκάθαρα δικαιώματα.",
       "Αρχιτεκτονική Service/Repository που διατηρεί τη βάση κώδικα οργανωμένη καθώς μεγαλώνει."
-    ]
+    ],
+    "featuredOrder": 6,
+    "imageSmall": "assets/images/portfolio/sass-academic-support-platform-720.webp",
+    "imageWidth": 1440,
+    "imageHeight": 900,
+    "filterCategory": "platforms"
   },
   {
     "slug": "toner-ink-eshop",
@@ -571,5 +581,285 @@
       "Εύκολη πλοήγηση σε πάνω από 10 κατηγορίες προϊόντων.",
       "Σύγκριση, wishlist και order tracking που ενισχύουν την εμπειρία αγοράς."
     ]
+  },
+  {
+    "slug": "hotelsystem-cloud-pms",
+    "title": "HotelSystem",
+    "category": "Cloud PMS",
+    "filterCategory": "platforms",
+    "liveUrl": "https://hotelssystem.net/",
+    "excerpt": "Cloud PMS για boutique ξενοδοχεία, με παρουσίαση κρατήσεων, δωματίων και διασύνδεσης καναλιών.",
+    "summary": "Μια καθαρή παρουσίαση ξενοδοχειακού λογισμικού που εξηγεί την καθημερινή οργάνωση μιας μικρής ξενοδοχειακής ομάδας.",
+    "metaTitle": "HotelSystem | RedStar Portfolio",
+    "metaDescription": "Cloud PMS για boutique ξενοδοχεία, με παρουσίαση κρατήσεων, δωματίων και διασύνδεσης καναλιών.",
+    "challenge": "Μια καθαρή παρουσίαση ξενοδοχειακού λογισμικού που εξηγεί την καθημερινή οργάνωση μιας μικρής ξενοδοχειακής ομάδας.",
+    "solution": [
+      "Παρουσίαση λειτουργιών PMS και καθημερινής υποδοχής.",
+      "Ενότητες για κανάλια κρατήσεων και απευθείας κρατήσεις.",
+      "Διαδρομές προς τιμολόγηση, ενημέρωση και εγγραφή."
+    ],
+    "outcomes": [
+      "Παρουσίαση λειτουργιών PMS και καθημερινής υποδοχής.",
+      "Ενότητες για κανάλια κρατήσεων και απευθείας κρατήσεις.",
+      "Διαδρομές προς τιμολόγηση, ενημέρωση και εγγραφή."
+    ],
+    "featuredOrder": 1,
+    "image": "assets/images/portfolio/hotelsystem-cloud-pms-1440.webp",
+    "imageSmall": "assets/images/portfolio/hotelsystem-cloud-pms-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας HotelSystem",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "greenpromo-leaflet-distribution",
+    "title": "GreenPromo",
+    "category": "Leaflet Distribution Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://greenpromo.transportmarketing.net/",
+    "excerpt": "Ιστοσελίδα διανομής φυλλαδίων στην Αθήνα, με υπηρεσίες, περιοχές κάλυψης και σαφή διαδρομή αιτήματος προσφοράς.",
+    "summary": "Η δημόσια παρουσία της GreenPromo οργανώνει την πληροφορία γύρω από τις μεθόδους διανομής, την τεκμηρίωση και την επικοινωνία.",
+    "metaTitle": "GreenPromo | RedStar Portfolio",
+    "metaDescription": "Ιστοσελίδα διανομής φυλλαδίων στην Αθήνα, με υπηρεσίες, περιοχές κάλυψης και σαφή διαδρομή αιτήματος προσφοράς.",
+    "challenge": "Η δημόσια παρουσία της GreenPromo οργανώνει την πληροφορία γύρω από τις μεθόδους διανομής, την τεκμηρίωση και την επικοινωνία.",
+    "solution": [
+      "Παρουσίαση διανομής πόρτα-πόρτα, χέρι-με-χέρι και σε επιχειρήσεις.",
+      "Ενότητες διαδικασίας, πακέτων και γεωγραφικής κάλυψης.",
+      "Σαφείς σύνδεσμοι για αίτημα προσφοράς."
+    ],
+    "outcomes": [
+      "Παρουσίαση διανομής πόρτα-πόρτα, χέρι-με-χέρι και σε επιχειρήσεις.",
+      "Ενότητες διαδικασίας, πακέτων και γεωγραφικής κάλυψης.",
+      "Σαφείς σύνδεσμοι για αίτημα προσφοράς."
+    ],
+    "featuredOrder": 2,
+    "image": "assets/images/portfolio/greenpromo-leaflet-distribution-1440.webp",
+    "imageSmall": "assets/images/portfolio/greenpromo-leaflet-distribution-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας GreenPromo",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "blueline-saas-platforms",
+    "title": "BlueLine",
+    "category": "SaaS Brand Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://blueline.transportmarketing.net/",
+    "excerpt": "Παρουσίαση οικογένειας SaaS προϊόντων για φιλοξενία, e-commerce, επικοινωνία, ιατρικό λογισμικό και AI αυτοματισμούς.",
+    "summary": "Ένα κοινό σημείο παρουσίασης των προϊόντων της BlueLine και της επιχειρηματικής ανάγκης που εξυπηρετεί το καθένα.",
+    "metaTitle": "BlueLine | RedStar Portfolio",
+    "metaDescription": "Παρουσίαση οικογένειας SaaS προϊόντων για φιλοξενία, e-commerce, επικοινωνία, ιατρικό λογισμικό και AI αυτοματισμούς.",
+    "challenge": "Ένα κοινό σημείο παρουσίασης των προϊόντων της BlueLine και της επιχειρηματικής ανάγκης που εξυπηρετεί το καθένα.",
+    "solution": [
+      "Επισκόπηση της οικογένειας SaaS προϊόντων.",
+      "Ξεκάθαρη διάκριση των περιοχών εφαρμογής.",
+      "Σύνδεσμοι προς προϊόντα και επικοινωνία."
+    ],
+    "outcomes": [
+      "Επισκόπηση της οικογένειας SaaS προϊόντων.",
+      "Ξεκάθαρη διάκριση των περιοχών εφαρμογής.",
+      "Σύνδεσμοι προς προϊόντα και επικοινωνία."
+    ],
+    "featuredOrder": 3,
+    "image": "assets/images/portfolio/blueline-saas-platforms-1440.webp",
+    "imageSmall": "assets/images/portfolio/blueline-saas-platforms-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας BlueLine",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "imatzoukas-plastic-surgery",
+    "title": "Ιωάννης Κ. Ματζούκας",
+    "category": "Plastic Surgery Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://imatzoukas.on-forge.com/",
+    "excerpt": "Ιατρική ιστοσελίδα πλαστικού χειρουργού με προφίλ ιατρού, υπηρεσίες, άρθρα και στοιχεία επικοινωνίας.",
+    "summary": "Μια οργανωμένη δημόσια παρουσία που συνδέει το προφίλ του ιατρού με πληροφορίες για τις υπηρεσίες και την επικοινωνία με το ιατρείο.",
+    "metaTitle": "Ιωάννης Κ. Ματζούκας | RedStar Portfolio",
+    "metaDescription": "Ιατρική ιστοσελίδα πλαστικού χειρουργού με προφίλ ιατρού, υπηρεσίες, άρθρα και στοιχεία επικοινωνίας.",
+    "challenge": "Μια οργανωμένη δημόσια παρουσία που συνδέει το προφίλ του ιατρού με πληροφορίες για τις υπηρεσίες και την επικοινωνία με το ιατρείο.",
+    "solution": [
+      "Παρουσίαση ιατρού και υπηρεσιών πλαστικής χειρουργικής.",
+      "Δομή για άρθρα και ενημερωτικό περιεχόμενο.",
+      "Άμεσοι σύνδεσμοι τηλεφωνικής επικοινωνίας και ραντεβού."
+    ],
+    "outcomes": [
+      "Παρουσίαση ιατρού και υπηρεσιών πλαστικής χειρουργικής.",
+      "Δομή για άρθρα και ενημερωτικό περιεχόμενο.",
+      "Άμεσοι σύνδεσμοι τηλεφωνικής επικοινωνίας και ραντεβού."
+    ],
+    "featuredOrder": 4,
+    "image": "assets/images/portfolio/imatzoukas-plastic-surgery-1440.webp",
+    "imageSmall": "assets/images/portfolio/imatzoukas-plastic-surgery-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας Ιωάννης Κ. Ματζούκας",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "universe-deree-campus-platform",
+    "title": "Universe · Deree",
+    "category": "Campus Community Platform",
+    "filterCategory": "platforms",
+    "liveUrl": "https://universe-deree-live-3b97bb.on-forge.com/",
+    "excerpt": "Πλατφόρμα πανεπιστημιακής κοινότητας για το Deree, με εκδηλώσεις, οργανώσεις, χώρους και νέα.",
+    "summary": "Το Universe συγκεντρώνει την ανακάλυψη εκδηλώσεων και οργανώσεων της πανεπιστημιακής κοινότητας. Το συγκεκριμένο περιβάλλον είναι επίδειξη με ερευνημένα στοιχεία οργανώσεων και φανταστική φοιτητική δραστηριότητα.",
+    "metaTitle": "Universe · Deree | RedStar Portfolio",
+    "metaDescription": "Πλατφόρμα πανεπιστημιακής κοινότητας για το Deree, με εκδηλώσεις, οργανώσεις, χώρους και νέα.",
+    "challenge": "Το Universe συγκεντρώνει την ανακάλυψη εκδηλώσεων και οργανώσεων της πανεπιστημιακής κοινότητας. Το συγκεκριμένο περιβάλλον είναι επίδειξη με ερευνημένα στοιχεία οργανώσεων και φανταστική φοιτητική δραστηριότητα.",
+    "solution": [
+      "Ανακάλυψη εκδηλώσεων και οργανώσεων.",
+      "Πλοήγηση σε χώρους, αθλητισμό, καταχωρίσεις και νέα.",
+      "Δημόσια παρουσίαση της κοινότητας και διαδρομές εγγραφής."
+    ],
+    "outcomes": [
+      "Ανακάλυψη εκδηλώσεων και οργανώσεων.",
+      "Πλοήγηση σε χώρους, αθλητισμό, καταχωρίσεις και νέα.",
+      "Δημόσια παρουσίαση της κοινότητας και διαδρομές εγγραφής."
+    ],
+    "featuredOrder": 5,
+    "image": "assets/images/portfolio/universe-deree-campus-platform-1440.webp",
+    "imageSmall": "assets/images/portfolio/universe-deree-campus-platform-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας Universe · Deree",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "cyclebox-indoor-cycling",
+    "title": "Cycle Box",
+    "category": "Fitness Studio Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://alexkourtis98.github.io/vlachostax/cyclebox/",
+    "excerpt": "Ιστοσελίδα indoor cycling studio στη Νέα Σμύρνη, με παρουσίαση εμπειρίας, χώρου και επιλογών κράτησης.",
+    "summary": "Η ιστοσελίδα παρουσιάζει την εμπειρία του Cycle Box και βοηθά τον επισκέπτη να βρει πληροφορίες για την πρώτη του προπόνηση.",
+    "metaTitle": "Cycle Box | RedStar Portfolio",
+    "metaDescription": "Ιστοσελίδα indoor cycling studio στη Νέα Σμύρνη, με παρουσίαση εμπειρίας, χώρου και επιλογών κράτησης.",
+    "challenge": "Η ιστοσελίδα παρουσιάζει την εμπειρία του Cycle Box και βοηθά τον επισκέπτη να βρει πληροφορίες για την πρώτη του προπόνηση.",
+    "solution": [
+      "Παρουσίαση indoor cycling και εξοπλισμού studio.",
+      "Ενότητες για πρώτη επίσκεψη, τιμές και επικοινωνία.",
+      "Σαφείς διαδρομές προς πληροφορίες κράτησης."
+    ],
+    "outcomes": [
+      "Παρουσίαση indoor cycling και εξοπλισμού studio.",
+      "Ενότητες για πρώτη επίσκεψη, τιμές και επικοινωνία.",
+      "Σαφείς διαδρομές προς πληροφορίες κράτησης."
+    ],
+    "featuredOrder": 8,
+    "image": "assets/images/portfolio/cyclebox-indoor-cycling-1440.webp",
+    "imageSmall": "assets/images/portfolio/cyclebox-indoor-cycling-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας Cycle Box",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "pilates-box-athens",
+    "title": "Pilates Box Athens",
+    "category": "Pilates Studio Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://alexkourtis98.github.io/vlachostax/pilatebox/",
+    "excerpt": "Ιστοσελίδα Pilates Reformer, Mat και Yoga με μαθήματα, συνδρομές, πληροφορίες studio και οδηγούς νέων μελών.",
+    "summary": "Η παρουσίαση του Pilates Box οργανώνει τα μαθήματα και τα επόμενα βήματα τόσο για νέους επισκέπτες όσο και για υπάρχοντα μέλη.",
+    "metaTitle": "Pilates Box Athens | RedStar Portfolio",
+    "metaDescription": "Ιστοσελίδα Pilates Reformer, Mat και Yoga με μαθήματα, συνδρομές, πληροφορίες studio και οδηγούς νέων μελών.",
+    "challenge": "Η παρουσίαση του Pilates Box οργανώνει τα μαθήματα και τα επόμενα βήματα τόσο για νέους επισκέπτες όσο και για υπάρχοντα μέλη.",
+    "solution": [
+      "Παρουσίαση Reformer, Mat και Yoga.",
+      "Διακριτές διαδρομές για νέα και υπάρχοντα μέλη.",
+      "Πληροφορίες studio, συνδρομών και συχνών ερωτήσεων."
+    ],
+    "outcomes": [
+      "Παρουσίαση Reformer, Mat και Yoga.",
+      "Διακριτές διαδρομές για νέα και υπάρχοντα μέλη.",
+      "Πληροφορίες studio, συνδρομών και συχνών ερωτήσεων."
+    ],
+    "featuredOrder": 9,
+    "image": "assets/images/portfolio/pilates-box-athens-1440.webp",
+    "imageSmall": "assets/images/portfolio/pilates-box-athens-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας Pilates Box Athens",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "vlachostax-accounting",
+    "title": "VlachosTax",
+    "category": "Accounting Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://alexkourtis98.github.io/vlachostax/vlachos/",
+    "excerpt": "Ιστοσελίδα λογιστικού και φοροτεχνικού γραφείου, με υπηρεσίες για ιδιώτες και επιχειρήσεις.",
+    "summary": "Η ιστοσελίδα του Φώτιου Κ. Βλάχου συγκεντρώνει φορολογικές, λογιστικές και μισθοδοτικές υπηρεσίες και τρόπους συνεργασίας.",
+    "metaTitle": "VlachosTax | RedStar Portfolio",
+    "metaDescription": "Ιστοσελίδα λογιστικού και φοροτεχνικού γραφείου, με υπηρεσίες για ιδιώτες και επιχειρήσεις.",
+    "challenge": "Η ιστοσελίδα του Φώτιου Κ. Βλάχου συγκεντρώνει φορολογικές, λογιστικές και μισθοδοτικές υπηρεσίες και τρόπους συνεργασίας.",
+    "solution": [
+      "Οργάνωση φορολογικών και λογιστικών υπηρεσιών.",
+      "Ξεχωριστή παρουσίαση μισθοδοσίας και ίδρυσης επιχείρησης.",
+      "Στοιχεία γραφείου και άμεσοι τρόποι επικοινωνίας."
+    ],
+    "outcomes": [
+      "Οργάνωση φορολογικών και λογιστικών υπηρεσιών.",
+      "Ξεχωριστή παρουσίαση μισθοδοσίας και ίδρυσης επιχείρησης.",
+      "Στοιχεία γραφείου και άμεσοι τρόποι επικοινωνίας."
+    ],
+    "featuredOrder": 10,
+    "image": "assets/images/portfolio/vlachostax-accounting-1440.webp",
+    "imageSmall": "assets/images/portfolio/vlachostax-accounting-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας VlachosTax",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "management-services-buildings",
+    "title": "Management Services Buildings",
+    "category": "Property Services Website",
+    "filterCategory": "websites",
+    "liveUrl": "https://alexkourtis98.github.io/vlachostax/management-building/",
+    "excerpt": "Ιστοσελίδα διαχείρισης πολυκατοικιών και επαγγελματικών κτιρίων στην Αθήνα και την Αττική.",
+    "summary": "Μια συγκεντρωτική παρουσίαση των υπηρεσιών που χρειάζεται ένα κτίριο, από διαχείριση και κοινόχρηστα έως καθαρισμό και τεχνική υποστήριξη.",
+    "metaTitle": "Management Services Buildings | RedStar Portfolio",
+    "metaDescription": "Ιστοσελίδα διαχείρισης πολυκατοικιών και επαγγελματικών κτιρίων στην Αθήνα και την Αττική.",
+    "challenge": "Μια συγκεντρωτική παρουσίαση των υπηρεσιών που χρειάζεται ένα κτίριο, από διαχείριση και κοινόχρηστα έως καθαρισμό και τεχνική υποστήριξη.",
+    "solution": [
+      "Παρουσίαση υπηρεσιών διαχείρισης κτιρίων.",
+      "Πληροφορίες για κοινόχρηστα, καθαρισμό και τεχνική υποστήριξη.",
+      "Διαδρομές προς προσφορά και τηλεφωνική επικοινωνία."
+    ],
+    "outcomes": [
+      "Παρουσίαση υπηρεσιών διαχείρισης κτιρίων.",
+      "Πληροφορίες για κοινόχρηστα, καθαρισμό και τεχνική υποστήριξη.",
+      "Διαδρομές προς προσφορά και τηλεφωνική επικοινωνία."
+    ],
+    "featuredOrder": 11,
+    "image": "assets/images/portfolio/management-services-buildings-1440.webp",
+    "imageSmall": "assets/images/portfolio/management-services-buildings-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας Management Services Buildings",
+    "imageWidth": 1440,
+    "imageHeight": 900
+  },
+  {
+    "slug": "fortistis-electronics-eshop",
+    "title": "Fortistis",
+    "category": "Electronics E-shop",
+    "filterCategory": "commerce",
+    "liveUrl": "https://fortistis.store/el/power-banks",
+    "excerpt": "E-shop φορτιστών και αξεσουάρ, με κατάλογο power banks, φίλτρα τιμής και κατασκευαστή, ταξινόμηση και καλάθι.",
+    "summary": "Η σελίδα Power Banks του Fortistis παρουσιάζει προϊόντα, τεχνικούς τίτλους και τιμές, με εργαλεία για περιορισμό και ταξινόμηση του καταλόγου.",
+    "metaTitle": "Fortistis | RedStar Portfolio",
+    "metaDescription": "E-shop φορτιστών και αξεσουάρ, με κατάλογο power banks, φίλτρα τιμής και κατασκευαστή, ταξινόμηση και καλάθι.",
+    "challenge": "Η σελίδα Power Banks του Fortistis παρουσιάζει προϊόντα, τεχνικούς τίτλους και τιμές, με εργαλεία για περιορισμό και ταξινόμηση του καταλόγου.",
+    "solution": [
+      "Κατάλογος προϊόντων με εικόνες, τίτλους και τιμές.",
+      "Φίλτρα κατηγορίας, κατασκευαστή και εύρους τιμής.",
+      "Ταξινόμηση προϊόντων και πρόσβαση στο καλάθι."
+    ],
+    "outcomes": [
+      "Κατάλογος προϊόντων με εικόνες, τίτλους και τιμές.",
+      "Φίλτρα κατηγορίας, κατασκευαστή και εύρους τιμής.",
+      "Ταξινόμηση προϊόντων και πρόσβαση στο καλάθι."
+    ],
+    "featuredOrder": 12,
+    "image": "assets/images/portfolio/fortistis-electronics-eshop-1440.webp",
+    "imageSmall": "assets/images/portfolio/fortistis-electronics-eshop-720.webp",
+    "imageAlt": "Στιγμιότυπο της ιστοσελίδας Fortistis",
+    "imageWidth": 1440,
+    "imageHeight": 900
   }
 ]

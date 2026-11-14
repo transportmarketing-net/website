@@ -1,0 +1,302 @@
+{
+  "sass-academic-support-platform": {
+    "sourceUrl": "https://sass.acg.edu/",
+    "capturedAt": "2026-11-14T16:13:42.120Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/sass-academic-support-platform-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 17282,
+        "sha256": "5e9ee513b0d40f77d19a10f0db07edb925597c00158f020fdf1a09c41c762b68"
+      },
+      {
+        "file": "assets/images/portfolio/sass-academic-support-platform-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 50798,
+        "sha256": "505c4d2c5606d6de509d98b74b1ea619ea957eba30ca3f2c976218e2803db5e8"
+      }
+    ]
+  },
+  "hotelsystem-cloud-pms": {
+    "sourceUrl": "https://hotelssystem.net/",
+    "capturedAt": "2026-11-14T16:13:43.887Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/hotelsystem-cloud-pms-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 34444,
+        "sha256": "7eca97dcdd9aae6abd7714108523f5dc7e8bdc56745313c817581c7e2582053d"
+      },
+      {
+        "file": "assets/images/portfolio/hotelsystem-cloud-pms-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 100576,
+        "sha256": "38083de5c008777b7dd891a0ef5134f0dd6f68c099aee8f8f1bad4a70cdc6bd6"
+      }
+    ]
+  },
+  "strive-hotel-staffing-website": {
+    "sourceUrl": "https://striveworkforce.gr/",
+    "capturedAt": "2026-11-14T16:17:04.890Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/strive-hotel-staffing-website-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 20790,
+        "sha256": "f4f103ce1251d1d7867d11389adec839436c4b2fd516919a2a0aa5665a6dca79"
+      },
+      {
+        "file": "assets/images/portfolio/strive-hotel-staffing-website-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 49574,
+        "sha256": "5f1f12ec1f1d4f5a99407d44ef9a2116a0e8ca2612dc070248061b28b728dec9"
+      }
+    ]
+  },
+  "greenpromo-leaflet-distribution": {
+    "sourceUrl": "https://greenpromo.transportmarketing.net/",
+    "capturedAt": "2026-11-14T16:13:46.078Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/greenpromo-leaflet-distribution-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 26450,
+        "sha256": "8935a7a1e8541e7ba347f6b9fdbaecf8732ad2168ee6646306645c2b62c9fea0"
+      },
+      {
+        "file": "assets/images/portfolio/greenpromo-leaflet-distribution-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 64750,
+        "sha256": "0311445632b2b99be13638e0c43f6af9287c471708df250e15be606850aadd3a"
+      }
+    ]
+  },
+  "blueline-saas-platforms": {
+    "sourceUrl": "https://blueline.transportmarketing.net/",
+    "capturedAt": "2026-11-14T16:13:47.749Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/blueline-saas-platforms-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 21068,
+        "sha256": "73f461790c5d2688012c939dba568d65f5fca63c68cd9318621d919c801fa49f"
+      },
+      {
+        "file": "assets/images/portfolio/blueline-saas-platforms-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 54322,
+        "sha256": "45ab51319608fa24aebdb06a6efc4d1a6620a78d952a88e8f110fa5b83132380"
+      }
+    ]
+  },
+  "imatzoukas-plastic-surgery": {
+    "sourceUrl": "https://imatzoukas.on-forge.com/",
+    "capturedAt": "2026-11-14T16:13:49.023Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/imatzoukas-plastic-surgery-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 27274,
+        "sha256": "0e7a591f8e27e07e5ec3c8c1e123ea4c88d3d4d74342bf2ed4a0e63485974ce1"
+      },
+      {
+        "file": "assets/images/portfolio/imatzoukas-plastic-surgery-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 73560,
+        "sha256": "7e1bcdc0eca4984e0eefc1383ef8f78e001a02bdad02a7ce3e586cc93ce8dd10"
+      }
+    ]
+  },
+  "cyclebox-indoor-cycling": {
+    "sourceUrl": "https://alexkourtis98.github.io/vlachostax/cyclebox/",
+    "capturedAt": "2026-11-14T16:13:49.890Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/cyclebox-indoor-cycling-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 19912,
+        "sha256": "6c668a934f8f3c061a5336361ba3c5e8f42a92befe7f9b393ab31c9aa57f7dc5"
+      },
+      {
+        "file": "assets/images/portfolio/cyclebox-indoor-cycling-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 45290,
+        "sha256": "1395d3b27deccc98fbe2f4e87db45ec2a9b4eb40f612510bba2b9174e93eb2da"
+      }
+    ]
+  },
+  "universe-deree-campus-platform": {
+    "sourceUrl": "https://universe-deree-live-3b97bb.on-forge.com/",
+    "capturedAt": "2026-11-14T16:13:51.140Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Campus community section, public session",
+    "images": [
+      {
+        "file": "assets/images/portfolio/universe-deree-campus-platform-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 24122,
+        "sha256": "7c4180a7786a746d7077ad2a3b7279e71885993708027c7ec0955542ba0df80b"
+      },
+      {
+        "file": "assets/images/portfolio/universe-deree-campus-platform-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 69242,
+        "sha256": "a2c5d7537e7e05a3f17fb10d172832f45afc8e66e37fe057aa6c9d4500281422"
+      }
+    ]
+  },
+  "pilates-box-athens": {
+    "sourceUrl": "https://alexkourtis98.github.io/vlachostax/pilatebox/",
+    "capturedAt": "2026-11-14T16:13:52.029Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/pilates-box-athens-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 28480,
+        "sha256": "066a5368aee97931c09557b50b94dd1fa86e8971b6d231f7df3bcae08a5e1c1c"
+      },
+      {
+        "file": "assets/images/portfolio/pilates-box-athens-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 66398,
+        "sha256": "b9702f7fd71d0740756afde95b871a88680684d772d1059e1d588a7ac633079d"
+      }
+    ]
+  },
+  "vlachostax-accounting": {
+    "sourceUrl": "https://alexkourtis98.github.io/vlachostax/vlachos/",
+    "capturedAt": "2026-11-14T16:13:52.793Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/vlachostax-accounting-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 15296,
+        "sha256": "e2fb33d34c4de55342b9aeda130d209c4ea0d062b012fad4dbca98e838eb8e53"
+      },
+      {
+        "file": "assets/images/portfolio/vlachostax-accounting-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 37356,
+        "sha256": "15dcac5b3c0618bd05279161c7123af90d08ce34a16cf8188995256d2159adda"
+      }
+    ]
+  },
+  "management-services-buildings": {
+    "sourceUrl": "https://alexkourtis98.github.io/vlachostax/management-building/",
+    "capturedAt": "2026-11-14T16:13:53.680Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Public homepage",
+    "images": [
+      {
+        "file": "assets/images/portfolio/management-services-buildings-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 33832,
+        "sha256": "515a46033a5042496dd83cc2755cf914885d4221d5d2f3bf3b3599ecd21f5272"
+      },
+      {
+        "file": "assets/images/portfolio/management-services-buildings-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 74874,
+        "sha256": "2d71db088fd020b908652a0e4139ba18017f9892b5187f64d230a11903cdefc9"
+      }
+    ]
+  },
+  "fortistis-electronics-eshop": {
+    "sourceUrl": "https://fortistis.store/el/power-banks?theme=light",
+    "capturedAt": "2026-11-14T16:13:54.955Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Power Banks product grid, light theme",
+    "images": [
+      {
+        "file": "assets/images/portfolio/fortistis-electronics-eshop-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 17148,
+        "sha256": "41ce9dde43ba338549630b4931f58495470431acb7f2592d087b1ada24ba12a2"
+      },
+      {
+        "file": "assets/images/portfolio/fortistis-electronics-eshop-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 43034,
+        "sha256": "007886ca541765b9947e19cddbc826ba7adcc7751b745b98875f0adc43e8142a"
+      }
+    ]
+  }
+}

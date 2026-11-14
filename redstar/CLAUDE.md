@@ -333,3 +333,14 @@ runner label; do not switch it back to a hosted runner. Upstream-only service
 routes use `upstream.css`/`upstream.js`; retain these while those routes exist.
 The CRM quote API is deployed, with its two additive migrations applied. Keep
 production checks non-submitting; use the isolated preview for enquiry tests.
+
+
+Portfolio updates: `node scripts/rebuild-site.mjs --portfolio-only` refreshes only
+portfolio pages, the marked homepage portfolio section and added sitemap URLs.
+`sitepad-data/portfolio-projects.json` is the shared source; `featuredOrder` puts
+the requested twelve projects first and `filterCategory` fixes their taxonomy.
+`node scripts/capture-portfolio.mjs [slug]` captures public sessions, including
+Universe's campus section and Fortistis's supported light-theme product grid.
+Original PNGs stay in the home cache; WebP variants and provenance are versioned.
+Run `node scripts/verify-portfolio.mjs http://127.0.0.1:8045/redstar/` against the
+local preview. It intercepts outbound live links and never submits project forms.
