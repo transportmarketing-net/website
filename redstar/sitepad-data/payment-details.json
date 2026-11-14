@@ -1,0 +1,12 @@
+{
+  "bank": "Eurobank",
+  "iban": "GR8202600450000960201687094",
+  "gateways": [
+    { "name": "Stripe", "logo": "stripe.svg" },
+    { "name": "Viva.com" }
+  ],
+  "cards": [
+    { "name": "Visa", "logo": "visa.svg" },
+    { "name": "Mastercard", "logo": "mastercard.svg" }
+  ]
+}

@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Custom Πλατφόρμες για Κατασκευές | RedStar</title>
   <meta name="description" content="Η RedStar χτίζει custom πλατφόρμες για εταιρείες κατασκευών: διαχείριση έργων, συνεργατών και κοστολόγησης σε ένα σύστημα. Laravel, Vue.js, Αθήνα.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -17,46 +17,61 @@
   <meta property="og:url" content="https://transportmarketing.net/redstar/blog/custom-platformes-etaireies-kataskeyon-diaheiriси-ergon-kostologisi/">
   <meta property="og:image" content="https://transportmarketing.net/redstar/sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap&amp;subset=greek">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&subset=greek">
   <link rel="stylesheet" href="../../assets/css/redstar.css">
   <script src="../../assets/js/redstar.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
-  <header class="site-header">
-    <div class="container site-header__bar">
-      <a class="brand" href="../../index.html" aria-label="RedStar, αρχική">
-        <img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70">
-      </a>
-      <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
-        <div class="nav-menu"><button class="nav-link nav-menu__trigger" type="button" data-solutions-trigger aria-expanded="false" aria-controls="solutions-panel">Υπηρεσίες <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-menu__panel" id="solutions-panel" data-solutions-menu hidden><a href="../../services/website-development/index.html">Ιστοσελίδες<small>WordPress, Joomla, custom HTML</small></a><a href="../../services/eshop-development/index.html">E-shop<small>Shopify, WooCommerce, Magento</small></a><a href="../../services/custom-web-apps/index.html">Εφαρμογές<small>Custom πλατφόρμες, SaaS, API</small></a><a href="../../services/digital-marketing/index.html">Digital Marketing<small>SEO, Google Ads, Meta Ads</small></a><a href="../../services/email-social/index.html">Email &amp; Social<small>Newsletters, social media</small></a><a href="../../services/branding/index.html">Branding<small>Ταυτότητα, λογότυπο, κείμενα</small></a><a href="../../services/hosting-domains/index.html">Hosting &amp; Domains<small>Φιλοξενία, SSL, DNS</small></a><a href="../../services/ai-automation/index.html">AI &amp; Αυτοματισμοί<small>Chatbots, workflows, n8n</small></a><a href="../../services/it-security/index.html">IT &amp; Ασφάλεια<small>Audits, GDPR, cloud</small></a><a href="../../services/consulting-support/index.html">Συμβουλευτική<small>Στρατηγική, υποστήριξη</small></a></div></div>
-        <a class="nav-link" href="../../portfolio/index.html">Έργα</a>
-        <a class="nav-link" href="../../about/index.html">Σχετικά</a>
-        <a class="nav-link" href="../../blog/index.html" aria-current="page">Σημειώσεις</a>
-      </nav>
-      <div class="header-actions">
-        <a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <button class="menu-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobile-menu" data-menu-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-      </div>
-    </div>
+  <a class="skip-link" href="#main-content">Μεταβαση στο περιεχομενο</a>
+  <header class="rs-header">
+    <a class="rs-logo" href="../../index.html" aria-label="RedStar, αρχικη">
+      <img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar Digital Agency">
+    </a>
+    <nav class="rs-nav" aria-label="Κύρια πλοήγηση">
+      <a href="../../services/index.html">Υπηρεσίες</a>
+      <a href="../../portfolio/index.html">Portfolio</a>
+      <a href="../../about/index.html">Σχετικά</a>
+      <a href="../../contact/index.html">Επικοινωνία</a>
+      <a href="../../blog/index.html" class="is-active">Blog</a>
+    </nav>
+    <button class="rs-hamburger" type="button" aria-label="Ανοιγμα μενου" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
   </header>
-  <div class="mobile-drawer" id="mobile-menu" data-mobile-drawer hidden>
-    <button class="mobile-drawer__scrim" type="button" aria-label="Κλείσιμο μενού" data-menu-scrim></button>
-    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Μενού">
-      <div class="mobile-drawer__top">
-        <a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a>
-        <button class="mobile-drawer__close" type="button" aria-label="Κλείσιμο μενού" data-menu-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <div class="rs-drawer" role="dialog" aria-modal="true" aria-label="Μενου">
+    <button class="rs-drawer__scrim" type="button" aria-label="Κλεισιμο μενου"></button>
+    <div class="rs-drawer__panel">
+      <div class="rs-drawer__top">
+        <a class="rs-logo" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-light-bg.svg" alt="RedStar" style="width:150px"></a>
+        <button class="rs-drawer__close" type="button" aria-label="Κλεισιμο μενου">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
       </div>
-      <nav class="mobile-nav" aria-label="Πλοήγηση κινητού">
-        <div class="mobile-nav__group"><span class="mobile-nav__group-title">Υπηρεσίες</span><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a><a href="../../services/digital-marketing/index.html">Digital Marketing</a><a href="../../services/email-social/index.html">Email & Social</a><a href="../../services/branding/index.html">Branding</a><a href="../../services/hosting-domains/index.html">Hosting & Domains</a><a href="../../services/ai-automation/index.html">AI & Αυτοματισμοί</a><a href="../../services/it-security/index.html">IT & Ασφάλεια</a><a href="../../services/consulting-support/index.html">Συμβουλευτική</a></div>
-        <a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a>
+      <nav class="rs-drawer__nav">
+        <a href="../../services/index.html">Υπηρεσίες</a>
+        <a href="../../portfolio/index.html">Portfolio</a>
+        <a href="../../about/index.html">Σχετικά</a>
+        <a href="../../contact/index.html">Επικοινωνία</a>
+        <a href="../../blog/index.html">Blog</a>
       </nav>
-      <div class="mobile-drawer__footer"><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="rs-drawer__footer">
+        <a class="rs-button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλεισε κληση <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
     </div>
   </div>
-<main id="main-content"><article><section class="article-hero"><div class="article-hero__media"><img src="../../sitepad-data/uploads/2026/05/redstar-space-crimson-nebula.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div><div class="container"><h1>Custom Πλατφόρμες για Κατασκευές</h1><p>Η RedStar χτίζει custom πλατφόρμες για εταιρείες κατασκευών: διαχείριση έργων, συνεργατών και κοστολόγησης σε ένα σύστημα. Laravel, Vue.js, Αθήνα.</p></div></section><div class="container article-layout"><div class="article-content"><article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Κατασκευών: Διαχείριση Έργων, Συνεργατών και Κοστολόγησης σε Ένα Σύστημα</h2> <p>Αν διευθύνεις μια εταιρεία κατασκευών, ξέρεις ακριβώς πόσο χαοτική μπορεί να γίνει η καθημερινότητα: Excel για την κοστολόγηση, WhatsApp για τους συνεργάτες, email για τους πελάτες και ένα notebook για τα χρονοδιαγράμματα. Στη RedStar χτίζουμε custom πλατφόρμες που αντικαθιστούν όλα αυτά με ένα ενιαίο, έξυπνο σύστημα - φτιαγμένο ακριβώς για τις ανάγκες σου.</p> <div style="background:#f4f4f4; border-left:4px solid #c0392b; padding:16px 20px; margin:24px 0; border-radius:4px;">
+  <main id="main-content">
+    <section class="rs-hero rs-hero--short">
+    <div class="rs-shell">
+      
+      <h1>Custom Πλατφόρμες για Κατασκευές</h1>
+      <p class="rs-lead">Η RedStar χτίζει custom πλατφόρμες για εταιρείες κατασκευών: διαχείριση έργων, συνεργατών και κοστολόγησης σε ένα σύστημα. Laravel, Vue.js, Αθήνα.</p>
+    </div>
+  </section>
+    <section class="rs-section">
+      <div class="rs-shell">
+        <div class="article-layout">
+          <div class="article-content"><article> <h2>Πώς Χτίζουμε Custom Πλατφόρμες για Εταιρείες Κατασκευών: Διαχείριση Έργων, Συνεργατών και Κοστολόγησης σε Ένα Σύστημα</h2> <p>Αν διευθύνεις μια εταιρεία κατασκευών, ξέρεις ακριβώς πόσο χαοτική μπορεί να γίνει η καθημερινότητα: Excel για την κοστολόγηση, WhatsApp για τους συνεργάτες, email για τους πελάτες και ένα notebook για τα χρονοδιαγράμματα. Στη RedStar χτίζουμε custom πλατφόρμες που αντικαθιστούν όλα αυτά με ένα ενιαίο, έξυπνο σύστημα - φτιαγμένο ακριβώς για τις ανάγκες σου.</p> <div style="background:#f4f4f4; border-left:4px solid #c0392b; padding:16px 20px; margin:24px 0; border-radius:4px;">
 <h3 style="margin-top:0;">Key Takeaways</h3>
 <ul>
 <li><strong>Ένα σύστημα, όχι δέκα εργαλεία:</strong> Η custom πλατφόρμα ενοποιεί διαχείριση έργων, συνεργατών και κοστολόγησης σε ένα περιβάλλον.</li>
@@ -110,22 +125,80 @@
 <p>Το κόστος εξαρτάται από την πολυπλοκότητα των modules και τον αριθμό των χρηστών. Τυπικά, μια ολοκληρωμένη πλατφόρμα για κατασκευαστική εταιρεία κυμαίνεται από €8.000 έως €30.000+ για την ανάπτυξη, ανάλογα με τις ανάγκες. Προτείνουμε πάντα να ξεκινάτε με ένα MVP - ένα λειτουργικό σύστημα core που επεκτείνεται σταδιακά - ώστε να βλέπετε αξία νωρίς και να διαχειρίζεστε το budget έξυπνα.</p> <h3>Μπορεί η πλατφόρμα να συνδεθεί με λογιστικά προγράμματα που ήδη χρησιμοποιούμε;</h3>
 <p>Ναι. Χτίζουμε REST API layers που επιτρέπουν integration με τα πιο διαδεδομένα λογιστικά συστήματα στην Ελλάδα, όπως Softone, ERP systems ή ακόμα και custom λογιστικά. Η αρχιτεκτονική είναι από την αρχή σχεδιασμένη για διαλειτουργικότητα - δεν δημιουργούμε silos, δημιουργούμε συνδέσεις.</p> <h3>Τι γίνεται αν η εταιρεία μας μεγαλώσει;</h3>
 <p>Η πλατφόρμα είναι σχεδιασμένη να κλιμακώνεται. Χρησιμοποιούμε αρχιτεκτονική που υποστηρίζει multi-tenant λειτουργία - αν αποφασίσεις να επεκτείνεις την πλατφόρμα σε θυγατρικές ή partner εταιρείες, αυτό είναι ήδη προβλεπόμενο στον σχεδιασμό. Το <strong>multi-tenant SaaS</strong> μοντέλο που χρησιμοποιούμε είναι το ίδιο που τρέχουν οι μεγαλύτερες ψηφιακές πλατφόρμες παγκοσμίως.</p> <h2>Γιατί Custom και Όχι Off-the-Shelf;</h2> <p>Είναι εύλογη ερώτηση. Υπάρχουν εργαλεία όπως το Procore ή το Buildertrend - γιατί να μην τα χρησιμοποιήσεις;</p> <p>Η απάντηση: γιατί κάθε κατασκευαστική εταιρεία στην Ελλάδα έχει δικές της διαδικασίες, δικές της συμφωνίες με συνεργάτες, δική της λογική κοστολόγησης. Τα έτοιμα εργαλεία σε αναγκάζουν να <em>προσαρμόσεις την εταιρεία σου στο software</em>. Η custom πλατφόρμα κάνει το αντίθετο: <strong>το software προσαρμόζεται στη δική σου λογική</strong>.</p> <p>Επιπλέον, με μια custom λύση δεν πληρώνεις μηνιαία συνδρομή ανά χρήστη που εκτοξεύεται καθώς η εταιρεία μεγαλώνει. Το κόστος είναι προβλέψιμο και η πλατφόρμα είναι δική σου.</p> <h2>Η RedStar στον Κατασκευαστικό Κλάδο</h2> <p>Ως <strong>digital agency</strong> με έδρα στην Αθήνα, η RedStar έχει αναπτύξει custom εφαρμογές για επιχειρήσεις από διαφορετικούς κλάδους - από ιατρικές κλινικές μέχρι logistics και staffing platforms. Η εμπειρία αυτή μας δίνει μια σπάνια δεξιότητα: να βλέπουμε τι λειτουργεί σε άλλους κλάδους και να το εφαρμόζουμε έξυπνα στις <strong>κατασκευές</strong>.</p> <p>Αν ψάχνεις <strong>custom εφαρμογές Αθήνα</strong>, <strong>web development Ελλάδα</strong> ή <strong>ανάπτυξη λογισμικού Ελλάδα</strong> με αποδεδειγμένη εμπειρία σε πολύπλοκα business systems, είμαστε εδώ για μια ειλικρινή συζήτηση - όχι για να πουλήσουμε, αλλά για να καταλάβουμε αν μπορούμε να βοηθήσουμε.</p> <p><strong>Η ψηφιακή λύση που χρειάζεσαι δεν υπάρχει ήδη σε κάποιο app store. Χτίζεται.</strong> Και εμείς στη RedStar το κάνουμε αυτό κάθε μέρα.</p> </article>
-<p>Related: <a href="../apo-excel-se-custom-platforma-odigos-mme-ellada/index.html">από Excel σε custom πλατφόρμα</a></p>
-<p>Related: <a href="../custom-platformes-etaireies-ypiresion-symvolaia-timologisi-epikoinonia/index.html">πλατφόρμες για εταιρείες υπηρεσιών</a></p>
-<p>Related: <a href="../custom-efarmogi-vs-saas-ellinikes-epixeiriseis-2026/index.html">custom εφαρμογή vs SaaS</a></p>
-<p>Related: <a href="../multi-tenancy-laravel-saas-platforma-epicheiriseis/index.html">Laravel για SaaS πλατφόρμα</a></p>
-<p>Related: <a href="../automatismoi-epikoinonias-pelaton-custom-systimata/index.html">αυτοματισμοί επικοινωνίας πελατών</a></p></div><aside class="article-aside" aria-label="Στοιχεία άρθρου"><div class="article-aside__panel"><strong>Συντάκτης</strong><span>Αλέξανδρος Κούρτης</span></div><div class="article-aside__panel"><a href="../index.html">Όλες οι σημειώσεις</a></div></aside></div></article><section class="final-cta"><div class="container final-cta__inner"><div><p class="eyebrow">Έχεις κάτι συγκεκριμένο στο μυαλό;</p><h2>Ας δούμε αν ταιριάζουμε.</h2><p>Σε 30 λεπτά ξεκαθαρίζουμε ανάγκη, κόστος και επόμενο βήμα.</p></div><a class="button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείσε κλήση <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-9 9M19 13v6H5V5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section></main>
-<footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__top">
-        <div class="site-footer__intro"><a class="brand" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar Digital Agency" width="220" height="70"></a><p>Ψηφιακές υπηρεσίες για επιχειρήσεις που θέλουν καθαρή δουλειά και άμεση συνεργασία.</p></div>
-        <nav aria-label="Υπηρεσίες"><h2>Υπηρεσίες</h2><a href="../../services/website-development/index.html">Ιστοσελίδες</a><a href="../../services/eshop-development/index.html">E-shop</a><a href="../../services/custom-web-apps/index.html">Εφαρμογές</a><a href="../../services/digital-marketing/index.html">Digital Marketing</a><a href="../../services/email-social/index.html">Email & Social</a><a href="../../services/branding/index.html">Branding</a><a href="../../services/hosting-domains/index.html">Hosting</a><a href="../../services/ai-automation/index.html">AI</a><a href="../../services/it-security/index.html">IT & Ασφάλεια</a><a href="../../services/consulting-support/index.html">Συμβουλευτική</a></nav>
-        <nav aria-label="RedStar"><h2>RedStar</h2><a href="../../portfolio/index.html">Έργα</a><a href="../../about/index.html">Σχετικά</a><a href="../../blog/index.html">Σημειώσεις</a><a href="../../contact/index.html">Επικοινωνία</a></nav>
-        <address class="site-footer__contact"><h2>Στοιχεία</h2><strong>Alexandros Kourtis</strong><span>Ξενοκλέους 25, Αθήνα</span><a href="mailto:akourtisdev@gmail.com">akourtisdev@gmail.com</a><a href="tel:+306989442438">+30 698 944 2438</a><span>ΑΦΜ: 153468535</span></address>
+<p>Related: <a href="../apo-excel-se-custom-platforma-odigos-mme-ellada/">από Excel σε custom πλατφόρμα</a></p>
+<p>Related: <a href="../custom-platformes-etaireies-ypiresion-symvolaia-timologisi-epikoinonia/">πλατφόρμες για εταιρείες υπηρεσιών</a></p>
+<p>Related: <a href="../custom-efarmogi-vs-saas-ellinikes-epixeiriseis/">custom εφαρμογή vs SaaS</a></p>
+<p>Related: <a href="../multi-tenancy-laravel-saas-platforma-epicheiriseis/">Laravel για SaaS πλατφόρμα</a></p>
+<p>Related: <a href="../automatismoi-epikoinonias-pelaton-custom-systimata/">αυτοματισμοί επικοινωνίας πελατών</a></p></div>
+          <aside class="article-sidebar" aria-label="Στοιχεια αρθρου">
+            <div class="article-sidebar__panel"><strong>Συντακτης</strong><span>Αλεξανδρος Κουρτης</span></div>
+            
+            <div class="article-sidebar__panel"><a href="../index.html">Ολα τα αρθρα</a></div>
+          </aside>
+        </div>
       </div>
-      <div class="site-footer__bottom"><span>© <span data-year>2026</span> RedStar.</span><div class="site-footer__legal"><a href="../../privacy/index.html">Απόρρητο</a><a href="../../terms/index.html">Όροι</a><a href="../../cookies/index.html">Cookies</a></div></div>
+    </section>
+    
+  <section class="rs-banner rs-banner--enquiry" id="enquiry-banner" aria-labelledby="enquiry-heading">
+    <div class="rs-banner__inner">
+      <div class="rs-banner__copy">
+        <p class="rs-banner__eyebrow">Το επόμενο βήμα</p>
+        <h2 id="enquiry-heading">Ας συζητήσουμε το έργο σας.</h2>
+        <p>Πείτε μου τι χρειάζεται η επιχείρησή σας. Θα συζητήσουμε τις προτεραιότητες και τα επόμενα βήματα.</p>
+      </div>
+      <div class="rs-banner__contact">
+        <div class="rs-banner__actions">
+          <a class="rs-banner__button" href="https://calendar.app.google/BivggDamyF6eLgFb6" target="_blank" rel="noopener">Κλείστε μια κλήση <span aria-hidden="true">↗</span></a>
+          <a class="rs-banner__button rs-banner__button--secondary" href="../../contact/index.html#quote-request">Ζητήστε προσφορά</a>
+        </div>
+        <a class="rs-banner__whatsapp" href="https://wa.me/306989442438" target="_blank" rel="noopener">Μιλήστε μου στο WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="rs-footer">
+    <div class="rs-footer__intro">
+      <a class="rs-logo" href="../../index.html"><img src="../../sitepad-data/brand/logos/logo-full-color-dark-bg.svg" alt="RedStar" style="width:160px"></a>
+      <p>Ιστοσελιδες και εργαλεια για επιχειρησεις που θελουν καθαρη δουλεια και αμεση συνεργασια.</p>
+    </div>
+    <nav>
+      <h3>Υπηρεσιες</h3>
+      <a href="../../services/website-development/index.html">Ιστοσελιδες</a>
+      <a href="../../services/eshop-development/index.html">E-Shop</a>
+      <a href="../../services/custom-web-apps/index.html">Εφαρμογες</a>
+      <a href="../../services/index.html">Ολες οι υπηρεσιες</a>
+    </nav>
+    <nav>
+      <h3>RedStar</h3>
+      <a href="../../portfolio/index.html">Εργα</a>
+      <a href="../../about/index.html">Σχετικα</a>
+      <a href="../../blog/index.html">Blog</a>
+      <a href="../../contact/index.html">Επικοινωνια</a>
+    </nav>
+    <address>
+      <h3>Στοιχεια</h3>
+      <strong>Alexandros Kourtis</strong>
+      <span>Ξενοκλεους 25, Αθηνα</span>
+      <a href="mailto:akourtisdev@gmail.com">akourtisdev@gmail.com</a>
+      <a href="tel:+306989442438">+30 698 944 2438</a>
+      <span>ΑΦΜ: 153468535</span>
+    </address>
+    <div class="rs-footer__bottom">
+      <span>&copy; <span data-year>2026</span> RedStar.</span>
+      <div class="rs-footer__legal">
+        <a href="../../privacy/index.html">Απορρητο</a>
+        <a href="../../terms/index.html">Οροι</a>
+        <a href="../../cookies/index.html">Cookies</a>
+      </div>
     </div>
   </footer>
-  <aside class="consent" data-consent hidden aria-label="Ρυθμίσεις cookies"><p>Χρησιμοποιούμε προαιρετικά στατιστικά για να βλέπουμε τι βοηθά. Δεν ξεκινούν χωρίς επιλογή.</p><div class="consent__actions"><button class="button" type="button" data-consent-accept>Αποδοχή</button><button class="button button--glass" type="button" data-consent-reject>Μόνο απαραίτητα</button></div></aside>
+  <div class="cookie-consent" hidden>
+    <p>Χρησιμοποιουμε προαιρετικα στατιστικα για να βλεπουμε τι βοηθα. Δεν ξεκινουν χωρις επιλογη.</p>
+    <div class="cookie-consent__actions">
+      <button class="rs-button" type="button" data-consent-accept>Αποδοχη</button>
+      <button class="rs-button rs-button--outline" type="button" data-consent-reject>Μονο απαραιτητα</button>
+    </div>
+  </div>
 </body>
 </html>

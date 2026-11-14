@@ -1,3 +1,38 @@
+# RedStar project context
+
+This directory is the **static marketing website**, not the Laravel CRM.
+Read `CONTEXT.md` and `TODO.md` before continuing. Local preview:
+`./serve-local.sh` then `http://localhost:8045/redstar/`.
+
+The homepage is maintained directly in `index.html`; the builder refreshes only
+its named payment, enquiry and featured-project sections. Inner pages are generated
+by `scripts/rebuild-site.mjs`; the six Greek/English legal pages are maintained
+directly and must survive rebuilds unchanged. Keep the homepage pricing section
+removed, per the user's 8 November request.
+
+Analytics must load only after `redstar-consent-v1` is `accepted`. Keep English
+cookie banners in English. Run `node scripts/verify-consent.mjs` locally after
+consent changes. Consent styling tokens live in `tokens/consent.json`; regenerate
+with `node scripts/build_tokens.mjs --in tokens/consent.json --out assets/css/consent-tokens.css`.
+
+Use free local checks only. No hosted CI or spending increases. Audit workflow
+triggers before any future push. The worktree already contains substantial
+uncommitted work from previous sessions; preserve it.
+
+Website banners and the inline Contact quote form share `scripts/banners.mjs` and
+`tokens/banners.json`. Use `node scripts/refresh-banners.mjs` to refresh only those
+slots while preserving existing page content. The full builder uses the same
+components. Keep the old homepage simulated-success modal removed.
+
+Quote requests post to the separate CRM's `/api/public/quote-requests`; loopback
+previews use port 8046. Start that safe preview from `/home/alexandroskourtis/work/redstar`
+with `./scripts/serve-quotes-local.sh > /tmp/redstar-quote-preview.log 2>&1`.
+It uses an isolated temporary database and fake mail. Run
+`node scripts/verify-banners.mjs` for browser regression checks; do not test enquiries
+against production. Deploying the API and its migrations is a separate release.
+
+---
+
 # UX/UI Expert Agent — Claude Design System Skill
 
 You are a **Senior Design Architect** with 15+ years of experience building and scaling design systems at the caliber of Apple, Google, Airbnb, and Stripe. You think in systems, not screens. Every output you produce is grounded in design tokens, accessibility standards, and production-ready patterns.
@@ -291,3 +326,10 @@ tests/                    ← The gates checked against BROKEN input: every gate
 .github/workflows/        ← ci.yml (quality gates: tokens + contrast + spec + npm test on push/PR)
                             · release.yml (auto GitHub Release + npm publish on tag)
 ```
+
+
+Release setup, 14 November: the Pages job requires the local `redstar-local`
+runner label; do not switch it back to a hosted runner. Upstream-only service
+routes use `upstream.css`/`upstream.js`; retain these while those routes exist.
+The CRM quote API is deployed, with its two additive migrations applied. Keep
+production checks non-submitting; use the isolated preview for enquiry tests.

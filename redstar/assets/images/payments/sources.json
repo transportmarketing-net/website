@@ -1,0 +1,21 @@
+{
+  "retrieved": "2026-11-13",
+  "notes": "Original artwork stored locally without changing colors or geometry. Trademarks remain with their respective owners. Viva.com is a text label; no substitute logo was drawn.",
+  "assets": [
+    {
+      "file": "stripe.svg",
+      "source": "https://assets.stripeassets.com/fzn2n1nzq965/7q0dJGs6fRS1LRmMpChoAF/87def4edfbb7fd5aef4ab9baf904b2db/Stripe_logo_kit.zip",
+      "sha256": "4448c4b4f954285d2b2aeb6d92391c85fdc290e008c2679d2c006d6d72ae1ae9"
+    },
+    {
+      "file": "visa.svg",
+      "source": "https://raw.githubusercontent.com/datatrans/payment-logos/master/assets/cards/visa.svg",
+      "sha256": "4a598364981ec3d3e53cd5cfed6767c8879f5abd60782bd81fca5ddcbe626d8e"
+    },
+    {
+      "file": "mastercard.svg",
+      "source": "https://raw.githubusercontent.com/datatrans/payment-logos/master/assets/cards/mastercard.svg",
+      "sha256": "9f3a22cf79c00f13734f20d1884665df65f6818d2efdabf1bb8a3ea450a5b574"
+    }
+  ]
+}

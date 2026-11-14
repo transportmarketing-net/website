@@ -12,6 +12,7 @@
  * Exit 0 only if 100% of checks pass.
  */
 import { execSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
 
 const checks = [
   ['Token JSON valid + aliases resolve', 'python3 scripts/validate_tokens.py'],
@@ -87,8 +88,14 @@ let pass = 0;
 const fails = [];
 for (const [label, cmd] of checks) {
   let ok = true, out = '';
-  try { out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, DS_REQUIRE_BROWSER: '1' } }).toString(); }
-  catch (e) { ok = false; out = (e.stdout || '').toString() + (e.stderr || '').toString(); }
+  // This copied kit may lack its example fixtures. Fail explicitly before
+  // launching a browser against a nonexistent page and waiting for timeouts.
+  const missing = [...new Set(cmd.match(/(?:examples|evals|templates)\/[\w./-]+/g) || [])].filter(file => !existsSync(file));
+  try {
+    if (missing.length) throw new Error(`Missing fixture(s): ${missing.join(', ')}`);
+    out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, DS_REQUIRE_BROWSER: '1' } }).toString();
+  }
+  catch (e) { ok = false; out = (e.stdout || '').toString() + (e.stderr || '').toString() || e.message; }
   console.log(`  ${ok ? 'PASS' : 'FAIL'}  ${label}`);
   if (ok) pass++; else fails.push([label, out.trim().split('\n').slice(-6).join('\n')]);
 }
