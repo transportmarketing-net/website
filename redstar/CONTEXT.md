@@ -270,3 +270,10 @@ on the existing workstation, without hosted runner jobs or billing changes.
 Future deployments need a runner with that label online. Public artifacts exclude
 internal scripts, Markdown documents, dependencies, source mirrors and Git data.
 Release checkout: /home/alexandroskourtis/.cache/redstar-release-20261114.
+
+Final artifact verification also passed for all 98 pages after adding canonical
+JavaScript filenames for four mirrored files with literal ?ver suffixes. Those
+old names were excluded by the Pages extension allowlist; the first publish was
+cancelled before deployment and replaced with the corrected artifact. Final
+browser layout smoke passed 32 desktop/mobile combinations. The article table
+fix is retained by the generator.
