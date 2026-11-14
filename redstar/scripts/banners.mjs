@@ -37,7 +37,7 @@ export function featuredProjectBanner(prefix = '') {
         <ul class="rs-banner__capabilities" aria-label="Λειτουργίες"><li>Εθελοντές</li><li>Δράσεις</li><li>Βάρδιες</li></ul>
         <div><a class="rs-banner__button" href="${prefix}portfolio/${project.slug}/index.html">Δείτε το έργο <span aria-hidden="true">→</span></a></div>
       </div>
-      <div class="rs-banner__preview"><img src="${prefix}${project.image}" alt="Διαχείριση εθελοντών στην πλατφόρμα HelpPoint" width="1440" height="900" loading="lazy" decoding="async"></div>
+      <div class="rs-banner__preview"><img src="${prefix}${project.image}" alt="${esc(project.imageAlt || project.title)}" width="${project.imageWidth || 1440}" height="${project.imageHeight || 900}" loading="lazy" decoding="async"></div>
     </div>
   </section>`;
 }

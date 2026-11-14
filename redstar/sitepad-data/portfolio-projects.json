@@ -8,8 +8,8 @@
     "focusKeyword": "παιδιατρικό laravel website",
     "category": "Healthcare Laravel",
     "portfolioMeta": "01 / Healthcare Laravel",
-    "image": "sitepad-data/uploads/2026/05/project-pediatric.png",
-    "imageAlt": "Homepage screenshot από το website της Δρ. Κοτζιά Δόξα",
+    "image": "assets/images/portfolio/kotzia-pediatric-pulmonology-platform-1440.webp",
+    "imageAlt": "Η ενότητα Οι Αρχές μας στην ιστοσελίδα της Δρ. Κοτζιά Δόξας",
     "liveUrl": "https://doxakotzia.gr/",
     "publishedAt": "2026-08-27",
     "excerpt": "Παιδιατρικό και παιδοπνευμονολογικό website σε Laravel με online ραντεβού, δίγλωσση δομή, SEO blog και admin διαχείριση.",
@@ -36,7 +36,12 @@
       "Καθαρή public παρουσία για γιατρό υψηλής εξειδίκευσης.",
       "Διαχειρίσιμο blog και περιεχόμενο χωρίς αλλαγές στον κώδικα.",
       "Ροή ραντεβού που συνδέει τη δημόσια σελίδα με την εσωτερική οργάνωση του ιατρείου."
-    ]
+    ],
+    "captureSectionHeading": "Οι Αρχές μας",
+    "captureView": "Οι Αρχές μας section, public session",
+    "imageSmall": "assets/images/portfolio/kotzia-pediatric-pulmonology-platform-720.webp",
+    "imageWidth": 1440,
+    "imageHeight": 839
   },
   {
     "slug": "lumencia-medical-marketing",
@@ -47,8 +52,8 @@
     "focusKeyword": "medical marketing platform",
     "category": "Medical Marketing",
     "portfolioMeta": "02 / Medical marketing",
-    "image": "sitepad-data/uploads/2026/05/project-lumencia.png",
-    "imageAlt": "Lumencia website screenshot",
+    "image": "assets/images/portfolio/lumencia-medical-marketing-1440.webp",
+    "imageAlt": "Η αρχική σελίδα της Lumencia με την παρουσίαση μάρκετινγκ για αισθητικά ιατρεία",
     "liveUrl": "https://lumencia.gr/",
     "publishedAt": "2026-08-27",
     "excerpt": "Premium marketing agency για πλαστικούς χειρουργούς και αισθητικές κλινικές, με Laravel 12, CRM και lead generation engine.",
@@ -74,7 +79,11 @@
       "Δημόσια εικόνα που ταιριάζει σε premium ιατρικό κοινό.",
       "Κεντρική βάση για leads και εμπορικές ενέργειες.",
       "Πλατφόρμα που μπορεί να μεγαλώσει μαζί με τις υπηρεσίες του agency."
-    ]
+    ],
+    "captureView": "Current Lumencia homepage hero, public session",
+    "imageSmall": "assets/images/portfolio/lumencia-medical-marketing-720.webp",
+    "imageWidth": 1440,
+    "imageHeight": 900
   },
   {
     "slug": "extratzis-staffing-platform",
@@ -123,8 +132,8 @@
     "focusKeyword": "creative agency portfolio",
     "category": "Creative Portfolio",
     "portfolioMeta": "04 / Creative portfolio",
-    "image": "sitepad-data/uploads/2026/05/project-akeraio.png",
-    "imageAlt": "Akeraio Studio website screenshot",
+    "image": "assets/images/portfolio/akeraio-creative-portfolio-1440.webp",
+    "imageAlt": "Η ομάδα του Akeraio Studio στη σελίδα About",
     "liveUrl": "https://akeraio.com/",
     "publishedAt": "2026-08-27",
     "excerpt": "Creative agency portfolio με Laravel 10, Vue 3, Inertia.js, 4 γλώσσες, 228 automated tests και 85% cache hit rate.",
@@ -150,7 +159,18 @@
       "Πολυγλωσσική παρουσίαση agency έργων.",
       "Γρήγορη εμπειρία χάρη σε caching.",
       "Κώδικας με test coverage για πιο ασφαλή εξέλιξη."
-    ]
+    ],
+    "captureUrl": "https://akeraio.com/about",
+    "captureSectionHeading": "Our Team",
+    "captureView": "About page, Our Team section, public session",
+    "imageSmall": "assets/images/portfolio/akeraio-creative-portfolio-720.webp",
+    "imageWidth": 1440,
+    "imageHeight": 818,
+    "captureViewport": {
+      "width": 1760,
+      "height": 1000
+    },
+    "captureSectionViewport": true
   },
   {
     "slug": "helppoint-volunteer-platform",
@@ -161,8 +181,8 @@
     "focusKeyword": "volunteer management platform",
     "category": "Volunteer SaaS",
     "portfolioMeta": "05 / Volunteer SaaS",
-    "image": "sitepad-data/uploads/2026/05/project-helppoint.png",
-    "imageAlt": "HelpPoint platform screenshot",
+    "image": "assets/images/portfolio/helppoint-volunteer-platform-1440.webp",
+    "imageAlt": "Ο χάρτης οργανισμών του HelpPoint στην Αθήνα",
     "liveUrl": "https://helppoint.net/",
     "publishedAt": "2026-08-27",
     "excerpt": "Πλατφόρμα διαχείρισης εθελοντών και μη κερδοσκοπικών οργανισμών με Laravel 12, multi-tenancy, campaigns, shifts και GeoJSON.",
@@ -188,7 +208,13 @@
       "Ενιαίο σύστημα για οργανισμούς, δράσεις και εθελοντές.",
       "Δομή έτοιμη για διεθνή χρήση.",
       "Χάρτης και βάρδιες που μετατρέπουν την πρόθεση σε πρακτική οργάνωση."
-    ]
+    ],
+    "captureUrl": "https://helppoint.net/map",
+    "captureMapCenter": "Κέντρο Αθήνας",
+    "captureView": "Athens organization map, public session",
+    "imageSmall": "assets/images/portfolio/helppoint-volunteer-platform-720.webp",
+    "imageWidth": 1440,
+    "imageHeight": 900
   },
   {
     "slug": "ellinity-tour-saas",

@@ -298,5 +298,121 @@
         "sha256": "007886ca541765b9947e19cddbc826ba7adcc7751b745b98875f0adc43e8142a"
       }
     ]
+  },
+  "lumencia-medical-marketing": {
+    "sourceUrl": "https://lumencia.gr/",
+    "capturedAt": "2026-11-14T16:36:08.699Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotSize": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Current Lumencia homepage hero, public session",
+    "images": [
+      {
+        "file": "assets/images/portfolio/lumencia-medical-marketing-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 27472,
+        "sha256": "17a22324e2740920526d3215ac09861ccbc27ce88a8b0202a8405eae143b6029"
+      },
+      {
+        "file": "assets/images/portfolio/lumencia-medical-marketing-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 64096,
+        "sha256": "d78330cb801d9e1eac6a2f68df7111dff9c24fb11585783b3cee8e2c115e4fe6"
+      }
+    ]
+  },
+  "akeraio-creative-portfolio": {
+    "sourceUrl": "https://akeraio.com/about",
+    "capturedAt": "2026-11-14T16:38:30.865Z",
+    "viewport": {
+      "width": 1760,
+      "height": 1000
+    },
+    "screenshotSize": {
+      "width": 1760,
+      "height": 1000
+    },
+    "view": "About page, Our Team section, public session",
+    "images": [
+      {
+        "file": "assets/images/portfolio/akeraio-creative-portfolio-720.webp",
+        "width": 720,
+        "height": 409,
+        "bytes": 18242,
+        "sha256": "1566132ea8fa840f483cbda0c0261d82823412402ba49f5027153c03d7c0d7c0"
+      },
+      {
+        "file": "assets/images/portfolio/akeraio-creative-portfolio-1440.webp",
+        "width": 1440,
+        "height": 818,
+        "bytes": 52816,
+        "sha256": "069542b178f88a91b68b2a9ca872898942c0494aa2a3cb59ebdda8ee1c3fabe1"
+      }
+    ]
+  },
+  "helppoint-volunteer-platform": {
+    "sourceUrl": "https://helppoint.net/map",
+    "capturedAt": "2026-11-14T16:36:11.844Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotSize": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Athens organization map, public session",
+    "images": [
+      {
+        "file": "assets/images/portfolio/helppoint-volunteer-platform-720.webp",
+        "width": 720,
+        "height": 450,
+        "bytes": 69774,
+        "sha256": "4b13f9ce908de07ac9f3ccfd7cce2bcaec1eb503a45e1e860e13c32b7f355b7d"
+      },
+      {
+        "file": "assets/images/portfolio/helppoint-volunteer-platform-1440.webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 250334,
+        "sha256": "e635da26d9c802e500b0499937cd8c4bb33aa3d1e8b74e5b760852cbf308fc66"
+      }
+    ]
+  },
+  "kotzia-pediatric-pulmonology-platform": {
+    "sourceUrl": "https://doxakotzia.gr/",
+    "capturedAt": "2026-11-14T16:36:13.063Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotSize": {
+      "width": 1440,
+      "height": 839
+    },
+    "view": "Οι Αρχές μας section, public session",
+    "images": [
+      {
+        "file": "assets/images/portfolio/kotzia-pediatric-pulmonology-platform-720.webp",
+        "width": 720,
+        "height": 420,
+        "bytes": 31076,
+        "sha256": "aae0479e5e0f68f1e7f1399e4ce1e08a21d20994fa52ebb0035292abd7c1fa0f"
+      },
+      {
+        "file": "assets/images/portfolio/kotzia-pediatric-pulmonology-platform-1440.webp",
+        "width": 1440,
+        "height": 839,
+        "bytes": 80864,
+        "sha256": "60aabd980e7ff3cbc742092e96b34b3fadcc2ac6cb222b71f41ea9613fe49576"
+      }
+    ]
   }
 }

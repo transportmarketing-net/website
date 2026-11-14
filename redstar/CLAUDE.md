@@ -344,3 +344,9 @@ Universe's campus section and Fortistis's supported light-theme product grid.
 Original PNGs stay in the home cache; WebP variants and provenance are versioned.
 Run `node scripts/verify-portfolio.mjs http://127.0.0.1:8045/redstar/` against the
 local preview. It intercepts outbound live links and never submits project forms.
+
+Capture overrides can specify `captureUrl`, `captureSectionHeading`,
+`captureViewport`, `captureSectionViewport`, `captureMapCenter` and `captureView`.
+Pass one or more slugs to capture explicitly, including non-featured projects.
+Preserve actual screenshot aspect ratios and update imageWidth/imageHeight from
+sitepad-data/portfolio-captures.json before the targeted portfolio rebuild.

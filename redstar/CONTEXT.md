@@ -325,3 +325,28 @@ captures and the updated ST.RIVE capture were inspected.
 Release continues to use only the existing local ephemeral runner with label
 redstar-local; no hosted runner or billing changes are authorized. No backend or
 database changes belong to this portfolio release.
+
+
+## Four screenshot replacements, 14 November 2026
+
+Replaced the Kotzia, Lumencia, HelpPoint and Akeraio project images at the user's
+request. Kotzia captures the live Οι Αρχές μας section; Lumencia captures its
+current homepage hero; HelpPoint captures /map after using the public Κέντρο
+Αθήνας control, with loaded tiles/markers and retained map attribution; Akeraio
+captures the About page's Our Team section with all five members visible. The
+Akeraio cookie overlay was dismissed using Reject All. No browser chrome or
+signed-in account details appear. Original PNGs remain in the home cache; eight
+new 720/1440px WebP variants and capture provenance are versioned.
+
+The capture script now accepts explicit non-featured slugs, multiple slugs,
+per-project URLs/viewports and section captures. Image dimensions follow each
+actual crop. Homepage/listing/detail images share those sources; the HelpPoint
+feature banner also uses the new map and source alt text. Other project order,
+copy, live destinations, layout and styling remain unchanged.
+
+Local checks: the established portfolio regression passed 70 layouts, 50 card
+image loads and 30 text states; eight new image hashes/dimensions verified. The
+homepage outside portfolio/HelpPoint slots and all six legal pages match the
+previous commit. The copied generic kit gate still reports 5/37 on its existing
+fixture/theme issues; no whole-site accessibility score is claimed. Publishing
+continues through the free local self-hosted runner only.
